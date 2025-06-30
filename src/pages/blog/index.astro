@@ -104,7 +104,7 @@ const categories = [...new Set(posts.map(post => post.data.category || 'Genel'))
 			<ul class="mv-grid">
 				{posts.map(post => (
 					<li class="mv-card">
-						<a href={post.slug ? `/blog/${post.slug}` : '#'}>
+						<a href={post.id ? `/blog/${post.id}` : '#'}>
 							{post.data.image && <img src={post.data.image} alt={post.data.title} class="mv-card-img" />}
 							<div class="mv-card-title">{post.data.title}</div>
 							<div class="mv-card-summary">{post.data.description || post.body.slice(0, 120) + '...'}</div>
