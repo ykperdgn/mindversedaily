@@ -1,5 +1,6 @@
 ---
 title: "Issue of Equity"
+description: "Foresight VCT PLC announces allotment of new ordinary shares on 30 June 2025."
 pubDate: "2025-06-30"
 category: "business"
 image: "https://ml-eu.globenewswire.com/Resource/Download/2c085047-33c7-4175-b3a2-e90c8210b5a3"

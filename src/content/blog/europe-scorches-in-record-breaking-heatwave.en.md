@@ -1,5 +1,6 @@
 ---
 title: "Europe scorches in record-breaking heatwave"
+description: "Europe faces record-breaking heatwave with alerts in multiple countries."
 pubDate: "2025-06-30"
 category: "world"
 image: "https://www.theglobeandmail.com/resizer/v2/PDO7FFTXEJH65DJW4A6XROI3HQ.JPG?auth=df58e1c7e91adf07b60326b98704c15ba11d00722b870d7ee715c79ee87b6beb&width=1200&height=800&quality=80&smart=true"

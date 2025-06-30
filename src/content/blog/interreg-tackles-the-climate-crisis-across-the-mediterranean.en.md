@@ -1,5 +1,6 @@
 ---
 title: "Interreg tackles the climate crisis across the Mediterranean"
+description: "EU-funded Interreg projects address climate crisis in the Mediterranean region."
 pubDate: "2025-06-30"
 category: "business"
 image: "https://ec.europa.eu/component-library/favicon.ico"

@@ -1,5 +1,6 @@
 ---
 title: "NT Logistics Highlights Single-Source Freight Strategy for"
+description: "Tailored freight solutions drive efficiency and reliability for mid-market food & beverage brands."
 pubDate: "2025-06-30"
 category: "world"
 image: "https://ml.globenewswire.com/Resource/Download/8b37f9ac-b005-4930-b6f3-60aeb4b1e27b"

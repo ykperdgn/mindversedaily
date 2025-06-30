@@ -1,5 +1,6 @@
 ---
 title: "London research: European cough medicine may aid Parkinson's patients"
+description: "European cough medicine may help slow or stop progression of dementia and Parkinson's."
 pubDate: "2025-06-30"
 category: "health"
 image: "https://smartcdn.gprod.postmedia.digital/lfpress/wp-content/uploads/2024/07/LFP20230605MH004.LF_.jpg"

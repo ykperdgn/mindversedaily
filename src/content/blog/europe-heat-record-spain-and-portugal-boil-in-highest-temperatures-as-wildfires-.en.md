@@ -1,5 +1,6 @@
 ---
 title: "Europe heat record: Spain and Portugal boil in highest temperatures as wildfires rage across continent fanned by 'suffocating' heatwave while Brit goes missing on Greek island"
+description: "Europe faces record heat, wildfires, and missing persons amid a deadly heatwave."
 pubDate: "2025-06-30"
 category: "world"
 image: "https://i.dailymail.co.uk/1s/2025/06/29/21/99839677-0-image-m-43_1751230702906.jpg"

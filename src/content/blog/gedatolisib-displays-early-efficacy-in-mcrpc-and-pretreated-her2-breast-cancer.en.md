@@ -1,5 +1,6 @@
 ---
 title: "Gedatolisib Displays Early Efficacy in mCRPC and Pretreated HER2+ Breast Cancer"
+description: "Gedatolisib shows clinical activity in prostate and HER2+ breast cancer patients."
 pubDate: "2025-06-30"
 category: "business"
 image: "https://cdn.sanity.io/images/0vv8moc6/onclive/b92f7430b0277068da75332136b852536c847f54-1920x1080.jpg?fit=crop&auto=format"

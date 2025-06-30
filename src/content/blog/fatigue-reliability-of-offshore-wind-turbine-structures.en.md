@@ -1,5 +1,6 @@
 ---
 title: "Fatigue reliability of offshore wind turbine structures"
+description: "Novel inspection strategy using fatigue modeling for offshore wind turbine maintenance."
 pubDate: "2025-06-30"
 category: "business"
 image: "https://www.lr.org/contentassets/57476a26d1854fcab19b624d02e67b89/offshore-techical-paper.jpg"
