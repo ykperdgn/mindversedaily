@@ -177,3 +177,55 @@ hr {
     height: 110px;
   }
 }
+
+/* Kategori menüsünü yatay ve sticky üst bar olarak düzenle, mobilde scrollable yap */
+.mv-categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2.2rem;
+  background: #fff;
+  border-bottom: 1.5px solid #e0e7ef;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  padding: 0.5rem 0;
+  overflow-x: auto;
+}
+.mv-category-tab {
+  background: #f1f5f9;
+  color: #2563eb;
+  border-radius: 1.2rem;
+  padding: 0.5rem 1.2rem;
+  font-weight: 600;
+  font-size: 1rem;
+  border: 1.5px solid #e0e7ef;
+  transition: background 0.2s, color 0.2s;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.mv-category-tab:hover, .mv-category-tab.active {
+  background: #2563eb;
+  color: #fff;
+}
+@media (max-width: 720px) {
+  .mv-categories {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 0.5rem 0.2rem;
+    margin-bottom: 1.2rem;
+  }
+  .mv-category-tab {
+    font-size: 0.97rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+/* Footer'ı gizle */
+.mv-footer, footer {
+  display: none !important;
+}
