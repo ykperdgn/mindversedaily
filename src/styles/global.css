@@ -150,3 +150,30 @@ hr {
 	/* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
 	white-space: nowrap;
 }
+
+.mv-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.3rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.mv-card-img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 0.7rem;
+  margin-bottom: 0.7rem;
+  background: #f1f5f9;
+  aspect-ratio: 16/9;
+  display: block;
+}
+@media (max-width: 720px) {
+  .mv-main-home, main {
+    padding: 0.5em;
+  }
+  .mv-card-img {
+    height: 110px;
+  }
+}

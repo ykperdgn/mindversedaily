@@ -115,7 +115,10 @@ const filteredPosts = searchQuery
 				{filteredPosts.map(post => (
 					<li class="mv-card">
 						<a href={post.id ? `/blog/${post.id}` : '#'}>
-							{post.data.image && <img src={post.data.image} alt={post.data.title} class="mv-card-img" />}
+							{post.data.image
+								? <img src={post.data.image} alt={post.data.title} class="mv-card-img" loading="lazy" onError={(e) => { e.target.src = '/assets/blog-placeholder-1.jpg'; }} />
+								: <img src="/assets/blog-placeholder-1.jpg" alt="placeholder" class="mv-card-img" loading="lazy" />
+							}
 							<div class="mv-card-title">{post.data.title}</div>
 							<div class="mv-card-summary">{post.data.description || post.body.slice(0, 120) + '...'}</div>
 							<div class="mv-card-meta">{post.data.category || 'Genel'} • <FormattedDate date={post.data.pubDate} /></div>
