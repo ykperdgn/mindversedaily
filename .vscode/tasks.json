@@ -1,0 +1,19 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "shell",
+      "label": "Astro: Geliştirme Sunucusu",
+      "command": "npm run dev",
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "type": "shell",
+      "label": "Astro: Build",
+      "command": "npm run build",
+      "group": "build",
+      "problemMatcher": []
+    }
+  ]
+}
