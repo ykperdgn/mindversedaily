@@ -3,47 +3,150 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+const categories = ['science', 'health', 'business', 'world'];
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to
-				<a href="https://docs.astro.build/">read the docs</a>
-				or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out
-				<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-				by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header />
+    <main class="mv-main-home">
+      <section class="mv-hero">
+        <h1 class="mv-title">MindVerse Daily</h1>
+        <p class="mv-desc">Bilim, sağlık, iş dünyası ve dünya gündeminden en güncel içerikler.</p>
+      </section>
+      <nav class="mv-categories">
+        {categories.map(cat => (
+          <a href={`/blog?category=${cat}`} class="mv-category-tab">{cat.charAt(0).toUpperCase() + cat.slice(1)}</a>
+        ))}
+      </nav>
+      <section class="mv-grid-section">
+        <h2 class="mv-section-title">Son Yazılar</h2>
+        <ul class="mv-grid">
+          {posts.slice(0, 8).map(post => (
+            <li class="mv-card">
+              <a href={post.slug ? `/blog/${post.slug}` : '#'}>
+                {post.data.image && <img src={post.data.image} alt={post.data.title} class="mv-card-img" />}
+                <div class="mv-card-title">{post.data.title}</div>
+                <div class="mv-card-summary">{post.data.description || post.body.slice(0, 100) + '...'}</div>
+                <div class="mv-card-meta">{post.data.category || 'Genel'} • {post.data.pubDate.toLocaleDateString()}</div>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    </main>
+    <Footer />
+  </body>
 </html>
+
+<style>
+.mv-main-home {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2.5rem 1rem 2rem 1rem;
+}
+.mv-hero {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.mv-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #2563eb;
+  margin-bottom: 0.5rem;
+  letter-spacing: -1px;
+}
+.mv-desc {
+  color: #64748b;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+.mv-categories {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2.2rem;
+}
+.mv-category-tab {
+  background: #f1f5f9;
+  color: #2563eb;
+  border-radius: 1.2rem;
+  padding: 0.5rem 1.2rem;
+  font-weight: 600;
+  font-size: 1rem;
+  border: 1.5px solid #e0e7ef;
+  transition: background 0.2s, color 0.2s;
+  text-transform: capitalize;
+}
+.mv-category-tab:hover {
+  background: #2563eb;
+  color: #fff;
+}
+.mv-section-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 1.2rem;
+  text-align: left;
+}
+.mv-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.3rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.mv-card {
+  background: #fff;
+  border-radius: 1.1rem;
+  box-shadow: 0 2px 8px 0 rgba(37,99,235,0.07);
+  border: 1px solid #e5e7eb;
+  padding: 1.1rem 1rem 1.1rem 1rem;
+  transition: box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  min-height: 260px;
+}
+.mv-card:hover {
+  box-shadow: 0 4px 16px 0 rgba(37,99,235,0.13);
+}
+.mv-card-img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 0.7rem;
+  margin-bottom: 0.7rem;
+}
+.mv-card-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 0.3rem;
+  line-height: 1.3;
+}
+.mv-card-summary {
+  font-size: 0.97rem;
+  color: #475569;
+  margin-bottom: 0.7rem;
+  line-clamp: 2;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.mv-card-meta {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-top: auto;
+}
+</style>

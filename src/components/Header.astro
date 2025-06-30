@@ -11,51 +11,41 @@ import { SITE_TITLE } from '../consts';
     </a>
     <nav class="w-full flex flex-wrap justify-center gap-1 mt-3 sm:mt-0">
       <a href="/" class="category-tab active"><span class="category-icon">🏠</span>Home</a>
-      {/* Kategoriler otomatik olarak eklenir */}
+      <a href="/blog?category=science" class="category-tab"><span class="category-icon">🔬</span>Science</a>
+      <a href="/blog?category=health" class="category-tab"><span class="category-icon">🧬</span>Health</a>
+      <a href="/blog?category=business" class="category-tab"><span class="category-icon">💼</span>Business</a>
+      <a href="/blog?category=world" class="category-tab"><span class="category-icon">🌍</span>World</a>
+      <a href="/about" class="category-tab"><span class="category-icon">ℹ️</span>About</a>
     </nav>
   </div>
 </header>
 
 <style>
-	header {
-		margin: 0;
-		padding: 0 1em;
-		background: white;
-		box-shadow: 0 2px 8px rgba(var(--black), 5%);
-	}
-	h2 {
-		margin: 0;
-		font-size: 1em;
-	}
-
-	h2 a,
-	h2 a.active {
-		text-decoration: none;
-	}
-	nav {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-	}
-	nav a {
-		padding: 1em 0.5em;
-		color: var(--black);
-		border-bottom: 4px solid transparent;
-		text-decoration: none;
-	}
-	nav a.active {
-		text-decoration: none;
-		border-bottom-color: var(--accent);
-	}
-	.social-links,
-	.social-links a {
-		display: flex;
-	}
-	@media (max-width: 720px) {
-		.social-links {
-			display: none;
-		}
-	}
+  .category-tab {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 1rem;
+    border-radius: 1.5rem;
+    background: #f8fafc;
+    color: #2563eb;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    min-width: 80px;
+    border: 1.5px solid transparent;
+    margin: 0 0.15rem;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.03);
+  }
+  .category-tab:hover, .category-tab.active {
+    background: #2563eb;
+    color: #fff;
+    border-color: #2563eb;
+    box-shadow: 0 2px 8px 0 rgba(37,99,235,0.10);
+  }
+  .category-icon {
+    font-size: 1.2rem;
+  }
 </style>
 
 <footer class="text-center text-xs text-gray-500 py-6 mt-10 border-t border-blue-100 bg-white">
