@@ -1,5 +1,6 @@
 ---
 title: "Canada drops digital services tax to help restart US trade talks"
+description: "Canada halts digital services tax after US tariff threats to restart trade talks."
 pubDate: "2025-06-30"
 category: "nation"
 image: "https://ichef.bbci.co.uk/news/1024/branded_news/4f82/live/6375dc20-5592-11f0-a9c4-6559fc28b390.jpg"

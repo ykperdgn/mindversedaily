@@ -1,5 +1,6 @@
 ---
 title: "Bemarituzumab Plus Chemo Improves OS in FGFR2b+ Gastric Cancer"
+description: "Bemarituzumab plus chemotherapy improves survival in advanced gastric cancer, new study shows."
 pubDate: "2025-06-30"
 category: "business"
 image: "https://cdn.sanity.io/images/0vv8moc6/targetedonc/5af6e25b17d074d8c9c8cb627adfc1e12de90596-480x270.png?fit=crop&auto=format"

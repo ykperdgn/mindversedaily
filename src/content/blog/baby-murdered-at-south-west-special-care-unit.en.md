@@ -1,5 +1,6 @@
 ---
 title: "Baby 'murdered' at South West special care unit"
+description: "He was just two weeks old. Parents on trial for murder at Yeovil Hospital."
 pubDate: "2025-06-30"
 category: "nation"
 image: "https://i2-prod.bristolpost.co.uk/article4859733.ece/ALTERNATES/s1200/2_JS182420104-1.jpg"

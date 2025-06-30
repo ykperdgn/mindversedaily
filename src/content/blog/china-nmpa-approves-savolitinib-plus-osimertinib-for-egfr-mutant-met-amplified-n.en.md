@@ -1,5 +1,6 @@
 ---
 title: "China NMPA Approves Savolitinib Plus Osimertinib for EGFR-Mutant, MET-Amplified NSCLC"
+description: "China approves savolitinib plus osimertinib for EGFR-mutant, MET-amplified NSCLC after TKI therapy."
 pubDate: "2025-06-30"
 category: "business"
 image: "https://cdn.sanity.io/images/0vv8moc6/onclive/29d40301d38489d149b41ebae8350267d67f754b-1920x1080.jpg?fit=crop&auto=format"

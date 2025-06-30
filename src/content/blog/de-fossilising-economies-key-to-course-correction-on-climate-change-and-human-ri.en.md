@@ -1,5 +1,6 @@
 ---
 title: "De-fossilising economies key to course correction on climate change and human rights protection, says UN expert"
+description: "UN expert urges urgent fossil fuel phase-out for climate and human rights protection."
 pubDate: "2025-06-30"
 category: "world"
 image: "https://reliefweb.int/modules/custom/reliefweb_meta/images/default.png"

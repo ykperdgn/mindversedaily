@@ -1,5 +1,6 @@
 ---
 title: "Dangerous variant of Salmonella still not eradicated in Danish dairy farms, finds study"
+description: "Salmonella Dublin remains a threat in Danish dairy farms despite eradication efforts since 2008."
 pubDate: "2025-06-30"
 category: "health"
 image: "https://scx2.b-cdn.net/gfx/news/hires/2025/dangerous-variant-of-s-1.jpg"

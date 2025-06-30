@@ -1,5 +1,6 @@
 ---
 title: "Chile communist Jeannette Jara to lead beleaguered ruling coalition at election"
+description: "Jeannette Jara wins primary, set to lead Chile's leftwing coalition in November election."
 pubDate: "2025-06-30"
 category: "world"
 image: "https://i.guim.co.uk/img/media/a4cada6fc0fdfef2bc3e7647cc2775efe28a83a6/281_0_2795_2237/master/2795.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=1fc56833da2dd39348a30a712ed76e7d"

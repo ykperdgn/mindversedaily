@@ -1,5 +1,6 @@
 ---
 title: "Banks bet big on fossil fuels, boosting financing in 2024, report finds"
+description: "Bank financing for the fossil fuel sector rose by $162.5 billion in 2024, reversing previous declines."
 pubDate: "2025-06-30"
 category: "business"
 image: "https://imgs.mongabay.com/wp-content/uploads/sites/20/2022/09/30133937/Jacob-Balzani_Mayuriaga-Oil-Spill-2016-WampisNation_3500px_Extra_0073-1.png"

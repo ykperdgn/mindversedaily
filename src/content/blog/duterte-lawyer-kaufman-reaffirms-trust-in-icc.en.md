@@ -1,5 +1,6 @@
 ---
 title: "Duterte lawyer Kaufman reaffirms trust in ICC"
+description: "Duterte’s lawyer Nicholas Kaufman expresses continued trust in ICC judges amid probe."
 pubDate: "2025-06-30"
 category: "nation"
 image: "https://mb.com.ph/manilabulletin/uploads/images/2025/06/30/23193.webp"
