@@ -41,9 +41,11 @@ console.log('Filtered posts before:', filteredPosts.length);
 
 // Filter by category first
 if (categoryQuery) {
-  filteredPosts = filteredPosts.filter(post =>
-    post.data.category?.toLowerCase() === categoryQuery.toLowerCase()
-  );
+  filteredPosts = filteredPosts.filter(post => {
+    const postCategory = post.data.category?.toLowerCase();
+    console.log(`Comparing: "${postCategory}" === "${categoryQuery}"`);
+    return postCategory === categoryQuery;
+  });
   console.log('Filtered posts after category filter:', filteredPosts.length);
   console.log('Posts in category:', filteredPosts.map(p => ({ title: p.data.title, category: p.data.category })));
 }
@@ -153,7 +155,7 @@ if (searchQuery) {
 			{categories.map(cat => (
 				<a
 					href={`/blog?category=${cat}`}
-					class={`mv-category-tab ${categoryQuery === cat ? 'active' : ''}`}
+					class={`mv-category-tab ${categoryQuery === cat.toLowerCase() ? 'active' : ''}`}
 				>
 					<span class="category-icon">{categoryIcons[cat]}</span>
 					{cat.charAt(0).toUpperCase() + cat.slice(1)}
