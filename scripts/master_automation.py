@@ -167,13 +167,11 @@ class MasterAutomationSystem:
     def deploy_site(self):
         """Site deployment"""
         try:
-            self.logger.info("🚀 Starting site deployment")
-
-            # Git operations
+            self.logger.info("🚀 Starting site deployment")            # Git operations
             commands = [
                 ("git add .", "Adding files to git"),
                 (f'git commit -m "Auto content update - {datetime.now().strftime("%Y-%m-%d %H:%M")}"', "Committing changes"),
-                ("git push origin main", "Pushing to repository")
+                ("git push origin master", "Pushing to repository")
             ]
 
             for command, description in commands:
