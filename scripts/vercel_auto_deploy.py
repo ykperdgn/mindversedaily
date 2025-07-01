@@ -10,6 +10,22 @@ import requests
 import json
 import time
 from datetime import datetime
+from pathlib import Path
+
+# Load environment variables from .env file
+def load_env():
+    """Load environment variables from .env file"""
+    env_file = Path(__file__).parent.parent / ".env"
+    if env_file.exists():
+        with open(env_file, 'r', encoding='utf-8') as f:
+            for line in f:
+                line = line.strip()
+                if line and not line.startswith('#') and '=' in line:
+                    key, value = line.split('=', 1)
+                    os.environ[key.strip()] = value.strip()
+
+# Load .env file
+load_env()
 
 class VercelAutoDeployer:
     def __init__(self):
@@ -22,6 +38,7 @@ class VercelAutoDeployer:
             print("💡 Using git push method for deployment")
             self.use_api = False
         else:
+            print(f"✅ VERCEL_TOKEN loaded: {self.vercel_token[:8]}...")
             self.use_api = True
 
     def run_command(self, command, description):
