@@ -2,7 +2,7 @@
 import BaseHead from '../../components/BaseHead.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+import { SITE_TITLE, SITE_DESCRIPTION, SITE_LANG } from '../../consts';
 import { getCollection } from 'astro:content';
 import FormattedDate from '../../components/FormattedDate.astro';
 
@@ -49,14 +49,34 @@ const categoryTitles = {
   quotes: "Alıntılar",
   love: "Aşk"
 };
+
+const categoryDescriptions = {
+  health: "Sağlık, tıp, wellness, beslenme ve mental sağlık konularında güncel yazılar ve araştırmalar",
+  psychology: "Psikoloji, davranış bilimleri, zihin sağlığı ve kişisel gelişim konularında derinlemesine analizler",
+  history: "Tarih, kültür, medeniyet ve geçmişin günümüze yansımaları üzerine kapsamlı yazılar",
+  space: "Uzay, astronomi, keşifler ve evrenin gizemleri hakkında bilimsel içerikler",
+  quotes: "İlham verici alıntılar, hikmetli sözler ve yaşam felsefesi üzerine düşünceler",
+  love: "Aşk, ilişkiler, duygular ve insan bağları üzerine psikolojik yaklaşımlar"
+};
+
+const categoryKeywords = {
+  health: "sağlık, tıp, wellness, mental sağlık, beslenme, egzersiz, yaşam tarzı",
+  psychology: "psikoloji, davranış, zihin, kişilik, terapi, bilişsel gelişim",
+  history: "tarih, geçmiş, medeniyet, kültür, arkeoloji, antik dönem",
+  space: "uzay, astronomi, gezegen, galaksi, keşif, NASA, evren",
+  quotes: "alıntılar, söz, hikmet, felsefe, motivasyon, ilham",
+  love: "aşk, ilişki, duygular, romantizm, sevgi, bağ, psikoloji"
+};
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={SITE_LANG}>
 	<head>
 		<BaseHead
-			title={`${categoryTitles[category] || category.charAt(0).toUpperCase() + category.slice(1)} - ${SITE_TITLE}`}
-			description={`${categoryTitles[category] || category} kategorisindeki en son yazılar`}
+			title={`${categoryTitles[category] || category.charAt(0).toUpperCase() + category.slice(1)} Yazıları - ${SITE_TITLE.split(' - ')[0]}`}
+			description={categoryDescriptions[category] || `${categoryTitles[category] || category} kategorisindeki en son yazılar ve haberler`}
+			keywords={categoryKeywords[category]}
+			articleType="website"
 		/>
 		<style>
 			body {
