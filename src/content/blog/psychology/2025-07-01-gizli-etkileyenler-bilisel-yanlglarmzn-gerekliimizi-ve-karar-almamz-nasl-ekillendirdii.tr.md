@@ -4,7 +4,7 @@ description: "Bilişsel yanılgılar, günlük yaşantımızda derin bir etkisi 
 pubDate: 2025-07-01
 category: "psychology"
 tags: []
-image: "https://unsplash.com/photo/-hTMCypQl6U (Bir kişi, büyüteçle bulmacayı inceler, düşüncelerimizi yakınarak incelememiz gerektiğini simgeleyen bir resim)"
+image: "https://images.pexels.com/photos/4226264/pexels-photo-4226264.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
 ---
 
 Here is the translation of the article into Turkish:

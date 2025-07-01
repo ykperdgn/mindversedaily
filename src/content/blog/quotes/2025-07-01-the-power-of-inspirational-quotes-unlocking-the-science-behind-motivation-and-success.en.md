@@ -4,7 +4,7 @@ description: "Inspirational quotes have been a source of motivation and guidance
 pubDate: 2025-07-01
 category: "quotes"
 tags: []
-image: "https://unsplash.com/photo/5fNmWej4tAA (a person standing in front of a motivational quote written on a wall, with a determined expression)"
+image: "https://images.pexels.com/photos/7563656/pexels-photo-7563656.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
 ---
 
 Inspirational quotes have been a staple of motivation and guidance for centuries. From ancient Greek philosophers to modern-day thought leaders, quotes have been used to inspire, motivate, and encourage people to strive for greatness. But what makes inspirational quotes so effective? Is it just a matter of clever wording, or is there something more profound at play?

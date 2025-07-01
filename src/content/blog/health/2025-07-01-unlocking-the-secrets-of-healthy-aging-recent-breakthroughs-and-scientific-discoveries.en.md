@@ -4,7 +4,7 @@ description: "As the global population ages, the quest for healthy aging has bec
 pubDate: 2025-07-01
 category: "health"
 tags: []
-image: "https://cdn.pixabay.com/photo/2017/02/17/11/14/old-2069514_960_720.jpg (A elderly couple enjoying a walk in nature)"
+image: "https://images.pexels.com/photos/6787217/pexels-photo-6787217.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
 ---
 
 Healthy aging is a multifaceted concept that encompasses physical, mental, and social well-being throughout life. As the global population ages, the importance of promoting healthy aging cannot be overstated. The World Health Organization estimates that by 2050, the number of people aged 60 and above will reach 2 billion, accounting for 22% of the global population. This demographic shift presents significant challenges, but also opportunities for scientific discovery and innovation.

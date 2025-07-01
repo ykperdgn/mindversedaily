@@ -4,7 +4,7 @@ description: "Bu makale, ruh sağlığı alanında son yılların en önemli gel
 pubDate: 2025-07-01
 category: "psychology"
 tags: []
-image: "https://www.pexels.com/photo/person-in-therapy-session-374016/"
+image: "https://images.pexels.com/photos/8849295/pexels-photo-8849295.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
 ---
 
 Here is the translation of the article into Turkish:

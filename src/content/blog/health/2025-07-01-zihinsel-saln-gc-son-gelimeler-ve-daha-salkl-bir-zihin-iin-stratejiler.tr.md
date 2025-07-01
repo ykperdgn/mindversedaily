@@ -4,7 +4,7 @@ description: "Zihinsel sağlık artık bir tabu konusu değildir ve son yıllard
 pubDate: 2025-07-01
 category: "health"
 tags: []
-image: "https://unsplash.com/photo/-hGpt6uW4KQ"
+image: "https://images.pexels.com/photos/32736878/pexels-photo-32736878.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
 ---
 
 Here is the translation of the article:

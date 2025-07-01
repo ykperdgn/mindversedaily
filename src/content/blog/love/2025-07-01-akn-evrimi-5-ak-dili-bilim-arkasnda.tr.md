@@ -4,7 +4,7 @@ description: "Aşk dilleri kavramı, ilişkilerimizde aşkı anlamamız ve ifade
 pubDate: 2025-07-01
 category: "love"
 tags: []
-image: "https://unsplash.com/photo/1634445453487-6a7c93c9a5a6?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max"
+image: "https://images.pexels.com/photos/32799155/pexels-photo-32799155.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
 ---
 
 Here is the translation of the article in Turkish:

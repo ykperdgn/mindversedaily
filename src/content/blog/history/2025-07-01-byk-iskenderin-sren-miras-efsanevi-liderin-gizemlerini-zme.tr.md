@@ -4,7 +4,7 @@ description: "Tarihindeki en ikonik liderlerden biri olan Büyük İskender, ant
 pubDate: 2025-07-01
 category: "history"
 tags: []
-image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Alexander_the_Great_mosaic.jpg/1280px-Alexander_the_Great_mosaic.jpg (Pergamon antik kentinden Büyük İskender mozaiği)"
+image: "https://images.pexels.com/photos/6034019/pexels-photo-6034019.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
 ---
 
 Here is the translation of the article into Turkish:

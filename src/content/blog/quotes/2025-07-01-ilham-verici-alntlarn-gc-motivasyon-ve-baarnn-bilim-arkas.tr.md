@@ -4,7 +4,7 @@ description: "İlham verici alıntılar yüzyıllardır motivasyon ve rehberlik 
 pubDate: 2025-07-01
 category: "quotes"
 tags: []
-image: "https://mindversedaily.com/images/generated/default.jpg"
+image: "https://images.pexels.com/photos/32787295/pexels-photo-32787295.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
 ---
 
 Here is the translation of the article in Turkish:

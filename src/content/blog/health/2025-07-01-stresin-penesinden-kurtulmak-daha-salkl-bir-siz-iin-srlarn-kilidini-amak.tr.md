@@ -4,7 +4,7 @@ description: "Stres, modern yaşamın kaçınılmaz bir parçası haline geldi, 
 pubDate: 2025-07-01
 category: "health"
 tags: []
-image: "https://images.unsplash.com/photo-1589821449963-6368b73f5a4f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c3RyZXNzfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
+image: "https://images.pexels.com/photos/32757255/pexels-photo-32757255.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
 ---
 
 Stres, algılanan tehditlere veya zorluklara karşı doğal bir yanıt, kortizol ve adrenalin gibi hormonların salınmasını tetikleyerek vücudumuzun "savaş veya uçuş" için hazırlanmasını sağlar. Occasional stres normal iken, kronik stres zihinsel ve fiziksel sağlığımız üzerinde yıkıcı sonuçlar doğurabilir. Dünya Sağlık Örgütü (DSÖ), stresin Amerikan şirketlerine yılda yaklaşık 300 milyar dolarlık bir maliyet getirdiğini tahmin ediyor, çalışanların %60'ı işle ilgili stres nedeniyle ciddi bir endişe kaynağı olarak gösteriyor.

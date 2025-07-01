@@ -4,7 +4,7 @@ description: "Stress has become an inevitable part of modern life, affecting mil
 pubDate: 2025-07-01
 category: "health"
 tags: []
-image: "https://images.unsplash.com/photo-1589821449963-6368b73f5a4f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c3RyZXNzfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
+image: "https://images.pexels.com/photos/6353850/pexels-photo-6353850.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
 ---
 
 Stress is a natural response to perceived threats or challenges, triggering the release of hormones like cortisol and adrenaline to prepare our bodies for "fight or flight." While occasional stress is normal, chronic stress can have devastating consequences on our mental and physical health. The World Health Organization (WHO) estimates that stress costs American businesses around $300 billion annually, with 60% of workers citing work-related stress as a major concern.

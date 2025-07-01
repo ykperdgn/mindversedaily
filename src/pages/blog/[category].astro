@@ -5,15 +5,29 @@ import Footer from '../../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 import { getCollection } from 'astro:content';
 import FormattedDate from '../../components/FormattedDate.astro';
-import { Image } from 'astro:assets';
 
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  const categories = [...new Set(posts.map(post => post.data.category).filter(Boolean))];
+
+  return categories.map(category => ({
+    params: { category },
+    props: { category }
+  }));
+}
+
+const { category } = Astro.params;
 const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 
-// Mevcut içeriklerden kategorileri otomatik çek
-const availableCategories = [...new Set(posts.map(post => post.data.category).filter(Boolean))];
+// Filter posts by category
+const filteredPosts = posts.filter(post =>
+  post.data.category?.toLowerCase() === category.toLowerCase()
+);
 
+// Get all available categories for navigation
+const availableCategories = [...new Set(posts.map(post => post.data.category).filter(Boolean))];
 const categories = availableCategories.length > 0
   ? availableCategories.sort()
   : ["health", "psychology", "history", "space", "quotes", "love"];
@@ -27,34 +41,23 @@ const categoryIcons = {
   love: "❤️"
 };
 
-const url = new URL(Astro.request.url);
-const searchQuery = url.searchParams.get('q')?.toLowerCase() || '';
-const categoryQuery = url.searchParams.get('category')?.toLowerCase() || '';
-
-let filteredPosts = posts;
-
-// Filter by category first
-if (categoryQuery) {
-  filteredPosts = filteredPosts.filter(post => {
-    const postCategory = post.data.category?.toLowerCase();
-    return postCategory === categoryQuery;
-  });
-}
-
-// Then filter by search query if exists
-if (searchQuery) {
-  filteredPosts = filteredPosts.filter(post =>
-    post.data.title.toLowerCase().includes(searchQuery) ||
-    post.data.description.toLowerCase().includes(searchQuery) ||
-    (post.body && post.body.toLowerCase().includes(searchQuery))
-  );
-}
+const categoryTitles = {
+  health: "Sağlık",
+  psychology: "Psikoloji",
+  history: "Tarih",
+  space: "Uzay",
+  quotes: "Alıntılar",
+  love: "Aşk"
+};
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<BaseHead
+			title={`${categoryTitles[category] || category.charAt(0).toUpperCase() + category.slice(1)} - ${SITE_TITLE}`}
+			description={`${categoryTitles[category] || category} kategorisindeki en son yazılar`}
+		/>
 		<style>
 			body {
 				background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -78,112 +81,88 @@ if (searchQuery) {
 			.page-header {
 				text-align: center;
 				margin-bottom: 3rem;
-				padding: 3rem 2rem;
+				padding: 2rem 0;
 				background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-				border-radius: 2rem;
-				box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-				position: relative;
-				overflow: hidden;
-			}
-
-			.page-header::before {
-				content: '';
-				position: absolute;
-				top: 0;
-				left: -100%;
-				width: 100%;
-				height: 100%;
-				background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-				transition: left 0.8s;
-				pointer-events: none;
-			}
-
-			.page-header:hover::before {
-				left: 100%;
+				border-radius: 1.5rem;
+				box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 			}
 
 			.page-title {
+				font-size: 2.5rem;
+				font-weight: 700;
+				color: #1e293b;
+				margin-bottom: 0.5rem;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 0.75rem;
+			}
+
+			.category-emoji {
 				font-size: 3rem;
-				font-weight: 900;
-				background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
-				-webkit-background-clip: text;
-				-webkit-text-fill-color: transparent;
-				background-clip: text;
-				margin-bottom: 1rem;
-				letter-spacing: -2px;
-				position: relative;
-				z-index: 1;
 			}
 
 			.page-subtitle {
-				font-size: 1.2rem;
+				font-size: 1.1rem;
 				color: #64748b;
-				margin: 0;
-				font-weight: 500;
-				position: relative;
-				z-index: 1;
+				margin-bottom: 2rem;
+			}
+
+			.breadcrumb {
+				font-size: 0.9rem;
+				color: #64748b;
+				margin-bottom: 1.5rem;
+			}
+
+			.breadcrumb a {
+				color: #2563eb;
+				text-decoration: none;
+			}
+
+			.breadcrumb a:hover {
+				text-decoration: underline;
 			}
 
 			.mv-categories {
 				display: flex;
 				justify-content: center;
-				gap: 1rem;
+				gap: 0.75rem;
 				margin-bottom: 3rem;
 				flex-wrap: wrap;
-				padding: 1.5rem;
-				background: rgba(255, 255, 255, 0.8);
-				border-radius: 2rem;
-				backdrop-filter: blur(10px);
-				box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 			}
 
 			.mv-category-tab {
-				background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
-				color: #2563eb;
+				background: rgba(255, 255, 255, 0.9);
+				color: #475569;
 				border-radius: 2rem;
-				padding: 1rem 1.8rem;
-				font-weight: 700;
-				font-size: 1rem;
-				border: 2px solid rgba(37, 99, 235, 0.1);
+				padding: 0.75rem 1.5rem;
+				font-weight: 600;
+				font-size: 0.95rem;
+				border: 2px solid rgba(226, 232, 240, 0.8);
 				transition: all 0.3s ease;
 				text-transform: capitalize;
 				text-decoration: none;
+				backdrop-filter: blur(10px);
 				box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-				position: relative;
-				overflow: hidden;
 			}
 
-			.mv-category-tab::before {
-				content: '';
-				position: absolute;
-				top: 0;
-				left: -100%;
-				width: 100%;
-				height: 100%;
-				background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
-				transition: left 0.3s;
-				z-index: -1;
-			}
-
-			.mv-category-tab:hover::before {
-				left: 0;
-			}
-
-			.mv-category-tab:hover,
-			.mv-category-tab.active {
+			.mv-category-tab:hover {
+				background: #2563eb;
 				color: #fff;
-				transform: translateY(-3px);
-				box-shadow: 0 8px 25px rgba(37, 99, 235, 0.25);
-				border-color: transparent;
+				border-color: #2563eb;
+				transform: translateY(-2px);
+				box-shadow: 0 4px 20px rgba(37, 99, 235, 0.2);
 			}
 
-			.mv-category-tab.active::before {
-				left: 0;
+			.mv-category-tab.active {
+				background: #2563eb;
+				color: #fff;
+				border-color: #2563eb;
+				box-shadow: 0 4px 20px rgba(37, 99, 235, 0.3);
 			}
 
 			.category-icon {
-				margin-right: 0.75rem;
-				font-size: 1.2rem;
+				margin-right: 0.5rem;
 			}
 
 			.mv-grid {
@@ -207,8 +186,8 @@ if (searchQuery) {
 			}
 
 			.mv-card:hover {
-				transform: translateY(-10px);
-				box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+				transform: translateY(-8px);
+				box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 			}
 
 			.mv-card::before {
@@ -237,11 +216,6 @@ if (searchQuery) {
 				width: 100%;
 				height: 200px;
 				object-fit: cover;
-				transition: transform 0.3s ease;
-			}
-
-			.mv-card:hover .mv-card-img {
-				transform: scale(1.05);
 			}
 
 			.mv-card-content {
@@ -276,18 +250,7 @@ if (searchQuery) {
 				color: #94a3b8;
 				display: flex;
 				align-items: center;
-				justify-content: space-between;
 				gap: 0.5rem;
-			}
-
-			.category-badge {
-				background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
-				color: #1e40af;
-				padding: 0.25rem 0.75rem;
-				border-radius: 1rem;
-				font-weight: 600;
-				font-size: 0.8rem;
-				text-transform: uppercase;
 			}
 
 			.no-posts {
@@ -326,22 +289,21 @@ if (searchQuery) {
 
 			@media (max-width: 768px) {
 				.page-title {
-					font-size: 2.2rem;
-				}
-
-				.mv-categories {
-					gap: 0.75rem;
-					padding: 1rem;
-				}
-
-				.mv-category-tab {
-					padding: 0.75rem 1.25rem;
-					font-size: 0.9rem;
+					font-size: 2rem;
 				}
 
 				.mv-grid {
 					grid-template-columns: 1fr;
 					gap: 1.5rem;
+				}
+
+				.mv-categories {
+					gap: 0.5rem;
+				}
+
+				.mv-category-tab {
+					padding: 0.5rem 1rem;
+					font-size: 0.9rem;
 				}
 			}
 		</style>
@@ -349,23 +311,33 @@ if (searchQuery) {
 	<body>
 		<div class="content-wrapper">
 			<Header />
+
 			<div class="container">
+				<div class="breadcrumb">
+					<a href="/">Ana Sayfa</a> > <a href="/blog">Blog</a> > {categoryTitles[category] || category.charAt(0).toUpperCase() + category.slice(1)}
+				</div>
+
 				<div class="page-header">
-					<h1 class="page-title">Blog Yazıları 📚</h1>
-					<p class="page-subtitle">Tüm kategorilerden {posts.length} yazı</p>
+					<h1 class="page-title">
+						<span class="category-emoji">{categoryIcons[category] || "📝"}</span>
+						{categoryTitles[category] || category.charAt(0).toUpperCase() + category.slice(1)}
+					</h1>
+					<p class="page-subtitle">
+						Bu kategoride {filteredPosts.length} yazı bulunuyor
+					</p>
 				</div>
 
 				<nav class="mv-categories">
-					<a href="/blog" class={`mv-category-tab ${!categoryQuery ? 'active' : ''}`}>
+					<a href="/blog" class="mv-category-tab">
 						Tüm Yazılar
 					</a>
 					{categories.map(cat => (
 						<a
 							href={`/blog/${cat}`}
-							class={`mv-category-tab ${categoryQuery === cat.toLowerCase() ? 'active' : ''}`}
+							class={`mv-category-tab ${category === cat.toLowerCase() ? 'active' : ''}`}
 						>
 							<span class="category-icon">{categoryIcons[cat]}</span>
-							{cat.charAt(0).toUpperCase() + cat.slice(1)}
+							{categoryTitles[cat] || cat.charAt(0).toUpperCase() + cat.slice(1)}
 						</a>
 					))}
 				</nav>
@@ -373,25 +345,36 @@ if (searchQuery) {
 				<main>
 					{filteredPosts.length === 0 ? (
 						<div class="no-posts">
-							<h3>İçerik bulunamadı</h3>
-							<p>Bu kategoride henüz içerik bulunmuyor.</p>
+							<h3>Henüz içerik yok</h3>
+							<p>Bu kategoride henüz yazı bulunmuyor.</p>
 							<a href="/blog">Tüm yazılara dön</a>
 						</div>
-					) : (
-						<ul class="mv-grid">
+					) : (						<ul class="mv-grid">
 							{filteredPosts.map(post => (
 								<li class="mv-card">
-									<a href={post.id ? `/blog/${post.id}` : '#'}>
-										{post.data.image
-											? <img src={post.data.image} alt={post.data.title} class="mv-card-img" loading="lazy" onError={(e) => { e.target.src = '/assets/blog-placeholder-1.svg'; }} />
-											: <img src="/assets/blog-placeholder-1.svg" alt="placeholder" class="mv-card-img" loading="lazy" />
-										}
+									<a href={post.id ? `/blog/${post.id}` : '#'}>										{post.data.image ? (
+											<img
+												src={post.data.image}
+												alt={post.data.title}
+												class="mv-card-img"
+												loading="lazy"
+												onError={(e) => { e.target.src = '/assets/blog-placeholder-1.svg'; }}
+											/>
+										) : (
+											<img
+												src="/assets/blog-placeholder-1.svg"
+												alt="placeholder"
+												class="mv-card-img"
+												loading="lazy"
+											/>
+										)}
 										<div class="mv-card-content">
 											<div class="mv-card-title">{post.data.title}</div>
-											<div class="mv-card-summary">{post.data.description || post.body.slice(0, 120) + '...'}</div>
+											<div class="mv-card-summary">
+												{post.data.description || post.body?.slice(0, 150) + '...'}
+											</div>
 											<div class="mv-card-meta">
-												<span class="category-badge">{post.data.category || 'Genel'}</span>
-												<span><FormattedDate date={post.data.pubDate} /></span>
+												<FormattedDate date={post.data.pubDate} />
 											</div>
 										</div>
 									</a>
@@ -401,7 +384,7 @@ if (searchQuery) {
 					)}
 				</main>
 			</div>
-			<Footer />
-		</div>
+
+			<Footer />		</div>
 	</body>
 </html>

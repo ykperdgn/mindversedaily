@@ -4,7 +4,7 @@ description: "Romantik jestler, aşk ve sevginin ifade edilmesinde yüzyıllarca
 pubDate: 2025-07-01
 category: "love"
 tags: []
-image: "https://unsplash.com/photo/1586435664088-7a57a1c4ee2e (Bir çift el ele tutuşuyor, arkada şehrin manzarası ve çiçek buketi var)"
+image: "https://images.pexels.com/photos/32802463/pexels-photo-32802463.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
 ---
 
 Here is the translation of the article into Turkish:

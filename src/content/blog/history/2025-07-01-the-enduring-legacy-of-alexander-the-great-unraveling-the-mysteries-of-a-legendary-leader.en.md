@@ -4,7 +4,7 @@ description: "Alexander the Great, one of the most iconic leaders in history, le
 pubDate: 2025-07-01
 category: "history"
 tags: []
-image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Alexander_the_Great_mosaic.jpg/1280px-Alexander_the_Great_mosaic.jpg (Mosaic of Alexander the Great from the ancient city of Pergamon)"
+image: "https://images.pexels.com/photos/31741556/pexels-photo-31741556.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
 ---
 
 Alexander the Great, the ancient Greek king who conquered a vast portion of the known world, has long been the subject of fascination and intrigue. For centuries, historians and scholars have attempted to unravel the mysteries surrounding this enigmatic leader, and recent developments have only added to the allure of his legend. From the discovery of his tomb to groundbreaking research on his military tactics, the story of Alexander the Great continues to captivate and inspire.

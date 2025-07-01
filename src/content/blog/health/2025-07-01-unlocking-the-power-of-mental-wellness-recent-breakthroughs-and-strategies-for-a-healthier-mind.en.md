@@ -4,7 +4,7 @@ description: "Mental wellness is no longer a taboo topic, and recent scientific 
 pubDate: 2025-07-01
 category: "health"
 tags: []
-image: "https://unsplash.com/photo/-hGpt6uW4KQ"
+image: "https://images.pexels.com/photos/5384564/pexels-photo-5384564.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
 ---
 
 Mental wellness has become a buzzword in recent years, and for good reason. With the rising prevalence of anxiety, depression, and other mental health disorders, it's clear that our collective mental health is in crisis. However, recent scientific findings have provided a glimmer of hope, shedding light on the importance of prioritizing our mental wellness and offering practical strategies for cultivating a healthier mind.
