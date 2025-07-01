@@ -8,7 +8,23 @@ import { getCollection } from 'astro:content';
 const posts = (await getCollection('blog')).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
-const categories = ['science', 'health', 'business', 'world'];
+const categories = [
+  "health",
+  "psychology",
+  "history",
+  "space",
+  "quotes",
+  "love"
+];
+
+const categoryIcons = {
+  health: "🧬",
+  psychology: "🧠",
+  history: "📜",
+  space: "🚀",
+  quotes: "💬",
+  love: "❤️"
+};
 ---
 
 <!doctype html>
@@ -25,7 +41,9 @@ const categories = ['science', 'health', 'business', 'world'];
       </section>
       <nav class="mv-categories">
         {categories.map(cat => (
-          <a href={`/blog?category=${cat}`} class="mv-category-tab">{cat.charAt(0).toUpperCase() + cat.slice(1)}</a>
+          <a href={`/blog?category=${cat}`} class="mv-category-tab">
+            <span class="category-icon">{categoryIcons[cat]}</span>{cat.charAt(0).toUpperCase() + cat.slice(1)}
+          </a>
         ))}
       </nav>
       <section class="mv-grid-section">
@@ -93,6 +111,9 @@ const categories = ['science', 'health', 'business', 'world'];
 .mv-category-tab:hover {
   background: #2563eb;
   color: #fff;
+}
+.category-icon {
+  margin-right: 0.5rem;
 }
 .mv-section-title {
   font-size: 1.3rem;

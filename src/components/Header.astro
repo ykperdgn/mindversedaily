@@ -3,21 +3,35 @@ import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../consts';
 ---
 
+const categories = [
+  "health",
+  "psychology",
+  "history",
+  "space",
+  "quotes",
+  "love"
+];
+
+const categoryIcons = {
+  health: "🧬",
+  psychology: "🧠",
+  history: "📜",
+  space: "🚀",
+  quotes: "💬",
+  love: "❤️"
+};
+
 <header class="sticky top-0 z-40 bg-white/95 backdrop-blur shadow-sm border-b border-blue-100">
   <div class="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between py-4 px-4 gap-4">
     <a href="/" class="flex items-center gap-2 font-extrabold text-2xl tracking-tight text-blue-700">
       <img src="/favicon.svg" alt="MindVerse" class="h-10 w-10 rounded-full border-2 border-blue-200 shadow bg-white" />
     </a>
     <nav class="mv-categories">
-      <a href="/" class="mv-category-tab active"><span class="category-icon">🏠</span>Home</a>
-      <a href="/blog?category=science" class="mv-category-tab"><span class="category-icon">🔬</span>Science</a>
-      <a href="/blog?category=health" class="mv-category-tab"><span class="category-icon">🧬</span>Health</a>
-      <a href="/blog?category=business" class="mv-category-tab"><span class="category-icon">💼</span>Business</a>
-      <a href="/blog?category=world" class="mv-category-tab"><span class="category-icon">🌍</span>World</a>
-      <a href="/about" class="mv-category-tab"><span class="category-icon">ℹ️</span>About</a>
-      <form action="/blog" method="get" class="mv-search-form" style="margin-left:1.5rem;">
-        <input type="text" name="q" placeholder="Ara..." class="mv-search-input" style="padding:0.4em 1em;border-radius:1em;border:1px solid #e0e7ef;outline:none;" />
-      </form>
+      {categories.map(cat => (
+        <a href={`/blog?category=${cat}`} class="mv-category-tab">
+          <span class="category-icon">{categoryIcons[cat]}</span>{cat.charAt(0).toUpperCase() + cat.slice(1)}
+        </a>
+      ))}
     </nav>
   </div>
 </header>
