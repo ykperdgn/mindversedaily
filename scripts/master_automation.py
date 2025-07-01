@@ -165,28 +165,63 @@ class MasterAutomationSystem:
             self.is_running = False
 
     def deploy_site(self):
-        """Site deployment"""
+        """Site deployment - Vercel production auto-deploy"""
         try:
-            self.logger.info("🚀 Starting site deployment")            # Git operations
-            commands = [
-                ("git add .", "Adding files to git"),
-                (f'git commit -m "Auto content update - {datetime.now().strftime("%Y-%m-%d %H:%M")}"', "Committing changes"),
-                ("git push origin master", "Pushing to repository")
-            ]
+            self.logger.info("🚀 Starting Vercel production deployment")
 
-            for command, description in commands:
-                success, output = self.run_command(command, description)
-                if not success and "nothing to commit" not in output.lower():
-                    self.logger.error(f"❌ Deployment step failed: {description}")
-                    return False
+            # Use the new Vercel auto deployer
+            from vercel_auto_deploy import VercelAutoDeployer
 
-            self.last_deploy_time = datetime.now()
-            self.logger.info("✅ Site deployment completed")
-            return True
+            deployer = VercelAutoDeployer()
+            success = deployer.deploy()
+
+            if success:
+                self.last_deploy_time = datetime.now()
+                self.logger.info("✅ Vercel production deployment completed successfully")
+
+                # Update monitoring data
+                self.update_monitoring_data({
+                    'last_deployment': self.last_deploy_time.isoformat(),
+                    'deployment_status': 'success',
+                    'deployment_method': 'vercel_auto_deploy'
+                })
+
+                return True
+            else:
+                self.logger.error("❌ Vercel production deployment failed")
+                return False
 
         except Exception as e:
             self.logger.error(f"❌ Deployment error: {e}")
             return False
+
+    def update_monitoring_data(self, data):
+        """Monitoring verilerini güncelle"""
+        try:
+            monitoring_dir = Path("scripts/monitoring")
+            monitoring_dir.mkdir(exist_ok=True)
+
+            latest_file = monitoring_dir / "latest_status.json"
+
+            # Load existing data or create new
+            if latest_file.exists():
+                with open(latest_file, 'r', encoding='utf-8') as f:
+                    existing_data = json.load(f)
+            else:
+                existing_data = {}
+
+            # Update with new data
+            existing_data.update(data)
+            existing_data['last_update'] = datetime.now().isoformat()
+
+            # Save updated data
+            with open(latest_file, 'w', encoding='utf-8') as f:
+                json.dump(existing_data, f, indent=2, ensure_ascii=False)
+
+            self.logger.debug(f"📊 Monitoring data updated")
+
+        except Exception as e:
+            self.logger.error(f"❌ Failed to update monitoring data: {e}")
 
     def system_health_check(self):
         """Sistem sağlık kontrolü"""

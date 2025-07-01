@@ -74,28 +74,36 @@ class AutoDeploymentSystem:
                 self.ollama_generator.create_article(category, "tr")
                 time.sleep(15)
 
-            print("✅ Ollama content creation completed")
-
-    def build_and_deploy(self):
+            print("✅ Ollama content creation completed")    def build_and_deploy(self):
         """Build ve deploy işlemi"""
         print("\n🏗️ Starting build and deployment process")
+
+        # Git status check
+        result = subprocess.run("git status --porcelain", shell=True, capture_output=True, text=True)
+        if not result.stdout.strip():
+            print("⚠️ No changes detected, skipping deployment")
+            return True
+
+        # Build first to ensure everything is working
+        if not self.run_command("npm run build", "Building project"):
+            return False
 
         # Git add
         if not self.run_command("git add .", "Adding new content to git"):
             return False
 
         # Git commit
-        commit_msg = f"Auto-generated content - {datetime.now().strftime('%Y-%m-%d %H:%M')}"
+        commit_msg = f"Auto-generated content - {datetime.now().strftime('%Y-%m-%d %H:%M')} [skip ci]"
         if not self.run_command(f'git commit -m "{commit_msg}"', "Committing changes"):
             print("⚠️ No changes to commit")
+            return True
 
-        # Build
-        if not self.run_command("npm run build", "Building project"):
-            return False        # Git push (Vercel otomatik deploy yapacak)
-        if not self.run_command("git push origin master", "Pushing to repository"):
+        # Git push (Vercel otomatik production deploy yapacak)
+        if not self.run_command("git push origin master", "Pushing to repository (triggers auto-deploy)"):
             return False
 
-        print("🚀 Deployment initiated successfully!")
+        print("🚀 Production deployment initiated automatically!")
+        print("📱 Site will be live at: https://mindverse-new.vercel.app")
         return True
 
     def daily_automation(self):

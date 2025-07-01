@@ -1,0 +1,827 @@
+{
+  "scanned_at": "2025-07-01T22:32:41.869364",
+  "total_files": 58,
+  "analyzed_files": 58,
+  "quality_scores": [
+    50,
+    80,
+    80,
+    60,
+    80,
+    70,
+    70,
+    80,
+    50,
+    70,
+    80,
+    60,
+    80,
+    70,
+    70,
+    70,
+    80,
+    70,
+    70,
+    80,
+    70,
+    60,
+    80,
+    70,
+    80,
+    70,
+    70,
+    60,
+    80,
+    60,
+    70,
+    80,
+    80,
+    70,
+    80,
+    80,
+    70,
+    80,
+    60,
+    60,
+    70,
+    70,
+    60,
+    50,
+    70,
+    80,
+    70,
+    70,
+    60,
+    70,
+    60,
+    80,
+    60,
+    70,
+    70,
+    80,
+    70,
+    60
+  ],
+  "files": [
+    {
+      "file": "src\\content\\blog\\health\\2025-07-01--unlocking-the-secrets-of-healthy-aging-recent-breakthroughs-and-strategies-for-a-vital-long-life.en.md",
+      "quality_score": 50,
+      "frontmatter_issues": [
+        "Missing required field: heroImage",
+        "Description too long: 474 > 200",
+        "Contains forbidden word: test"
+      ],
+      "content_issues": [
+        "No proper headings found",
+        "Found 2 very long paragraphs"
+      ],
+      "word_count": 722,
+      "analyzed_at": "2025-07-01T22:32:41.870364"
+    },
+    {
+      "file": "src\\content\\blog\\health\\2025-07-01-baklk-sistemimizin-srlarn-aa-karma-son-dnemdeki-yenilikler-ve-keifler.tr.md",
+      "quality_score": 80,
+      "frontmatter_issues": [
+        "Missing required field: heroImage"
+      ],
+      "content_issues": [
+        "No proper headings found"
+      ],
+      "word_count": 551,
+      "analyzed_at": "2025-07-01T22:32:41.870364"
+    },
+    {
+      "file": "src\\content\\blog\\health\\2025-07-01-breaking-down-barriers-the-revolutionary-shift-in-mental-wellness.en.md",
+      "quality_score": 80,
+      "frontmatter_issues": [
+        "Missing required field: heroImage"
+      ],
+      "content_issues": [
+        "No proper headings found"
+      ],
+      "word_count": 816,
+      "analyzed_at": "2025-07-01T22:32:41.871363"
+    },
+    {
+      "file": "src\\content\\blog\\health\\2025-07-01-breaking-the-grip-of-stress-unlocking-the-secrets-to-a-healthier-you.en.md",
+      "quality_score": 60,
+      "frontmatter_issues": [
+        "Missing required field: heroImage",
+        "Description too long: 462 > 200",
+        "Contains forbidden word: test"
+      ],
+      "content_issues": [
+        "No proper headings found"
+      ],
+      "word_count": 788,
+      "analyzed_at": "2025-07-01T22:32:41.871363"
+    },
+    {
+      "file": "src\\content\\blog\\health\\2025-07-01-engelleri-amak-mental-saln-devrimsel-deiimi.tr.md",
+      "quality_score": 80,
+      "frontmatter_issues": [
+        "Missing required field: heroImage"
+      ],
+      "content_issues": [
+        "No proper headings found"
+      ],
+      "word_count": 586,
+      "analyzed_at": "2025-07-01T22:32:41.871363"
+    },
+    {
+      "file": "src\\content\\blog\\health\\2025-07-01-salkl-yalanmann-srlarn-aklama-uzun-ve-salkl-bir-yaama-ilikin-son-gelimeler-ve-stratejiler.tr.md",
+      "quality_score": 70,
+      "frontmatter_issues": [
+        "Missing required field: heroImage",
+        "Title too long: 105 > 100"
+      ],
+      "content_issues": [
+        "No proper headings found"
+      ],
+      "word_count": 505,
+      "analyzed_at": "2025-07-01T22:32:41.883363"
+    },
+    {
+      "file": "src\\content\\blog\\health\\2025-07-01-stresin-penesinden-kurtulmak-daha-salkl-bir-siz-iin-srlarn-kilidini-amak.tr.md",
+      "quality_score": 70,
+      "frontmatter_issues": [
+        "Missing required field: heroImage",
+        "Description too long: 483 > 200"
+      ],
+      "content_issues": [
+        "No proper headings found"
+      ],
+      "word_count": 668,
+      "analyzed_at": "2025-07-01T22:32:41.883363"
+    },
+    {
+      "file": "src\\content\\blog\\health\\2025-07-01-unlocking-the-power-of-mental-wellness-recent-breakthroughs-and-strategies-for-a-healthier-mind.en.md",
+      "quality_score": 80,
+      "frontmatter_issues": [
+        "Missing required field: heroImage"
+      ],
+      "content_issues": [
+        "No proper headings found"
+      ],
+      "word_count": 811,
+      "analyzed_at": "2025-07-01T22:32:41.883363"
+    },
+    {
+      "file": "src\\content\\blog\\health\\2025-07-01-unlocking-the-secrets-of-healthy-aging-recent-breakthroughs-and-scientific-discoveries.en.md",
+      "quality_score": 50,
+      "frontmatter_issues": [
+        "Missing required field: heroImage",
+        "Description too long: 452 > 200",
+        "Contains forbidden word: test"
+      ],
+      "content_issues": [
+        "No proper headings found",
+        "Found 1 very long paragraphs"
+      ],
+      "word_count": 761,
+      "analyzed_at": "2025-07-01T22:32:41.884868"
+    },
+    {
+      "file": "src\\content\\blog\\health\\2025-07-01-unlocking-the-secrets-of-healthy-aging-recent-breakthroughs-and-strategies-for-a-longer-healthier-life.en.md",
+      "quality_score": 70,
+      "frontmatter_issues": [
+        "Missing required field: heroImage",
+        "Title too long: 103 > 100"
+      ],
+      "content_issues": [
+        "No proper headings found"
+      ],
+      "word_count": 684,
+      "analyzed_at": "2025-07-01T22:32:41.884868"
+    },
+    {
+      "file": "src\\content\\blog\\health\\2025-07-01-unlocking-the-secrets-of-the-immune-system-recent-breakthroughs-and-discoveries.en.md",
+      "quality_score": 80,
+      "frontmatter_issues": [
+        "Missing required field: heroImage"
+      ],
+      "content_issues": [
+        "No proper headings found"
+      ],
+      "word_count": 809,
+      "analyzed_at": "2025-07-01T22:32:41.884868"
+    },
+    {
+      "file": "src\\content\\blog\\health\\2025-07-01-untitled.tr.md",
+      "quality_score": 60,
+      "frontmatter_issues": [
+        "Missing required field: heroImage",
+        "Description too long: 238 > 200"
+      ],
+      "content_issues": [
+        "No proper headings found",
+        "Found 1 very long paragraphs"
+      ],
+      "word_count": 627,
+      "analyzed_at": "2025-07-01T22:32:41.884868"
+    },
+    {
+      "file": "src\\content\\blog\\health\\2025-07-01-zihinsel-iyi-olgunun-gc-son-gelimeler-ve-daha-salkl-bir-zihin-iin-stratejiler.tr.md",
+      "quality_score": 80,
+      "frontmatter_issues": [
+        "Missing required field: heroImage"
+      ],
+      "content_issues": [
+        "No proper headings found"
+      ],
+      "word_count": 663,
+      "analyzed_at": "2025-07-01T22:32:41.885873"
+    },
+    {
+      "file": "src\\content\\blog\\health\\2025-07-01-zihinsel-saln-gc-son-gelimeler-ve-daha-salkl-bir-zihin-iin-stratejiler.tr.md",
+      "quality_score": 70,
+      "frontmatter_issues": [
+        "Missing required field: heroImage",
+        "Description too long: 386 > 200"
+      ],
+      "content_issues": [
+        "No proper headings found"
+      ],
+      "word_count": 552,
+      "analyzed_at": "2025-07-01T22:32:41.885873"
+    },
+    {
+      "file": "src\\content\\blog\\history\\2025-07-01-byk-iskenderin-sren-miras-efsanevi-liderin-gizemlerini-zme.tr.md",
+      "quality_score": 70,
+      "frontmatter_issues": [
+        "Missing required field: heroImage",
+        "Description too long: 308 > 200"
+      ],
+      "content_issues": [
+        "No proper headings found"
+      ],
+      "word_count": 550,
+      "analyzed_at": "2025-07-01T22:32:41.885873"
+    },
+    {
+      "file": "src\\content\\blog\\history\\2025-07-01-devrimlerin-evrimi-gemii-aklamak-bugn-anlamak-ve-gelecei-ekillendirmek.tr.md",
+      "quality_score": 70,
+      "frontmatter_issues": [
+        "Missing required field: heroImage",
+        "Description too long: 314 > 200"
+      ],
+      "content_issues": [
+        "No proper headings found"
+      ],
+      "word_count": 545,
+      "analyzed_at": "2025-07-01T22:32:41.886873"
+    },
+    {
+      "file": "src\\content\\blog\\history\\2025-07-01-kltrel-mirasmzn-srlarn-aa-karma-son-keifler-ve-bulgular.tr.md",
+      "quality_score": 80,
+      "frontmatter_issues": [
+        "Missing required field: heroImage"
+      ],
+      "content_issues": [
+        "No proper headings found"
+      ],
+      "word_count": 532,
+      "analyzed_at": "2025-07-01T22:32:41.886873"
+    },
+    {
+      "file": "src\\content\\blog\\history\\2025-07-01-the-cycle-of-revolutions-unraveling-the-past-understanding-the-present-and-shaping-the-future.en.md",
+      "quality_score": 70,
+      "frontmatter_issues": [
+        "Missing required field: heroImage",
+        "Description too long: 399 > 200"
+      ],
+      "content_issues": [
+        "No proper headings found"
+      ],
+      "word_count": 796,
+      "analyzed_at": "2025-07-01T22:32:41.886873"
+    },
+    {
+      "file": "src\\content\\blog\\history\\2025-07-01-the-enduring-legacy-of-alexander-the-great-unraveling-the-mysteries-of-a-legendary-leader.en.md",
+      "quality_score": 70,
+      "frontmatter_issues": [
+        "Missing required field: heroImage",
+        "Description too long: 379 > 200"
+      ],
+      "content_issues": [
+        "No proper headings found"
+      ],
+      "word_count": 811,
+      "analyzed_at": "2025-07-01T22:32:41.886873"
+    },
+    {
+      "file": "src\\content\\blog\\history\\2025-07-01-unraveling-the-fabric-of-time-a-journey-through-historical-inventions-and-recent-breakthroughs.en.md",
+      "quality_score": 80,
+      "frontmatter_issues": [
+        "Missing required field: heroImage"
+      ],
+      "content_issues": [
+        "No proper headings found"
+      ],
+      "word_count": 721,
+      "analyzed_at": "2025-07-01T22:32:41.887873"
+    },
+    {
+      "file": "src\\content\\blog\\history\\2025-07-01-unveiling-the-secrets-of-our-cultural-heritage-recent-discoveries-and-findings.en.md",
+      "quality_score": 70,
+      "frontmatter_issues": [
+        "Missing required field: heroImage"
+      ],
+      "content_issues": [
+        "No proper headings found",
+        "Found 3 very long paragraphs"
+      ],
+      "word_count": 751,
+      "analyzed_at": "2025-07-01T22:32:41.887873"
+    },
+    {
+      "file": "src\\content\\blog\\history\\2025-07-01-unveiling-the-secrets-of-the-past-recent-discoveries-in-cultural-heritage.en.md",
+      "quality_score": 60,
+      "frontmatter_issues": [
+        "Missing required field: heroImage",
+        "Description too long: 495 > 200",
+        "Contains forbidden word: test"
+      ],
+      "content_issues": [
+        "No proper headings found"
+      ],
+      "word_count": 646,
+      "analyzed_at": "2025-07-01T22:32:41.887873"
+    },
+    {
+      "file": "src\\content\\blog\\history\\2025-07-01-zamann-dokusunu-zmleme-tarih-icatlar-ve-yeni-krlanglarn-yolculuu.tr.md",
+      "quality_score": 80,
+      "frontmatter_issues": [
+        "Missing required field: heroImage"
+      ],
+      "content_issues": [
+        "No proper headings found"
+      ],
+      "word_count": 463,
+      "analyzed_at": "2025-07-01T22:32:41.887873"
+    },
+    {
+      "file": "src\\content\\blog\\love\\2025-07-01-ak-arptcl-bilimi-modern-adaki-romantik-jestlerin-gc.tr.md",
+      "quality_score": 70,
+      "frontmatter_issues": [
+        "Missing required field: heroImage",
+        "Description too long: 275 > 200"
+      ],
+      "content_issues": [
+        "No proper headings found"
+      ],
+      "word_count": 408,
+      "analyzed_at": "2025-07-01T22:32:41.888873"
+    },
+    {
+      "file": "src\\content\\blog\\love\\2025-07-01-ak-dili-zmlyoruz-be-ak-dili-bilim-arkasndaki-srlar-zyoruz.tr.md",
+      "quality_score": 80,
+      "frontmatter_issues": [
+        "Missing required field: heroImage"
+      ],
+      "content_issues": [
+        "No proper headings found"
+      ],
+      "word_count": 524,
+      "analyzed_at": "2025-07-01T22:32:41.888873"
+    },
+    {
+      "file": "src\\content\\blog\\love\\2025-07-01-akn-evrimi-5-ak-dili-bilim-arkasnda.tr.md",
+      "quality_score": 70,
+      "frontmatter_issues": [
+        "Missing required field: heroImage",
+        "Description too long: 323 > 200"
+      ],
+      "content_issues": [
+        "No proper headings found"
+      ],
+      "word_count": 592,
+      "analyzed_at": "2025-07-01T22:32:41.888873"
+    },
+    {
+      "file": "src\\content\\blog\\love\\2025-07-01-akn-kodunu-zme-5-ak-dili-bilim-arkasndaki.tr.md",
+      "quality_score": 70,
+      "frontmatter_issues": [
+        "Missing required field: heroImage",
+        "Description too long: 406 > 200"
+      ],
+      "content_issues": [
+        "No proper headings found"
+      ],
+      "word_count": 644,
+      "analyzed_at": "2025-07-01T22:32:41.888873"
+    },
+    {
+      "file": "src\\content\\blog\\love\\2025-07-01-cracking-the-code-of-love-unraveling-the-science-behind-the-5-love-languages.en.md",
+      "quality_score": 60,
+      "frontmatter_issues": [
+        "Missing required field: heroImage",
+        "Description too long: 451 > 200",
+        "Contains forbidden word: test"
+      ],
+      "content_issues": [
+        "No proper headings found"
+      ],
+      "word_count": 851,
+      "analyzed_at": "2025-07-01T22:32:41.889872"
+    },
+    {
+      "file": "src\\content\\blog\\love\\2025-07-01-decoding-the-language-of-love-unraveling-the-science-behind-the-five-love-languages.en.md",
+      "quality_score": 80,
+      "frontmatter_issues": [
+        "Missing required field: heroImage"
+      ],
+      "content_issues": [
+        "No proper headings found"
+      ],
+      "word_count": 679,
+      "analyzed_at": "2025-07-01T22:32:41.889872"
+    },
+    {
+      "file": "src\\content\\blog\\love\\2025-07-01-the-evolution-of-love-unraveling-the-science-behind-the-5-love-languages.en.md",
+      "quality_score": 60,
+      "frontmatter_issues": [
+        "Missing required field: heroImage",
+        "Description too long: 356 > 200",
+        "Contains forbidden word: test"
+      ],
+      "content_issues": [
+        "No proper headings found"
+      ],
+      "word_count": 788,
+      "analyzed_at": "2025-07-01T22:32:41.889872"
+    },
+    {
+      "file": "src\\content\\blog\\love\\2025-07-01-the-science-of-swoon-unraveling-the-power-of-romantic-gestures-in-the-modern-era.en.md",
+      "quality_score": 70,
+      "frontmatter_issues": [
+        "Missing required field: heroImage",
+        "Description too long: 338 > 200"
+      ],
+      "content_issues": [
+        "No proper headings found"
+      ],
+      "word_count": 662,
+      "analyzed_at": "2025-07-01T22:32:41.890874"
+    },
+    {
+      "file": "src\\content\\blog\\psychology\\2025-07-01-cracking-the-code-of-personality-recent-developments-in-understanding-human-behavior.en.md",
+      "quality_score": 80,
+      "frontmatter_issues": [
+        "Missing required field: heroImage"
+      ],
+      "content_issues": [
+        "No proper headings found"
+      ],
+      "word_count": 757,
+      "analyzed_at": "2025-07-01T22:32:41.890874"
+    },
+    {
+      "file": "src\\content\\blog\\psychology\\2025-07-01-cracking-the-code-unlocking-the-secrets-of-early-childhood-development.en.md",
+      "quality_score": 80,
+      "frontmatter_issues": [
+        "Missing required field: heroImage"
+      ],
+      "content_issues": [
+        "No proper headings found"
+      ],
+      "word_count": 847,
+      "analyzed_at": "2025-07-01T22:32:41.890874"
+    },
+    {
+      "file": "src\\content\\blog\\psychology\\2025-07-01-gizli-etkileyenler-bilisel-yanlglarmzn-gerekliimizi-ve-karar-almamz-nasl-ekillendirdii.tr.md",
+      "quality_score": 70,
+      "frontmatter_issues": [
+        "Missing required field: heroImage",
+        "Description too long: 424 > 200"
+      ],
+      "content_issues": [
+        "No proper headings found"
+      ],
+      "word_count": 529,
+      "analyzed_at": "2025-07-01T22:32:41.891890"
+    },
+    {
+      "file": "src\\content\\blog\\psychology\\2025-07-01-here-is-the-translated-article-in-turkish.tr.md",
+      "quality_score": 80,
+      "frontmatter_issues": [
+        "Missing required field: heroImage"
+      ],
+      "content_issues": [
+        "No proper headings found"
+      ],
+      "word_count": 588,
+      "analyzed_at": "2025-07-01T22:32:41.891890"
+    },
+    {
+      "file": "src\\content\\blog\\psychology\\2025-07-01-here-is-the-translation-of-the-article-into-turkish.tr.md",
+      "quality_score": 80,
+      "frontmatter_issues": [
+        "Missing required field: heroImage"
+      ],
+      "content_issues": [
+        "No proper headings found"
+      ],
+      "word_count": 516,
+      "analyzed_at": "2025-07-01T22:32:41.891890"
+    },
+    {
+      "file": "src\\content\\blog\\psychology\\2025-07-01-kandrc-zihin-bilisel-yanlglarn-gizli-glerini-aa-karma.tr.md",
+      "quality_score": 70,
+      "frontmatter_issues": [
+        "Missing required field: heroImage",
+        "Description too long: 415 > 200"
+      ],
+      "content_issues": [
+        "No proper headings found"
+      ],
+      "word_count": 561,
+      "analyzed_at": "2025-07-01T22:32:41.891890"
+    },
+    {
+      "file": "src\\content\\blog\\psychology\\2025-07-01-kodu-zmek-erken-ocukluk-geliiminin-srlarn-aklamak.tr.md",
+      "quality_score": 80,
+      "frontmatter_issues": [
+        "Missing required field: heroImage"
+      ],
+      "content_issues": [
+        "No proper headings found"
+      ],
+      "word_count": 609,
+      "analyzed_at": "2025-07-01T22:32:41.892889"
+    },
+    {
+      "file": "src\\content\\blog\\psychology\\2025-07-01-revolutionizing-mental-health-exploring-the-latest-developments-in-therapy-techniques.en.md",
+      "quality_score": 60,
+      "frontmatter_issues": [
+        "Missing required field: heroImage",
+        "Description too long: 361 > 200",
+        "Contains forbidden word: test"
+      ],
+      "content_issues": [
+        "No proper headings found"
+      ],
+      "word_count": 876,
+      "analyzed_at": "2025-07-01T22:32:41.892889"
+    },
+    {
+      "file": "src\\content\\blog\\psychology\\2025-07-01-revolutionizing-mental-health-exploring-the-latest-therapy-techniques-and-scientific-breakthroughs.en.md",
+      "quality_score": 60,
+      "frontmatter_issues": [
+        "Missing required field: heroImage",
+        "Description too long: 336 > 200",
+        "Contains forbidden word: test"
+      ],
+      "content_issues": [
+        "No proper headings found"
+      ],
+      "word_count": 799,
+      "analyzed_at": "2025-07-01T22:32:41.892889"
+    },
+    {
+      "file": "src\\content\\blog\\psychology\\2025-07-01-revolutionizing-mental-health-the-latest-advancements-in-therapy-techniques.en.md",
+      "quality_score": 70,
+      "frontmatter_issues": [
+        "Missing required field: heroImage",
+        "Contains forbidden word: test"
+      ],
+      "content_issues": [
+        "No proper headings found"
+      ],
+      "word_count": 783,
+      "analyzed_at": "2025-07-01T22:32:41.892889"
+    },
+    {
+      "file": "src\\content\\blog\\psychology\\2025-07-01-ruh-sal-devrimi-terapi-tekniklerinin-son-gelimeleri.tr.md",
+      "quality_score": 70,
+      "frontmatter_issues": [
+        "Missing required field: heroImage",
+        "Description too long: 236 > 200"
+      ],
+      "content_issues": [
+        "No proper headings found"
+      ],
+      "word_count": 380,
+      "analyzed_at": "2025-07-01T22:32:41.892889"
+    },
+    {
+      "file": "src\\content\\blog\\psychology\\2025-07-01-the-deceptive-mind-unveiling-the-hidden-forces-of-cognitive-biases.en.md",
+      "quality_score": 60,
+      "frontmatter_issues": [
+        "Missing required field: heroImage",
+        "Description too long: 436 > 200"
+      ],
+      "content_issues": [
+        "No proper headings found",
+        "Found 3 very long paragraphs"
+      ],
+      "word_count": 751,
+      "analyzed_at": "2025-07-01T22:32:41.893889"
+    },
+    {
+      "file": "src\\content\\blog\\psychology\\2025-07-01-the-hidden-influencers-how-cognitive-biases-shape-our-reality-and-decision-making.en.md",
+      "quality_score": 50,
+      "frontmatter_issues": [
+        "Missing required field: heroImage",
+        "Description too long: 453 > 200",
+        "Contains forbidden word: test"
+      ],
+      "content_issues": [
+        "No proper headings found",
+        "Found 1 very long paragraphs"
+      ],
+      "word_count": 852,
+      "analyzed_at": "2025-07-01T22:32:41.893889"
+    },
+    {
+      "file": "src\\content\\blog\\quotes\\2025-07-01-baar-ve-baarszln-ift-yn-paradoksun-zmlenmesi.tr.md",
+      "quality_score": 70,
+      "frontmatter_issues": [
+        "Missing required field: heroImage",
+        "Description too long: 330 > 200"
+      ],
+      "content_issues": [
+        "No proper headings found"
+      ],
+      "word_count": 533,
+      "analyzed_at": "2025-07-01T22:32:41.893889"
+    },
+    {
+      "file": "src\\content\\blog\\quotes\\2025-07-01-balk-zamansz-bilgelik-tarihin-en-byk-zihinlerinin-srlarn-karma.tr.md",
+      "quality_score": 80,
+      "frontmatter_issues": [
+        "Missing required field: heroImage"
+      ],
+      "content_issues": [
+        "No proper headings found"
+      ],
+      "word_count": 668,
+      "analyzed_at": "2025-07-01T22:32:41.894872"
+    },
+    {
+      "file": "src\\content\\blog\\quotes\\2025-07-01-ilham-verici-alntlarn-gc-motivasyon-ve-baarnn-bilim-arkas.tr.md",
+      "quality_score": 70,
+      "frontmatter_issues": [
+        "Missing required field: heroImage",
+        "Description too long: 440 > 200"
+      ],
+      "content_issues": [
+        "No proper headings found"
+      ],
+      "word_count": 587,
+      "analyzed_at": "2025-07-01T22:32:41.894872"
+    },
+    {
+      "file": "src\\content\\blog\\quotes\\2025-07-01-the-double-edged-sword-of-success-and-failure-unraveling-the-paradox.en.md",
+      "quality_score": 70,
+      "frontmatter_issues": [
+        "Missing required field: heroImage",
+        "Description too long: 324 > 200"
+      ],
+      "content_issues": [
+        "No proper headings found"
+      ],
+      "word_count": 764,
+      "analyzed_at": "2025-07-01T22:32:41.894872"
+    },
+    {
+      "file": "src\\content\\blog\\quotes\\2025-07-01-the-power-of-inspirational-quotes-unlocking-the-science-behind-motivation-and-success.en.md",
+      "quality_score": 60,
+      "frontmatter_issues": [
+        "Missing required field: heroImage",
+        "Description too long: 445 > 200",
+        "Contains forbidden word: test"
+      ],
+      "content_issues": [
+        "No proper headings found"
+      ],
+      "word_count": 715,
+      "analyzed_at": "2025-07-01T22:32:41.894872"
+    },
+    {
+      "file": "src\\content\\blog\\quotes\\2025-07-01-timeless-wisdom-unearthing-the-secrets-of-historys-greatest-minds.en.md",
+      "quality_score": 70,
+      "frontmatter_issues": [
+        "Missing required field: heroImage",
+        "Contains forbidden word: test"
+      ],
+      "content_issues": [
+        "No proper headings found"
+      ],
+      "word_count": 883,
+      "analyzed_at": "2025-07-01T22:32:41.894872"
+    },
+    {
+      "file": "src\\content\\blog\\space\\2025-07-01--unveiling-the-mysteries-of-the-universe-recent-breakthroughs-in-cosmic-phenomena.en.md",
+      "quality_score": 60,
+      "frontmatter_issues": [
+        "Missing required field: heroImage",
+        "Description too long: 542 > 200",
+        "Contains forbidden word: test"
+      ],
+      "content_issues": [
+        "No proper headings found"
+      ],
+      "word_count": 899,
+      "analyzed_at": "2025-07-01T22:32:41.895875"
+    },
+    {
+      "file": "src\\content\\blog\\space\\2025-07-01-beyond-the-cosmos-unveiling-the-frontiers-of-space-exploration.en.md",
+      "quality_score": 80,
+      "frontmatter_issues": [
+        "Missing required field: heroImage"
+      ],
+      "content_issues": [
+        "No proper headings found"
+      ],
+      "word_count": 764,
+      "analyzed_at": "2025-07-01T22:32:41.895875"
+    },
+    {
+      "file": "src\\content\\blog\\space\\2025-07-01-cosmic-windows-unveiling-the-secrets-of-the-universe-with-telescopes.en.md",
+      "quality_score": 60,
+      "frontmatter_issues": [
+        "Missing required field: heroImage",
+        "Description too long: 460 > 200"
+      ],
+      "content_issues": [
+        "No proper headings found",
+        "Found 1 very long paragraphs"
+      ],
+      "word_count": 784,
+      "analyzed_at": "2025-07-01T22:32:41.895875"
+    },
+    {
+      "file": "src\\content\\blog\\space\\2025-07-01-evrenin-srlarini-aga-karma-kozmik-olaylarin-son-gelimeleri.tr.md",
+      "quality_score": 70,
+      "frontmatter_issues": [
+        "Missing required field: heroImage",
+        "Description too long: 231 > 200"
+      ],
+      "content_issues": [
+        "No proper headings found"
+      ],
+      "word_count": 593,
+      "analyzed_at": "2025-07-01T22:32:41.895875"
+    },
+    {
+      "file": "src\\content\\blog\\space\\2025-07-01-kozmik-pencereler-teleskoplarla-evrenin-srlarn-aa-karmak.tr.md",
+      "quality_score": 70,
+      "frontmatter_issues": [
+        "Missing required field: heroImage",
+        "Description too long: 465 > 200"
+      ],
+      "content_issues": [
+        "No proper headings found"
+      ],
+      "word_count": 539,
+      "analyzed_at": "2025-07-01T22:32:41.896892"
+    },
+    {
+      "file": "src\\content\\blog\\space\\2025-07-01-kozmosun-tesinde-uzay-aratrmasnn-snrn-aa-karma.tr.md",
+      "quality_score": 80,
+      "frontmatter_issues": [
+        "Missing required field: heroImage"
+      ],
+      "content_issues": [
+        "No proper headings found"
+      ],
+      "word_count": 569,
+      "analyzed_at": "2025-07-01T22:32:41.896892"
+    },
+    {
+      "file": "src\\content\\blog\\space\\2025-07-01-kzl-gezegen-ykseliyor-marsta-yaamn-gizemlerini-aa-karmak.tr.md",
+      "quality_score": 70,
+      "frontmatter_issues": [
+        "Missing required field: heroImage",
+        "Description too long: 298 > 200"
+      ],
+      "content_issues": [
+        "No proper headings found"
+      ],
+      "word_count": 471,
+      "analyzed_at": "2025-07-01T22:32:41.896892"
+    },
+    {
+      "file": "src\\content\\blog\\space\\2025-07-01-red-planet-rising-unveiling-the-mysteries-of-life-on-mars.en.md",
+      "quality_score": 60,
+      "frontmatter_issues": [
+        "Missing required field: heroImage",
+        "Description too long: 292 > 200",
+        "Contains forbidden word: test"
+      ],
+      "content_issues": [
+        "No proper headings found"
+      ],
+      "word_count": 721,
+      "analyzed_at": "2025-07-01T22:32:41.896892"
+    }
+  ],
+  "summary": {
+    "high_quality": 19,
+    "medium_quality": 36,
+    "low_quality": 3,
+    "errors": 0
+  },
+  "average_quality": 70.17241379310344
+}
