@@ -11,14 +11,12 @@ const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 
-const categories = [
-  "health",
-  "psychology",
-  "history",
-  "space",
-  "quotes",
-  "love"
-];
+// Mevcut içeriklerden kategorileri otomatik çek
+const availableCategories = [...new Set(posts.map(post => post.data.category).filter(Boolean))];
+
+const categories = availableCategories.length > 0
+  ? availableCategories.sort()
+  : ["health", "psychology", "history", "space", "quotes", "love"];
 
 const categoryIcons = {
   health: "🧬",
@@ -34,6 +32,11 @@ const searchQuery = url.searchParams.get('q')?.toLowerCase() || '';
 const categoryQuery = url.searchParams.get('category')?.toLowerCase() || '';
 
 let filteredPosts = posts;
+
+// Debug için kategori ve post sayısını konsola yazdır
+console.log('Available categories:', availableCategories);
+console.log('Total posts:', posts.length);
+console.log('Category query:', categoryQuery);
 
 // Filter by category first
 if (categoryQuery) {
