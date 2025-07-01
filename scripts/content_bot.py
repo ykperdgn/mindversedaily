@@ -11,6 +11,23 @@ def slugify(text):
     text = re.sub(r'[^a-z0-9\-]', '', text)
     return text
 
+def parse_article_fields(article_text):
+    # Başlık, özet, görsel ve içerik ayıkla
+    lines = article_text.splitlines()
+    title = next((l for l in lines if l.lower().startswith("title:") or l.lower().startswith("# ")), None)
+    description = next((l for l in lines if l.lower().startswith("summary:") or l.lower().startswith("description:")), None)
+    image = next((l for l in lines if l.lower().startswith("image:") or l.lower().startswith("img:")), None)
+    # Fallbacks
+    if title:
+        title = title.split(":",1)[1].strip() if ":" in title else title.strip("# ").strip()
+    else:
+        title = "Untitled"
+    description = description.split(":",1)[1].strip() if description and ":" in description else (description or "No summary.")
+    image = image.split(":",1)[1].strip() if image and ":" in image else "https://mindversedaily.com/images/generated/default.jpg"
+    # İçerik kısmı (frontmatter satırlarını çıkar)
+    content = "\n".join([l for l in lines if not any(l.lower().startswith(x) for x in ["title:", "summary:", "description:", "image:", "img:"])]).strip()
+    return title, description, image, content
+
 categories = ["health", "psychology", "history", "space", "quotes", "love"]
 
 subtopics = {
@@ -29,7 +46,7 @@ def create_articles_for_all_categories():
             subtopic = random.choice(subtopics[category])
             prompt_en = (
                 f"Write a long-form article (700+ words) in English in the category '{category}' focusing on '{subtopic}', including recent developments or scientific findings. "
-                "Include a catchy title, a short summary, 3 shareable sentences, and a CTA at the end."
+                "Include a catchy title (start with 'Title:'), a short summary (start with 'Summary:'), and a suggested image URL (start with 'Image:'). Then write the full article."
             )
             english_article = generate_content(prompt_en)
             time.sleep(5)
@@ -41,16 +58,15 @@ def create_articles_for_all_categories():
             turkish_article = generate_content(short_translation_prompt)
             time.sleep(5)
 
-            title_line = english_article.splitlines()[0]
-            title = title_line.strip("# ")
-            slug = slugify(title)
-
-            content_dir = os.path.join(os.path.dirname(__file__), "..", "src", "content", "blog", category)
-            os.makedirs(content_dir, exist_ok=True)
-
-            for lang, content in [("en", english_article), ("tr", turkish_article)]:
+            for lang, article in [("en", english_article), ("tr", turkish_article)]:
+                title, description, image, content = parse_article_fields(article)
+                slug = slugify(title)
+                content_dir = os.path.join(os.path.dirname(__file__), "..", "src", "content", "blog", category)
+                os.makedirs(content_dir, exist_ok=True)
                 filepath = os.path.join(content_dir, f"{date}-{slug}.{lang}.md")
+                frontmatter = f"---\ntitle: \"{title}\"\ndescription: \"{description}\"\npubDate: {date}\ncategory: \"{category}\"\ntags: []\nimage: \"{image}\"\n---\n\n"
                 with open(filepath, "w", encoding="utf-8") as f:
+                    f.write(frontmatter)
                     f.write(content)
             print(f"✅ Successfully created articles for category '{category}' with subtopic '{subtopic}'.")
         except Exception as e:
