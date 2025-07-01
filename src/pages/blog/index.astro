@@ -11,17 +11,45 @@ const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 
-const categories = [...new Set(posts.map(post => post.data.category || 'Genel'))];
+const categories = [
+  "health",
+  "psychology",
+  "history",
+  "space",
+  "quotes",
+  "love"
+];
+
+const categoryIcons = {
+  health: "🧬",
+  psychology: "🧠",
+  history: "📜",
+  space: "🚀",
+  quotes: "💬",
+  love: "❤️"
+};
 
 const url = new URL(Astro.request.url);
 const searchQuery = url.searchParams.get('q')?.toLowerCase() || '';
-const filteredPosts = searchQuery
-  ? posts.filter(post =>
-      post.data.title.toLowerCase().includes(searchQuery) ||
-      post.data.description.toLowerCase().includes(searchQuery) ||
-      (post.body && post.body.toLowerCase().includes(searchQuery))
-    )
-  : posts;
+const categoryQuery = url.searchParams.get('category')?.toLowerCase() || '';
+
+let filteredPosts = posts;
+
+// Filter by category first
+if (categoryQuery) {
+  filteredPosts = filteredPosts.filter(post =>
+    post.data.category?.toLowerCase() === categoryQuery
+  );
+}
+
+// Then filter by search query if exists
+if (searchQuery) {
+  filteredPosts = filteredPosts.filter(post =>
+    post.data.title.toLowerCase().includes(searchQuery) ||
+    post.data.description.toLowerCase().includes(searchQuery) ||
+    (post.body && post.body.toLowerCase().includes(searchQuery))
+  );
+}
 ---
 
 <!doctype html>
@@ -49,6 +77,13 @@ const filteredPosts = searchQuery
 			.mv-category-tab:hover {
 				background: #2563eb;
 				color: #fff;
+				}
+			.mv-category-tab.active {
+				background: #2563eb;
+				color: #fff;
+			}
+			.category-icon {
+				margin-right: 0.5rem;
 			}
 			.mv-grid {
 				display: grid;
@@ -106,11 +141,26 @@ const filteredPosts = searchQuery
 	<body>
 		<Header />
 		<nav class="mv-categories">
+			<a href="/blog" class={`mv-category-tab ${!categoryQuery ? 'active' : ''}`}>
+				All Posts
+			</a>
 			{categories.map(cat => (
-				<a href={`/blog?category=${cat}`} class="mv-category-tab">{cat.charAt(0).toUpperCase() + cat.slice(1)}</a>
+				<a
+					href={`/blog?category=${cat}`}
+					class={`mv-category-tab ${categoryQuery === cat ? 'active' : ''}`}
+				>
+					<span class="category-icon">{categoryIcons[cat]}</span>
+					{cat.charAt(0).toUpperCase() + cat.slice(1)}
+				</a>
 			))}
 		</nav>
 		<main>
+			{filteredPosts.length === 0 && (
+				<div class="no-posts" style="text-align: center; padding: 2rem; color: #64748b;">
+					<p>Bu kategoride henüz içerik bulunmuyor.</p>
+					<a href="/blog" style="color: #2563eb; text-decoration: underline;">Tüm yazılara dön</a>
+				</div>
+			)}
 			<ul class="mv-grid">
 				{filteredPosts.map(post => (
 					<li class="mv-card">
