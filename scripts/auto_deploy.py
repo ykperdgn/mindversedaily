@@ -91,10 +91,8 @@ class AutoDeploymentSystem:
 
         # Build
         if not self.run_command("npm run build", "Building project"):
-            return False
-
-        # Git push (Vercel otomatik deploy yapacak)
-        if not self.run_command("git push origin main", "Pushing to repository"):
+            return False        # Git push (Vercel otomatik deploy yapacak)
+        if not self.run_command("git push origin master", "Pushing to repository"):
             return False
 
         print("🚀 Deployment initiated successfully!")

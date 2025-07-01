@@ -292,10 +292,8 @@ def auto_deploy():
         result = subprocess.run(["npm", "run", "build"], cwd=base_dir, capture_output=True, text=True, shell=True)
         if result.returncode != 0:
             print(f"❌ Build failed: {result.stderr}")
-            return False
-
-        # Git push (Vercel otomatik deploy yapacak)
-        result = subprocess.run(["git", "push", "origin", "main"], cwd=base_dir, capture_output=True, text=True, shell=True)
+            return False        # Git push (Vercel otomatik deploy yapacak)
+        result = subprocess.run(["git", "push", "origin", "master"], cwd=base_dir, capture_output=True, text=True, shell=True)
         if result.returncode != 0:
             print(f"❌ Git push failed: {result.stderr}")
             return False
