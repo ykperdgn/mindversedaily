@@ -16,12 +16,9 @@ export const onRequest = defineMiddleware(async (context, next) => {
     return next();
   }
 
-  // Sadece Vercel production'da çalışsın
-  const country = req.headers.get("x-vercel-ip-country") || "US";
-
-  // Language prefix'leri ve static dosyaları atla
-  const skipPrefixes = ["/tr/", "/en/", "/tr", "/en"];
-  const skipExts = [".png", ".jpg", ".jpeg", ".svg", ".ico", ".css", ".js", ".json"];
+  // Static dosyaları ve API rotalarını atla
+  const skipPrefixes = ["/tr/", "/en/", "/tr", "/en", "/blog/", "/about", "/api/"];
+  const skipExts = [".png", ".jpg", ".jpeg", ".svg", ".ico", ".css", ".js", ".json", ".txt", ".xml"];
   if (
     skipPrefixes.some(p => pathname.startsWith(p)) ||
     skipExts.some(ext => pathname.endsWith(ext))
@@ -29,11 +26,29 @@ export const onRequest = defineMiddleware(async (context, next) => {
     return next();
   }
 
-  // Sadece root path (/) için redirect yap
+  // Sadece root path (/) için dil yönlendirme mantığı
   if (pathname === "/") {
-    const langPrefix = country === "TR" ? "/tr" : "/en";
-    const redirectTo = new URL(`${langPrefix}${pathname}${search}`, origin).toString();
-    return Response.redirect(redirectTo, 302);
+    // Vercel IP country ve accept-language headers'ı al
+    const country = req.headers.get("x-vercel-ip-country") || "TR";
+    const acceptLanguage = req.headers.get("accept-language") || "";
+
+    // Dil tercihi algılama
+    const hasEnglish = acceptLanguage.toLowerCase().includes("en");
+    const hasTurkish = acceptLanguage.toLowerCase().includes("tr");
+
+    // Türkiye IP'si veya Türkçe tarayıcı dili VARSA => Ana sayfada kal (varsayılan Türkçe)
+    if (country === "TR" || hasTurkish) {
+      return next(); // Ana sayfada kal, redirect yapma
+    }
+
+    // Sadece açıkça İngilizce isteyenler için /en/ sayfasına yönlendir
+    if (hasEnglish && !hasTurkish) {
+      const redirectTo = new URL(`/en${search}`, origin).toString();
+      return Response.redirect(redirectTo, 302);
+    }
+
+    // Belirsiz durumlar için ana sayfada kal (Türkçe varsayılan)
+    return next();
   }
 
   return next();
