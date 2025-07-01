@@ -4,7 +4,7 @@ description: "NASA'nın Perseverance gezgininin Mars yüzeyini keşfetmesi, Kız
 pubDate: 2025-07-01
 category: "space"
 tags: []
-image: "https://pixabay.com/get/g3495415b40f7ba8a5f4a879d54398609f65f20e62c4ae1b63d2b73ad2f13ec9f1d5a72489a5f17b14b958f73008241e3_640.jpg"nın Perseverance gezgininin Mars manzarasını yakalıyor)"
+image: "https://pixabay.com/get/g3495415b40f7ba8a5f4a879d54398609f65f20e62c4ae1b63d2b73ad2f13ec9f1d5a72489a5f17b14b958f73008241e3_640.jpg"
 ---
 
 İnsanlık, Kızıl Gezegen'de yaşam olasılığıyla asırlardır ilgilenmiştir. Mars'ın paslı manzarası, yüksek dağları ve geniş vadileri, keşfetme ve sırlarını ortaya çıkarma arzumuzu ateşlemiştir. NASA'nın Perseverance gezgininin Mars yüzeyini keşfetmeye devam etmesi, Kızıl Gezegen'de yaşam olasılığı üzerine yeni keşifler ışığında aydınlatıyor.
