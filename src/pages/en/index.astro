@@ -72,10 +72,9 @@ const enDescription = "MindVerse Daily: Latest news, research and in-depth analy
 				</nav><!-- Latest Posts Section -->
 				<section class="mv-grid-section">
 					<h2 class="mv-section-title">Latest Posts</h2>
-					<ul class="mv-grid">						{posts.slice(0, 8).map((post) => {
-							// İngilizce post için doğru URL oluştur
+					<ul class="mv-grid">						{posts.slice(0, 8).map((post) => {							// İngilizce post için doğru URL oluştur
 							const slug = post.slug || post.id;
-							const postUrl = `/blog/${slug.replace('.en', '')}en`;
+							const postUrl = `/${slug.replace('.en', '')}en`;
 							return (
 							<li class="mv-card">
 								<a href={postUrl}>

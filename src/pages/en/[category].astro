@@ -354,11 +354,10 @@ const pageKeywords = `${category}, ${category} articles, ${category} research, s
               <p>No articles found in this category yet.</p>
               <a href="/en">Back to home</a>
             </div>
-          ) : (
-            <ul class="mv-grid">
+          ) : (            <ul class="mv-grid">
               {filteredPosts.map(post => (
                 <li class="mv-card">
-                  <a href={post.id ? `/blog/${post.id}` : '#'}>
+                  <a href={post.id ? `/${post.id}` : '#'}>
                     {post.data.image ? (
                       <img
                         src={post.data.image}

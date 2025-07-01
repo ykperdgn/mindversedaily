@@ -407,7 +407,7 @@ const homeKeywords = `${SITE_KEYWORDS}, blog, güncel haberler, bilimsel araşt�
           <ul class="mv-grid">
             {posts.slice(0, 8).map(post => (
               <li class="mv-card">
-                <a href={post.id ? `/blog/${post.id}` : '#'}>
+                <a href={post.id ? `/${post.id}` : '#'}>
                   {post.data.image
                     ? <img src={post.data.image} alt={post.data.title} class="mv-card-img" loading="lazy" onError={(e) => { e.target.src = '/assets/blog-placeholder-1.svg'; }} />
                     : <img src="/assets/blog-placeholder-1.svg" alt="placeholder" class="mv-card-img" loading="lazy" />
