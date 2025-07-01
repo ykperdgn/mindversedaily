@@ -34,10 +34,8 @@ class TwitterBot:
                 access_token=self.access_token,
                 access_token_secret=self.access_token_secret,
                 wait_on_rate_limit=True
-            )
-
-        # Shared posts tracking
-        self.shared_posts_file = "scripts/data/shared_tweets.json"
+            )        # Shared posts tracking
+        self.shared_posts_file = Path(__file__).parent / "data" / "shared_tweets.json"
         self.load_shared_posts()
 
     def load_shared_posts(self):
@@ -66,13 +64,14 @@ class TwitterBot:
             "horoscope": "🔮",
             "science": "🔬",
             "technology": "💻",
-            "nature": "🌿"
-        }
+            "nature": "🌿"        }
         return category_emojis.get(category.lower(), "📝")
 
     def get_latest_blog_posts(self, days_back=1):
         """Son günlerde oluşturulan blog yazılarını getir"""
-        content_dir = Path("src/content/blog")
+        # Script dosyasının bir üst klasöründen başla
+        script_dir = Path(__file__).parent.parent
+        content_dir = script_dir / "src" / "content" / "blog"
         posts = []
 
         if not content_dir.exists():
