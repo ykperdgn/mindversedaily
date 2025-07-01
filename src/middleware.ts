@@ -15,13 +15,14 @@ export const onRequest = defineMiddleware(async (context, next) => {
   ) {
     return next();
   }
-
   // Static dosyaları ve API rotalarını atla
-  const skipPrefixes = ["/tr/", "/en/", "/tr", "/en", "/blog/", "/about", "/api/"];
-  const skipExts = [".png", ".jpg", ".jpeg", ".svg", ".ico", ".css", ".js", ".json", ".txt", ".xml"];
+  const skipPrefixes = ["/tr/", "/en/", "/tr", "/en", "/blog/", "/about", "/api/", "/_astro/"];
+  const skipExts = [".png", ".jpg", ".jpeg", ".svg", ".ico", ".css", ".js", ".json", ".txt", ".xml", ".woff", ".woff2"];
   if (
     skipPrefixes.some(p => pathname.startsWith(p)) ||
-    skipExts.some(ext => pathname.endsWith(ext))
+    skipExts.some(ext => pathname.endsWith(ext)) ||
+    pathname.startsWith("/_astro/") ||
+    pathname.includes("/assets/")
   ) {
     return next();
   }

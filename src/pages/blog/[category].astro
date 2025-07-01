@@ -17,9 +17,20 @@ export async function getStaticPaths() {
 }
 
 const { category } = Astro.params;
-const posts = (await getCollection('blog')).sort(
-	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
-);
+const allPosts = await getCollection('blog');
+
+// Kategori sayfasında dil algılama
+const isEnglishCategory = Astro.url.pathname.includes('/en/');
+const posts = allPosts
+  .filter(post => {
+    if (!post.slug) return false; // slug kontrolü ekle
+    if (isEnglishCategory) {
+      return post.slug.endsWith('.en'); // Sadece İngilizce
+    } else {
+      return post.slug.endsWith('.tr') || (!post.slug.endsWith('.en') && !post.slug.endsWith('.tr')); // Türkçe + varsayılan
+    }
+  })
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 // Filter posts by category
 const filteredPosts = posts.filter(post =>

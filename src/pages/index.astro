@@ -6,9 +6,15 @@ import { SITE_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS, SITE_LANG } from '../const
 import { getCollection } from 'astro:content';
 
 // Ana sayfada kategorileri `src/content/blog` klasörlerinden otomatik çek
-const posts = (await getCollection('blog')).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
-);
+const allPosts = await getCollection('blog');
+
+// SADECE TÜRKÇE içerikleri filtrele (Ana sayfa = Türkçe varsayılan)
+const posts = allPosts
+  .filter(post => {
+    if (!post.slug) return false; // slug kontrolü ekle
+    return post.slug.endsWith('.tr') || (!post.slug.endsWith('.en') && !post.slug.endsWith('.tr')); // tr uzantılı veya uzantısız (varsayılan TR)
+  })
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 // Dinamik kategoriler - content/blog klasörlerinden
 const availableCategories = [...new Set(posts.map(post => post.data.category).filter(Boolean))];

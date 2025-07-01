@@ -7,9 +7,20 @@ import { getCollection } from 'astro:content';
 import FormattedDate from '../../components/FormattedDate.astro';
 import { Image } from 'astro:assets';
 
-const posts = (await getCollection('blog')).sort(
-	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
-);
+const allPosts = await getCollection('blog');
+
+// Blog index için dil algılama (URL'ye göre)
+const isEnglishBlog = Astro.url.pathname.includes('/en/');
+const posts = allPosts
+  .filter(post => {
+    if (!post.slug) return false; // slug kontrolü ekle
+    if (isEnglishBlog) {
+      return post.slug.endsWith('.en'); // Sadece İngilizce
+    } else {
+      return post.slug.endsWith('.tr') || (!post.slug.endsWith('.en') && !post.slug.endsWith('.tr')); // Türkçe + varsayılan
+    }
+  })
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 // Mevcut içeriklerden kategorileri otomatik çek
 const availableCategories = [...new Set(posts.map(post => post.data.category).filter(Boolean))];

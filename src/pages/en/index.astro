@@ -1,11 +1,112 @@
 ---
-export const prerender = true;
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS } from '../../consts';
+import { getCollection } from 'astro:content';
+
+// İngilizce sayfa için SADECE İngilizce içerikleri getir
+const allPosts = await getCollection('blog');
+
+// SADECE İNGİLİZCE içerikleri filtrele
+const posts = allPosts
+  .filter(post => post.slug && post.slug.endsWith('.en'))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+// Dinamik kategoriler - İngilizce içeriklerden
+const availableCategories = [...new Set(posts.map(post => post.data.category).filter(Boolean))];
+
+const categories = availableCategories.length > 0
+  ? availableCategories
+  : ["health", "psychology", "history", "space", "quotes", "love"];
+
+const categoryIcons = {
+  health: "🧬",
+  psychology: "🧠",
+  history: "📜",
+  space: "🚀",
+  quotes: "💬",
+  love: "❤️"
+};
+
+// English homepage SEO
+const homeKeywords = `science news, health, psychology, technology, space, history, research, current news, academic studies, scientific discoveries, blog`;
+const enTitle = "MindVerse Daily - Science, Health & Technology News";
+const enDescription = "MindVerse Daily: Latest news, research and in-depth analysis in science, health, psychology, history, space and technology. Your gateway to knowledge with fresh content every day.";
 ---
+
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta http-equiv="refresh" content="0; url=/" />
-    <link rel="canonical" href="/" />
-  </head>
-  <body></body>
+<html lang="en-US">
+	<head>
+		<BaseHead
+			title={enTitle}
+			description={enDescription}
+			keywords={homeKeywords}
+		/>
+	</head>
+	<body>
+		<div class="content-wrapper">
+			<Header />
+
+			<main class="mv-main-home">
+				<!-- English Hero Section -->
+				<section class="mv-hero">
+					<div class="hero-logo-container">
+						<div class="hero-galaxy">🌌</div>
+					</div>
+					<h1 class="mv-title">
+						<span class="mind-gradient">Mind</span><span class="verse-gradient">Verse</span>
+						<span class="daily-subtitle">Daily</span>
+					</h1>
+					<p class="mv-desc">Quality content from science, health, psychology and current topics</p>
+				</section>
+
+				<!-- Categories Navigation -->
+				<nav class="mv-categories">
+					{categories.map((category) => (
+						<a href={`/blog/${category}`} class="mv-category-tab">
+							<span class="category-icon">{categoryIcons[category]}</span>
+							{category.charAt(0).toUpperCase() + category.slice(1)}
+						</a>
+					))}
+				</nav>
+
+				<!-- Latest Posts Section -->
+				<section class="mv-grid-section">
+					<h2 class="mv-section-title">Latest Posts</h2>
+					<ul class="mv-grid">
+						{posts.slice(0, 8).map((post) => (
+							<li class="mv-card">
+								<a href={`/blog/${post.slug}`}>
+									<img
+										src={post.data.heroImage || '/assets/blog-placeholder-1.svg'}
+										alt={post.data.title}
+										class="mv-card-img"
+										loading="lazy"
+										onError="(e) => {
+											e.target.src = '/assets/blog-placeholder-1.svg';
+										}"
+									/>
+									<div class="mv-card-content">
+										<div class="mv-card-title">{post.data.title}</div>
+										<div class="mv-card-summary">{post.data.description}</div>
+										<div class="mv-card-meta">
+											<span class="category-badge">{post.data.category}</span>
+											<span>{new Date(post.data.pubDate).toLocaleDateString('en-US', {
+												year: 'numeric',
+												month: '2-digit',
+												day: '2-digit'
+											})}</span>
+										</div>
+									</div>
+								</a>
+							</li>
+						))}
+					</ul>
+				</section>
+			</main>
+
+			<Footer />
+		</div>
+	</body>
 </html>
