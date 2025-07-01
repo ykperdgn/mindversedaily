@@ -66,13 +66,13 @@ const homeKeywords = `${SITE_KEYWORDS}, blog, güncel haberler, bilimsel araşt�
       .mv-main-home {
         max-width: 1200px;
         margin: 0 auto;
-        padding: 6rem 1rem 2rem 1rem; /* Header için orta boşluk */
+        padding: 6rem 1rem 2rem 1rem; /* Header için daha iyi boşluk */
       }
 
       .mv-hero {
         text-align: center;
-        margin-bottom: 2rem; /* Daha az margin */
-        padding: 2rem 2rem; /* Daha küçük padding */
+        margin-bottom: 1rem; /* Daha az margin */
+        padding: 1.5rem 2rem; /* Daha küçük padding */
         background: linear-gradient(135deg, #1e1b4b 0%, #312e81 25%, #1e40af 50%, #7c3aed 75%, #ec4899 100%);
         border-radius: 2rem;
         box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
@@ -99,7 +99,7 @@ const homeKeywords = `${SITE_KEYWORDS}, blog, güncel haberler, bilimsel araşt�
       }
 
       .hero-galaxy {
-        font-size: 4rem;
+        font-size: 3rem; /* Daha küçük */
         animation: spin 10s linear infinite, pulse 2s ease-in-out infinite alternate;
         display: inline-block;
         filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
@@ -116,16 +116,16 @@ const homeKeywords = `${SITE_KEYWORDS}, blog, güncel haberler, bilimsel araşt�
       }
 
       .mv-title {
-        font-size: 2.5rem; /* Daha küçük font */
+        font-size: 2.2rem; /* Daha da küçük */
         font-weight: 900;
-        margin-bottom: 0.5rem; /* Daha az margin */
+        margin-bottom: 0.3rem; /* Daha az margin */
         letter-spacing: -2px;
         position: relative;
         z-index: 2;
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 0.3rem; /* Daha az gap */
+        gap: 0.2rem; /* Daha az gap */
       }
 
       .mind-gradient {
@@ -149,7 +149,7 @@ const homeKeywords = `${SITE_KEYWORDS}, blog, güncel haberler, bilimsel araşt�
       }
 
       .daily-subtitle {
-        font-size: 1.8rem; /* Daha küçük font */
+        font-size: 1.6rem; /* Daha küçük font */
         color: rgba(255, 255, 255, 0.9);
         font-weight: 700;
         text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
@@ -166,10 +166,10 @@ const homeKeywords = `${SITE_KEYWORDS}, blog, güncel haberler, bilimsel araşt�
 
       .mv-desc {
         color: rgba(255, 255, 255, 0.9);
-        font-size: 1.1rem; /* Daha küçük font */
+        font-size: 1rem; /* Daha küçük font */
         margin: 0 auto;
         font-weight: 500;
-        max-width: 500px; /* Daha dar genişlik */
+        max-width: 450px; /* Daha dar genişlik */
         line-height: 1.6;
         position: relative;
         z-index: 2;
@@ -245,11 +245,28 @@ const homeKeywords = `${SITE_KEYWORDS}, blog, güncel haberler, bilimsel araşt�
         overflow: hidden;
         transition: all 0.3s ease;
         backdrop-filter: blur(10px);
+        position: relative;
       }
 
       .mv-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+        transform: translateY(-8px);
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+      }
+
+      .mv-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+        transition: left 0.5s;
+        pointer-events: none;
+      }
+
+      .mv-card:hover::before {
+        left: 100%;
       }
 
       .mv-card a {
@@ -279,6 +296,10 @@ const homeKeywords = `${SITE_KEYWORDS}, blog, güncel haberler, bilimsel araşt�
         color: #1e293b;
         margin-bottom: 0.75rem;
         line-height: 1.4;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
       }
 
       .mv-card-summary {
@@ -286,6 +307,10 @@ const homeKeywords = `${SITE_KEYWORDS}, blog, güncel haberler, bilimsel araşt�
         color: #64748b;
         margin-bottom: 1rem;
         line-height: 1.6;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
       }
 
       .mv-card-meta {
@@ -293,7 +318,6 @@ const homeKeywords = `${SITE_KEYWORDS}, blog, güncel haberler, bilimsel araşt�
         color: #94a3b8;
         display: flex;
         align-items: center;
-        justify-content: space-between;
         gap: 0.5rem;
       }
 
@@ -305,6 +329,14 @@ const homeKeywords = `${SITE_KEYWORDS}, blog, güncel haberler, bilimsel araşt�
         font-weight: 600;
         font-size: 0.8rem;
         text-transform: uppercase;
+      }
+
+      .mv-section-title {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #1e293b;
+        margin-bottom: 2rem;
+        text-align: center;
       }
 
       @media (max-width: 768px) {
@@ -392,15 +424,6 @@ const homeKeywords = `${SITE_KEYWORDS}, blog, güncel haberler, bilimsel araşt�
 
         <!-- Astroloji Widget -->
         <AstrologyWidget />
-
-        <nav class="mv-categories">
-          {categories.map(cat => (
-            <a href={`/${cat}`} class="mv-category-tab">
-              <span class="category-icon">{categoryIcons[cat]}</span>
-              {cat.charAt(0).toUpperCase() + cat.slice(1)}
-            </a>
-          ))}
-        </nav>
 
         <section class="mv-grid-section">
           <h2 class="mv-section-title">Son Yazılar</h2>
