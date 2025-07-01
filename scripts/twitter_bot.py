@@ -12,6 +12,12 @@ from datetime import datetime, timedelta
 import re
 import random
 from pathlib import Path
+from dotenv import load_dotenv
+
+# .env dosyasını yükle (root klasöründen)
+script_dir = Path(__file__).parent
+env_path = script_dir.parent / ".env"
+load_dotenv(env_path)
 
 class TwitterBot:
     def __init__(self, test_mode=False):
