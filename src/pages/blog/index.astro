@@ -145,17 +145,44 @@ if (searchQuery) {
 				margin-top: auto;
 			}
 		</style>
+		<script>
+			// Client-side category filtering
+			function filterByCategory(category) {
+				const url = new URL(window.location);
+				if (category === 'all') {
+					url.searchParams.delete('category');
+				} else {
+					url.searchParams.set('category', category);
+				}
+				window.location.href = url.toString();
+			}
+
+			// Add click handlers to category tabs
+			document.addEventListener('DOMContentLoaded', () => {
+				const categoryTabs = document.querySelectorAll('.mv-category-tab');
+				categoryTabs.forEach(tab => {
+					tab.addEventListener('click', (e) => {
+						e.preventDefault();
+						const href = tab.getAttribute('href');
+						const url = new URL(href, window.location.origin);
+						const category = url.searchParams.get('category') || 'all';
+						filterByCategory(category);
+					});
+				});
+			});
+		</script>
 	</head>
 	<body>
 		<Header />
 		<nav class="mv-categories">
-			<a href="/blog" class={`mv-category-tab ${!categoryQuery ? 'active' : ''}`}>
+			<a href="/blog" class={`mv-category-tab ${!categoryQuery ? 'active' : ''}`} data-astro-reload>
 				All Posts
 			</a>
 			{categories.map(cat => (
 				<a
 					href={`/blog?category=${cat}`}
 					class={`mv-category-tab ${categoryQuery === cat.toLowerCase() ? 'active' : ''}`}
+					data-astro-reload
 				>
 					<span class="category-icon">{categoryIcons[cat]}</span>
 					{cat.charAt(0).toUpperCase() + cat.slice(1)}
