@@ -63,60 +63,6 @@ class VercelAutoDeployer:
         result = subprocess.run("git status --porcelain", shell=True, capture_output=True, text=True)
         return result.stdout.strip()
 
-    def create_deployment_via_api(self):
-        """Vercel API ile deployment oluştur"""
-        if not self.use_api:
-            return False
-
-        headers = {
-            'Authorization': f'Bearer {self.vercel_token}',
-            'Content-Type': 'application/json'
-        }
-
-        # Get latest commit
-        result = subprocess.run("git rev-parse HEAD", shell=True, capture_output=True, text=True)
-        if result.returncode != 0:
-            print("❌ Failed to get git commit hash")
-            return False
-
-        commit_sha = result.stdout.strip()
-
-        deployment_data = {
-            'name': 'mindverse-new',
-            'gitSource': {
-                'type': 'github',
-                'repo': 'jacob-ai-bot/mindverse_blog',
-                'ref': 'master',
-                'sha': commit_sha
-            },
-            'projectSettings': {
-                'framework': 'astro',
-                'buildCommand': 'npm run build',
-                'outputDirectory': 'dist',
-                'installCommand': 'npm install'
-            },
-            'target': 'production'
-        }
-
-        try:
-            response = requests.post(
-                f'https://api.vercel.com/v13/deployments',
-                headers=headers,
-                json=deployment_data
-            )
-
-            if response.status_code == 200:
-                deployment = response.json()
-                print(f"🚀 Production deployment created: {deployment.get('url', 'N/A')}")
-                return True
-            else:
-                print(f"❌ API deployment failed: {response.status_code} - {response.text}")
-                return False
-
-        except Exception as e:
-            print(f"❌ API deployment error: {e}")
-            return False
-
     def deploy_via_git(self):
         """Git push ile deployment"""
         print("\n🔄 Using Git-based deployment method")
@@ -152,21 +98,19 @@ class VercelAutoDeployer:
         print(f"\n🌟 Starting Vercel Production Auto-Deploy at {datetime.now()}")
         print("=" * 60)
 
-        # Try API method first, fallback to Git
-        if self.use_api:
-            print("🔄 Attempting deployment via Vercel API...")
-            if self.create_deployment_via_api():
-                return True
-            else:
-                print("⚠️ API method failed, falling back to Git method")
-
-        # Git-based deployment
+        # Use Git-based deployment (API method can be added later)
         return self.deploy_via_git()
 
     def status_check(self):
         """Deployment status kontrolü"""
         if not self.use_api:
-            print("⚠️ Cannot check status without VERCEL_TOKEN")
+            print("⚠️ Cannot check detailed status without VERCEL_TOKEN")
+            print("🔄 Checking git status instead...")
+            changes = self.check_git_status()
+            if changes:
+                print(f"📊 Uncommitted changes found: {len(changes.split())}")
+            else:
+                print("✅ Git repository is clean")
             return
 
         headers = {
@@ -176,17 +120,48 @@ class VercelAutoDeployer:
 
         try:
             response = requests.get(
-                f'https://api.vercel.com/v6/deployments?projectId={self.project_id}&limit=5',
+                f'https://api.vercel.com/v6/deployments?projectId={self.project_id}&limit=3',
                 headers=headers
             )
 
             if response.status_code == 200:
                 deployments = response.json().get('deployments', [])
                 if deployments:
+                    print("📊 Recent deployments:")
+                    for i, deployment in enumerate(deployments[:3], 1):
+                        state = deployment.get('state', 'unknown')
+                        url = deployment.get('url', 'N/A')
+                        created = deployment.get('createdAt', 'N/A')
+
+                        # Convert timestamp
+                        if created != 'N/A':
+                            try:
+                                created_time = datetime.fromtimestamp(int(created) / 1000)
+                                created = created_time.strftime('%Y-%m-%d %H:%M:%S')
+                            except:
+                                pass
+
+                        status_icon = {
+                            'READY': '✅',
+                            'ERROR': '❌',
+                            'BUILDING': '🔄',
+                            'QUEUED': '⏳'
+                        }.get(state, '❓')
+
+                        print(f"  {i}. {status_icon} {state}")
+                        print(f"     🔗 https://{url}")
+                        print(f"     ⏰ {created}")
+                        print()
+
+                    # Show latest status prominently
                     latest = deployments[0]
-                    print(f"📊 Latest deployment status: {latest.get('state', 'unknown')}")
-                    print(f"🔗 URL: {latest.get('url', 'N/A')}")
-                    print(f"⏰ Created: {latest.get('createdAt', 'N/A')}")
+                    latest_state = latest.get('state', 'unknown')
+                    if latest_state == 'READY':
+                        print(f"🟢 Latest deployment is LIVE: https://mindverse-new.vercel.app")
+                    elif latest_state == 'ERROR':
+                        print(f"🔴 Latest deployment FAILED!")
+                    else:
+                        print(f"🟡 Latest deployment is {latest_state}")
                 else:
                     print("📊 No deployments found")
             else:
@@ -207,7 +182,7 @@ if __name__ == "__main__":
         if success:
             print("\n✅ Deployment completed successfully!")
             # Wait a bit and check status
-            time.sleep(10)
+            time.sleep(5)
             deployer.status_check()
         else:
             print("\n❌ Deployment failed!")
