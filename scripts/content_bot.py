@@ -13,6 +13,33 @@ def slugify(text):
     text = re.sub(r'[^a-z0-9\-]', '', text)
     return text
 
+def clean_frontmatter_value(value):
+    """Frontmatter değerlerini güvenli hale getir"""
+    if not value:
+        return ""
+
+    # Tehlikeli karakterleri temizle
+    value = str(value).strip()
+
+    # YAML için problem yaratan karakterleri temizle
+    dangerous_chars = ['"', "'", ":", "|", ">", "[", "]", "{", "}", "&", "*", "#", "@", "`", "\\"]
+    for char in dangerous_chars:
+        if char in ['"', "'"]:
+            # Tırnak işaretlerini kaldır
+            value = value.replace(char, "")
+        else:
+            # Diğer karakterleri güvenli alternatiflerle değiştir
+            value = value.replace(char, " ")
+
+    # Fazla boşlukları temizle
+    value = re.sub(r'\s+', ' ', value).strip()
+
+    # Çok uzunsa kısalt
+    if len(value) > 200:
+        value = value[:197] + "..."
+
+    return value
+
 def parse_article_fields(article_text, category=None, image_fetcher=None):
     # Başlık, özet, görsel ve içerik ayıkla
     lines = article_text.splitlines()
@@ -20,12 +47,13 @@ def parse_article_fields(article_text, category=None, image_fetcher=None):
     lines = [l for l in lines if not l.lower().startswith("translate the following") and not l.lower().startswith("türkçeye çevir") and not l.lower().startswith("çevrilmiş hali:")]
     # Title ve summary satırlarını body'den de ayıkla
     title = next((l for l in lines if l.lower().startswith("title:") or l.lower().startswith("# ") or l.lower().startswith("**title:**")), None)
-    description = next((l for l in lines if l.lower().startswith("summary:") or l.lower().startswith("description:") or l.lower().startswith("**summary:**")), None)    # Fallbacks
+    description = next((l for l in lines if l.lower().startswith("summary:") or l.lower().startswith("description:") or l.lower().startswith("**summary:**")), None)
+
+    # Title işleme
     if title:
         # **Title:** veya Title: veya # ...
         title = title.split(":",1)[1].strip() if ":" in title else title.strip("# *").strip()
-        # Ekstra karakterleri temizle
-        title = title.strip('*"').strip()
+        title = clean_frontmatter_value(title)
     else:
         title = "Untitled"
 
@@ -36,16 +64,18 @@ def parse_article_fields(article_text, category=None, image_fetcher=None):
             "title:", "summary:", "description:", "image:", "img:", "**image:**", "**title:**", "**summary:**", "başlık:", "özet:"
         ])]
         if content_lines:
-            title = content_lines[0].strip().strip('"*').strip()[:80]  # İlk 80 karakter
+            title = content_lines[0].strip()[:80]  # İlk 80 karakter
+            title = clean_frontmatter_value(title)
             if title.endswith(":"):
                 title = title[:-1]
         else:
             title = f"Article about {category}" if category else "New Article"
+            title = clean_frontmatter_value(title)
 
+    # Description işleme
     if description:
         description = description.split(":",1)[1].strip() if ":" in description else description.strip("# *").strip()
-        # Ekstra karakterleri temizle
-        description = description.strip('*"').strip()
+        description = clean_frontmatter_value(description)
     else:
         description = "No summary."
 
@@ -74,6 +104,39 @@ def parse_article_fields(article_text, category=None, image_fetcher=None):
         ])
     ]).strip()
     return title, description, image, content
+
+def write_safe_article(filepath, title, description, date, category, image, content):
+    """Güvenli makale dosyası yazma fonksiyonu"""
+
+    # Güvenli frontmatter değerleri
+    safe_title = clean_frontmatter_value(title)
+    safe_description = clean_frontmatter_value(description)
+    safe_category = clean_frontmatter_value(category)
+
+    # URL güvenliği için image kontrolü
+    if not image or not image.startswith(('http://', 'https://')):
+        image = "/assets/blog-placeholder-1.svg"
+
+    # Güvenli frontmatter oluştur
+    frontmatter = f"""---
+title: "{safe_title}"
+description: "{safe_description}"
+pubDate: {date}
+category: "{safe_category}"
+tags: []
+image: "{image}"
+---
+
+"""
+
+    try:
+        with open(filepath, "w", encoding="utf-8") as f:
+            f.write(frontmatter)
+            f.write(content)
+        return True
+    except Exception as e:
+        print(f"❌ Error writing file {filepath}: {e}")
+        return False
 
 categories = ["health", "psychology", "history", "space", "quotes", "love"]
 
@@ -114,10 +177,7 @@ def create_articles_for_all_categories(auto_deploy_enabled=False):
                 content_dir = os.path.join(os.path.dirname(__file__), "..", "src", "content", "blog", category)
                 os.makedirs(content_dir, exist_ok=True)
                 filepath = os.path.join(content_dir, f"{date}-{slug}.{lang}.md")
-                frontmatter = f"---\ntitle: \"{title}\"\ndescription: \"{description}\"\npubDate: {date}\ncategory: \"{category}\"\ntags: []\nimage: \"{image}\"\n---\n\n"
-                with open(filepath, "w", encoding="utf-8") as f:
-                    f.write(frontmatter)
-                    f.write(content)
+                write_safe_article(filepath, title, description, date, category, image, content)
             print(f"✅ Successfully created articles for category '{category}' with subtopic '{subtopic}'.")
         except Exception as e:
             print(f"⚠️ Error while processing category '{category}': {e}")
@@ -133,39 +193,79 @@ def create_articles_for_selected_categories(selected_categories, auto_deploy_ena
     image_fetcher = ImageFetcher()  # Image fetcher instance'ı oluştur
 
     for category in selected_categories:
+        category_start = datetime.datetime.now()
+        print(f"\n🎯 Processing category: {category}")
+        print(f"   ⏰ Started at: {category_start.strftime('%H:%M:%S')}")
+
         try:
             subtopic = random.choice(subtopics[category])
+            print(f"   📝 Selected subtopic: {subtopic}")
+
+            # English article creation
+            print(f"   🇬🇧 Creating English article...")
+            english_start = datetime.datetime.now()
             prompt_en = (
                 f"Write a long-form article (700+ words) in English in the category '{category}' focusing on '{subtopic}', including recent developments or scientific findings. "
                 "Include a catchy title (start with 'Title:') and a short summary (start with 'Summary:'). Then write the full article."
             )
             english_article = generate_content(prompt_en)
+            english_duration = (datetime.datetime.now() - english_start).total_seconds()
+            print(f"   ✅ English article completed in {english_duration:.1f}s")
+
             time.sleep(5)
 
+            # Turkish translation
+            print(f"   🇹🇷 Creating Turkish translation...")
+            turkish_start = datetime.datetime.now()
             short_translation_prompt = (
                 "Makalenin tamamını baştan sona Türkçeye çevir. Başlık ve özet dahil, başa tekrar Title: ve Summary: ekle. Sadece çeviriyi döndür:\n\n"
             ) + english_article[:12000]
 
             turkish_article = generate_content(short_translation_prompt)
+            turkish_duration = (datetime.datetime.now() - turkish_start).total_seconds()
+            print(f"   ✅ Turkish translation completed in {turkish_duration:.1f}s")
+
             time.sleep(5)
 
+            # File creation
+            print(f"   💾 Creating article files...")
+            files_created = 0
+
             for lang, article in [("en", english_article), ("tr", turkish_article)]:
+                file_start = datetime.datetime.now()
                 title, description, image, content = parse_article_fields(article, category, image_fetcher)
                 slug = slugify(title)
                 content_dir = os.path.join(os.path.dirname(__file__), "..", "src", "content", "blog", category)
                 os.makedirs(content_dir, exist_ok=True)
                 filepath = os.path.join(content_dir, f"{date}-{slug}.{lang}.md")
-                frontmatter = f"---\ntitle: \"{title}\"\ndescription: \"{description}\"\npubDate: {date}\ncategory: \"{category}\"\ntags: []\nimage: \"{image}\"\n---\n\n"
-                with open(filepath, "w", encoding="utf-8") as f:
-                    f.write(frontmatter)
-                    f.write(content)
-            print(f"✅ Successfully created articles for category '{category}' with subtopic '{subtopic}'.")
+
+                success = write_safe_article(filepath, title, description, date, category, image, content)
+                file_duration = (datetime.datetime.now() - file_start).total_seconds()
+
+                if success:
+                    files_created += 1
+                    print(f"      ✅ {lang.upper()} file created in {file_duration:.1f}s: {os.path.basename(filepath)}")
+                else:
+                    print(f"      ❌ Failed to create {lang.upper()} file")
+
+            category_end = datetime.datetime.now()
+            total_duration = (category_end - category_start).total_seconds()
+
+            print(f"   🎉 Category '{category}' completed successfully!")
+            print(f"   📊 Files created: {files_created}/2")
+            print(f"   ⏱️ Total time: {total_duration:.1f}s")
+            print(f"   📝 Subtopic: {subtopic}")
+
         except Exception as e:
-            print(f"⚠️ Error while processing category '{category}': {e}")
+            category_end = datetime.datetime.now()
+            total_duration = (category_end - category_start).total_seconds()
+            print(f"   ❌ Error processing category '{category}': {e}")
+            print(f"   ⏱️ Failed after: {total_duration:.1f}s")
             continue
 
     # Otomatik deploy
     if auto_deploy_enabled:
+        print(f"\n⏳ Waiting 10 seconds before deployment...")
         time.sleep(10)  # Content creation tamamlansin
         auto_deploy()
 
