@@ -40,10 +40,10 @@ body {
 	font-size: 18px;
 	line-height: 1.7;
 }
-main {
+main, .mv-main-home {
 	width: 100%;
 	max-width: 1200px;
-	margin: auto;
+	margin: 0 auto;
 	padding: 2.5em 1em 2em 1em;
 }
 h1,
@@ -84,8 +84,17 @@ a:hover {
 p {
 	margin-bottom: 1em;
 }
+.prose {
+	color: #374151;
+	line-height: 1.8;
+}
 .prose p {
-	margin-bottom: 2em;
+	margin-bottom: 1.2em;
+}
+.prose img {
+	max-width: 100%;
+	border-radius: 0.5rem;
+	margin: 1.5em 0;
 }
 textarea {
 	width: 100%;
@@ -161,13 +170,25 @@ hr {
 }
 .mv-card-img {
   width: 100%;
-  height: 140px;
+  height: 160px;
   object-fit: cover;
-  border-radius: 0.7rem;
+  border-radius: 0.75rem;
   margin-bottom: 0.7rem;
   background: #f1f5f9;
   aspect-ratio: 16/9;
   display: block;
+}
+.mv-card:hover {
+  transform: translateY(-4px);
+  transition: transform 0.2s;
+}
+@media (max-width: 768px) {
+  .mv-card-img {
+    height: 120px;
+  }
+  .mv-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
 }
 @media (max-width: 720px) {
   .mv-main-home, main {
