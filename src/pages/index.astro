@@ -333,18 +333,44 @@ const homeKeywords = `${SITE_KEYWORDS}, blog, güncel haberler, bilimsel araşt�
         }
 
         .mv-categories {
-          gap: 0.75rem;
-          padding: 1rem;
+          gap: 0.5rem;
+          padding: 0.75rem;
+          overflow-x: auto;
+          justify-content: flex-start;
+          -webkit-overflow-scrolling: touch;
+          scroll-behavior: smooth;
         }
 
         .mv-category-tab {
-          padding: 0.75rem 1.25rem;
-          font-size: 0.9rem;
+          padding: 0.6rem 1rem;
+          font-size: 0.85rem;
+          white-space: nowrap;
+          flex-shrink: 0;
         }
 
         .mv-grid {
           grid-template-columns: 1fr;
           gap: 1.5rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .mv-categories {
+          gap: 0.4rem;
+          padding: 0.5rem;
+          margin-left: -1rem;
+          margin-right: -1rem;
+          border-radius: 1rem;
+        }
+
+        .mv-category-tab {
+          padding: 0.5rem 0.8rem;
+          font-size: 0.8rem;
+          min-width: auto;
+        }
+
+        .mv-main-home {
+          padding: 1.5rem 0.75rem;
         }
       }
     </style>
