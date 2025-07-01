@@ -7,7 +7,7 @@ tags: []
 image: "https://images.pexels.com/photos/32801871/pexels-photo-32801871.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
 ---
 
-Here is the translated article:
+# Kültürel Mirasımızın Sırlarını Açığa Çıkarma: Son Keşifler ve Bulgular
 
 
 

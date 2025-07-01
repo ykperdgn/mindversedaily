@@ -7,7 +7,7 @@ tags: []
 image: "https://images.pexels.com/photos/32794960/pexels-photo-32794960.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
 ---
 
-Here is the translated article:
+# Zihinsel İyi Olgunun Gücü: Son Gelişmeler ve Daha Sağlıklı Bir Zihin İçin Stratejiler
 
 
 
