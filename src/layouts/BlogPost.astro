@@ -53,11 +53,10 @@ const enhancedKeywords = [
 			min-height: 100vh;
 			backdrop-filter: blur(10px);
 		}
-
 		.blog-container {
 			max-width: 4xl;
 			margin: 0 auto;
-			padding: 2rem 1rem;
+			padding: 8rem 1rem 2rem 1rem; /* Header için üstten boşluk */
 		}
 
 		.blog-article {
@@ -85,9 +84,8 @@ const enhancedKeywords = [
 		.blog-article:hover .hero-image img {
 			transform: scale(1.02);
 		}
-
 		.blog-content {
-			padding: 3rem;
+			padding: 3rem 4rem; /* Daha geniş padding */
 		}
 
 		.blog-meta {
@@ -110,11 +108,17 @@ const enhancedKeywords = [
 			-webkit-text-fill-color: transparent;
 			background-clip: text;
 		}
-
 		.prose {
 			color: #374151;
 			line-height: 1.8;
-			font-size: 1.1rem;
+			font-size: 1.2rem; /* Daha büyük font */
+			max-width: none; /* Full width kullan */
+		}
+
+		.prose p {
+			margin-bottom: 1.8rem; /* Daha fazla margin */
+			font-size: 1.2rem; /* Paragraph'lar için büyük font */
+			line-height: 1.8; /* İyi line height */
 		}
 
 		.prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
