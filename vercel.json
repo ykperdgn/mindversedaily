@@ -12,14 +12,8 @@
   },
   "github": {
     "autoAlias": true,
-    "autoJobCancelation": true
-  },
-  "functions": {
-    "src/pages/**/*.astro": {
-      "maxDuration": 30
-    }
-  },
-  "regions": ["fra1", "iad1"],
+    "autoJobCancelation": true  },
+  "regions": ["iad1"],
   "headers": [
     {
       "source": "/(.*)",

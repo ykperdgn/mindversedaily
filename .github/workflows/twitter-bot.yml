@@ -1,0 +1,40 @@
+name: 🐦 Daily Twitter Bot
+
+on:
+  schedule:
+    # Her gün 09:00 UTC (12:00 TR) ve 15:00 UTC (18:00 TR) çalışsın
+    - cron: '0 9 * * *'  # Sabah paylaşımı
+    - cron: '0 15 * * *' # Öğleden sonra paylaşımı
+  workflow_dispatch: # Manuel çalıştırma
+
+jobs:
+  tweet-bot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: 🐍 Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: 📦 Install Dependencies
+        run: |
+          pip install tweepy python-dotenv
+
+      - name: 🐦 Run Twitter Bot
+        env:
+          TWITTER_API_KEY: ${{ secrets.TWITTER_API_KEY }}
+          TWITTER_API_SECRET: ${{ secrets.TWITTER_API_SECRET }}
+          TWITTER_ACCESS_TOKEN: ${{ secrets.TWITTER_ACCESS_TOKEN }}
+          TWITTER_ACCESS_TOKEN_SECRET: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
+          TWITTER_BEARER_TOKEN: ${{ secrets.TWITTER_BEARER_TOKEN }}
+        run: |
+          cd scripts
+          python twitter_bot.py
+
+      - name: 📊 Display Results
+        run: |
+          echo "✅ Twitter bot tamamlandı!"
+          echo "🔍 Log dosyası kontrol edilebilir"

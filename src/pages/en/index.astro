@@ -1,6 +1,6 @@
 ---
 import BaseHead from '../../components/BaseHead.astro';
-import Header from '../../components/Header.astro';
+import HeaderEN from '../../components/HeaderEN.astro';
 import Footer from '../../components/Footer.astro';
 import AstrologyWidgetEN from '../../components/AstrologyWidgetEN.astro';
 import { SITE_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS } from '../../consts';
@@ -44,10 +44,9 @@ const enDescription = "MindVerse Daily: Latest news, research and in-depth analy
 			description={enDescription}
 			keywords={homeKeywords}
 		/>
-	</head>
-	<body>
+	</head>	<body>
 		<div class="content-wrapper">
-			<Header />
+			<HeaderEN />
 
 			<main class="mv-main-home">				<!-- English Hero Section -->
 				<section class="mv-hero">
@@ -62,17 +61,15 @@ const enDescription = "MindVerse Daily: Latest news, research and in-depth analy
 				</section>
 
 				<!-- English Astrology Widget -->
-				<AstrologyWidgetEN />
-
-				<!-- Categories Navigation -->
+				<AstrologyWidgetEN />				<!-- Categories Navigation -->
 				<nav class="mv-categories">
 					{categories.map((category) => (
-						<a href={`/blog/${category}`} class="mv-category-tab">
+						<a href={`/en/${category}`} class="mv-category-tab">
 							<span class="category-icon">{categoryIcons[category]}</span>
 							{category.charAt(0).toUpperCase() + category.slice(1)}
 						</a>
 					))}
-				</nav>				<!-- Latest Posts Section -->
+				</nav><!-- Latest Posts Section -->
 				<section class="mv-grid-section">
 					<h2 class="mv-section-title">Latest Posts</h2>
 					<ul class="mv-grid">						{posts.slice(0, 8).map((post) => {
