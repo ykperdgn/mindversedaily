@@ -173,28 +173,29 @@ def auto_deploy():
     """Otomatik build ve deploy işlemi"""
     try:
         print("\n🚀 Starting automatic deployment...")
+        base_dir = os.path.dirname(os.path.dirname(__file__))  # scripts/../
 
         # Git add
-        result = subprocess.run(["git", "add", "."], cwd=os.path.dirname(__file__) + "/..", capture_output=True, text=True)
+        result = subprocess.run(["git", "add", "."], cwd=base_dir, capture_output=True, text=True, shell=True)
         if result.returncode != 0:
             print(f"❌ Git add failed: {result.stderr}")
             return False
 
         # Git commit
         commit_msg = f"Auto-generated content - {datetime.datetime.now().strftime('%Y-%m-%d %H:%M')}"
-        result = subprocess.run(["git", "commit", "-m", commit_msg], cwd=os.path.dirname(__file__) + "/..", capture_output=True, text=True)
+        result = subprocess.run(["git", "commit", "-m", commit_msg], cwd=base_dir, capture_output=True, text=True, shell=True)
         if result.returncode != 0:
             print("⚠️ No changes to commit or commit failed")
 
         # Build
         print("🏗️ Building project...")
-        result = subprocess.run(["npm", "run", "build"], cwd=os.path.dirname(__file__) + "/..", capture_output=True, text=True)
+        result = subprocess.run(["npm", "run", "build"], cwd=base_dir, capture_output=True, text=True, shell=True)
         if result.returncode != 0:
             print(f"❌ Build failed: {result.stderr}")
             return False
 
         # Git push (Vercel otomatik deploy yapacak)
-        result = subprocess.run(["git", "push", "origin", "main"], cwd=os.path.dirname(__file__) + "/..", capture_output=True, text=True)
+        result = subprocess.run(["git", "push", "origin", "main"], cwd=base_dir, capture_output=True, text=True, shell=True)
         if result.returncode != 0:
             print(f"❌ Git push failed: {result.stderr}")
             return False
