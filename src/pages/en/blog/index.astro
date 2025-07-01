@@ -66,14 +66,15 @@ const pageKeywords = "blog posts, science articles, health news, psychology rese
               {category.charAt(0).toUpperCase() + category.slice(1)}
             </a>
           ))}
-        </nav>
-
-        <!-- Blog Posts Grid -->
+        </nav>        <!-- Blog Posts Grid -->
         <section class="mv-grid-section">
-          <ul class="mv-grid">
-            {posts.map((post) => (
+          <ul class="mv-grid">            {posts.map((post) => {
+              // İngilizce post için doğru URL oluştur
+              const slug = post.slug || post.id;
+              const postUrl = `/blog/${slug.replace('.en', '')}en`;
+              return (
               <li class="mv-card">
-                <a href={`/blog/${post.slug}`}>
+                <a href={postUrl}>
                   <img
                     src={post.data.heroImage || '/assets/blog-placeholder-1.svg'}
                     alt={post.data.title}
@@ -88,12 +89,12 @@ const pageKeywords = "blog posts, science articles, health news, psychology rese
                     <div class="mv-card-summary">{post.data.description}</div>
                     <div class="mv-card-meta">
                       <span class="category-badge">{post.data.category}</span>
-                      <FormattedDate date={post.data.pubDate} />
-                    </div>
+                      <FormattedDate date={post.data.pubDate} />                    </div>
                   </div>
                 </a>
               </li>
-            ))}
+              );
+            })}
           </ul>
         </section>
       </main>

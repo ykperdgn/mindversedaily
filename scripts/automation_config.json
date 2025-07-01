@@ -1,0 +1,27 @@
+{
+  "content_schedule": {
+    "daily_times": ["09:00", "15:00", "21:00"],
+    "categories_per_run": [2, 4],
+    "rate_limit_seconds": 15
+  },
+  "deployment": {
+    "auto_deploy": true,
+    "deploy_after_content": true,
+    "deploy_times": ["09:30", "15:30", "21:30"]
+  },
+  "monitoring": {
+    "health_check_interval": 30,
+    "max_consecutive_failures": 3,
+    "notification_enabled": true
+  },
+  "backup": {
+    "enabled": true,
+    "interval_hours": 24,
+    "keep_days": 7
+  },
+  "maintenance": {
+    "cleanup_logs": true,
+    "cleanup_interval_days": 7,
+    "update_dependencies": true
+  }
+}

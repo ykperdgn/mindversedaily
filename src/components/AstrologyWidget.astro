@@ -86,16 +86,19 @@ const { className = '' } = Astro.props;
       <button id="check-compatibility" class="compatibility-btn" disabled>
         Uyumu Kontrol Et
       </button>
-    </div>
-
-    <div class="compatibility-result" id="compatibility-result" style="display: none;">
+    </div>    <div class="compatibility-result" id="compatibility-result" style="display: none;">
       <div class="compatibility-score">
         <div class="score-circle">
           <span id="compatibility-score">0</span>
           <small>/10</small>
         </div>
       </div>
-      <div class="compatibility-content" id="compatibility-content"></div>
+      <div class="compatibility-content" id="compatibility-content">
+        <div class="loading">
+          <div class="spinner"></div>
+          <p>Yıldızlar uyumu hesaplıyor...</p>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -265,12 +268,21 @@ const { className = '' } = Astro.props;
 .compatibility-result {
   display: flex;
   gap: 2rem;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
 }
 
 .compatibility-score {
   text-align: center;
+  flex-shrink: 0;
+}
+
+.compatibility-content {
+  flex: 1;
+  min-width: 300px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+  padding: 1rem;
 }
 
 .score-circle {
@@ -375,11 +387,11 @@ document.addEventListener('DOMContentLoaded', function() {
   const horoscopeResult = document.getElementById('horoscope-result');
   const resultContent = document.getElementById('result-content');
   const selectedSignName = document.getElementById('selected-sign-name');
-  const tabBtns = document.querySelectorAll('.tab-btn');
-  const compatibilityBtn = document.getElementById('check-compatibility');
+  const tabBtns = document.querySelectorAll('.tab-btn');  const compatibilityBtn = document.getElementById('check-compatibility');
   const sign1Select = document.getElementById('sign1');
   const sign2Select = document.getElementById('sign2');
   const compatibilityResult = document.getElementById('compatibility-result');
+  const compatibilityContent = document.getElementById('compatibility-content');
   const cosmicContent = document.getElementById('cosmic-content');
   const refreshCosmicBtn = document.getElementById('refresh-cosmic');
 
@@ -420,142 +432,217 @@ document.addEventListener('DOMContentLoaded', function() {
       currentType = this.dataset.type;
       loadHoroscope(currentSign, currentType);
     });
-  });
-
-  // Horoskop yükleme fonksiyonu
+  });  // Horoskop yükleme fonksiyonu (detaylı mock data)
   async function loadHoroscope(sign, type) {
     showLoading(resultContent);
 
-    try {
-      const response = await fetch('/api/astrology', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          action: 'generate-horoscope',
-          sign: sign,
-          type: type,
-          language: 'tr'
-        })
-      });
-
-      const data = await response.json();
-
-      if (data.success) {
-        resultContent.innerHTML = `
-          <div class="horoscope-content">
-            ${data.content || 'Horoskop yorumu yükleniyor...'}
-          </div>
-        `;
-      } else {
-        resultContent.innerHTML = `
-          <div class="error-message">
-            <p>⚠️ Horoskop yüklenirken hata oluştu: ${data.error}</p>
-            <button onclick="loadHoroscope('${sign}', '${type}')" class="retry-btn">
-              🔄 Tekrar Dene
-            </button>
-          </div>
-        `;
+    // Detaylı ve farklı horoskop verileri
+    const detailedHoroscopes = {
+      'koc': {
+        'daily': '♈ **Koç Burcu - 1 Temmuz Günlük Yorumu**\n\n🔥 Mars enerjisiyle dolu bir gün sizi bekliyor! Sabah saatlerinde aldığınız haber hayatınızda önemli bir dönüm noktası olabilir.\n\n**⏰ Saatlik Rehber:**\n• **09:00-12:00** - İş görüşmeleri için ideal zaman\n• **14:00-16:00** - Yaratıcı projelerinize odaklanın\n• **19:00-21:00** - Sosyal aktiviteler ve arkadaşlarla buluşma\n\n**💰 Para:** Beklenmedik bir gelir kapıda. Ancak büyük harcamalardan kaçının.\n**💕 Aşk:** Eski bir arkadaşınızdan romantik mesaj alabilirsiniz.\n**🏥 Sağlık:** Enerji seviyeniz yüksek, spor yapmak için mükemmel gün.',
+        'weekly': '♈ **Koç Burcu - Haftalık Astro Rehber (1-7 Temmuz)**\n\n🌟 Bu hafta kişisel dönüşümünüzün en kritik dönemlerinden birini yaşıyorsunuz. Merkür-Mars kavuşumu cesaret verici kararlar almanızı destekliyor.\n\n**📅 Günlük Breakdown:**\n• **Pazartesi-Salı:** Yeni projeler için zemin hazırlığı\n• **Çarşamba-Perşembe:** İletişimde altın günler, önemli görüşmeler\n• **Cuma:** Mali konularda dikkatli olun, büyük kararları erteleyin\n• **Cumartesi-Pazar:** Aile zamanı ve kişisel gelişim\n\n**🎯 Bu Haftanın Hedefi:** Uzun süredir ertelediğiniz bir planı hayata geçirin.\n**⚠️ Dikkat:** Perşembe günü aceleci davranışlardan kaçının.\n**💫 Şanslı Renk:** Kırmızı ve turuncu tonları',
+        'monthly': '♈ **Koç Burcu - Temmuz 2025 Aylık Astroloji Takvimi**\n\n🚀 Temmuz ayı sizin için büyük bir uyanış ve değişim ayı! Güneş-Jüpiter üçgeni kariyerinizde sıçrama yapmanızı destekliyor.\n\n**🗓️ Önemli Tarihler:**\n• **5-8 Temmuz:** Aşk hayatında sürpriz gelişmeler\n• **12-15 Temmuz:** Kariyer fırsatları dorukta\n• **20-23 Temmuz:** Mali durum düzelme eğiliminde\n• **28-31 Temmuz:** Seyahat ve yeni deneyimler\n\n**💼 Kariyer:** Terfiye hazır olun! Üst yönetimden gelebilecek teklifi reddetmeyin.\n**💖 İlişkiler:** Bekârsanız 15 Temmuz sonrası önemli tanışma. Evliyseniz romantizm geri dönüyor.\n**🏠 Aile:** Ev değişikliği veya yenileme planları gündeme gelebilir.\n**💰 Finans:** Ay ortasından sonra gelir artışı beklentisi yüksek.'
+      },
+      'boga': {
+        'daily': '♉ **Boğa Burcu - Günün Astro Enerjisi**\n\n🌱 Venüs\'ün güçlü etkisiyle estetik zevkiniz dorukta! Bugün aldığınız kararlar uzun vadeli mutluluğunuzu etkileyebilir.\n\n**🎨 Yaratıcılık Zamanı:**\nSanatsal yetenekleriniz bugün parıldıyor. Dekorasyon, müzik veya yemek yapmaya odaklanın.\n\n**💚 Sağlık Notları:**\n• Boyun ve omuz bölgenize özen gösterin\n• Doğal gıdalar tüketin, işlenmiş yiyeceklerden uzak durun\n• Yoga veya meditasyon idealdir\n\n**💝 İlişkiler:** Partnerinizle kaliteli zaman geçirin. Tek iseniz, sosyal medyadan uzak durun.\n**🏡 Ev:** Bahçe işleri veya bitki bakımı ruh halinizi düzeltecek.',
+        'weekly': '♉ **Boğa Burcu - 7 Günlük Astro Planlama**\n\n🌸 Bu hafta istikrar arayışınız sonuç vermeye başlıyor. Toprak elementi güçlü olduğu için pratik kararlar alma zamanı.\n\n**💼 İş Hayatı:**\nUzun vadeli projelerinizi gözden geçirin. Hızlı sonuç beklemeyin, sabır anahtarınız.\n\n**💰 Para Durumu:**\n• Tasarruf planlarınızı revize edin\n• Gayrimenkul yatırımı için araştırma yapın\n• Online alışverişte dikkatli olun\n\n**🌿 Doğa Bağlantısı:** Hafta sonu mutlaka yeşillik arasında vakit geçirin.\n**💕 Romantik İpucu:** Çiçek hediye etmek veya almak bu hafta şansınızı artırır.',
+        'monthly': '♉ **Boğa Burcu - Temmuz\'da Büyük Dönüşüm**\n\n🏗️ Bu ay hayatınızın temellerini yeniden atıyorsunuz. Sabırla inşa ettiğiniz her şey kalıcı olacak.\n\n**🎯 Ana Tema:** Maddi güvenlik ve duygusal istikrar\n\n**📊 Aylık Hedefler:**\n1. **Mali Planlama:** Emeklilik veya yatırım fonu açın\n2. **Sağlık:** Beslenme alışkanlıklarınızı düzenleyin\n3. **İlişkiler:** Uzun vadeli bağlılıklarınızı güçlendirin\n4. **Kariyer:** Uzmanlık alanınızı geliştirin\n\n**🌟 Şanslı Dönemler:**\n• **8-12 Temmuz:** Aşk ve yaratıcılık\n• **18-22 Temmuz:** Para ve kariyer\n• **25-29 Temmuz:** Aile ve ev\n\n**⚡ Dikkat:** Hızlı değişimlere direnmek yerine adapte olmaya odaklanın.'
+      },
+      'ikizler': {
+        'daily': '♊ **İkizler Burcu - Günün Zeka Oyunu**\n\n🧠 Merkür\'ün güçlü etkisiyle mental aktiviteniz dorukta! Bugün aldığınız bilgiler gelecekte çok işinize yarayacak.\n\n**📱 İletişim Odağı:**\n• Eski arkadaşlarınızla iletişime geçin\n• Sosyal medyada aktif olun ama paylaşım yaparken dikkatli olun\n• Podcastler veya eğitici videolar izleyin\n\n**🎓 Öğrenme Fırsatları:**\nBugün öğrendiğiniz yeni bir beceri career path\'inizde dönüm noktası olabilir.\n\n**💫 Şans Faktörü:** Kısa mesafe seyahatlerde beklenmedik fırsatlar\n**⚠️ Uyarı:** Çok konuşmak yerine dinlemeye odaklanın',
+        'weekly': '♊ **İkizler Burcu - İletişim Haftası**\n\n📞 Bu hafta network\'ünüzü genişletme konusunda altın fırsat! Yeni insanlarla tanışacak, eski bağlantıları yenileyeceksiniz.\n\n**🗓️ Haftalık Roadmap:**\n• **Pazartesi:** Brainstorming sessions\n• **Salı-Çarşamba:** Yazışma ve görüşmeler\n• **Perşembe:** Eğitim veya seminer katılımı\n• **Cuma:** Sosyal aktiviteler\n• **Hafta Sonu:** Mental detoks\n\n**📚 Skill Development:** Yeni bir dil öğrenmeye başlamak için ideal hafta\n**💻 Teknoloji:** Yeni uygulama veya tool keşfedeceksiniz',
+        'monthly': '♊ **İkizler Burcu - Bilgi ve Bağlantı Ayı**\n\n🌐 Temmuz ayı sizin için büyük bir networking ve öğrenme dönemi. Çok yönlü yetenekleriniz parlamaya başlıyor.\n\n**🎯 Aylık Objectives:**\n1. **Skill Upgrade:** Online kurs tamamlayın\n2. **Network Expansion:** Her hafta 3 yeni kişiyle tanışın\n3. **Content Creation:** Blog veya sosyal medya içerik üretin\n4. **Travel Planning:** Kısa kaçamaklar planlayın\n\n**📈 Gelişim Alanları:**\n• **Dijital Marketing:** Kendinizi online tanıtın\n• **Çoklu Proje Yönetimi:** Farklı işleri aynı anda sürdürün\n• **Public Speaking:** Konuşma becerinizi geliştirin\n\n**🎪 Eğlence:** Tiyatro, konser, festival - kültürel etkinlikler sizi bekliyor!'
       }
-    } catch (error) {
+    };
+
+    // Diğer burçlar için varsayılan template
+    const generateDynamicContent = (sign, type) => {
+      const signNames = {
+        'yengec': 'Yengeç ♋', 'aslan': 'Aslan ♌', 'basak': 'Başak ♍',
+        'terazi': 'Terazi ♎', 'akrep': 'Akrep ♏', 'yay': 'Yay ♐',
+        'oglak': 'Oğlak ♑', 'kova': 'Kova ♒', 'balik': 'Balık ♓'
+      };
+
+      const periods = {
+        'daily': 'Günlük',
+        'weekly': 'Haftalık',
+        'monthly': 'Aylık'
+      };
+
+      const advices = {
+        'daily': [
+          'Bugün sezgilerinizi dinleyin, doğru yoldasınız.',
+          'Yeni bir fırsatın kapısında olabilirsiniz.',
+          'Sabır ve kararlılık bugünün anahtar kelimeleri.',
+          'İletişimde dikkatli olun, yanlış anlaşılabilirsiniz.',
+          'Enerji seviyeniz yüksek, hedeflerinize odaklanın.'
+        ],
+        'weekly': [
+          'Bu hafta kişisel gelişiminize odaklanın.',
+          'İlişkilerinizde denge kurmaya çalışın.',
+          'Finansal konularda temkinli davranın.',
+          'Yaratıcı projeleriniz için ideal hafta.',
+          'Sağlığınıza öncelik verin, dinlenmeyi ihmal etmeyin.'
+        ],
+        'monthly': [
+          'Bu ay büyük değişimlere hazır olun.',
+          'Uzun vadeli planlarınızı gözden geçirin.',
+          'Yeni dostluklar ve işbirlikleri sizi bekliyor.',
+          'Geçmişle barışık, geleceğe umutla bakın.',
+          'Kendinize yatırım yapma zamanı.'
+        ]
+      };
+
+      const randomAdvice = advices[type][Math.floor(Math.random() * advices[type].length)];      return `✨ **${signNames[sign]} ${periods[type]} Yorumu**\n\n${randomAdvice}\n\n🔮 **Ana Tema:** Dönüşüm ve yenilenme\n💫 **Tavsiye:** İç sesinizi dinleyin\n⭐ **Şans:** Ortalamanın üstünde\n\n*Detaylı yorumlar için horoscope bölümündeki özel yazılarımızı okuyabilirsiniz.*`;
+    };
+
+    setTimeout(() => {
+      let content;
+      if (detailedHoroscopes[sign] && detailedHoroscopes[sign][type]) {
+        content = detailedHoroscopes[sign][type];
+      } else {
+        content = generateDynamicContent(sign, type);
+      }
+
       resultContent.innerHTML = `
-        <div class="error-message">
-          <p>⚠️ Bağlantı hatası oluştu</p>
-          <button onclick="loadHoroscope('${sign}', '${type}')" class="retry-btn">
-            🔄 Tekrar Dene
-          </button>
+        <div class="horoscope-content">
+          ${content.replace(/\n/g, '<br>')}
         </div>
       `;
-    }
+    }, 1000); // Daha hızlı horoscope loading
   }
-
   // Aşk uyumu kontrol
   function checkCompatibilityInputs() {
     const sign1 = sign1Select.value;
     const sign2 = sign2Select.value;
-    compatibilityBtn.disabled = !sign1 || !sign2 || sign1 === sign2;
+    // Aynı burçlar da karşılaştırılabilir (kendi kendini tanıma)
+    compatibilityBtn.disabled = !sign1 || !sign2;
   }
 
   sign1Select.addEventListener('change', checkCompatibilityInputs);
-  sign2Select.addEventListener('change', checkCompatibilityInputs);
-
-  compatibilityBtn.addEventListener('click', async function() {
+  sign2Select.addEventListener('change', checkCompatibilityInputs);  compatibilityBtn.addEventListener('click', async function() {
     const sign1 = sign1Select.value;
-    const sign2 = sign2Select.value;
+    const sign2 = sign2Select.value;    if (!sign1 || !sign2) return;
 
-    if (!sign1 || !sign2) return;
-
-    showLoading(compatibilityResult);
+    showLoading(compatibilityContent);
     compatibilityResult.style.display = 'block';
 
-    try {
-      const response = await fetch('/api/astrology', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          action: 'compatibility-analysis',
-          sign1: sign1,
-          sign2: sign2,
-          language: 'tr'
-        })
-      });
+    // Detaylı compatibility analizi
+    const generateDetailedCompatibility = (s1, s2) => {
+      const signDetails = {
+        'koc': { name: 'Koç', element: 'Ateş', planet: 'Mars', traits: ['enerjik', 'lider', 'aceleci'] },
+        'boga': { name: 'Boğa', element: 'Toprak', planet: 'Venüs', traits: ['sabırlı', 'güvenilir', 'inatçı'] },
+        'ikizler': { name: 'İkizler', element: 'Hava', planet: 'Merkür', traits: ['esnek', 'konuşkan', 'meraklı'] },
+        'yengec': { name: 'Yengeç', element: 'Su', planet: 'Ay', traits: ['duygusal', 'koruyucu', 'sezgisel'] },
+        'aslan': { name: 'Aslan', element: 'Ateş', planet: 'Güneş', traits: ['gururlu', 'yaratıcı', 'cömert'] },
+        'basak': { name: 'Başak', element: 'Toprak', planet: 'Merkür', traits: ['detayist', 'pratik', 'mükemmeliyetçi'] },
+        'terazi': { name: 'Terazi', element: 'Hava', planet: 'Venüs', traits: ['dengeli', 'diplomatik', 'kararsız'] },
+        'akrep': { name: 'Akrep', element: 'Su', planet: 'Mars', traits: ['tutkulu', 'gizemli', 'güçlü'] },
+        'yay': { name: 'Yay', element: 'Ateş', planet: 'Jüpiter', traits: ['özgür', 'iyimser', 'maceracı'] },
+        'oglak': { name: 'Oğlak', element: 'Toprak', planet: 'Satürn', traits: ['disiplinli', 'hırslı', 'sorumluluk sahibi'] },
+        'kova': { name: 'Kova', element: 'Hava', planet: 'Uranüs', traits: ['bağımsız', 'yenilikçi', 'eccentric'] },
+        'balik': { name: 'Balık', element: 'Su', planet: 'Neptün', traits: ['hayal kurma', 'şefkatli', 'hassas'] }
+      };
 
-      const data = await response.json();
+      const elementCompatibility = {
+        'Ateş': { 'Ateş': 8, 'Toprak': 4, 'Hava': 9, 'Su': 3 },
+        'Toprak': { 'Ateş': 4, 'Toprak': 7, 'Hava': 5, 'Su': 8 },
+        'Hava': { 'Ateş': 9, 'Toprak': 5, 'Hava': 7, 'Su': 6 },
+        'Su': { 'Ateş': 3, 'Toprak': 8, 'Hava': 6, 'Su': 9 }
+      };
 
-      if (data.success) {
-        // Score parse et
-        const scoreMatch = data.content.match(/(\d+)\/10/);
-        const score = scoreMatch ? scoreMatch[1] : '?';
+      const info1 = signDetails[s1];
+      const info2 = signDetails[s2];
 
-        document.getElementById('compatibility-score').textContent = score;
-        document.getElementById('compatibility-content').innerHTML = data.content;
-      } else {
-        compatibilityResult.innerHTML = `
-          <div class="error-message">
-            <p>⚠️ Uyum analizi yüklenirken hata: ${data.error}</p>
-          </div>
-        `;
+      let baseScore = elementCompatibility[info1.element][info2.element];
+
+      // Aynı burç bonusu
+      if (s1 === s2) {
+        baseScore = 9;
       }
-    } catch (error) {
-      compatibilityResult.innerHTML = `
-        <div class="error-message">
-          <p>⚠️ Bağlantı hatası oluştu</p>
-        </div>
-      `;
-    }
-  });
 
-  // Kozmik öngörü yükleme
+      // Aynı gezegen bonusu
+      if (info1.planet === info2.planet) {
+        baseScore += 1;
+      }
+
+      // Final score (1-10 arası)
+      const finalScore = Math.min(10, Math.max(1, baseScore + Math.floor(Math.random() * 2 - 1)));
+
+      const levelMessages = {
+        9: [
+          "🔥 **Mükemmel Uyum!** Yıldızlar sizin için dans ediyor! Bu eşleşme gerçekten nadir ve değerli.",
+          "✨ **Kozmik Bağlantı!** Ruhlarınız aynı frekansta titreşiyor. Bu bir mucize eşleşme!"
+        ],
+        8: [
+          "💖 **Harika Uyum!** Birbirinizi tamamlayan güçlü bir bağınız var.",
+          "🌟 **Güçlü Kimya!** Element uyumunuz sayesinde doğal bir çekim var."
+        ],
+        7: [
+          "💕 **İyi Uyum!** Küçük çabalarla harika sonuçlar alabilirsiniz.",
+          "⭐ **Umut Verici!** Farklılıklarınız sizi güçlendiriyor."
+        ],
+        6: [
+          "💛 **Orta Uyum.** Sabır ve anlayışla güzel bir ilişki kurabilirsiniz.",
+          "🌈 **Denge Gerekli.** Birbirinizi anlamaya çalıştığınızda magic happens!"
+        ],
+        5: [
+          "💙 **Meydan Okuyucu Uyum.** Büyüme için birbirinize ihtiyacınız var.",
+          "🔮 **Öğretici İlişki.** Challenges vardır ama birlikte güçlenirsiniz."
+        ]
+      };
+
+      const score = Math.max(5, finalScore); // Minimum 5 puan
+      const messageKey = score >= 9 ? 9 : score >= 8 ? 8 : score >= 7 ? 7 : score >= 6 ? 6 : 5;
+      const messages = levelMessages[messageKey];
+      const selectedMessage = messages[Math.floor(Math.random() * messages.length)];      const detailedAnalysis = `
+**🎭 Kişilik Analizi:**
+• **${info1.name}:** ${info1.traits.join(', ')}
+• **${info2.name}:** ${info2.traits.join(', ')}
+
+**🌟 Element Uyumu:** ${info1.element} + ${info2.element}
+**🪐 Gezegen Etkisi:** ${info1.planet} & ${info2.planet}
+
+**💡 İlişki Tavsiyeleri:**
+${s1 === s2 ?
+  '• Aynı burçtan olmanız deep understanding sağlar\n• Ego çatışmalarından kaçının\n• Birbirinizin space\'ine saygı gösterin' :
+  '• Farklılıklarınızı strength olarak görün\n• İletişim konusuna özen gösterin\n• Birbirinizden öğrenmeye açık olun'
+}
+
+**🎯 Bu İlişkide Odaklanmanız Gerekenler:**
+• Karşılıklı saygı ve anlayış
+• Ortak hedefler belirleme
+• Birbirini tamamlayan qualities'leri keşfetme
+      `;
+
+      return {
+        score: score,
+        content: `💕 **${info1.name} & ${info2.name} Aşk Uyumu Raporu** 💕\n\n${selectedMessage}\n\n**📊 Uyum Skoru: ${score}/10**\n\n${detailedAnalysis}`
+      };
+    };    setTimeout(() => {
+      const compatibility = generateDetailedCompatibility(sign1, sign2);
+      document.getElementById('compatibility-score').textContent = compatibility.score;
+      document.getElementById('compatibility-content').innerHTML = compatibility.content.replace(/\n/g, '<br>');
+    }, 800); // Daha hızlı sonuç
+  });
+  // Kozmik öngörü yükleme (mock data)
   async function loadCosmicForecast() {
     showLoading(cosmicContent);
 
-    try {
-      const response = await fetch('/api/astrology?action=cosmic-forecast&period=week');
-      const data = await response.json();
+    const cosmicMessages = [
+      '🌌 **Kozmik Enerji Raporu**\n\nBu hafta Merkür retrograd döneminden çıkıyor. İletişimde dikkatli olun.\n\n⭐ **Ana Tema:** Yenilenme\n🔮 **Tavsiye:** Meditasyon yapın\n💫 **Fırsat:** Yaratıcı projeler',
+      '🌟 **Evrensel Titreşimler**\n\nVenüs ve Mars uyum içinde. Aşk ve tutku bir arada.\n\n💕 **İlişkiler:** Güçlenme dönemi\n🎨 **Sanat:** İlham verici günler\n🌙 **Sezgi:** Güçlü mesajlar',
+      '✨ **Astral Enerji Durumu**\n\nJüpiter\'in olumlu etkisiyle büyüme ve genişleme zamanı.\n\n🎯 **Hedefler:** Büyük hayal kurun\n📚 **Öğrenme:** Yeni bilgiler\n🌍 **Seyahat:** Uzak yerler çağırıyor'
+    ];
 
-      if (data.success) {
-        cosmicContent.innerHTML = `
-          <div class="cosmic-forecast-content">
-            ${data.content || 'Kozmik enerji analizi yükleniyor...'}
-          </div>
-        `;
-      } else {
-        cosmicContent.innerHTML = `
-          <div class="error-message">
-            <p>⚠️ Kozmik öngörü yüklenirken hata: ${data.error}</p>
-          </div>
-        `;
-      }
-    } catch (error) {
+    setTimeout(() => {
+      const randomMessage = cosmicMessages[Math.floor(Math.random() * cosmicMessages.length)];
       cosmicContent.innerHTML = `
-        <div class="error-message">
-          <p>⚠️ Evrenle bağlantı kurulamadı 🌌</p>
+        <div class="cosmic-forecast-content">
+          ${randomMessage.replace(/\n/g, '<br>')}
         </div>
       `;
-    }
+    }, 1000);
   }
 
   refreshCosmicBtn.addEventListener('click', loadCosmicForecast);

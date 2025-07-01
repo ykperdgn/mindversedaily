@@ -96,15 +96,16 @@ const pageKeywords = `${category}, ${category} articles, ${category} research, s
               {cat.charAt(0).toUpperCase() + cat.slice(1)}
             </a>
           ))}
-        </nav>
-
-        <!-- Blog Posts Grid -->
+        </nav>        <!-- Blog Posts Grid -->
         <section class="mv-grid-section">
           {filteredPosts.length > 0 ? (
-            <ul class="mv-grid">
-              {filteredPosts.map((post) => (
+            <ul class="mv-grid">              {filteredPosts.map((post) => {
+                // İngilizce post için doğru URL oluştur
+                const slug = post.slug || post.id;
+                const postUrl = `/blog/${slug.replace('.en', '')}en`;
+                return (
                 <li class="mv-card">
-                  <a href={`/blog/${post.slug}`}>
+                  <a href={postUrl}>
                     <img
                       src={post.data.heroImage || '/assets/blog-placeholder-1.svg'}
                       alt={post.data.title}
@@ -116,15 +117,15 @@ const pageKeywords = `${category}, ${category} articles, ${category} research, s
                     />
                     <div class="mv-card-content">
                       <div class="mv-card-title">{post.data.title}</div>
-                      <div class="mv-card-summary">{post.data.description}</div>
-                      <div class="mv-card-meta">
+                      <div class="mv-card-summary">{post.data.description}</div>                      <div class="mv-card-meta">
                         <span class="category-badge">{post.data.category}</span>
                         <FormattedDate date={post.data.pubDate} />
                       </div>
                     </div>
                   </a>
                 </li>
-              ))}
+                );
+              })}
             </ul>
           ) : (
             <div class="mv-empty-state">

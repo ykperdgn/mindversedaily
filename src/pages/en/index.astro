@@ -2,6 +2,7 @@
 import BaseHead from '../../components/BaseHead.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
+import AstrologyWidgetEN from '../../components/AstrologyWidgetEN.astro';
 import { SITE_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS } from '../../consts';
 import { getCollection } from 'astro:content';
 
@@ -48,8 +49,7 @@ const enDescription = "MindVerse Daily: Latest news, research and in-depth analy
 		<div class="content-wrapper">
 			<Header />
 
-			<main class="mv-main-home">
-				<!-- English Hero Section -->
+			<main class="mv-main-home">				<!-- English Hero Section -->
 				<section class="mv-hero">
 					<div class="hero-logo-container">
 						<div class="hero-galaxy">🌌</div>
@@ -61,6 +61,9 @@ const enDescription = "MindVerse Daily: Latest news, research and in-depth analy
 					<p class="mv-desc">Quality content from science, health, psychology and current topics</p>
 				</section>
 
+				<!-- English Astrology Widget -->
+				<AstrologyWidgetEN />
+
 				<!-- Categories Navigation -->
 				<nav class="mv-categories">
 					{categories.map((category) => (
@@ -69,15 +72,16 @@ const enDescription = "MindVerse Daily: Latest news, research and in-depth analy
 							{category.charAt(0).toUpperCase() + category.slice(1)}
 						</a>
 					))}
-				</nav>
-
-				<!-- Latest Posts Section -->
+				</nav>				<!-- Latest Posts Section -->
 				<section class="mv-grid-section">
 					<h2 class="mv-section-title">Latest Posts</h2>
-					<ul class="mv-grid">
-						{posts.slice(0, 8).map((post) => (
+					<ul class="mv-grid">						{posts.slice(0, 8).map((post) => {
+							// İngilizce post için doğru URL oluştur
+							const slug = post.slug || post.id;
+							const postUrl = `/blog/${slug.replace('.en', '')}en`;
+							return (
 							<li class="mv-card">
-								<a href={`/blog/${post.slug}`}>
+								<a href={postUrl}>
 									<img
 										src={post.data.heroImage || '/assets/blog-placeholder-1.svg'}
 										alt={post.data.title}
@@ -101,7 +105,8 @@ const enDescription = "MindVerse Daily: Latest news, research and in-depth analy
 									</div>
 								</a>
 							</li>
-						))}
+							);
+						})}
 					</ul>
 				</section>
 			</main>

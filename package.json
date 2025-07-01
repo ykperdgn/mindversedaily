@@ -7,7 +7,19 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "fetch-gnews": "ts-node scripts/fetch-gnews-content.ts"
+    "fetch-gnews": "ts-node scripts/fetch-gnews-content.ts",
+    "auto:content": "python scripts/master_automation.py content",
+    "auto:deploy": "python scripts/master_automation.py deploy",
+    "auto:health": "python scripts/master_automation.py health",
+    "auto:backup": "python scripts/master_automation.py backup",
+    "auto:maintenance": "python scripts/master_automation.py maintenance",
+    "quality:scan": "python scripts/quality_control.py scan",
+    "quality:fix": "python scripts/quality_control.py fix",
+    "quality:both": "python scripts/quality_control.py both",
+    "monitor:check": "python scripts/performance_monitor.py check",
+    "monitor:report": "python scripts/performance_monitor.py report",
+    "monitor:status": "python scripts/performance_monitor.py status",
+    "dashboard": "python create_dashboard.py"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.0",

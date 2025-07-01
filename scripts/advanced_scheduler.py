@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
 Gelişmiş Otomatik İçerik ve Deployment Sistemi
 - Her kategori için 15 saniye arayla içerik üretir
@@ -16,6 +17,12 @@ import schedule
 import threading
 from datetime import datetime
 from content_bot import create_articles_for_selected_categories, auto_deploy
+
+# UTF-8 encoding support for Windows
+if sys.platform == "win32":
+    import codecs
+    sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())
+    sys.stderr = codecs.getwriter("utf-8")(sys.stderr.detach())
 
 class AdvancedContentScheduler:
     def __init__(self):
@@ -381,7 +388,7 @@ def main():
 
 def print_usage():
     print("""
-🤖 Advanced Content Scheduler Usage:
+Advanced Content Scheduler Usage:
 
 python advanced_scheduler.py [MODE] [OPTIONS]
 

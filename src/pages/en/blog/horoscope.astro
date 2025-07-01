@@ -1,36 +1,36 @@
 ---
-import BaseHead from '../../components/BaseHead.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
-import AstrologyWidget from '../../components/AstrologyWidget.astro';
+import BaseHead from '../../../components/BaseHead.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import AstrologyWidgetEN from '../../../components/AstrologyWidgetEN.astro';
 
-// Burç grupları
+// Zodiac signs
 const zodiacSigns = {
-  'koc': { name: 'Koç', emoji: '♈', element: 'Ateş' },
-  'boga': { name: 'Boğa', emoji: '♉', element: 'Toprak' },
-  'ikizler': { name: 'İkizler', emoji: '♊', element: 'Hava' },
-  'yengec': { name: 'Yengeç', emoji: '♋', element: 'Su' },
-  'aslan': { name: 'Aslan', emoji: '♌', element: 'Ateş' },
-  'basak': { name: 'Başak', emoji: '♍', element: 'Toprak' },
-  'terazi': { name: 'Terazi', emoji: '♎', element: 'Hava' },
-  'akrep': { name: 'Akrep', emoji: '♏', element: 'Su' },
-  'yay': { name: 'Yay', emoji: '♐', element: 'Ateş' },
-  'oglak': { name: 'Oğlak', emoji: '♑', element: 'Toprak' },
-  'kova': { name: 'Kova', emoji: '♒', element: 'Hava' },
-  'balik': { name: 'Balık', emoji: '♓', element: 'Su' }
+  'aries': { name: 'Aries', emoji: '♈', element: 'Fire' },
+  'taurus': { name: 'Taurus', emoji: '♉', element: 'Earth' },
+  'gemini': { name: 'Gemini', emoji: '♊', element: 'Air' },
+  'cancer': { name: 'Cancer', emoji: '♋', element: 'Water' },
+  'leo': { name: 'Leo', emoji: '♌', element: 'Fire' },
+  'virgo': { name: 'Virgo', emoji: '♍', element: 'Earth' },
+  'libra': { name: 'Libra', emoji: '♎', element: 'Air' },
+  'scorpio': { name: 'Scorpio', emoji: '♏', element: 'Water' },
+  'sagittarius': { name: 'Sagittarius', emoji: '♐', element: 'Fire' },
+  'capricorn': { name: 'Capricorn', emoji: '♑', element: 'Earth' },
+  'aquarius': { name: 'Aquarius', emoji: '♒', element: 'Air' },
+  'pisces': { name: 'Pisces', emoji: '♓', element: 'Water' }
 };
 
-const pageTitle = 'Horoscope - Burç Yorumları ve Astroloji';
-const pageDescription = 'Günlük, haftalık ve aylık burç yorumları. Astroloji analizleri, aşk uyumu ve kişisel horoscope rehberiniz.';
+const pageTitle = 'Horoscope - Zodiac Readings and Astrology';
+const pageDescription = 'Daily, weekly and monthly horoscope readings. Astrology analysis, love compatibility and your personal horoscope guide.';
 ---
 
 <!doctype html>
-<html lang="tr">
+<html lang="en">
 <head>
   <BaseHead
     title={pageTitle}
     description={pageDescription}
-    keywords="burç yorumu, horoskop, astroloji, günlük burç, haftalık burç, aylık burç, aşk uyumu, doğum haritası"
+    keywords="horoscope, zodiac, astrology, daily horoscope, weekly horoscope, monthly horoscope, love compatibility, birth chart"
     articleType="website"
   />
   <style>
@@ -106,7 +106,9 @@ const pageDescription = 'Günlük, haftalık ve aylık burç yorumları. Astrolo
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 1.5rem;
       margin-bottom: 3rem;
-    }    .zodiac-card {
+    }
+
+    .zodiac-card {
       background: white;
       border-radius: 1rem;
       padding: 1.5rem;
@@ -179,7 +181,9 @@ const pageDescription = 'Günlük, haftalık ve aylık burç yorumları. Astrolo
       color: #666;
       font-size: 1.1rem;
       line-height: 1.6;
-    }    .section-title {
+    }
+
+    .section-title {
       font-size: 2.5rem;
       font-weight: 800;
       text-align: center;
@@ -212,7 +216,9 @@ const pageDescription = 'Günlük, haftalık ve aylık burç yorumları. Astrolo
 
       .hero-title {
         font-size: 2rem;
-      }      .zodiac-overview {
+      }
+
+      .zodiac-overview {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: 1rem;
       }
@@ -228,27 +234,29 @@ const pageDescription = 'Günlük, haftalık ve aylık burç yorumları. Astrolo
       <section class="horoscope-hero">
         <div class="hero-content">
           <div class="hero-icon">🔮✨</div>
-          <h1 class="hero-title">Astroloji & Horoscope</h1>
+          <h1 class="hero-title">Astrology & Horoscope</h1>
           <p class="hero-subtitle">
-            Yıldızların rehberliğinde geleceğinizi keşfedin. Günlük, haftalık ve aylık burç yorumlarınız burada.
+            Discover your future with the guidance of the stars. Your daily, weekly and monthly horoscope readings are here.
           </p>
         </div>
-      </section>      <!-- Astrology Widget Introduction -->
+      </section>
+
+      <!-- Astrology Widget Introduction -->
       <section class="widget-intro">
-        <h2 class="section-title">🔮 İnteraktif Astroloji Merkezi</h2>
+        <h2 class="section-title">🔮 Interactive Astrology Center</h2>
         <p>
-          Günlük, haftalık ve aylık horoscope yorumlarınızı keşfedin. Aşk uyumunuzu öğrenin ve yıldızların size neler söylediğini görün.
+          Discover your daily, weekly and monthly horoscope readings. Learn your love compatibility and see what the stars have to tell you.
         </p>
       </section>
 
-      <!-- Astrology Widget -->
-      <AstrologyWidget />
+      <!-- English Astrology Widget -->
+      <AstrologyWidgetEN />
 
       <!-- Zodiac Signs Quick Access -->
       <section>
-        <h2 class="section-title">Burç Seçimi</h2>
+        <h2 class="section-title">Zodiac Selection</h2>
         <p style="text-align: center; color: #666; margin-bottom: 2rem;">
-          Burç kartlarına tıklayarak doğrudan o burcun detaylı yorumlarına ulaşabilirsiniz.
+          Click on zodiac cards to directly access detailed readings for that sign.
         </p>
 
         <div class="zodiac-overview">
@@ -257,17 +265,20 @@ const pageDescription = 'Günlük, haftalık ve aylık burç yorumları. Astrolo
               <div class="zodiac-emoji">{sign.emoji}</div>
               <div class="zodiac-name">{sign.name}</div>
               <div class="zodiac-element">{sign.element} Element</div>
-              <div class="zodiac-action">Yorumları Gör</div>
+              <div class="zodiac-action">View Readings</div>
             </div>
           ))}
         </div>
       </section>
-    </main><Footer />
+    </main>
+
+    <Footer />
   </div>
-  <!-- Horoscope sayfası JavaScript -->
+
+  <!-- English Horoscope page JavaScript -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      // Burç kartlarına tıklama olayı ekle
+      // Add click events to zodiac cards
       const zodiacCards = document.querySelectorAll('.zodiac-card[data-sign]');
 
       zodiacCards.forEach(card => {
@@ -275,10 +286,10 @@ const pageDescription = 'Günlük, haftalık ve aylık burç yorumları. Astrolo
           const signKey = this.dataset.sign;
           const signName = this.querySelector('.zodiac-name').textContent;
 
-          // Astrology widget'a scroll yap
+          // Scroll to astrology widget
           scrollToAstrologyWidget();
 
-          // Burcu seç ve widget'ı aç
+          // Select sign and open widget
           setTimeout(() => {
             selectZodiacInWidget(signKey, signName);
           }, 800);
@@ -296,20 +307,20 @@ const pageDescription = 'Günlük, haftalık ve aylık burç yorumları. Astrolo
       }
 
       function selectZodiacInWidget(signKey, signName) {
-        // Widget içindeki burç butonunu bul ve tıkla
+        // Find and click zodiac button in widget
         const zodiacButton = document.querySelector(`.astrology-widget [data-sign="${signKey}"]`);
 
         if (zodiacButton) {
-          // Önceki seçimleri temizle
+          // Clear previous selections
           document.querySelectorAll('.astrology-widget .zodiac-sign').forEach(btn => {
             btn.classList.remove('selected');
           });
 
-          // Yeni burcu seç
+          // Select new sign
           zodiacButton.classList.add('selected');
           zodiacButton.click();
 
-          // Görsel feedback
+          // Visual feedback
           zodiacButton.style.transform = 'scale(1.1)';
           setTimeout(() => {
             zodiacButton.style.transform = '';

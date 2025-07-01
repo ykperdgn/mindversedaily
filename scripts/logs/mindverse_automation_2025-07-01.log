@@ -1,0 +1,33 @@
+2025-07-01 22:04:50,459 - MasterAutomation - INFO - 🚀 MindVerse Master Automation System Started
+2025-07-01 22:04:50,459 - MasterAutomation - INFO - ✅ Configuration loaded from file
+2025-07-01 22:04:50,461 - MasterAutomation - INFO - 🔄 Git status check
+2025-07-01 22:04:50,524 - MasterAutomation - INFO - ✅ Git status check completed successfully
+2025-07-01 22:04:50,525 - MasterAutomation - INFO - 💓 Health check completed - Files: 56
+2025-07-01 22:05:44,319 - MasterAutomation - INFO - 🚀 MindVerse Master Automation System Started
+2025-07-01 22:05:44,319 - MasterAutomation - INFO - ✅ Configuration loaded from file
+2025-07-01 22:05:44,321 - MasterAutomation - INFO - 🌅 Starting daily content creation
+2025-07-01 22:05:44,321 - MasterAutomation - INFO - 🔄 Daily content creation
+2025-07-01 22:05:44,501 - MasterAutomation - ERROR - ❌ Daily content creation failed: Traceback (most recent call last):
+  File "C:\Users\Jacob\MindVerse\mindverse_blog\public\mindverse_new\scripts\advanced_scheduler.py", line 421, in <module>
+    main()
+  File "C:\Users\Jacob\MindVerse\mindverse_blog\public\mindverse_new\scripts\advanced_scheduler.py", line 380, in main
+    print_usage()
+  File "C:\Users\Jacob\MindVerse\mindverse_blog\public\mindverse_new\scripts\advanced_scheduler.py", line 383, in print_usage
+    print("""
+  File "C:\Users\Jacob\AppData\Local\Programs\Python\Python311\Lib\encodings\cp1254.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f916' in position 2: character maps to <undefined>
+
+2025-07-01 22:05:44,501 - MasterAutomation - ERROR - ❌ Content creation failed: Traceback (most recent call last):
+  File "C:\Users\Jacob\MindVerse\mindverse_blog\public\mindverse_new\scripts\advanced_scheduler.py", line 421, in <module>
+    main()
+  File "C:\Users\Jacob\MindVerse\mindverse_blog\public\mindverse_new\scripts\advanced_scheduler.py", line 380, in main
+    print_usage()
+  File "C:\Users\Jacob\MindVerse\mindverse_blog\public\mindverse_new\scripts\advanced_scheduler.py", line 383, in print_usage
+    print("""
+  File "C:\Users\Jacob\AppData\Local\Programs\Python\Python311\Lib\encodings\cp1254.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f916' in position 2: character maps to <undefined>
+

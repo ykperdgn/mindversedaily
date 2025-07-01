@@ -17,7 +17,8 @@ const categoryIcons = {
   history: "📜",
   space: "🚀",
   quotes: "💬",
-  love: "❤️"
+  love: "❤️",
+  horoscope: "🔮"
 };
 ---
 
@@ -35,6 +36,10 @@ const categoryIcons = {
       <a href="/blog" class="mv-category-tab">
         <span class="category-icon">📚</span>
         Tümü
+      </a>
+      <a href="/blog/horoscope" class="mv-category-tab">
+        <span class="category-icon">🔮</span>
+        Horoskop
       </a>
       {categories.map(cat => (
         <a href={`/blog/${cat}`} class="mv-category-tab">

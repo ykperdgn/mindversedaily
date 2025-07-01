@@ -380,6 +380,29 @@ Diğer burçların {type} yorumlarını da okuyabilirsiniz:
 
         return "\n".join(links[:6])  # İlk 6 burcu göster
 
+    def write_horoscope_file(self, sign: str, type: str = "weekly") -> bool:
+        """Horoskop dosyasını oluştur ve kaydet"""
+        result = self.create_horoscope_content(sign, type)
+        if not result:
+            return False
+
+        content, filename = result
+
+        # Horoscope dizinini oluştur
+        horoscope_dir = os.path.join("src", "content", "blog", "horoscope")
+        os.makedirs(horoscope_dir, exist_ok=True)
+
+        # Dosya yolunu oluştur
+        file_path = os.path.join(horoscope_dir, filename)
+
+        try:
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(content)
+            return True
+        except Exception as e:
+            print(f"Dosya yazma hatası: {e}")
+            return False
+
 def main():
     """Ana fonksiyon - komut satırı ve API desteği"""
     import argparse
@@ -401,11 +424,9 @@ def main():
         if args.action == 'horoscope':
             if args.output == 'content':
                 # Dosya oluşturma modu
-                result = bot.create_horoscope_content(args.sign, args.type)
-                if result:
-                    content, filename = result
-                    print(f"Generated: {filename}")
-                    print(content[:500] + "...")
+                success = bot.write_horoscope_file(args.sign, args.type)
+                if success:
+                    print(f"Generated: {args.sign}-{args.type}-yorum.tr.md")
                 else:
                     print("Content generation failed!")
             else:

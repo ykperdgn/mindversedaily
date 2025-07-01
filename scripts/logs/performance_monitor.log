@@ -1,0 +1,13 @@
+2025-07-01 22:05:13,717 - PerformanceMonitor - INFO - 🔍 Starting site monitoring cycle
+2025-07-01 22:05:13,718 - PerformanceMonitor - INFO - Checking MindVerse Main...
+2025-07-01 22:05:14,075 - PerformanceMonitor - INFO - ❌ MindVerse Main: error (0.355s)
+2025-07-01 22:05:14,075 - PerformanceMonitor - WARNING -    Error: HTTP 402
+2025-07-01 22:05:14,076 - PerformanceMonitor - INFO - Checking MindVerse English...
+2025-07-01 22:05:14,319 - PerformanceMonitor - INFO - ❌ MindVerse English: error (0.243s)
+2025-07-01 22:05:14,320 - PerformanceMonitor - WARNING -    Error: HTTP 402
+2025-07-01 22:05:14,330 - PerformanceMonitor - INFO - Checking MindVerse Horoscope...
+2025-07-01 22:05:14,556 - PerformanceMonitor - INFO - ❌ MindVerse Horoscope: error (0.225s)
+2025-07-01 22:05:14,556 - PerformanceMonitor - WARNING -    Error: HTTP 402
+2025-07-01 22:05:14,559 - PerformanceMonitor - WARNING - 🚨 ALERT: Site error: HTTP 402
+2025-07-01 22:05:14,560 - PerformanceMonitor - WARNING - 🚨 ALERT: Site error: HTTP 402
+2025-07-01 22:05:14,560 - PerformanceMonitor - WARNING - 🚨 ALERT: Site error: HTTP 402

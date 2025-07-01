@@ -1,0 +1,699 @@
+---
+// English Astrology Widget - Horoscope and astrology features
+interface Props {
+  className?: string;
+}
+
+const { className = '' } = Astro.props;
+---
+
+<div class={`astrology-widget ${className}`}>
+  <!-- Zodiac Selector -->
+  <div class="zodiac-selector">
+    <h3>🔮 Your Daily Horoscope</h3>
+    <div class="zodiac-grid">
+      <button class="zodiac-sign" data-sign="aries">♈ Aries</button>
+      <button class="zodiac-sign" data-sign="taurus">♉ Taurus</button>
+      <button class="zodiac-sign" data-sign="gemini">♊ Gemini</button>
+      <button class="zodiac-sign" data-sign="cancer">♋ Cancer</button>
+      <button class="zodiac-sign" data-sign="leo">♌ Leo</button>
+      <button class="zodiac-sign" data-sign="virgo">♍ Virgo</button>
+      <button class="zodiac-sign" data-sign="libra">♎ Libra</button>
+      <button class="zodiac-sign" data-sign="scorpio">♏ Scorpio</button>
+      <button class="zodiac-sign" data-sign="sagittarius">♐ Sagittarius</button>
+      <button class="zodiac-sign" data-sign="capricorn">♑ Capricorn</button>
+      <button class="zodiac-sign" data-sign="aquarius">♒ Aquarius</button>
+      <button class="zodiac-sign" data-sign="pisces">♓ Pisces</button>
+    </div>
+  </div>
+
+  <!-- Horoscope Result Area -->
+  <div class="horoscope-result" id="horoscope-result-en" style="display: none;">
+    <div class="result-header">
+      <h4 id="selected-sign-name-en"></h4>
+      <div class="result-tabs">
+        <button class="tab-btn-en active" data-type="daily">Daily</button>
+        <button class="tab-btn-en" data-type="weekly">Weekly</button>
+        <button class="tab-btn-en" data-type="monthly">Monthly</button>
+      </div>
+    </div>
+    <div class="result-content" id="result-content-en">
+      <div class="loading">
+        <div class="spinner"></div>
+        <p>Reading the stars...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Love Compatibility Section -->
+  <div class="compatibility-section">
+    <h3>💕 Love Compatibility</h3>
+    <div class="compatibility-form">
+      <select id="sign1-en" class="sign-select">
+        <option value="">First Sign</option>
+        <option value="aries">♈ Aries</option>
+        <option value="taurus">♉ Taurus</option>
+        <option value="gemini">♊ Gemini</option>
+        <option value="cancer">♋ Cancer</option>
+        <option value="leo">♌ Leo</option>
+        <option value="virgo">♍ Virgo</option>
+        <option value="libra">♎ Libra</option>
+        <option value="scorpio">♏ Scorpio</option>
+        <option value="sagittarius">♐ Sagittarius</option>
+        <option value="capricorn">♑ Capricorn</option>
+        <option value="aquarius">♒ Aquarius</option>
+        <option value="pisces">♓ Pisces</option>
+      </select>
+
+      <span class="compatibility-heart">💝</span>
+
+      <select id="sign2-en" class="sign-select">
+        <option value="">Second Sign</option>
+        <option value="aries">♈ Aries</option>
+        <option value="taurus">♉ Taurus</option>
+        <option value="gemini">♊ Gemini</option>
+        <option value="cancer">♋ Cancer</option>
+        <option value="leo">♌ Leo</option>
+        <option value="virgo">♍ Virgo</option>
+        <option value="libra">♎ Libra</option>
+        <option value="scorpio">♏ Scorpio</option>
+        <option value="sagittarius">♐ Sagittarius</option>
+        <option value="capricorn">♑ Capricorn</option>
+        <option value="aquarius">♒ Aquarius</option>
+        <option value="pisces">♓ Pisces</option>
+      </select>
+
+      <button id="check-compatibility-en" class="compatibility-btn" disabled>
+        Check Compatibility
+      </button>
+    </div>
+
+    <div class="compatibility-result" id="compatibility-result-en" style="display: none;">
+      <div class="compatibility-score">
+        <div class="score-circle">
+          <span id="compatibility-score-en">0</span>
+          <small>/10</small>
+        </div>
+      </div>
+      <div class="compatibility-content" id="compatibility-content-en">
+        <div class="loading">
+          <div class="spinner"></div>
+          <p>Stars calculating compatibility...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cosmic Forecast -->
+  <div class="cosmic-forecast">
+    <h3>🌌 This Week's Cosmic Energy</h3>
+    <div class="cosmic-content" id="cosmic-content-en">
+      <div class="loading">
+        <div class="spinner"></div>
+        <p>Listening to the universe...</p>
+      </div>
+    </div>
+    <button id="refresh-cosmic-en" class="cosmic-refresh-btn">🔄 Refresh</button>
+  </div>
+</div>
+
+<style>
+.astrology-widget {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 20px;
+  padding: 2rem;
+  color: white;
+  margin: 2rem 0;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.astrology-widget h3 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.zodiac-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.zodiac-sign {
+  background: rgba(255,255,255,0.2);
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 12px;
+  padding: 0.8rem 0.5rem;
+  color: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.zodiac-sign:hover {
+  background: rgba(255,255,255,0.3);
+  border-color: rgba(255,255,255,0.5);
+  transform: translateY(-2px);
+}
+
+.zodiac-sign.selected {
+  background: rgba(255,215,0,0.3);
+  border-color: #ffd700;
+  box-shadow: 0 0 20px rgba(255,215,0,0.4);
+}
+
+.horoscope-result {
+  background: rgba(255,255,255,0.1);
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  backdrop-filter: blur(10px);
+}
+
+.result-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.result-tabs {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.tab-btn-en {
+  background: rgba(255,255,255,0.2);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  color: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-btn-en.active {
+  background: rgba(255,215,0,0.3);
+  border-color: #ffd700;
+}
+
+.result-content {
+  background: rgba(0,0,0,0.2);
+  border-radius: 10px;
+  padding: 1.5rem;
+  min-height: 200px;
+}
+
+.compatibility-section {
+  background: rgba(255,255,255,0.1);
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  backdrop-filter: blur(10px);
+}
+
+.compatibility-form {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.sign-select {
+  background: rgba(255,255,255,0.2);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 8px;
+  padding: 0.5rem;
+  color: white;
+  min-width: 150px;
+}
+
+.sign-select option {
+  background: #333;
+  color: white;
+}
+
+.compatibility-heart {
+  font-size: 1.5rem;
+  animation: pulse 2s infinite;
+}
+
+.compatibility-btn {
+  background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.2rem;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.compatibility-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.compatibility-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.compatibility-result {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.compatibility-score {
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.compatibility-content {
+  flex: 1;
+  min-width: 300px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.score-circle {
+  background: conic-gradient(from 0deg, #ff6b6b 0%, #feca57 50%, #48ca61 100%);
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 auto;
+}
+
+.cosmic-forecast {
+  background: rgba(0,0,0,0.2);
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+.cosmic-content {
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  min-height: 150px;
+}
+
+.cosmic-refresh-btn {
+  background: linear-gradient(45deg, #a8edea, #fed6e3);
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  color: #333;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-height: 100px;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(255,255,255,0.3);
+  border-top: 4px solid #ffd700;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+@media (max-width: 768px) {
+  .astrology-widget {
+    padding: 1rem;
+  }
+
+  .zodiac-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+
+  .compatibility-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .sign-select {
+    min-width: auto;
+  }
+
+  .compatibility-result {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+</style>
+
+<script>
+// English Astrology Widget JavaScript
+document.addEventListener('DOMContentLoaded', function() {
+  const zodiacSigns = document.querySelectorAll('.zodiac-sign');
+  const horoscopeResult = document.getElementById('horoscope-result-en');
+  const resultContent = document.getElementById('result-content-en');
+  const selectedSignName = document.getElementById('selected-sign-name-en');
+  const tabBtns = document.querySelectorAll('.tab-btn-en');  const compatibilityBtn = document.getElementById('check-compatibility-en');
+  const sign1Select = document.getElementById('sign1-en');
+  const sign2Select = document.getElementById('sign2-en');
+  const compatibilityResult = document.getElementById('compatibility-result-en');
+  const compatibilityContent = document.getElementById('compatibility-content-en');
+  const cosmicContent = document.getElementById('cosmic-content-en');
+  const refreshCosmicBtn = document.getElementById('refresh-cosmic-en');
+
+  let currentSign = '';
+  let currentType = 'daily';
+
+  // Sign mapping from Turkish to English
+  const signMapping = {
+    'aries': 'koc',
+    'taurus': 'boga',
+    'gemini': 'ikizler',
+    'cancer': 'yengec',
+    'leo': 'aslan',
+    'virgo': 'basak',
+    'libra': 'terazi',
+    'scorpio': 'akrep',
+    'sagittarius': 'yay',
+    'capricorn': 'oglak',
+    'aquarius': 'kova',
+    'pisces': 'balik'
+  };
+
+  const reverseSignMapping = Object.fromEntries(
+    Object.entries(signMapping).map(([en, tr]) => [tr, en])
+  );
+
+  // Zodiac sign selection
+  zodiacSigns.forEach(sign => {
+    sign.addEventListener('click', function() {
+      // Clear previous selection
+      zodiacSigns.forEach(s => s.classList.remove('selected'));
+
+      // Mark new selection
+      this.classList.add('selected');
+      currentSign = this.dataset.sign;
+
+      // Show sign name
+      const signName = this.textContent;
+      selectedSignName.textContent = signName;
+
+      // Show result area
+      horoscopeResult.style.display = 'block';
+
+      // Load horoscope
+      loadHoroscope(currentSign, currentType);
+    });
+  });
+
+  // Tab switching
+  tabBtns.forEach(tab => {
+    tab.addEventListener('click', function() {
+      if (!currentSign) return;
+
+      // Update tab state
+      tabBtns.forEach(t => t.classList.remove('active'));
+      this.classList.add('active');
+
+      currentType = this.dataset.type;
+      loadHoroscope(currentSign, currentType);
+    });
+  });
+
+  // English Horoscope loading function
+  async function loadHoroscope(sign, type) {
+    showLoading(resultContent);
+
+    // Convert English sign to Turkish for data lookup
+    const turkishSign = signMapping[sign];
+
+    // English horoscope content
+    const englishHoroscopes = {
+      'aries': {
+        'daily': '♈ **Aries Daily Reading - July 1st**\n\n🔥 Mars energy fills your day! Morning news could mark an important turning point in your life.\n\n**⏰ Hourly Guide:**\n• **09:00-12:00** - Perfect time for job interviews\n• **14:00-16:00** - Focus on creative projects\n• **19:00-21:00** - Social activities and meeting friends\n\n**💰 Money:** Unexpected income is coming. Avoid big expenses.\n**💕 Love:** You might receive a romantic message from an old friend.\n**🏥 Health:** High energy level, stay hydrated.',
+        'weekly': '♈ **Aries Weekly Astro Guide (July 1-7)**\n\n🌟 This week you\'re experiencing one of the most critical periods of personal transformation. Mercury-Mars conjunction supports brave decisions.\n\n**📅 Daily Breakdown:**\n• **Monday-Tuesday:** Foundation setting for new projects\n• **Wednesday-Thursday:** Golden days for communication, important meetings\n• **Friday:** Be careful with finances, postpone big decisions\n• **Weekend:** Family time and personal development\n\n**🎯 This Week\'s Goal:** Take action on long-delayed plans.',
+        'monthly': '♈ **Aries July 2025 Monthly Astrology Calendar**\n\n🚀 July is a month of great awakening and change for you! Sun-Jupiter trine supports career advancement.\n\n**🗓️ Important Dates:**\n• **July 5-8:** Surprise developments in love life\n• **July 12-15:** Career opportunities at peak\n• **July 20-23:** Financial improvement trend\n• **July 28-31:** Travel and new experiences\n\n**💼 Career:** Get ready for promotion! Don\'t refuse offers from upper management.\n**💖 Relationships:** Commitment time is approaching.'
+      },
+      'taurus': {
+        'daily': '♉ **Taurus Daily Astro Energy**\n\n🌱 Venus\'s powerful influence puts your aesthetic taste at its peak! Today\'s decisions could affect your long-term happiness.\n\n**🎨 Creativity Time:**\nYour artistic talents are shining today. Focus on decoration, music, or cooking.\n\n**💚 Health Notes:**\n• Pay attention to your neck and shoulder area\n• Consume natural foods, avoid processed foods\n• Yoga or meditation is ideal\n\n**💝 Relationships:** Spend quality time with your partner. If single, stay away from social media.',
+        'weekly': '♉ **Taurus 7-Day Astro Planning**\n\n🌸 This week your search for stability is starting to pay off. Time to make practical decisions with strong earth element.\n\n**💼 Work Life:**\nReview your long-term projects. Don\'t expect quick results, patience is your key.\n\n**💰 Money Situation:**\n• Revise your savings plans\n• Research real estate investment\n• Be careful with online shopping\n\n**🌿 Nature Connection:** Definitely spend time among greenery this weekend.',
+        'monthly': '♉ **Taurus July Major Transformation**\n\n🏗️ This month you\'re rebuilding the foundations of your life. Everything you build with patience will be permanent.\n\n**🎯 Main Theme:** Financial security and emotional stability\n\n**📊 Monthly Goals:**\n1. **Financial Planning:** Open retirement or investment fund\n2. **Health:** Organize your eating habits\n3. **Relationships:** Strengthen long-term commitments\n4. **Career:** Develop your expertise area'
+      },
+      'gemini': {
+        'daily': '♊ **Gemini Daily Brain Game**\n\n🧠 With Mercury\'s strong influence, your mental activity is at its peak! Information you gather today will be very useful in the future.\n\n**📱 Communication Focus:**\n• Get in touch with old friends\n• Be active on social media but careful when sharing\n• Watch podcasts or educational videos\n\n**🎓 Learning Opportunities:**\nA new skill you learn today could be a turning point in your career path.\n\n**💫 Luck Factor:** Unexpected opportunities in short-distance travel\n**⚠️ Warning:** Talking too much...',
+        'weekly': '♊ **Gemini Communication Week**\n\n📞 This week is a golden opportunity to expand your network! You\'ll meet new people and renew old connections.\n\n**🗓️ Weekly Roadmap:**\n• **Monday:** Brainstorming sessions\n• **Tuesday-Wednesday:** Correspondence and meetings\n• **Thursday:** Education or seminar participation\n• **Friday:** Social activities\n• **Weekend:** Mental detox\n\n**📚 Skill Development:** Ideal week to start learning a new language\n**💻 Technology:** You\'ll discover a new app or tool',
+        'monthly': '♊ **Gemini July Information & Connection Month**\n\n🌐 July is a big networking and learning period for you. Your versatile talents are starting to shine.\n\n**🎯 Monthly Objectives:**\n1. **Skill Upgrade:** Complete an online course\n2. **Network Expansion:** Meet 3 new people each week\n3. **Content Creation:** Produce blog or social media content\n4. **Travel Planning:** Plan short getaways\n\n**📈 Development Areas:**\n• **Digital Marketing:** Promote yourself online'
+      }
+    };
+
+    // Generate dynamic content for other signs
+    const generateEnglishContent = (sign, type) => {
+      const signNames = {
+        'cancer': 'Cancer ♋', 'leo': 'Leo ♌', 'virgo': 'Virgo ♍',
+        'libra': 'Libra ♎', 'scorpio': 'Scorpio ♏', 'sagittarius': 'Sagittarius ♐',
+        'capricorn': 'Capricorn ♑', 'aquarius': 'Aquarius ♒', 'pisces': 'Pisces ♓'
+      };
+
+      const periods = {
+        'daily': 'Daily',
+        'weekly': 'Weekly',
+        'monthly': 'Monthly'
+      };
+
+      const advices = {
+        'daily': [
+          'Trust your intuition today, you\'re on the right path.',
+          'You might be at the door of a new opportunity.',
+          'Patience and determination are today\'s keywords.',
+          'Be careful in communication, you might be misunderstood.',
+          'Your energy level is high, focus on your goals.'
+        ],
+        'weekly': [
+          'Focus on your personal development this week.',
+          'Try to balance your relationships.',
+          'Be cautious with financial matters.',
+          'Ideal week for creative projects.',
+          'Prioritize your health, don\'t neglect rest.'
+        ],
+        'monthly': [
+          'Get ready for big changes this month.',
+          'Review your long-term plans.',
+          'New friendships and collaborations await you.',
+          'Make peace with the past, look to the future with hope.',
+          'Time to invest in yourself.'
+        ]
+      };
+
+      const randomAdvice = advices[type][Math.floor(Math.random() * advices[type].length)];
+
+      return `✨ **${signNames[sign]} ${periods[type]} Reading**\n\n${randomAdvice}\n\n🔮 **Main Theme:** Transformation and renewal\n💫 **Advice:** Listen to your inner voice\n⭐ **Luck:** Above average\n\n*For detailed readings, check our special articles in the horoscope section.*`;
+    };
+
+    setTimeout(() => {
+      let content;
+      if (englishHoroscopes[sign] && englishHoroscopes[sign][type]) {
+        content = englishHoroscopes[sign][type];
+      } else {
+        content = generateEnglishContent(sign, type);
+      }
+
+      resultContent.innerHTML = `
+        <div class="horoscope-content">
+          ${content.replace(/\n/g, '<br>')}
+        </div>
+      `;
+    }, 1000);
+  }
+
+  // Love compatibility check
+  function checkCompatibilityInputs() {
+    const sign1 = sign1Select.value;
+    const sign2 = sign2Select.value;
+    compatibilityBtn.disabled = !sign1 || !sign2;
+  }
+
+  sign1Select.addEventListener('change', checkCompatibilityInputs);
+  sign2Select.addEventListener('change', checkCompatibilityInputs);
+
+  compatibilityBtn.addEventListener('click', async function() {
+    const sign1 = sign1Select.value;
+    const sign2 = sign2Select.value;    if (!sign1 || !sign2) return;
+
+    showLoading(compatibilityContent);
+    compatibilityResult.style.display = 'block';
+
+    // English compatibility analysis
+    const generateEnglishCompatibility = (s1, s2) => {
+      const signDetails = {
+        'aries': { name: 'Aries', element: 'Fire', planet: 'Mars', traits: ['energetic', 'leader', 'impulsive'] },
+        'taurus': { name: 'Taurus', element: 'Earth', planet: 'Venus', traits: ['patient', 'reliable', 'stubborn'] },
+        'gemini': { name: 'Gemini', element: 'Air', planet: 'Mercury', traits: ['flexible', 'talkative', 'curious'] },
+        'cancer': { name: 'Cancer', element: 'Water', planet: 'Moon', traits: ['emotional', 'protective', 'intuitive'] },
+        'leo': { name: 'Leo', element: 'Fire', planet: 'Sun', traits: ['proud', 'creative', 'generous'] },
+        'virgo': { name: 'Virgo', element: 'Earth', planet: 'Mercury', traits: ['detail-oriented', 'practical', 'perfectionist'] },
+        'libra': { name: 'Libra', element: 'Air', planet: 'Venus', traits: ['balanced', 'diplomatic', 'indecisive'] },
+        'scorpio': { name: 'Scorpio', element: 'Water', planet: 'Mars', traits: ['passionate', 'mysterious', 'strong'] },
+        'sagittarius': { name: 'Sagittarius', element: 'Fire', planet: 'Jupiter', traits: ['free', 'optimistic', 'adventurous'] },
+        'capricorn': { name: 'Capricorn', element: 'Earth', planet: 'Saturn', traits: ['disciplined', 'ambitious', 'responsible'] },
+        'aquarius': { name: 'Aquarius', element: 'Air', planet: 'Uranus', traits: ['independent', 'innovative', 'eccentric'] },
+        'pisces': { name: 'Pisces', element: 'Water', planet: 'Neptune', traits: ['dreamy', 'compassionate', 'sensitive'] }
+      };
+
+      const elementCompatibility = {
+        'Fire': { 'Fire': 8, 'Earth': 4, 'Air': 9, 'Water': 3 },
+        'Earth': { 'Fire': 4, 'Earth': 7, 'Air': 5, 'Water': 8 },
+        'Air': { 'Fire': 9, 'Earth': 5, 'Air': 7, 'Water': 6 },
+        'Water': { 'Fire': 3, 'Earth': 8, 'Air': 6, 'Water': 9 }
+      };
+
+      const info1 = signDetails[s1];
+      const info2 = signDetails[s2];
+
+      let baseScore = elementCompatibility[info1.element][info2.element];
+
+      if (s1 === s2) {
+        baseScore = 9;
+      }
+
+      if (info1.planet === info2.planet) {
+        baseScore += 1;
+      }
+
+      const finalScore = Math.min(10, Math.max(1, baseScore + Math.floor(Math.random() * 2 - 1)));
+
+      const levelMessages = {
+        9: [
+          "🔥 **Perfect Match!** The stars are dancing for you! This pairing is truly rare and precious.",
+          "✨ **Cosmic Connection!** Your souls vibrate on the same frequency. This is a miracle match!"
+        ],
+        8: [
+          "💖 **Great Compatibility!** You have a strong bond that complements each other.",
+          "🌟 **Strong Chemistry!** Natural attraction thanks to your element harmony."
+        ],
+        7: [
+          "💕 **Good Match!** You can achieve great results with small efforts.",
+          "⭐ **Promising!** Your differences make you stronger."
+        ],
+        6: [
+          "💛 **Moderate Compatibility.** You can build a beautiful relationship with patience and understanding.",
+          "🌈 **Balance Needed.** Magic happens when you try to understand each other!"
+        ],
+        5: [
+          "💙 **Challenging Match.** You need each other for growth.",
+          "🔮 **Learning Relationship.** There are challenges but you grow stronger together."
+        ]
+      };
+
+      const score = Math.max(5, finalScore);
+      const messageKey = score >= 9 ? 9 : score >= 8 ? 8 : score >= 7 ? 7 : score >= 6 ? 6 : 5;
+      const messages = levelMessages[messageKey];
+      const selectedMessage = messages[Math.floor(Math.random() * messages.length)];
+
+      const detailedAnalysis = `
+**🎭 Personality Analysis:**
+• **${info1.name}:** ${info1.traits.join(', ')}
+• **${info2.name}:** ${info2.traits.join(', ')}
+
+**🌟 Element Compatibility:** ${info1.element} + ${info2.element}
+**🪐 Planetary Influence:** ${info1.planet} & ${info2.planet}
+
+**💡 Relationship Tips:**
+${s1 === s2 ?
+  '• Being the same sign provides deep understanding\n• Avoid ego conflicts\n• Respect each other\'s space' :
+  '• See your differences as strengths\n• Pay attention to communication\n• Be open to learning from each other'
+}
+
+**🎯 Focus Areas for This Relationship:**
+• Mutual respect and understanding
+• Setting common goals
+• Discovering complementary qualities
+      `;
+
+      return {
+        score: score,
+        content: `💕 **${info1.name} & ${info2.name} Love Compatibility Report** 💕\n\n${selectedMessage}\n\n**📊 Compatibility Score: ${score}/10**\n\n${detailedAnalysis}`
+      };
+    };
+
+    setTimeout(() => {
+      const compatibility = generateEnglishCompatibility(sign1, sign2);
+      document.getElementById('compatibility-score-en').textContent = compatibility.score;
+      document.getElementById('compatibility-content-en').innerHTML = compatibility.content.replace(/\n/g, '<br>');
+    }, 800);
+  });
+
+  // English cosmic forecast loading
+  async function loadCosmicForecast() {
+    showLoading(cosmicContent);
+
+    const cosmicMessages = [
+      '🌌 **Cosmic Energy Report**\n\nMercury is coming out of retrograde this week. Be careful in communication.\n\n⭐ **Main Theme:** Renewal\n🔮 **Advice:** Meditate\n💫 **Opportunity:** Creative projects',
+      '🌟 **Universal Vibrations**\n\nVenus and Mars are in harmony. Love and passion together.\n\n💕 **Relationships:** Strengthening period\n🎨 **Art:** Inspiring days\n🌙 **Intuition:** Strong messages',
+      '✨ **Astral Energy Status**\n\nWith Jupiter\'s positive influence, it\'s time for growth and expansion.\n\n🎯 **Goals:** Dream big\n📚 **Learning:** New knowledge\n🌍 **Travel:** Distant places are calling'
+    ];
+
+    setTimeout(() => {
+      const randomMessage = cosmicMessages[Math.floor(Math.random() * cosmicMessages.length)];
+      cosmicContent.innerHTML = `
+        <div class="cosmic-forecast-content">
+          ${randomMessage.replace(/\n/g, '<br>')}
+        </div>
+      `;
+    }, 1000);
+  }
+
+  refreshCosmicBtn.addEventListener('click', loadCosmicForecast);
+
+  // Loading display function
+  function showLoading(element) {
+    element.innerHTML = `
+      <div class="loading">
+        <div class="spinner"></div>
+        <p>Reading the stars...</p>
+      </div>
+    `;
+  }
+
+  // Load cosmic forecast on page load
+  loadCosmicForecast();
+
+  // Global functions
+  window.loadHoroscopeEN = loadHoroscope;
+});
+</script>
