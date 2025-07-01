@@ -37,12 +37,15 @@ let filteredPosts = posts;
 console.log('Available categories:', availableCategories);
 console.log('Total posts:', posts.length);
 console.log('Category query:', categoryQuery);
+console.log('Filtered posts before:', filteredPosts.length);
 
 // Filter by category first
 if (categoryQuery) {
   filteredPosts = filteredPosts.filter(post =>
-    post.data.category?.toLowerCase() === categoryQuery
+    post.data.category?.toLowerCase() === categoryQuery.toLowerCase()
   );
+  console.log('Filtered posts after category filter:', filteredPosts.length);
+  console.log('Posts in category:', filteredPosts.map(p => ({ title: p.data.title, category: p.data.category })));
 }
 
 // Then filter by search query if exists
