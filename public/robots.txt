@@ -2,6 +2,17 @@ User-agent: *
 Allow: /
 Disallow: /scripts/
 Disallow: /*.json$
+Disallow: /automation_dashboard.html
+Disallow: /status.html
+Disallow: /*.bat$
+Disallow: /*.py$
+
+# Allow important pages
+Allow: /blog/
+Allow: /en/
+Allow: /tr/
+Allow: /rss.xml
+Allow: /sitemap-index.xml
 
 # Sitemap location
 Sitemap: https://mindversedaily.vercel.app/sitemap-index.xml
@@ -9,12 +20,22 @@ Sitemap: https://mindversedaily.vercel.app/sitemap-index.xml
 # Crawl-delay for better server performance
 Crawl-delay: 1
 
-# Google specific
+# Search engine specific instructions
 User-agent: Googlebot
-Allow: /
-Crawl-delay: 0
-
-# Bing specific
-User-agent: bingbot
-Allow: /
 Crawl-delay: 1
+Allow: /
+
+User-agent: Bingbot
+Crawl-delay: 2
+Allow: /
+
+# Social media bots
+User-agent: facebookexternalhit/1.1
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+# SEO friendly
+User-agent: *
+Request-rate: 1/1s

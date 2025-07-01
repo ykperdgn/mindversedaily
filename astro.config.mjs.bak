@@ -18,6 +18,13 @@ export default defineConfig({
 					tr: 'tr-TR',
 					en: 'en-US'
 				}
+			},
+			filter: (page) => {
+				// Exclude automation and private pages from sitemap
+				return !page.includes('/automation_dashboard') &&
+				       !page.includes('/status.html') &&
+				       !page.includes('/.bat') &&
+				       !page.includes('/.py');
 			}
 		})
 	],
@@ -29,4 +36,5 @@ export default defineConfig({
 		inlineStylesheets: 'auto'
 	},
 	compressHTML: true
+});
 });

@@ -1,0 +1,70 @@
+{
+  "name": "MindVerse Daily - Bilim ve Teknoloji Haberleri",
+  "short_name": "MindVerse",
+  "description": "Bilim, sağlık, psikoloji, tarih, uzay ve teknoloji alanlarında güncel haberler ve araştırmalar",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#667eea",
+  "theme_color": "#667eea",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "tr-TR",
+  "categories": ["news", "science", "health", "technology"],
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/blog-placeholder-1.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/assets/blog-placeholder-1.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Sağlık Haberleri",
+      "short_name": "Sağlık",
+      "description": "Sağlık ve tıp haberleri",
+      "url": "/blog/health/",
+      "icons": [{ "src": "/favicon.svg", "sizes": "96x96" }]
+    },
+    {
+      "name": "Uzay Haberleri",
+      "short_name": "Uzay",
+      "description": "Uzay ve astronomi haberleri",
+      "url": "/blog/space/",
+      "icons": [{ "src": "/favicon.svg", "sizes": "96x96" }]
+    },
+    {
+      "name": "Psikoloji",
+      "short_name": "Psikoloji",
+      "description": "Psikoloji ve davranış bilimleri",
+      "url": "/blog/psychology/",
+      "icons": [{ "src": "/favicon.svg", "sizes": "96x96" }]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/assets/blog-placeholder-1.svg",
+      "sizes": "1280x720",
+      "type": "image/svg+xml",
+      "form_factor": "wide",
+      "label": "MindVerse Ana Sayfa"
+    },
+    {
+      "src": "/assets/blog-placeholder-2.svg",
+      "sizes": "390x844",
+      "type": "image/svg+xml",
+      "form_factor": "narrow",
+      "label": "MindVerse Mobil Görünüm"
+    }
+  ]
+}

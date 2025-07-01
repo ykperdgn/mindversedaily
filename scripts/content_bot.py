@@ -77,9 +77,7 @@ def parse_article_fields(article_text, category=None, image_fetcher=None):
         description = description.split(":",1)[1].strip() if ":" in description else description.strip("# *").strip()
         description = clean_frontmatter_value(description)
     else:
-        description = "No summary."
-
-    # Description kontrolü
+        description = "No summary."    # Enhanced SEO description kontrolü
     if not description or description.lower() in ["no summary.", "özet yok.", ""]:
         # İçerikten ilk paragrafı özet yap
         content_lines = [l for l in lines if len(l.strip()) > 50 and not any(l.lower().startswith(x) for x in [
@@ -88,12 +86,26 @@ def parse_article_fields(article_text, category=None, image_fetcher=None):
         if content_lines:
             description = content_lines[0].strip().strip('"*').strip()[:150] + "..."  # İlk 150 karakter
         else:
-            description = f"An article about {category}" if category else "A new article"
+            description = f"MindVerse Daily'den {category} kategorisinde güncel ve detaylı makale" if category else "MindVerse Daily'den yeni makale"
 
-    # API'den görsel çek
+    # SEO-friendly title optimization
+    if title and not title.lower().startswith('mindverse'):
+        # Add category context to title for better SEO
+        category_context = {
+            'health': 'Sağlık',
+            'psychology': 'Psikoloji',
+            'history': 'Tarih',
+            'space': 'Uzay',
+            'quotes': 'Motivasyon',
+            'love': 'İlişki'
+        }
+        if category in category_context and len(title) < 60:
+            title = f"{title} - {category_context[category]} Rehberi"
+
+    # API'den görsel çek - Enhanced with SEO alt text
     if image_fetcher and title and category:
         image = image_fetcher.get_image_for_content(title, category, description)
-        print(f"🖼️ Image fetched for '{title}': {image}")
+        print(f"🖼️ SEO-optimized image fetched for '{title}': {image}")
     else:
         image = "/assets/blog-placeholder-1.svg"
 
