@@ -2,17 +2,20 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import AstrologyWidget from '../components/AstrologyWidget.astro';
 import { SITE_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS, SITE_LANG } from '../consts';
 import { getCollection } from 'astro:content';
 
 // Ana sayfada kategorileri `src/content/blog` klasörlerinden otomatik çek
 const allPosts = await getCollection('blog');
 
-// SADECE TÜRKÇE içerikleri filtrele (Ana sayfa = Türkçe varsayılan)
+// SADECE TÜRKÇE içerikleri filtrele (id bazında filtreleme)
 const posts = allPosts
   .filter(post => {
-    if (!post.slug) return false; // slug kontrolü ekle
-    return post.slug.endsWith('.tr') || (!post.slug.endsWith('.en') && !post.slug.endsWith('.tr')); // tr uzantılı veya uzantısız (varsayılan TR)
+    if (!post.id) return false;
+    // id dosya yoluna bakarak Türkçe içerikleri filtrele
+    const isTurkish = post.id.endsWith('tr') || (!post.id.endsWith('en') && !post.id.endsWith('tr'));
+    return isTurkish;
   })
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
@@ -21,7 +24,7 @@ const availableCategories = [...new Set(posts.map(post => post.data.category).fi
 
 const categories = availableCategories.includes('health') && availableCategories.includes('psychology')
   ? availableCategories
-  : ["health", "psychology", "history", "space", "quotes", "love"];
+  : ["health", "psychology", "history", "space", "quotes", "love", "horoscope"];
 
 const categoryIcons = {
   health: "🧬",
@@ -29,7 +32,8 @@ const categoryIcons = {
   history: "📜",
   space: "🚀",
   quotes: "💬",
-  love: "❤️"
+  love: "❤️",
+  horoscope: "🔮"
 };
 
 // Homepage SEO optimization
@@ -359,6 +363,9 @@ const homeKeywords = `${SITE_KEYWORDS}, blog, güncel haberler, bilimsel araşt�
           </h1>
           <p class="mv-desc">Bilim, sağlık, psikoloji ve güncel konulardan en kaliteli içerikler</p>
         </section>
+
+        <!-- Astroloji Widget -->
+        <AstrologyWidget />
 
         <nav class="mv-categories">
           {categories.map(cat => (

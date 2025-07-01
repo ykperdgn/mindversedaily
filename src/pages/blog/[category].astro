@@ -23,11 +23,11 @@ const allPosts = await getCollection('blog');
 const isEnglishCategory = Astro.url.pathname.includes('/en/');
 const posts = allPosts
   .filter(post => {
-    if (!post.slug) return false; // slug kontrolü ekle
+    if (!post.id) return false; // id kontrolü ekle
     if (isEnglishCategory) {
-      return post.slug.endsWith('.en'); // Sadece İngilizce
+      return post.id.endsWith('en'); // Sadece İngilizce
     } else {
-      return post.slug.endsWith('.tr') || (!post.slug.endsWith('.en') && !post.slug.endsWith('.tr')); // Türkçe + varsayılan
+      return post.id.endsWith('tr') || (!post.id.endsWith('en') && !post.id.endsWith('tr')); // Türkçe + varsayılan
     }
   })
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());

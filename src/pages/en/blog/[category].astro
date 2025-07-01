@@ -8,7 +8,7 @@ import FormattedDate from '../../../components/FormattedDate.astro';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
-  const englishPosts = posts.filter(post => post.slug && post.slug.endsWith('.en'));
+  const englishPosts = posts.filter(post => post.id && post.id.endsWith('en'));
   const categories = [...new Set(englishPosts.map(post => post.data.category).filter(Boolean))];
 
   return categories.map(category => ({
@@ -22,7 +22,7 @@ const allPosts = await getCollection('blog');
 
 // İngilizce kategori sayfası - SADECE İngilizce içerikler
 const posts = allPosts
-  .filter(post => post.slug && post.slug.endsWith('.en')) // Sadece İngilizce
+  .filter(post => post.id && post.id.endsWith('en')) // Sadece İngilizce
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 // Filter posts by category

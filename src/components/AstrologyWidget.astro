@@ -1,0 +1,579 @@
+---
+// Astrology Widget - Horoskop ve astroloji özellikleri
+interface Props {
+  className?: string;
+}
+
+const { className = '' } = Astro.props;
+---
+
+<div class={`astrology-widget ${className}`}>
+  <!-- Burç Seçici -->
+  <div class="zodiac-selector">
+    <h3>🔮 Günlük Burç Yorumunuz</h3>
+    <div class="zodiac-grid">
+      <button class="zodiac-sign" data-sign="koc">♈ Koç</button>
+      <button class="zodiac-sign" data-sign="boga">♉ Boğa</button>
+      <button class="zodiac-sign" data-sign="ikizler">♊ İkizler</button>
+      <button class="zodiac-sign" data-sign="yengec">♋ Yengeç</button>
+      <button class="zodiac-sign" data-sign="aslan">♌ Aslan</button>
+      <button class="zodiac-sign" data-sign="basak">♍ Başak</button>
+      <button class="zodiac-sign" data-sign="terazi">♎ Terazi</button>
+      <button class="zodiac-sign" data-sign="akrep">♏ Akrep</button>
+      <button class="zodiac-sign" data-sign="yay">♐ Yay</button>
+      <button class="zodiac-sign" data-sign="oglak">♑ Oğlak</button>
+      <button class="zodiac-sign" data-sign="kova">♒ Kova</button>
+      <button class="zodiac-sign" data-sign="balik">♓ Balık</button>
+    </div>
+  </div>
+
+  <!-- Horoskop Sonuç Alanı -->
+  <div class="horoscope-result" id="horoscope-result" style="display: none;">
+    <div class="result-header">
+      <h4 id="selected-sign-name"></h4>
+      <div class="result-tabs">
+        <button class="tab-btn active" data-type="daily">Günlük</button>
+        <button class="tab-btn" data-type="weekly">Haftalık</button>
+        <button class="tab-btn" data-type="monthly">Aylık</button>
+      </div>
+    </div>
+    <div class="result-content" id="result-content">
+      <div class="loading">
+        <div class="spinner"></div>
+        <p>Yıldızlar okunuyor...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Aşk Uyumu Bölümü -->
+  <div class="compatibility-section">
+    <h3>💕 Aşk Uyumu</h3>
+    <div class="compatibility-form">
+      <select id="sign1" class="sign-select">
+        <option value="">Birinci Burç</option>
+        <option value="koc">♈ Koç</option>
+        <option value="boga">♉ Boğa</option>
+        <option value="ikizler">♊ İkizler</option>
+        <option value="yengec">♋ Yengeç</option>
+        <option value="aslan">♌ Aslan</option>
+        <option value="basak">♍ Başak</option>
+        <option value="terazi">♎ Terazi</option>
+        <option value="akrep">♏ Akrep</option>
+        <option value="yay">♐ Yay</option>
+        <option value="oglak">♑ Oğlak</option>
+        <option value="kova">♒ Kova</option>
+        <option value="balik">♓ Balık</option>
+      </select>
+
+      <span class="compatibility-heart">💝</span>
+
+      <select id="sign2" class="sign-select">
+        <option value="">İkinci Burç</option>
+        <option value="koc">♈ Koç</option>
+        <option value="boga">♉ Boğa</option>
+        <option value="ikizler">♊ İkizler</option>
+        <option value="yengec">♋ Yengeç</option>
+        <option value="aslan">♌ Aslan</option>
+        <option value="basak">♍ Başak</option>
+        <option value="terazi">♎ Terazi</option>
+        <option value="akrep">♏ Akrep</option>
+        <option value="yay">♐ Yay</option>
+        <option value="oglak">♑ Oğlak</option>
+        <option value="kova">♒ Kova</option>
+        <option value="balik">♓ Balık</option>
+      </select>
+
+      <button id="check-compatibility" class="compatibility-btn" disabled>
+        Uyumu Kontrol Et
+      </button>
+    </div>
+
+    <div class="compatibility-result" id="compatibility-result" style="display: none;">
+      <div class="compatibility-score">
+        <div class="score-circle">
+          <span id="compatibility-score">0</span>
+          <small>/10</small>
+        </div>
+      </div>
+      <div class="compatibility-content" id="compatibility-content"></div>
+    </div>
+  </div>
+
+  <!-- Kozmik Öngörü -->
+  <div class="cosmic-forecast">
+    <h3>🌌 Bu Haftanın Kozmik Enerjisi</h3>
+    <div class="cosmic-content" id="cosmic-content">
+      <div class="loading">
+        <div class="spinner"></div>
+        <p>Evren dinleniyor...</p>
+      </div>
+    </div>
+    <button id="refresh-cosmic" class="cosmic-refresh-btn">🔄 Yenile</button>
+  </div>
+</div>
+
+<style>
+.astrology-widget {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 20px;
+  padding: 2rem;
+  color: white;
+  margin: 2rem 0;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.astrology-widget h3 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.zodiac-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.zodiac-sign {
+  background: rgba(255,255,255,0.2);
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 12px;
+  padding: 0.8rem 0.5rem;
+  color: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.zodiac-sign:hover {
+  background: rgba(255,255,255,0.3);
+  border-color: rgba(255,255,255,0.5);
+  transform: translateY(-2px);
+}
+
+.zodiac-sign.selected {
+  background: rgba(255,215,0,0.3);
+  border-color: #ffd700;
+  box-shadow: 0 0 20px rgba(255,215,0,0.4);
+}
+
+.horoscope-result {
+  background: rgba(255,255,255,0.1);
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  backdrop-filter: blur(10px);
+}
+
+.result-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.result-tabs {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.tab-btn {
+  background: rgba(255,255,255,0.2);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  color: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-btn.active {
+  background: rgba(255,215,0,0.3);
+  border-color: #ffd700;
+}
+
+.result-content {
+  background: rgba(0,0,0,0.2);
+  border-radius: 10px;
+  padding: 1.5rem;
+  min-height: 200px;
+}
+
+.compatibility-section {
+  background: rgba(255,255,255,0.1);
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  backdrop-filter: blur(10px);
+}
+
+.compatibility-form {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.sign-select {
+  background: rgba(255,255,255,0.2);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 8px;
+  padding: 0.5rem;
+  color: white;
+  min-width: 150px;
+}
+
+.sign-select option {
+  background: #333;
+  color: white;
+}
+
+.compatibility-heart {
+  font-size: 1.5rem;
+  animation: pulse 2s infinite;
+}
+
+.compatibility-btn {
+  background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.2rem;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.compatibility-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.compatibility-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.compatibility-result {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.compatibility-score {
+  text-align: center;
+}
+
+.score-circle {
+  background: conic-gradient(from 0deg, #ff6b6b 0%, #feca57 50%, #48ca61 100%);
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 auto;
+}
+
+.cosmic-forecast {
+  background: rgba(0,0,0,0.2);
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+.cosmic-content {
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  min-height: 150px;
+}
+
+.cosmic-refresh-btn {
+  background: linear-gradient(45deg, #a8edea, #fed6e3);
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  color: #333;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-height: 100px;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(255,255,255,0.3);
+  border-top: 4px solid #ffd700;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+@media (max-width: 768px) {
+  .astrology-widget {
+    padding: 1rem;
+  }
+
+  .zodiac-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+
+  .compatibility-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .sign-select {
+    min-width: auto;
+  }
+
+  .compatibility-result {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+</style>
+
+<script>
+// Astrology Widget JavaScript
+document.addEventListener('DOMContentLoaded', function() {
+  const zodiacSigns = document.querySelectorAll('.zodiac-sign');
+  const horoscopeResult = document.getElementById('horoscope-result');
+  const resultContent = document.getElementById('result-content');
+  const selectedSignName = document.getElementById('selected-sign-name');
+  const tabBtns = document.querySelectorAll('.tab-btn');
+  const compatibilityBtn = document.getElementById('check-compatibility');
+  const sign1Select = document.getElementById('sign1');
+  const sign2Select = document.getElementById('sign2');
+  const compatibilityResult = document.getElementById('compatibility-result');
+  const cosmicContent = document.getElementById('cosmic-content');
+  const refreshCosmicBtn = document.getElementById('refresh-cosmic');
+
+  let currentSign = '';
+  let currentType = 'daily';
+
+  // Burç seçimi
+  zodiacSigns.forEach(sign => {
+    sign.addEventListener('click', function() {
+      // Önceki seçimi temizle
+      zodiacSigns.forEach(s => s.classList.remove('selected'));
+
+      // Yeni seçimi işaretle
+      this.classList.add('selected');
+      currentSign = this.dataset.sign;
+
+      // Burç adını göster
+      const signName = this.textContent;
+      selectedSignName.textContent = signName;
+
+      // Sonuç alanını göster
+      horoscopeResult.style.display = 'block';
+
+      // Horoskop yükle
+      loadHoroscope(currentSign, currentType);
+    });
+  });
+
+  // Tab değişimi
+  tabBtns.forEach(tab => {
+    tab.addEventListener('click', function() {
+      if (!currentSign) return;
+
+      // Tab durumunu güncelle
+      tabBtns.forEach(t => t.classList.remove('active'));
+      this.classList.add('active');
+
+      currentType = this.dataset.type;
+      loadHoroscope(currentSign, currentType);
+    });
+  });
+
+  // Horoskop yükleme fonksiyonu
+  async function loadHoroscope(sign, type) {
+    showLoading(resultContent);
+
+    try {
+      const response = await fetch('/api/astrology', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          action: 'generate-horoscope',
+          sign: sign,
+          type: type,
+          language: 'tr'
+        })
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        resultContent.innerHTML = `
+          <div class="horoscope-content">
+            ${data.content || 'Horoskop yorumu yükleniyor...'}
+          </div>
+        `;
+      } else {
+        resultContent.innerHTML = `
+          <div class="error-message">
+            <p>⚠️ Horoskop yüklenirken hata oluştu: ${data.error}</p>
+            <button onclick="loadHoroscope('${sign}', '${type}')" class="retry-btn">
+              🔄 Tekrar Dene
+            </button>
+          </div>
+        `;
+      }
+    } catch (error) {
+      resultContent.innerHTML = `
+        <div class="error-message">
+          <p>⚠️ Bağlantı hatası oluştu</p>
+          <button onclick="loadHoroscope('${sign}', '${type}')" class="retry-btn">
+            🔄 Tekrar Dene
+          </button>
+        </div>
+      `;
+    }
+  }
+
+  // Aşk uyumu kontrol
+  function checkCompatibilityInputs() {
+    const sign1 = sign1Select.value;
+    const sign2 = sign2Select.value;
+    compatibilityBtn.disabled = !sign1 || !sign2 || sign1 === sign2;
+  }
+
+  sign1Select.addEventListener('change', checkCompatibilityInputs);
+  sign2Select.addEventListener('change', checkCompatibilityInputs);
+
+  compatibilityBtn.addEventListener('click', async function() {
+    const sign1 = sign1Select.value;
+    const sign2 = sign2Select.value;
+
+    if (!sign1 || !sign2) return;
+
+    showLoading(compatibilityResult);
+    compatibilityResult.style.display = 'block';
+
+    try {
+      const response = await fetch('/api/astrology', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          action: 'compatibility-analysis',
+          sign1: sign1,
+          sign2: sign2,
+          language: 'tr'
+        })
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        // Score parse et
+        const scoreMatch = data.content.match(/(\d+)\/10/);
+        const score = scoreMatch ? scoreMatch[1] : '?';
+
+        document.getElementById('compatibility-score').textContent = score;
+        document.getElementById('compatibility-content').innerHTML = data.content;
+      } else {
+        compatibilityResult.innerHTML = `
+          <div class="error-message">
+            <p>⚠️ Uyum analizi yüklenirken hata: ${data.error}</p>
+          </div>
+        `;
+      }
+    } catch (error) {
+      compatibilityResult.innerHTML = `
+        <div class="error-message">
+          <p>⚠️ Bağlantı hatası oluştu</p>
+        </div>
+      `;
+    }
+  });
+
+  // Kozmik öngörü yükleme
+  async function loadCosmicForecast() {
+    showLoading(cosmicContent);
+
+    try {
+      const response = await fetch('/api/astrology?action=cosmic-forecast&period=week');
+      const data = await response.json();
+
+      if (data.success) {
+        cosmicContent.innerHTML = `
+          <div class="cosmic-forecast-content">
+            ${data.content || 'Kozmik enerji analizi yükleniyor...'}
+          </div>
+        `;
+      } else {
+        cosmicContent.innerHTML = `
+          <div class="error-message">
+            <p>⚠️ Kozmik öngörü yüklenirken hata: ${data.error}</p>
+          </div>
+        `;
+      }
+    } catch (error) {
+      cosmicContent.innerHTML = `
+        <div class="error-message">
+          <p>⚠️ Evrenle bağlantı kurulamadı 🌌</p>
+        </div>
+      `;
+    }
+  }
+
+  refreshCosmicBtn.addEventListener('click', loadCosmicForecast);
+
+  // Loading gösterimi
+  function showLoading(element) {
+    element.innerHTML = `
+      <div class="loading">
+        <div class="spinner"></div>
+        <p>Yıldızlar okunuyor...</p>
+      </div>
+    `;
+  }
+
+  // Sayfa yüklendiğinde kozmik öngörüyü yükle
+  loadCosmicForecast();
+
+  // Global functions
+  window.loadHoroscope = loadHoroscope;
+});
+</script>
