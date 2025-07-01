@@ -1,0 +1,24 @@
+{
+  "generated_at": "2025-07-02T01:10:33.672992",
+  "total_tweets": 2,
+  "recent_tweets_7_days": 2,
+  "average_per_day": 0.2857142857142857,
+  "category_distribution": {
+    "health": 2
+  },
+  "last_tweet": {
+    "post_id": "2025-07-01-unlocking-the-secrets-of-healthy-aging-recent-breakthroughs-and-strategies-for-a-longer-healthier-life.en",
+    "tweet_id": "test_tweet_id_123",
+    "shared_at": "2025-07-02T00:40:57.816021",
+    "title": "Unlocking the Secrets of Healthy Aging Recent Breakthroughs and Strategies for a Longer, Healthier Life",
+    "category": "health",
+    "url": "https://mindversedaily.com/health/2025-07-01-unlocking-the-secrets-of-healthy-aging-recent-breakthroughs-and-strategies-for-a-longer-healthier-life"
+  },
+  "performance_metrics": {
+    "tweets_last_24h": 2,
+    "tweets_last_7d": 2,
+    "success_rate": 100.0,
+    "avg_tweet_length": 180.0,
+    "most_active_hour": 0
+  }
+}

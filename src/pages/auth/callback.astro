@@ -1,0 +1,47 @@
+---
+import BlogPost from '../../layouts/BlogPost.astro';
+---
+
+<BlogPost
+	title="Twitter Auth Callback"
+	description="Twitter bot yetkilendirme callback sayfası"
+	pubDate={new Date()}
+	heroImage=""
+>
+	<div class="container">
+		<h1>Twitter Yetkilendirme</h1>
+
+		<div class="content">
+			<p>Twitter bot yetkilendirme işlemi tamamlandı.</p>
+			<p>Bu sayfa Twitter API entegrasyonu için kullanılmaktadır.</p>
+
+			<a href="/" class="back-button">Ana Sayfa'ya Dön</a>		</div>
+	</div>
+</BlogPost>
+
+<style>
+	.container {
+		max-width: 600px;
+		margin: 0 auto;
+		padding: 2rem;
+		text-align: center;
+	}
+
+	.content {
+		margin-top: 2rem;
+	}
+
+	.back-button {
+		display: inline-block;
+		background: #0070f3;
+		color: white;
+		padding: 0.8rem 1.5rem;
+		text-decoration: none;
+		border-radius: 5px;
+		margin-top: 2rem;
+	}
+
+	.back-button:hover {
+		background: #0051a2;
+	}
+</style>
