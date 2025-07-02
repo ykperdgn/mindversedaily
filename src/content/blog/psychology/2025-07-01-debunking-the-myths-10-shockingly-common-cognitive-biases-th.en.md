@@ -1,6 +1,6 @@
----
+﻿---
 title: "Debunking the Myths 10 Shockingly Common Cognitive Biases That Shape Your Reality"
-description: "MindVerse Dailyden psychology kategorisinde güncel makale"
+description: "Discover the fascinating world of human psychology with insights into behavior, mental health, cognitive science, and the latest psychological research."
 pubDate: 2025-07-01
 category: "psychology"
 tags: []

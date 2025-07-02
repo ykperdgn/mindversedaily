@@ -1,6 +1,6 @@
----
+﻿---
 title: "Shielding Humanity The Surprising Impact of Cosmic Radiation on Space Travel and Earths Magnetic Field"
-description: "MindVerse Dailyden space kategorisinde güncel makale"
+description: "Explore the mysteries of the cosmos with cutting-edge space science discoveries, astronomical breakthroughs, and the latest research in space exploration."
 pubDate: 2025-07-01
 category: "space"
 tags: []

@@ -1,6 +1,6 @@
----
+﻿---
 title: "Unlocking the Neuroscience of Love How Your Brain Falls for You (And What That Means for Your Relationship)"
-description: "MindVerse Dailyden love kategorisinde güncel makale"
+description: "Explore the science of love, relationships, and human connection with expert insights into romance, dating psychology, and building meaningful bonds."
 pubDate: 2025-07-01
 category: "love"
 tags: []

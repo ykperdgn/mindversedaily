@@ -1,6 +1,6 @@
----
+﻿---
 title: "The pursuit of personal growth is not a destination; its a journey that requires effort, patience, and self-awareness."
-description: "MindVerse Dailyden quotes kategorisinde güncel makale"
+description: "Find inspiration and wisdom through powerful quotes, motivational sayings, and timeless words that can transform your perspective on life."
 pubDate: 2025-07-01
 category: "quotes"
 tags: []

@@ -1,6 +1,6 @@
----
+﻿---
 title: "Beyond Our Cosmic Horizon The Thrilling Discovery of Exoplanets and What They Reveal About the Universes Secrets"
-description: "MindVerse Dailyden space kategorisinde güncel makale"
+description: "Explore the mysteries of the cosmos with cutting-edge space science discoveries, astronomical breakthroughs, and the latest research in space exploration."
 pubDate: 2025-07-01
 category: "space"
 tags: []

@@ -1,6 +1,6 @@
----
+﻿---
 title: "Exploring the Cosmic Frontier Uncovering Secrets of Planetary Science and the Quest for Life Beyond Earth"
-description: "MindVerse Dailyden space kategorisinde güncel makale"
+description: "Explore the mysteries of the cosmos with cutting-edge space science discoveries, astronomical breakthroughs, and the latest research in space exploration."
 pubDate: 2025-07-01
 category: "space"
 tags: []

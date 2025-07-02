@@ -1,6 +1,6 @@
----
+﻿---
 title: "The Moons Hidden Depths"
-description: "MindVerse Dailyden space kategorisinde güncel makale"
+description: "Explore the mysteries of the cosmos with cutting-edge space science discoveries, astronomical breakthroughs, and the latest research in space exploration."
 pubDate: 2025-07-02
 category: "space"
 tags: []

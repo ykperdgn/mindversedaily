@@ -1,6 +1,6 @@
----
+﻿---
 title: "Love Unraveled The Surprising Psychology Behind Happy Couples Tips for Building a Stronger Bond (Let me know if youd like me to try again!)"
-description: "MindVerse Dailyden love kategorisinde güncel makale"
+description: "Explore the science of love, relationships, and human connection with expert insights into romance, dating psychology, and building meaningful bonds."
 pubDate: 2025-07-01
 category: "love"
 tags: []

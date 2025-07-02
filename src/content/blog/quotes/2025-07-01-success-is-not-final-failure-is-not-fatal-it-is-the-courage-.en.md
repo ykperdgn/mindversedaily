@@ -1,6 +1,6 @@
----
+﻿---
 title: "Success is not final, failure is not fatal it is the courage to continue that counts. - Winston Churchill"
-description: "MindVerse Dailyden quotes kategorisinde güncel makale"
+description: "Find inspiration and wisdom through powerful quotes, motivational sayings, and timeless words that can transform your perspective on life."
 pubDate: 2025-07-01
 category: "quotes"
 tags: []
