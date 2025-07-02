@@ -14,8 +14,7 @@ export const onRequest = defineMiddleware(async (context, next) => {
     !process.env.VERCEL
   ) {
     return next();
-  }
-  // Static dosyaları ve API rotalarını atla
+  }  // Static dosyaları ve API rotalarını atla
   const skipPrefixes = ["/tr/", "/en/", "/tr", "/en", "/blog/", "/about", "/api/", "/_astro/"];
   const skipExts = [".png", ".jpg", ".jpeg", ".svg", ".ico", ".css", ".js", ".json", ".txt", ".xml", ".woff", ".woff2"];
   if (
@@ -25,6 +24,14 @@ export const onRequest = defineMiddleware(async (context, next) => {
     pathname.includes("/assets/")
   ) {
     return next();
+  }
+
+  // SEO bot'ları ve crawler'ları tespit et - bunlar için redirect yapma
+  const userAgent = req.headers.get("user-agent") || "";
+  const isBot = /bot|crawler|spider|crawling|googlebot|bingbot|facebookexternalhit|twitterbot|whatsapp|telegram/i.test(userAgent);
+
+  if (isBot) {
+    return next(); // Bot'lar için redirect yapma, direkt içeriği sun
   }
 
   // Sadece root path (/) için dil yönlendirme mantığı

@@ -1,0 +1,10 @@
+[33mae3a9d7[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m Fix blog post URL routing and language filtering
+[33m0c620bb[m Fix internal server errors: improved language filtering and defensive slug handling for all routes
+[33mcbb096d[m Defensive coding for BlogPost.astro and BaseHead.astro, all content and automation robust, ready for production sync
+[33mf4629a1[m Unify English homepage grid and design with Turkish, fix language switch, and ensure consistent UX.
+[33m3fe338e[m Remove all horoscope content, update automation, and ensure only Groq/Ollama bulk content. Horoscope is now bot-only.
+[33m56628c0[m Otomatik içerik üretimi Groq (EN) ve Ollama (TR) ayrımı, horoscope otomatik üretimden çıkarıldı, kod ve içerik güncellendi
+[33m1ae6e07[m Boş ve hatalı .md dosyası silindi: build hatası önlendi (love/akn-evrimi-5-ak-dili-bilim-arkasnda.tr.md)
+[33m8243641[m Boş ve hatalı .md dosyası silindi: build hatası önlendi (psychology/here-is-the-translated-article-in-turkish.tr.md)
+[33mff7dbba[m Boş ve hatalı .md dosyası silindi: build hatası önlendi (love/ak-arptcl-bilimi.tr.md)
+[33m6e373ff[m Boş ve hatalı .md dosyası silindi: build hatası önlendi (references.en.md)

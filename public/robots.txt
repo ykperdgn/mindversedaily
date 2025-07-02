@@ -7,12 +7,26 @@ Disallow: /status.html
 Disallow: /*.bat$
 Disallow: /*.py$
 
-# Allow important pages
+# Allow important pages explicitly for better indexing
 Allow: /blog/
 Allow: /en/
 Allow: /tr/
+Allow: /science*
+Allow: /health*
+Allow: /business*
+Allow: /world*
+Allow: /psychology*
+Allow: /space*
+Allow: /history*
+Allow: /quotes*
+Allow: /love*
+Allow: /en/science*
+Allow: /en/health*
+Allow: /en/business*
+Allow: /en/world*
 Allow: /rss.xml
 Allow: /sitemap-index.xml
+Allow: /sitemap*.xml
 
 # Sitemap location
 Sitemap: https://mindversedaily.vercel.app/sitemap-index.xml
@@ -24,9 +38,23 @@ Crawl-delay: 1
 User-agent: Googlebot
 Crawl-delay: 1
 Allow: /
+# Explicit permissions for Google
+Allow: /blog/*
+Allow: /en/*
+Allow: /science*
+Allow: /health*
+Allow: /business*
+Allow: /world*
+Allow: /psychology*
 
 User-agent: Bingbot
 Crawl-delay: 2
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
 Allow: /
 
 # Social media bots
