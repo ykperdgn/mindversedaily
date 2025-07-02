@@ -7,11 +7,9 @@ tags: []
 image: "/assets/blog-placeholder-1.svg"
 ---
 
-Here is the translation of the article into Turkish:
+# Engelleri Aşmak: Mental Sağlığın Devrimsel Değişimi
 
-
-
-Mental sağlık uzun bir süre boyunca gizem ve yanlış anlama ile çevrili bir konuydu. Çok uzun bir süre boyunca, mental sağlık sorunları süpürülüp örtbas edildi ve etkilenenler genellikle damgalanarak dışlandı. Ancak son yıllarda, manzara dramatik bir şekilde değişti. Sırrın perdesi kaldırıldı ve mental sağlık, genel sağlık açısından hayati bir parçası haline geldi.
+Mental sağlık uzun bir süre boyunca gizem ve yanlış anlama ile çevrili bir konuydu.Çok uzun bir süre boyunca, mental sağlık sorunları süpürülüp örtbas edildi ve etkilenenler genellikle damgalanarak dışlandı. Ancak son yıllarda, manzara dramatik bir şekilde değişti. Sırrın perdesi kaldırıldı ve mental sağlık, genel sağlık açısından hayati bir parçası haline geldi.
 
 Mental sağlık alanındaki en önemli gelişmelerden biri, bağırsak-beyin ekseninin tanınmasıdır. Bu kavram, bağırsak mikrobiyomunun mental sağlığımızı etkilediğini önerir. Araştırmalar, bağırsak bakterilerinin dengesizliği olarak bilinen disbiyozisin, anksiyete, depresyon ve bipolar bozukluğun yanı sıra çeşitli mental sağlık durumlarıyla bağlantılı olduğunu gösterdi.
 

@@ -7,13 +7,7 @@ tags: []
 image: "https://images.pexels.com/photos/32787295/pexels-photo-32787295.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
 ---
 
-Here is the translation of the article in Turkish:
-
-
-
-Görüntü: https://unsplash.com/photo/5fNmWej4tAA (duvara yazılmış motive edici bir alıntı önünde duran bir kişi, kararlı bir ifadeyle)
-
-İlham verici alıntılar, yüzyıllardır motivasyon ve rehberlik kaynağı olmuştur. Eski Yunan filozoflarından modern düşünce liderlerine kadar, alıntılar insanları büyük şeyler yapmaya teşvik etmek için kullanılmıştır. Ancak ilham verici alıntılar nasıl bu kadar etkili? Sadece akıllı bir sözün mi yoksa daha derin bir şeyin mi etkisi var?
+İlham verici alıntılar, yüzyıllardır motivasyon ve rehberlik kaynağı olmuştur.Eski Yunan filozoflarından modern düşünce liderlerine kadar, alıntılar insanları büyük şeyler yapmaya teşvik etmek için kullanılmıştır. Ancak ilham verici alıntılar nasıl bu kadar etkili? Sadece akıllı bir sözün mi yoksa daha derin bir şeyin mi etkisi var?
 
 Son bilimsel keşifler, ilham verici alıntıların zihnimiz ve davranışımız üzerindeki etkisinin psikolojik ve nörolojik mekanizmalarına ışık tutmuştur. Positive Psychology Dergisi'nde yayınlanan bir çalışmaya göre, ilham verici alıntılar mental sağlıkımıza önemli bir etkisi oluşturarak mutluluk, umut ve iyimserlik duygularını arttırabilir (Kashdan & Ciarrochi, 2013).
 

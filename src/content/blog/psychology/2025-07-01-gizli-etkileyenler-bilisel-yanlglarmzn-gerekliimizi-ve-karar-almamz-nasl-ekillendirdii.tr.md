@@ -7,12 +7,7 @@ tags: []
 image: "https://images.pexels.com/photos/4226264/pexels-photo-4226264.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
 ---
 
-Here is the translation of the article into Turkish:
-
-
-
-
-Bilişsel yanılgılar, görünmez kuklacılar gibi, düşünce, duygu ve davranışlarımızı farkında olmadan yönlendirirler. Bunlar, akıl yürütme veya mantık hataları değil, bilişsel makinelerimizde bulunan içsel kusurlardır ve irrasyonel yargılar ve kararlar almaya yol açarlar. İyi haber, bu yanılgıların farkına vararak, onların etkisini azaltmak ve daha bilgili, rasyonel kararlar almak için adımlar atabiliriz.
+Bilişsel yanılgılar, görünmez kuklacılar gibi, düşünce, duygu ve davranışlarımızı farkında olmadan yönlendirirler.Bunlar, akıl yürütme veya mantık hataları değil, bilişsel makinelerimizde bulunan içsel kusurlardır ve irrasyonel yargılar ve kararlar almaya yol açarlar. İyi haber, bu yanılgıların farkına vararak, onların etkisini azaltmak ve daha bilgili, rasyonel kararlar almak için adımlar atabiliriz.
 
 En iyi bilinen bilişsel yanılgılardan biri onaylama yanılmasıdır, yani mevcut inançlarımızı onaylayan bilgiyi aramaya ve daha fazla ağırlık vermeye meyilliyiz, tersine kanıtlayan kanıtları ise görmezden geliriz veya hafifletiriz. Psikolojik Bilim dergisinde yayınlanan bir çalışmaya göre, insanlar yanlış olsa bile, inançlarını destekleyen bilgileri daha iyi hatırlarlar (1). Bu yanılga, bizim kritik düşünceyi bırakarak, önceden var olan kavramlarımızı güvenilmesi gereken bir kaynak olarak kullanarak entelektüel tembelliğe yol açabilir.
 

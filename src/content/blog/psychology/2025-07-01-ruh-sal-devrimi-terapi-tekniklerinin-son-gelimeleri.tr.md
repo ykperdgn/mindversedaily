@@ -7,9 +7,7 @@ tags: []
 image: "https://images.pexels.com/photos/8849295/pexels-photo-8849295.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
 ---
 
-Here is the translation of the article into Turkish:
-
-Psikoloji alanı sürekli evrim geçiriyor ve yeni araştırmalar ve yenilikler ortaya çıkıyor. Son yıllarda, bireysel ihtiyaçlarına daha fazla odaklanan ve daha etkili terapi tekniklerine yönelme eğilimi olmuştur. Bu makale, ruh sağlığı alanında son gelişmeleri ele alacak ve bilim dünyasında çıkan yenilikleri ve keşifleri sunacak.
+Psikoloji alanı sürekli evrim geçiriyor ve yeni araştırmalar ve yenilikler ortaya çıkıyor.Son yıllarda, bireysel ihtiyaçlarına daha fazla odaklanan ve daha etkili terapi tekniklerine yönelme eğilimi olmuştur. Bu makale, ruh sağlığı alanında son gelişmeleri ele alacak ve bilim dünyasında çıkan yenilikleri ve keşifleri sunacak.
 
 Sanal Gerçeklik Maruz Kalma Tedavisi: Anksiyete Bozuklukları İçin Bir Devrim
 

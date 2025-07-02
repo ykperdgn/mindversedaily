@@ -442,8 +442,32 @@ button:hover, .btn:hover {
 	a {
 		text-decoration: underline;
 	}
-
 	button, .btn {
 		border: 2px solid currentColor;
 	}
+}
+
+/* MindVerse Blog Card Styles - Enhanced Visibility */
+.mv-card-title {
+	color: #1e293b !important;
+	font-weight: 700 !important;
+	font-size: 1.25rem !important;
+	line-height: 1.4 !important;
+	margin-bottom: 0.75rem !important;
+}
+
+.mv-card-title:hover {
+	color: #0f172a !important;
+}
+
+.mv-card-summary {
+	color: #64748b !important;
+	font-size: 1rem !important;
+	line-height: 1.6 !important;
+	margin-bottom: 1rem !important;
+}
+
+.mv-card-meta {
+	color: #94a3b8 !important;
+	font-size: 0.9rem !important;
 }

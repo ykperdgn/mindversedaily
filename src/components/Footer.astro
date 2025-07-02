@@ -5,8 +5,15 @@ const today = new Date();
 <footer class="mv-footer">
   <div class="footer-content">
     <div class="footer-brand">
-      <img src="/favicon.svg" alt="MindVerse" class="footer-logo" />
-      <div class="brand-text">MindVerse Daily</div>
+      <div class="footer-logo-container">
+        <div class="footer-galaxy-container">
+          <span class="footer-galaxy-emoji">🌌</span>
+        </div>
+        <div class="footer-brand-text">
+          <span class="footer-mind-text">Mind</span><span class="footer-verse-text">Verse</span>
+        </div>
+      </div>
+      <div class="footer-subtitle">Daily</div>
       <div class="copyright">&copy; {today.getFullYear()} MindVerse. Tüm hakları saklıdır.</div>
     </div>
     <div class="footer-links">
@@ -42,14 +49,73 @@ const today = new Date();
   text-align: center;
 }
 
-.footer-logo {
-  height: 3rem;
-  width: 3rem;
-  margin: 0 auto 1rem;
-  opacity: 0.9;
+.footer-logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-galaxy-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 0.5rem;
+  background: linear-gradient(135deg, #1e1b4b 0%, #312e81 25%, #1e40af 50%, #7c3aed 75%, #ec4899 100%);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow:
+    0 0 15px rgba(124, 58, 237, 0.3),
+    0 0 30px rgba(124, 58, 237, 0.1),
+    inset 0 0 10px rgba(255, 255, 255, 0.1);
+  transition: all 0.4s ease;
+}
+
+.footer-galaxy-emoji {
+  font-size: 1.2rem;
+  animation: spin 8s linear infinite;
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.6));
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.footer-brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 0.9;
+}
+
+.footer-mind-text {
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 900;
+  font-size: 1.1rem;
+  letter-spacing: -0.02em;
+}
+
+.footer-verse-text {
+  background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 50%, #f59e0b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 900;
+  font-size: 1.1rem;
+  letter-spacing: -0.02em;
+}
+
+.footer-subtitle {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #94a3b8;
+  margin-bottom: 0.75rem;
 }
 
 .brand-text {

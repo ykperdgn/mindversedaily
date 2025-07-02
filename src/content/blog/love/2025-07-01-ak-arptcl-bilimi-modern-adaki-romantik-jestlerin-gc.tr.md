@@ -7,12 +7,7 @@ tags: []
 image: "https://images.pexels.com/photos/32802463/pexels-photo-32802463.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
 ---
 
-Here is the translation of the article into Turkish:
-
-
-
-
-Romantik jestler, aşk hikâyelerinin, masalların ve Sevgililer Günü reklamlarının bir parçası olmuştur. Sürpriz bir kaçamak, samimi bir aşk mektubu ya da iki kişi için mum ışığında akşam yemeği, kimin kalbini kazanmaz? Ancak aşk hikâyelerinin ötesinde, romantik jestlerin kalplerimizi kazanmalarının sebebi nedir?
+Romantik jestler, aşk hikâyelerinin, masalların ve Sevgililer Günü reklamlarının bir parçası olmuştur.Sürpriz bir kaçamak, samimi bir aşk mektubu ya da iki kişi için mum ışığında akşam yemeği, kimin kalbini kazanmaz? Ancak aşk hikâyelerinin ötesinde, romantik jestlerin kalplerimizi kazanmalarının sebebi nedir?
 
 Son yıllarda, bilim insanları ve ilişki uzmanları, romantik jestlerin psikolojisi üzerine daha derin araştırmalar yaptı. Bu araştırma, romantik jestlerin beynimizin ödül sistemine nasıl etki ettiğini ve duygusal yanıtlarımızı, sosyal bağları ve bağlanma duygusunu düzenlemeye yardımcı olduğunu ortaya koydu. Bu nörotransmiterler, sağlıklı bir ilişkide kritik bileşenleridir.
 

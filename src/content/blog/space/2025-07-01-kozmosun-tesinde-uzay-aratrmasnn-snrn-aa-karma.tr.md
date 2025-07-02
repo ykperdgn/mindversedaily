@@ -7,11 +7,7 @@ tags: []
 image: "/assets/blog-placeholder-1.svg"
 ---
 
-Here is the translation of the article into Turkish:
-
-
-
-İnsanlar olarak, hepimiz uzayın geniş alanına merak etmişizdir, bilinmeyenin keşfedilmesini ve anlaşılmasını istiyoruz. Uzay araştırması, bir zamanlar bilim kurgu olarak düşünülüyorken, şimdi somut bir gerçekliğe dönüşmüştür. NASA'nın Artemis misyonundan SpaceX ve Blue Origin gibi özel oyunculara kadar, uzay yarışında hiç olmadığı kadar yoğun bir ortam yaşanmaktadır.
+İnsanlar olarak, hepimiz uzayın geniş alanına merak etmişizdir, bilinmeyenin keşfedilmesini ve anlaşılmasını istiyoruz.Uzay araştırması, bir zamanlar bilim kurgu olarak düşünülüyorken, şimdi somut bir gerçekliğe dönüşmüştür. NASA'nın Artemis misyonundan SpaceX ve Blue Origin gibi özel oyunculara kadar, uzay yarışında hiç olmadığı kadar yoğun bir ortam yaşanmaktadır.
 
 NASA'nın Artemis Misyonu: Ay'a Dönüş ve Ötesine
 

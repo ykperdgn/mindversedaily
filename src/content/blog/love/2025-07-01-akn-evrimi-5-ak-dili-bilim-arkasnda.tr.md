@@ -7,12 +7,7 @@ tags: []
 image: "https://images.pexels.com/photos/32799155/pexels-photo-32799155.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
 ---
 
-Here is the translation of the article in Turkish:
-
-
-
-
-Gary Chapman'ın 1992 yılında yayımladığı "5 Aşk Dili: Kalıcı Aşk Sırrı" kitabında ilk kez tanıtılan aşk dilleri kavramı, kültürel bir fenomen haline geldi. Her kişinin aşkı alma ve ifade etme biçimini belirleyen birincil ve ikincil aşk dili olduğu fikri, dünya çapında milyonlarla rezonansa girdi. Ancak herhangi bir popüler fikir gibi, aşk ve ilişkiler alanında özellikle bilim arkasında incelememiz gerekir.
+Gary Chapman'ın 1992 yılında yayımladığı "5 Aşk Dili: Kalıcı Aşk Sırrı" kitabında ilk kez tanıtılan aşk dilleri kavramı, kültürel bir fenomen haline geldi.Her kişinin aşkı alma ve ifade etme biçimini belirleyen birincil ve ikincil aşk dili olduğu fikri, dünya çapında milyonlarla rezonansa girdi. Ancak herhangi bir popüler fikir gibi, aşk ve ilişkiler alanında özellikle bilim arkasında incelememiz gerekir.
 
 5 Aşk Dili: Yeniden Tanım
 

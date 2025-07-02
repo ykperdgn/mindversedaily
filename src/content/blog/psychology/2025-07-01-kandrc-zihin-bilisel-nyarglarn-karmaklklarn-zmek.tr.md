@@ -7,11 +7,7 @@ tags: []
 image: "https://images.pexels.com/photos/6932014/pexels-photo-6932014.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
 ---
 
-Here is the translation of the article:
-
-
-
-Bilişsel önyargılar insan deneyimimizin bir parçasıdır. Beynimizin dünyadaki karmaşıklıkları yönetmek için zihinsel kısayollarına ve kural kitaplarına güvenmesi sonucu ortaya çıkar. Bu önyargılar birçok durumda yardımcı olabilir, ancak aynı zamanda yargı hatalarına, klişelere ve davranışlarımızı kasıtlı olmayan yollarda etkilemeye neden olabilir.
+Bilişsel önyargılar insan deneyimimizin bir parçasıdır.Beynimizin dünyadaki karmaşıklıkları yönetmek için zihinsel kısayollarına ve kural kitaplarına güvenmesi sonucu ortaya çıkar. Bu önyargılar birçok durumda yardımcı olabilir, ancak aynı zamanda yargı hatalarına, klişelere ve davranışlarımızı kasıtlı olmayan yollarda etkilemeye neden olabilir.
 
 En iyi bilinen bilişsel önyargılardan biri onaylama önyargısıdır. Bu, mevcut inançlarımızı onaylayan bilgileri arama ve buna göre daha fazla ağırlık verme, tersine kanıtlanmaya çalışmayan bilgilerimizi yok sayma eğilimimizdir. Sosyal medya çağında, algoritmaların bize dünya görüşümüzü onaylayan bilgileri sunması, onaylama önyargımızı güçlendiriyor ve bizim görüşlerimizi pekiştiriyor.
 
