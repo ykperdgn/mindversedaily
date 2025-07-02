@@ -155,10 +155,11 @@ def parse_article_fields(article_text: str, category: str, image_fetcher=None) -
             "translate the following", "türkçeye çevir", "çevrilmiş hali:",
             "here is the", "burada", "write a comprehensive", "bu ingilizce makaleyi",
             "recent years have", "the power of", "another trend", "a study published",
-            "individuals who", "compared to those", "in addition to"
-        ]):
+            "individuals who", "compared to those", "in addition to"        ]):
             continue
-        clean_lines.append(line)    if not clean_lines:
+        clean_lines.append(line)
+
+    if not clean_lines:
         if category == "en" or "english" in str(category).lower():
             return f"New {category.title()} Article", f"Latest insights and research from MindVerse Daily in {category} category", "/assets/blog-placeholder-1.svg", "Article content could not be loaded."
         else:
