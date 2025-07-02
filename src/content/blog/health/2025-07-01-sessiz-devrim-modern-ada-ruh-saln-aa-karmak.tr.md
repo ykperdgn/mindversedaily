@@ -4,7 +4,7 @@ description: "Ruh sağlığı, bugün dünyanın hızlı tempolu dünyasında ge
 pubDate: 2025-07-01
 category: "health"
 tags: []
-image: "https://images.pexels.com/photos/6627564/pexels-photo-6627564.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+image: "https://images.pexels.com/photos/4101143/pexels-photo-4101143.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
 ---
 
 # Sessiz Devrim: Modern Çağda Ruh Sağlığını Açığa Çıkarmak

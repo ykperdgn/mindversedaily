@@ -6,15 +6,19 @@ import AstrologyWidget from '../components/AstrologyWidget.astro';
 import { SITE_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS, SITE_LANG } from '../consts';
 import { getCollection } from 'astro:content';
 
+// Dinamik dil tespit
+const currentPath = Astro.url.pathname;
+const isEnglishPage = currentPath.startsWith('/en');
+
 // Ana sayfada kategorileri `src/content/blog` klasörlerinden otomatik çek
 const allPosts = await getCollection('blog');
 
-// SADECE TÜRKÇE içerikleri filtrele (id bazında filtreleme)
+// SADECE TÜRKÇE içerikleri filtrele (slug bazında filtreleme)
 const posts = allPosts
   .filter(post => {
-    if (!post.id) return false;
-    // id dosya yoluna bakarak Türkçe içerikleri filtrele
-    const isTurkish = post.id.endsWith('tr') || (!post.id.endsWith('en') && !post.id.endsWith('tr'));
+    if (!post.slug) return false;
+    // slug'a bakarak Türkçe içerikleri filtrele - .tr ile bitenler veya .en ile bitmeyenler
+    const isTurkish = post.slug.endsWith('.tr') || (!post.slug.endsWith('.en') && !post.slug.endsWith('.tr'));
     return isTurkish;
   })
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
@@ -61,6 +65,49 @@ const homeKeywords = `${SITE_KEYWORDS}, blog, güncel haberler, bilimsel araşt�
         background: rgba(255, 255, 255, 0.95);
         min-height: 100vh;
         backdrop-filter: blur(10px);
+      }
+
+      /* Language Switcher */
+      .language-switcher {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1001;
+        display: flex;
+        gap: 5px;
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 25px;
+        padding: 5px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(226, 232, 240, 0.8);
+      }
+
+      .lang-btn {
+        padding: 8px 12px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+        color: #64748b;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        min-width: 40px;
+        text-align: center;
+      }
+
+      .lang-btn:hover {
+        background: rgba(59, 130, 246, 0.1);
+        color: #3b82f6;
+        transform: scale(1.05);
+      }
+
+      .lang-btn.active {
+        background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+        color: white;
+        box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
       }
 
       .mv-main-home {
@@ -174,74 +221,6 @@ const homeKeywords = `${SITE_KEYWORDS}, blog, güncel haberler, bilimsel araşt�
         position: relative;
         z-index: 2;
         text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-      }
-
-      /* Language Toggle Button */
-      .language-toggle-container {
-        display: flex;
-        justify-content: center;
-        margin: 2rem 0;
-        padding: 0 1rem;
-      }
-
-      .language-toggle-btn {
-        display: flex;
-        align-items: center;
-        gap: 0.75rem;
-        background: linear-gradient(135deg, #1e40af 0%, #7c3aed 50%, #ec4899 100%);
-        color: white;
-        border-radius: 2rem;
-        padding: 1rem 2rem;
-        font-weight: 700;
-        font-size: 1.1rem;
-        text-decoration: none;
-        border: 2px solid rgba(255, 255, 255, 0.2);
-        transition: all 0.3s ease;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-        backdrop-filter: blur(10px);
-        position: relative;
-        overflow: hidden;
-      }
-
-      .language-toggle-btn::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-        transition: left 0.5s;
-        pointer-events: none;
-      }
-
-      .language-toggle-btn:hover::before {
-        left: 100%;
-      }
-
-      .language-toggle-btn:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
-        border-color: rgba(255, 255, 255, 0.4);
-      }
-
-      .language-flag {
-        font-size: 1.5rem;
-        filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
-      }
-
-      .language-text {
-        font-weight: 700;
-        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-      }
-
-      .language-arrow {
-        font-size: 1.2rem;
-        transition: transform 0.3s ease;
-      }
-
-      .language-toggle-btn:hover .language-arrow {
-        transform: translateX(5px);
       }
 
       .mv-categories {
@@ -452,16 +431,6 @@ const homeKeywords = `${SITE_KEYWORDS}, blog, güncel haberler, bilimsel araşt�
           grid-template-columns: 1fr;
           gap: 1.5rem;
         }
-
-        .language-toggle-btn {
-          padding: 0.8rem 1.5rem;
-          font-size: 1rem;
-          gap: 0.5rem;
-        }
-
-        .language-flag {
-          font-size: 1.3rem;
-        }
       }
 
       @media (max-width: 480px) {
@@ -482,25 +451,17 @@ const homeKeywords = `${SITE_KEYWORDS}, blog, güncel haberler, bilimsel araşt�
         .mv-main-home {
           padding: 1.5rem 0.75rem;
         }
-
-        .language-toggle-btn {
-          padding: 0.7rem 1.2rem;
-          font-size: 0.9rem;
-          gap: 0.4rem;
-        }
-
-        .language-flag {
-          font-size: 1.2rem;
-        }
-
-        .language-toggle-container {
-          margin: 1.5rem 0;
-        }
       }
     </style>
   </head>
   <body>
     <div class="content-wrapper">
+      <!-- Language Switcher -->
+      <div class="language-switcher">
+        <a href="/" class={`lang-btn ${!isEnglishPage ? 'active' : ''}`}>TR</a>
+        <a href="/en" class={`lang-btn ${isEnglishPage ? 'active' : ''}`}>EN</a>
+      </div>
+
       <Header />
       <main class="mv-main-home">
         <section class="mv-hero">
@@ -514,24 +475,19 @@ const homeKeywords = `${SITE_KEYWORDS}, blog, güncel haberler, bilimsel araşt�
           <p class="mv-desc">Bilim, sağlık, psikoloji ve güncel konulardan en kaliteli içerikler</p>
         </section>
 
-        <!-- Language Toggle Button -->
-        <div class="language-toggle-container">
-          <a href="/en" class="language-toggle-btn">
-            <span class="language-flag">🇬🇧</span>
-            <span class="language-text">Read in English</span>
-            <span class="language-arrow">→</span>
-          </a>
-        </div>
-
         <!-- Astroloji Widget -->
         <AstrologyWidget />
 
         <section class="mv-grid-section">
           <h2 class="mv-section-title">Son Yazılar</h2>
           <ul class="mv-grid">
-            {posts.slice(0, 8).map(post => (
+            {posts.slice(0, 8).map(post => {
+              // Türkçe post için doğru URL oluştur
+              const slug = post.slug || post.id;
+              const postUrl = `/${slug}`;
+              return (
               <li class="mv-card">
-                <a href={post.id ? `/${post.id}` : '#'}>
+                <a href={postUrl}>
                   {post.data.image
                     ? <img src={post.data.image} alt={post.data.title} class="mv-card-img" loading="lazy" onError={(e) => { e.target.src = '/assets/blog-placeholder-1.svg'; }} />
                     : <img src="/assets/blog-placeholder-1.svg" alt="placeholder" class="mv-card-img" loading="lazy" />
@@ -546,7 +502,8 @@ const homeKeywords = `${SITE_KEYWORDS}, blog, güncel haberler, bilimsel araşt�
                   </div>
                 </a>
               </li>
-            ))}
+              );
+            })}
           </ul>
         </section>
       </main>
