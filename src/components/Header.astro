@@ -20,6 +20,17 @@ const categoryIcons = {
   love: "❤️",
   horoscope: "🔮"
 };
+
+// Türkçe kategori isimleri
+const categoryNamesTR = {
+  health: "Sağlık",
+  psychology: "Psikoloji",
+  history: "Tarih",
+  space: "Uzay",
+  quotes: "Sözler",
+  love: "Aşk",
+  horoscope: "Horoskop"
+};
 ---
 
 <header class="header-fixed">
@@ -45,7 +56,7 @@ const categoryIcons = {
         </a>
         {categories.map(cat => (
           <a href={`/${cat}`} class="mv-category-tab">
-            <span class="category-icon">{categoryIcons[cat]}</span>{cat.charAt(0).toUpperCase() + cat.slice(1)}
+            <span class="category-icon">{categoryIcons[cat]}</span>{categoryNamesTR[cat]}
           </a>
         ))}
       </div>

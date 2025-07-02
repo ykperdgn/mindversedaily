@@ -40,6 +40,17 @@ const categoryIcons = {
   horoscope: "🔮"
 };
 
+// Türkçe kategori isimleri
+const categoryNamesTR = {
+  health: "Sağlık",
+  psychology: "Psikoloji",
+  history: "Tarih",
+  space: "Uzay",
+  quotes: "Sözler",
+  love: "Aşk",
+  horoscope: "Horoskop"
+};
+
 // Homepage SEO optimization
 const homeKeywords = `${SITE_KEYWORDS}, blog, güncel haberler, bilimsel araştırmalar, sağlık haberleri, psikoloji makaleleri, tarih yazıları, uzay keşifleri`;
 ---
@@ -496,7 +507,7 @@ const homeKeywords = `${SITE_KEYWORDS}, blog, güncel haberler, bilimsel araşt�
                     <div class="mv-card-title">{post.data.title}</div>
                     <div class="mv-card-summary">{post.data.description || post.body.slice(0, 120) + '...'}</div>
                     <div class="mv-card-meta">
-                      <span class="category-badge">{post.data.category || 'Genel'}</span>
+                      <span class="category-badge">{categoryNamesTR[post.data.category] || post.data.category || 'Genel'}</span>
                       <span>{post.data.pubDate.toLocaleDateString()}</span>
                     </div>
                   </div>
