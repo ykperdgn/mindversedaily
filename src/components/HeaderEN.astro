@@ -32,53 +32,97 @@ const categoryNames = {
 };
 ---
 
-<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-lg border-b border-blue-100">
-  <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between py-4 px-6 gap-4">
-    <a href="/en" class="flex items-center gap-4 font-extrabold text-3xl tracking-tight group">
-      <div class="logo-container">
-        <span class="galaxy-emoji">🌌</span>
-      </div>
-      <div class="brand-text">
-        <span class="mind-text">Mind</span><span class="verse-text">Verse</span>
-      </div>
-    </a>    <nav class="mv-categories">
-      <a href="/en/horoscope" class="mv-category-tab">
-        <span class="category-icon">🔮</span>
-        Horoscope
+<header class="header-fixed">
+  <div class="max-w-6xl mx-auto">
+    <!-- Logo Section -->
+    <div class="logo-section">
+      <a href="/en" class="logo-link">
+        <div class="logo-container">
+          <span class="galaxy-emoji">🌌</span>
+        </div>
+        <div class="brand-text">
+          <span class="mind-text">Mind</span><span class="verse-text">Verse</span>
+        </div>
       </a>
-      {categories.map(cat => (
-        <a href={`/en/${cat}`} class="mv-category-tab">
-          <span class="category-icon">{categoryIcons[cat]}</span>
-          {categoryNames[cat]}
+    </div>
+
+    <!-- Categories Navigation -->
+    <nav class="mv-categories-wrapper">
+      <div class="mv-categories">
+        <a href="/en/horoscope" class="mv-category-tab">
+          <span class="category-icon">🔮</span>
+          Horoscope
         </a>
-      ))}
+        {categories.map(cat => (
+          <a href={`/en/${cat}`} class="mv-category-tab">
+            <span class="category-icon">{categoryIcons[cat]}</span>
+            {categoryNames[cat]}
+          </a>
+        ))}
+      </div>
     </nav>
   </div>
 </header>
 
 <style>
+  /* Header Fixed */
+  .header-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Logo Section */
+  .logo-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1rem;
+    width: 100%;
+  }
+
+  .logo-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 900;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .logo-link:hover {
+    transform: scale(1.02);
+  }
+
   /* Logo ve Brand Styling */
   .logo-container {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 60px;
-    height: 60px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
     background: linear-gradient(135deg, #1e1b4b 0%, #312e81 25%, #1e40af 50%, #7c3aed 75%, #ec4899 100%);
-    border: 3px solid rgba(255, 255, 255, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.3);
     box-shadow:
-      0 0 30px rgba(124, 58, 237, 0.4),
-      0 0 60px rgba(124, 58, 237, 0.2),
-      inset 0 0 20px rgba(255, 255, 255, 0.1);
+      0 0 20px rgba(124, 58, 237, 0.4),
+      0 0 40px rgba(124, 58, 237, 0.2),
+      inset 0 0 15px rgba(255, 255, 255, 0.1);
     transition: all 0.4s ease;
   }
 
   .galaxy-emoji {
-    font-size: 2rem;
+    font-size: 1.5rem;
     animation: spin 8s linear infinite;
-    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
   }
 
   @keyframes spin {
@@ -86,7 +130,7 @@ const categoryNames = {
     to { transform: rotate(360deg); }
   }
 
-  .group:hover .logo-container {
+  .logo-link:hover .logo-container {
     transform: scale(1.1);
     box-shadow:
       0 0 40px rgba(124, 58, 237, 0.6),
@@ -94,7 +138,7 @@ const categoryNames = {
       inset 0 0 25px rgba(255, 255, 255, 0.2);
   }
 
-  .group:hover .galaxy-emoji {
+  .logo-link:hover .galaxy-emoji {
     animation-duration: 2s;
   }
 
@@ -110,7 +154,7 @@ const categoryNames = {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     font-weight: 900;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     letter-spacing: -0.02em;
     text-shadow: 0 2px 10px rgba(59, 130, 246, 0.3);
   }
@@ -121,13 +165,13 @@ const categoryNames = {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     font-weight: 900;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     letter-spacing: -0.02em;
     text-shadow: 0 2px 10px rgba(139, 92, 246, 0.3);
   }
 
-  .group:hover .mind-text,
-  .group:hover .verse-text {
+  .logo-link:hover .mind-text,
+  .logo-link:hover .verse-text {
     animation: glow 2s ease-in-out infinite alternate;
   }
 
@@ -140,12 +184,22 @@ const categoryNames = {
     }
   }
 
-  /* Kategori Tabs */
+  /* Kategori Tabs - Büyük ve Belirgin */
+  .mv-categories-wrapper {
+    background: rgba(248, 250, 252, 0.95);
+    border-top: 1px solid rgba(226, 232, 240, 0.8);
+    padding: 0.5rem 0;
+  }
+
   .mv-categories {
     display: flex;
     gap: 0.5rem;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+    max-width: 6xl;
+    margin: 0 auto;
+    padding: 0 1rem;
   }
 
   .mv-category-tab {
@@ -153,19 +207,20 @@ const categoryNames = {
     align-items: center;
     gap: 0.5rem;
     padding: 0.75rem 1.25rem;
-    border-radius: 2rem;
+    border-radius: 1.5rem;
     background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
     color: #2563eb;
     font-weight: 700;
     font-size: 0.95rem;
     transition: all 0.3s ease;
-    min-width: 80px;
-    border: 2px solid rgba(37, 99, 235, 0.1);
-    margin: 0 0.25rem;
+    min-width: 100px;
+    border: 2px solid rgba(37, 99, 235, 0.15);
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     text-decoration: none;
     position: relative;
     overflow: hidden;
+    text-align: center;
+    justify-content: center;
   }
 
   .mv-category-tab::before {
@@ -186,8 +241,8 @@ const categoryNames = {
 
   .mv-category-tab:hover {
     color: #fff;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.25);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.3);
     border-color: transparent;
   }
 
@@ -196,13 +251,27 @@ const categoryNames = {
   }
 
   @media (max-width: 768px) {
+    .logo-section {
+      padding: 0.5rem 0.75rem;
+    }
+
+    .logo-link {
+      gap: 0.5rem;
+      font-size: 1.25rem;
+    }
+
+    .mv-categories-wrapper {
+      padding: 0.4rem 0;
+    }
+
     .mv-categories {
       overflow-x: auto;
-      padding-bottom: 0.5rem;
+      padding: 0 0.75rem;
       justify-content: flex-start;
       -webkit-overflow-scrolling: touch;
       scrollbar-width: none;
       -ms-overflow-style: none;
+      gap: 0.4rem;
     }
 
     .mv-categories::-webkit-scrollbar {
@@ -211,9 +280,13 @@ const categoryNames = {
 
     .mv-category-tab {
       font-size: 0.85rem;
-      padding: 0.5rem 1rem;
+      padding: 0.6rem 1rem;
       white-space: nowrap;
       flex-shrink: 0;
+      min-width: 85px;
     }
-  }
+
+    .category-icon {
+      font-size: 1rem;
+    }  }
 </style>

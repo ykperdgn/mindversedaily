@@ -108,12 +108,10 @@ const enDescription = "MindVerse Daily: Latest news, research and in-depth analy
 				max-width: 1200px;
 				margin: 0 auto;
 				padding: 9rem 1rem 2rem 1rem;
-			}
-
-			.mv-hero {
+			}			.mv-hero {
 				text-align: center;
-				margin-bottom: 3rem;
-				padding: 3rem 2rem;
+				margin-bottom: 1rem;
+				padding: 1.5rem 2rem;
 				background: linear-gradient(135deg, #1e1b4b 0%, #312e81 25%, #1e40af 50%, #7c3aed 75%, #ec4899 100%);
 				border-radius: 2rem;
 				box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
@@ -283,28 +281,24 @@ const enDescription = "MindVerse Daily: Latest news, research and in-depth analy
 
 			.language-toggle-btn:hover .language-arrow {
 				transform: translateX(5px);
-			}
-
-			.mv-categories {
+			}			.mv-categories {
 				display: flex;
 				justify-content: center;
 				gap: 1rem;
-				margin-bottom: 3rem;
+				margin-bottom: 1.5rem; /* Daha az margin */
 				flex-wrap: wrap;
-				padding: 1rem;
+				padding: 1rem; /* Daha az padding */
 				background: rgba(255, 255, 255, 0.8);
 				border-radius: 2rem;
 				backdrop-filter: blur(10px);
 				box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-			}
-
-			.mv-category-tab {
+			}			.mv-category-tab {
 				background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
 				color: #2563eb;
 				border-radius: 2rem;
-				padding: 1rem 1.75rem;
+				padding: 1rem 1.75rem; /* Daha küçük padding */
 				font-weight: 700;
-				font-size: 1.1rem;
+				font-size: 1.1rem; /* Daha küçük font */
 				border: 2px solid rgba(37, 99, 235, 0.1);
 				transition: all 0.3s ease;
 				text-transform: capitalize;
@@ -560,18 +554,10 @@ const enDescription = "MindVerse Daily: Latest news, research and in-depth analy
 						<span class="language-text">Türkçe Oku</span>
 						<span class="language-arrow">→</span>
 					</a>
-				</div>
+				</div>				<!-- English Astrology Widget -->
+				<AstrologyWidgetEN />
 
-				<!-- English Astrology Widget -->
-				<AstrologyWidgetEN /><!-- Categories Navigation -->
-				<nav class="mv-categories">
-					{categories.map((category) => (
-						<a href={`/en/${category}`} class="mv-category-tab">
-							<span class="category-icon">{categoryIcons[category]}</span>
-							{category.charAt(0).toUpperCase() + category.slice(1)}
-						</a>
-					))}
-				</nav><!-- Latest Posts Section -->
+				<!-- Latest Posts Section -->
 				<section class="mv-grid-section">
 					<h2 class="mv-section-title">Latest Posts</h2>
 					<ul class="mv-grid">						{posts.slice(0, 8).map((post) => {							// İngilizce post için doğru URL oluştur
