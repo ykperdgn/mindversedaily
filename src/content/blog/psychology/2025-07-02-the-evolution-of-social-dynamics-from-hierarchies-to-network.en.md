@@ -4,7 +4,6 @@ description: "Discover cutting-edge research and insights from MindVerse Daily i
 pubDate: 2025-07-02
 category: "psychology"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Traditional notions of social hierarchy have been upended by the proliferation of digital platforms and global connectivity. Today's social dynamics are characterized by complex networks, where relationships are fluid and multifaceted. Research suggests that these networked structures can lead to increased creativity, innovation, and collective intelligence (Wasserman & Faust, 2019).

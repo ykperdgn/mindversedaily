@@ -4,7 +4,6 @@ description: "The Evolution of Cultural Exchanges"
 pubDate: 2025-07-02
 category: "history"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 **The Evolution of Cultural Exchanges**

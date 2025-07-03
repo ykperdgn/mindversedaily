@@ -4,7 +4,6 @@ description: "Kronik Hastalıkların Yükü"
 pubDate: 2025-07-02
 category: health
 tags: []
-image: /assets/blog-placeholder-1.svg
 ---
 
 **Kronik Hastalıkların Yükü**

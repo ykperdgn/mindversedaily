@@ -1,10 +1,9 @@
 ---
-title: ""Uzayın Sınırlarını Aşmak"
+title: "Uzayın Sınırlarını Aşmak"
 description: "Erken Yıllar: Kırıcı Teleskoplar"
 pubDate: 2025-07-01
 category: space
 tags: []
-image: /assets/blog-placeholder-1.svg
 ---
 
 İLK TELESKOPLAR
@@ -13,7 +12,7 @@ image: /assets/blog-placeholder-1.svg
 
 ## YANSITICI TELESKOPLAR: ASTRONOMİDE BİR YENİ ÇAĞ
 
-19. yüzyılın başlarında, yansıtıcı teleskopların geliştirilmesi astronomiyi tekrar devrimleştirdi. Aynalar yerine lensler kullanılarak, astronomlar daha büyük, daha güçlü araçlar yarattı ve gece gökyüzünü daha yüksek bir kesinlikte incelemelerine izin verdi. Bu dönemin en ünlü yansıtıcı teleskopu, 1917'de tamamlandığı Kaliforniya'daki Mount Wilson Gözlemevi'nde bulunan Hooker Teleskopuydu ve 70 yıldan fazla dünyanın en büyük teleskopu olarak kaldı.
+19. yüzyılın başlarında, yansıtıcı teleskopların geliştirilmesi astronomiyi tekrar devrimleştirdi. Aynalar yerine lensler kullanılarak, astronomlar daha büyük, daha güçlü araçlar yarattı ve gece gökyüzünü daha yüksek bir kesinlikte incelemelerine izin verdi. Bu dönemin en ünlü yansıtıcı teleskopu, 1917'de tamamlandığı Kaliforniya'daki Mount Wilson Gözlemevi'nde bulunan Höker Teleskopuydu ve 70 yıldan fazla dünyanın en büyük teleskopu olarak kaldı.
 
 ## ADAPTİF OPTİK: TELESKOP TEKNOLOJİSİNİN GELECEĞİ
 
@@ -29,7 +28,7 @@ Teleskop teknolojisi, evrenimizin理解imize yönelik önemli sonuçlar doğuruy
 
 ## UZMAN GÖRÜŞÜ: TELESKOP TEKNOLOJİSİNİN GELECEĞİ
 
-Gemini Gözlemevi direktörü ve ünlü astronom Dr. Michael Werner'a göre, "Sonraki nesil teleskopları astronomi için oyun değiştiriciler olacak. Evreni önceden imkansız yollarla incelememize izin verecek, karanlık maddelerin sırlarını araştırmaya ve dünyadaki yaşamın işaretlerini aramaya."
+Gemini Gözlemevi direktörü ve ünlü astronom Dr. Michael Werner'a göre, Sonraki nesil teleskopları astronomi için oyun değiştiriciler olacak. Evreni önceden imkansız yollarla incelememize izin verecek, karanlık maddelerin sırlarını araştırmaya ve dünyadaki yaşamın işaretlerini aramaya."
 
 ## SONUÇ
 

@@ -1,15 +1,14 @@
 ---
 title: "Dünya Savaşlarının Analizi Nedenleri, Sonuçları ve Dersler"
-description: "Dünya savaşları, insanlığın tarihinde en yıkıcı ve kanlı olaylardır. Bu makalede, I. ve II. Dünya Savaşlarının nedenleri, gelişmeleri ve sonuçlarını inceleyeceğiz. Ayrıca, bu savaşlardan alınan der..."
+description: "Dünya savaşları, insanlığın tarihinde en yıkıcı ve kanlı olaylardır. Bu makalede, I. ve II. Dünya Savaşlarının nedenleri, gelişmeleri ve sonuçlarını inceleye..."
 pubDate: 2025-07-02
-category: "history"
+category: history
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 **Dünya Savaşlarının Nedenleri**
 
-Dünya savaşları, karmaşık nedenlerin sonucunda ortaya çıkar. I. Dünya Savaşı, ulus devletlerin yayılmacılık politikaları, militarizm ve ittifak sistemlerinin neden olduğu bir dizi olaydan kaynaklanmıştır. II. Dünya Savaşı ise, Almanya'nın yayılmacı politikaları, İtalya'nın faşist rejimi ve Japonya'nın militarist rejiminin neden olduğu bir dizi olaydan kaynaklanmıştır.
+Dünya savaşları, çıkarmaşık nedenlerin sonucunda ortaya çıkar. I. Dünya Savaşı, ulus devletlerin yayılmacılık politikaları, militarizm ve ittifak sistemlerinin neden olduğu bir dizi olaydan kaynaklanmıştır. II. Dünya Savaşı ise, Almanya'nın yayılmacı politikaları, İtalya'nın faşist rejimi ve Japonya'nın militarist rejiminin neden olduğu bir dizi olaydan kaynaklanmıştır.
 
 **I. Dünya Savaşı**
 

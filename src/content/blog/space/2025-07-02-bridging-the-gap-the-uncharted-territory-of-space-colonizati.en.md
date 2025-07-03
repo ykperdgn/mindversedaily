@@ -4,7 +4,6 @@ description: "Section 1 The Business Case for Space Colonization"
 pubDate: 2025-07-02
 category: "space"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 As humanity hurtles towards a future where Earth's resources are dwindling and the consequences of climate change become increasingly dire, the idea of space colonization is gaining momentum. What was once the realm of science fiction is now becoming a tangible reality, with private companies like SpaceX, Blue Origin, and Virgin Galactic leading the charge.

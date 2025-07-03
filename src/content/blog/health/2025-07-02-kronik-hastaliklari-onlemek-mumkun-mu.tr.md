@@ -4,7 +4,6 @@ description: "Kronik Hastalıkların Yükü"
 pubDate: 2025-07-02
 category: health
 tags: []
-image: /assets/blog-placeholder-1.svg
 ---
 
 **Kronik Hastalıkların Yükü**
@@ -23,7 +22,7 @@ Beslenme, kronik hastalık önlemede kritik bir bileşen olmasına rağmen, diğ
 
 1. **Zihin-Vücut Bağlantısı**: Zihin-vücut bağlantısı yaygın olarak incelenmiştir ve stres yönetimi teknikleri, meditasyon ve yoga gibi, kronik hastalık riskinde derin bir etki yaratır.
 
-2. **Mikrobiyom Modifikasyonu**: İnsan mikrobiyomu, genel sağlık için kritik bir faktör olarak tanınmaktadır. Diyet müdahaleleri veya probiyotikler aracılığıyla bağırsak mikrobiyomunu değiştirmek, kronik hastalıkların önlenmesi için umut vaat ediyor.
+2. **Mikrobiyom Modifikasyonu**: İnsan mikrobiyomu, genel sağlık için kritik bir faktör olarak tanınmaktadır. Diyet müdahaleleri veya probiyotikler aracılığıyla bağırsak mikrobiyomunu değiştirmek, kronik hastalıkların önlenmesi için umut vğt ediyor.
 
 3. **Dijital Sağlık Müdahaleleri**: Dijital sağlık teknolojileri, mobil uygulamalar ve giyilebilir cihazlar gibi, kronik hastalık önleme yaklaşımımızı devrimleştiriyor. Bunlar, bireylerin davranışlarını izlemelerine, kişiselleştirilmiş geri bildirimi almalarına ve motive olmalarına yardımcı olacak.
 
@@ -45,7 +44,7 @@ Bilimsel kanıtlar ikna edici olsa da, araştırma sonuçlarını gerçek dünya
 
 2. Beslenme, kronik hastalıkların önlenmesinde kritik bir rol oynuyor, Akdeniz Diyeti de yüksek derecede etkili bir örnek oluyor.
 
-3. Zihin-vücut bağlantısı, mikrobiyom modifikasyonu ve dijital sağlık müdahaleleri gibi gelişen trendler, inovatif önleme stratejileri için umut vaat ediyor.
+3. Zihin-vücut bağlantısı, mikrobiyom modifikasyonu ve dijital sağlık müdahaleleri gibi gelişen trendler, inovatif önleme stratejileri için umut vğt ediyor.
 
 4. Pratik tavsiyeler, küçük adımlarla başlamak, destek almak ve ilerlemeyi izlemek, bireylerin araştırma sonuçlarını gerçek dünyaya uygulamasına yardımcı olabilir.
 

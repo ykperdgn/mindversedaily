@@ -4,7 +4,6 @@ description: "Space exploration has witnessed tremendous progress in recent year
 pubDate: 2025-07-01
 category: "space"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 As humans, we have always been fascinated by the vast expanse of space, driven by an innate desire to explore and understand the unknown. Space exploration, once considered the realm of science fiction, has become a tangible reality, with recent developments catapulting us towards a new era of interstellar discovery. From NASA's Artemis mission to private players like SpaceX and Blue Origin, the space race has never been more intense, with humanity poised to take a giant leap into the cosmos.

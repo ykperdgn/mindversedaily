@@ -1,10 +1,9 @@
 ---
 title: "Antik Medeniyetlerin Gizemleri Tarih Sahnesindeki Bilinmeyenler"
-description: "Tarihimizin sayfalarında gizemli ve bilinmeyen birçok olay yer alıyor. Antik medeniyetlerin gizemleri, insanlığın en eski zamanlarından günümüze kadar uzanan bir gizli world. Bu makalede, antik med..."
+description: "Tarihimizin sayfalarında gizemli ve bilinmeyen birçok olay yer alıyor. Antik medeniyetlerin gizemleri, insanlığın en eski zamanlarından günümüze kadar uzanan..."
 pubDate: 2025-07-02
-category: "history"
+category: history
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Antik Medeniyetlerin Gizemleri: Tarih Sahnesindeki Bilinmeyenler

@@ -1,10 +1,9 @@
 ---
 title: "Dayanıklılık Bilgeliği Hayatın Fırtınalarında Direnmek"
-description: "Dayanıklılık bilgeliği, yaşamımızın her döneminde karşılaşabileceğimiz zorluklara karşı direnme yeteneğimizi geliştirmemizi sağlar. Bu yazıda, dayanıklılık bilgeliğinin önemini ve nasıl geliştirile..."
+description: "Dayanıklılık bilgeliği, yaşamımızın her döneminde karşılaşabileceğimiz zorluklara karşı direnme yeteneğimizi geliştirmemizi sağlar. Bu yazıda, dayanıklılık b..."
 pubDate: 2025-07-02
-category: "quotes"
+category: quotes
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Dayanıklılık Bilgeliği Nedir?

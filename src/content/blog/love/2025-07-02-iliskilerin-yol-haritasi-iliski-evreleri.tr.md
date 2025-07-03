@@ -1,10 +1,9 @@
 ---
 title: "İlişkilerin Yol Haritası İlişki Evreleri"
-description: "İlişkiler, yaşamımızın en önemli parçalarından biridir. Ancak, sağlıklı bir ilişkinin gelişmesi için belli evrelerden geçmesi gerekir. İlişki evreleri, sevdiğimiz insanla birlikte yol aldığımız sür..."
+description: "İlişkiler, yaşamımızın en önemli parçalarından biridir. Ancak, sağlıklı bir ilişkinin gelişmesi için belli evrelerden geçmesi gerekir. İlişki evreleri, sevdi..."
 pubDate: 2025-07-02
-category: "love"
+category: love
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 İlişkilerin Yol Haritası: İlişki Evreleri

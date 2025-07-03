@@ -4,7 +4,6 @@ description: "The Rise of Online Dating"
 pubDate: 2025-07-01
 category: "love"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 According to a Pew Research Center survey conducted in 2020, more than half of Americans (54%) believe that online dating is a good way to meet people, while 42% think it's not. Despite the mixed opinions, online dating has become an integral part of modern dating culture. Platforms like Tinder, Bumble, and OkCupid have made it easier for singles to connect with potential matches.

@@ -1,10 +1,17 @@
+---
+title: "The Moons Hidden Depths.En"
+description: "Discover the latest research and insights in space category on MindVerse Daily."
+pubDate: 2025-07-02
+category: space
+tags: []
+---
+
 ﻿---
 title: "The Moons Hidden Depths"
 description: "Explore the mysteries of the cosmos with cutting-edge space science discoveries, astronomical breakthroughs, and the latest research in space exploration."
 pubDate: 2025-07-02
 category: "space"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 One of the most significant advancements in lunar research is our increased understanding of the moon's internal structure. Using data from NASA's Lunar Reconnaissance Orbiter (LRO) and the European Space Agency's SMART-1 mission, scientists have created detailed maps of the moon's subsurface. These findings have revealed a complex system of fault lines, craters, and ancient lava flows that challenge our previous understanding of the moon's evolution.

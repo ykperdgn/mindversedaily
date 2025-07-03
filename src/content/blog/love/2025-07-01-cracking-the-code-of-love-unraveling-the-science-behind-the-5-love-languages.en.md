@@ -4,7 +4,6 @@ description: "In the pursuit of understanding the complexities of love, the conc
 pubDate: 2025-07-01
 category: "love"
 tags: []
-image: "https://images.pexels.com/photos/4580783/pexels-photo-4580783.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
 ---
 
 ---

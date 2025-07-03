@@ -1,10 +1,9 @@
 ---
 title: "Hastalıkları Önleme Stratejileri"
-description: "Türkçe: "Önleme en iyi ilaçtır" atasözünün söylendiği gibi, hastalık ve hastalıkların yaygın oldu..."
+description: "Önleme en iyi ilaçtır"
 category: health
 pubDate: 2025-07-03
-heroImage: /assets/blog-placeholder-1.svg
-tags: ["health"]
+tags: [health"]
 ---
 
 "Eski bir atasözü der ki, "önleme en iyi ilaçtır." Bugün, hastalıklar ve rahatsızlıkların yaygın olduğu bir dünyada, onlar için önleyici adımlar atmaya çalışmak, iyi sağlık korumak ve ömür süresini artırmak için kritiktir. Dünya Sağlık Örgütü (DSÖ), tüm hastalıkların yüzde 70'ine kadarını sağlıklı yaşam seçimleri ve hastalık önleme stratejileri aracılığıyla önleyebileceğini veya yönetebileceğini tahmin ediyor. Bu makalede, sizi daha sağlıklı, daha uzun bir yaşam sürmeye yardımcı olacak en etkili hastalık önleme stratejilerine dalacağız.

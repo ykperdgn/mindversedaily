@@ -4,7 +4,6 @@ description: "Functional medicine offers a beacon of hope in this crisis. By add
 pubDate: 2025-07-02
 category: "health"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Chronic diseases are no longer an issue exclusive to developed countries. In 2023, the World Health Organization (WHO) reported that non-communicable diseases (NCDs), such as diabetes, heart disease, and cancer, now account for over 70% of global deaths. The consequences are dire: healthcare systems are overwhelmed, economies suffer, and individuals struggle to manage their conditions.

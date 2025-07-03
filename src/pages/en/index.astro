@@ -3,6 +3,7 @@ import BaseHead from '../../components/BaseHead.astro';
 import HeaderEN from '../../components/HeaderEN.astro';
 import Footer from '../../components/Footer.astro';
 import AstrologyWidgetEN from '../../components/AstrologyWidgetEN.astro';
+import SearchWidget from '../../components/SearchWidget.astro';
 import { SITE_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS } from '../../consts';
 import { getCollection } from 'astro:content';
 
@@ -553,8 +554,12 @@ const enDescription = "MindVerse Daily: Latest news, research and in-depth analy
 						<span class="language-flag">🇹🇷</span>
 						<span class="language-text">Türkçe Oku</span>
 						<span class="language-arrow">→</span>
-					</a>
-				</div>				<!-- English Astrology Widget -->
+					</a>				</div>
+
+				<!-- Search Widget -->
+				<SearchWidget lang="en" />
+
+				<!-- English Astrology Widget -->
 				<AstrologyWidgetEN />
 
 				<!-- Latest Posts Section -->
@@ -563,9 +568,14 @@ const enDescription = "MindVerse Daily: Latest news, research and in-depth analy
 					<ul class="mv-grid">						{posts.slice(0, 8).map((post) => {							// İngilizce post için doğru URL oluştur
 							const slug = post.slug || post.id;
 							const postUrl = `/${slug}`;
-							return (
-							<li class="mv-card">
-								<a href={postUrl}>
+							return (							<li class="mv-card">
+								<a
+									href={postUrl}
+									data-post-title={post.data.title}
+									data-post-description={post.data.description || ''}
+									data-post-category={post.data.category || ''}
+									data-post-date={post.data.pubDate.toISOString()}
+								>
 									<img
 										src={post.data.heroImage || '/assets/blog-placeholder-1.svg'}
 										alt={post.data.title}

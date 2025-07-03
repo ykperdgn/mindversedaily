@@ -1,10 +1,9 @@
 ---
-title: ""Kendini Geliştirme Bilim Sırları"
+title: "Kendini Geliştirme Bilim Sırları"
 description: "MindVerse Daily'de quotes kategorisinde yenilikçi araştırmalar ve içgörüler keşfedin."
 pubDate: 2025-07-02
 category: quotes
 tags: []
-image: /assets/blog-placeholder-1.svg
 ---
 
 Kendini İyileştirme: Bilim ve Uygulama
@@ -15,7 +14,7 @@ Son yıllarda, kendini iyileştirme mekanizmaları üzerine ışık tutan çalı
 
 ## Kendini İyileştirme Sanatına Küresel Bir Bakış
 
-Küresel manzaraya bakıldığında, kendini iyileştirme kavramının artık Batı fenomeni olmadığında açık. Aslında, "kendi bakım" kavramı, meditasyon ve yoga gibi geleneksel uygulamalarıyla bağlantılı olarak Asya kültürlerinde giderek daha fazla yaygınlaşıyor.
+Küresel manzaraya bakıldığında, kendini iyileştirme kavramının artık Batı fenomeni olmadığında açık. Aslında, kendi bakım" kavramı, meditasyon ve yoga gibi geleneksel uygulamalarıyla bağlantılı olarak Asya kültürlerinde giderek daha fazla yaygınlaşıyor.
 
 2025 yılında Asya-Pasifik Ekonomik İşbirliği (APEC) tarafından yayınlanan bir rapor, bölgedeki zihinsel iyi oluşmanın önemini vurguluyor ve stres, anksiyete ve yanma gibi faktörlerin ana endişeler arasında yer aldığını belirtiyor. Kendi bakımına verilen önem, yerel ihtiyaçlara göre ürün ve hizmetler geliştiren girişimciler ve yenilikçiler tarafından büyüyen bir endüstri oluşturuyor.
 

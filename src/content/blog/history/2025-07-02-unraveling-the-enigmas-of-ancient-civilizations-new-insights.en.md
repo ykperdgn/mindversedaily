@@ -4,7 +4,6 @@ description: "The Mysterious Megaliths Deciphering the Secrets of Stonehenge"
 pubDate: 2025-07-02
 category: "history"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 As we delve into the depths of human history, it is astonishing to discover that many ancient civilizations have left behind a treasure trove of mysteries waiting to be solved. From the majestic pyramids of Egypt to the enigmatic ruins of Machu Picchu, these ancient cultures continue to captivate our imagination with their remarkable achievements and unexplained phenomena.

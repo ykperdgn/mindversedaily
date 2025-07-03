@@ -4,7 +4,6 @@ description: "Discover cutting-edge research and insights from MindVerse Daily i
 pubDate: 2025-07-02
 category: "quotes"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Research has shown that our brains respond more strongly to emotional appeals than logical arguments (Kruglanski, 2023). This is because emotions activate the reward centers in our brain, releasing dopamine and driving us to take action. Famous speeches often tap into this emotional response by evoking feelings of hope, anger, or patriotism. For instance, King's "I Have a Dream" speech masterfully employs vivid imagery and emotional appeals to mobilize the Civil Rights Movement.

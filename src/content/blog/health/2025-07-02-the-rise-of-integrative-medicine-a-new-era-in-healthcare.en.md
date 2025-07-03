@@ -4,7 +4,6 @@ description: "Discover cutting-edge research and insights from MindVerse Daily i
 pubDate: 2025-07-02
 category: "health"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 ## **The Resurgence of Herbalism: Botanicals for Modern Times**

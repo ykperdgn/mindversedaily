@@ -4,7 +4,6 @@ description: "Group dynamics refers to the study of how individuals interact wit
 pubDate: 2025-07-01
 category: "psychology"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Group dynamics refers to the study of how individuals interact with one another in a group setting. This complex phenomenon has been studied extensively by psychologists, sociologists, and organizational behavior experts, leading to a wealth of knowledge on what makes groups tick.

@@ -4,7 +4,6 @@ description: "Cognitive biases are systematic errors in thinking and decision-ma
 pubDate: 2025-07-01
 category: "psychology"
 tags: []
-image: "https://images.pexels.com/photos/8900007/pexels-photo-8900007.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
 ---
 
 Cognitive biases are like invisible puppeteers, subtly manipulating our thoughts, emotions, and behaviors without us even realizing it. These biases are not errors in logic or reasoning, but rather inherent flaws in our cognitive machinery that can lead to irrational judgments and decisions. The good news is that by becoming aware of these biases, we can take steps to mitigate their influence and make more informed, rational choices.

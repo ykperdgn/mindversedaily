@@ -1,10 +1,9 @@
 ---
-title: "Kandırıcı Zihin: Bilişsel Yanılgıların Gizli Güçlerini Açığa Çıkarma"
-description: "Bilişsel yanılgılar, insan beyninin işleyişinde doğal bir parçası olarak, irrasyonel yargılar ve kararlar alma riskini taşımaktadır. Son yıllarda, bilim adamları bu yanılgıların nöral mekanizmalarını anlamaya çalışmış ve bunları günlük yaşantımızdaki etkilerini ortaya koymuştur. Bu makale, bilişsel yanılgıların dünyasına dalıyor, en yaygın türlerini, son gelişmeleri ve günlük yaşantımızdaki sonuçlarını探探 ediyor."
+title: "Kandırıcı Zihin: Bilişsel Yanılgıların Gizli Güçlerini Açığa Çıçıçıkarma"
+description: "Bilişsel yanılgılar, insan beyninin işleyişinde doğal bir parçası olarak, irrasyonel yargılar ve kararlar alma riskini taşımaktadır. Son yıllarda, bilim adam..."
 pubDate: 2025-07-01
-category: "psychology"
+category: psychology
 tags: []
-image: "https://images.pexels.com/photos/8923956/pexels-photo-8923956.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
 ---
 
 İnsan beyni, bir saniyede kompleks kararlar alma ve büyük miktarda bilgi işleme kabiliyetine sahip şaşırtıcı bir organdır. Ancak, bu inanılmaz makine, hatalara karşı değil. Bilişsel yanılgılar, irrasyonel düşünme ve yanlış karar alma riskini taşımaktadır. Bunlar, tembellik, zeka eksikliği veya kötü eğitim sonucu değil, beynimizin doğal bir parçası olarak ortaya çıkar.

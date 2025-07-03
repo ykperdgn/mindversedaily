@@ -3,6 +3,7 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import AstrologyWidget from '../components/AstrologyWidget.astro';
+import SearchWidget from '../components/SearchWidget.astro';
 import { SITE_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS, SITE_LANG } from '../consts';
 import { getCollection } from 'astro:content';
 
@@ -483,8 +484,10 @@ const homeKeywords = `${SITE_KEYWORDS}, blog, güncel haberler, bilimsel araşt�
             <span class="mind-gradient">Mind</span><span class="verse-gradient">Verse</span>
             <span class="daily-subtitle">Daily</span>
           </h1>
-          <p class="mv-desc">Bilim, sağlık, psikoloji ve güncel konulardan en kaliteli içerikler</p>
-        </section>
+          <p class="mv-desc">Bilim, sağlık, psikoloji ve güncel konulardan en kaliteli içerikler</p>        </section>
+
+        <!-- Arama Widget -->
+        <SearchWidget lang="tr" />
 
         <!-- Astroloji Widget -->
         <AstrologyWidget />
@@ -496,9 +499,14 @@ const homeKeywords = `${SITE_KEYWORDS}, blog, güncel haberler, bilimsel araşt�
               // Türkçe post için doğru URL oluştur
               const slug = post.slug || post.id;
               const postUrl = `/${slug}`;
-              return (
-              <li class="mv-card">
-                <a href={postUrl}>
+              return (              <li class="mv-card">
+                <a
+                  href={postUrl}
+                  data-post-title={post.data.title}
+                  data-post-description={post.data.description || post.body.slice(0, 120) + '...'}
+                  data-post-category={post.data.category || 'Genel'}
+                  data-post-date={post.data.pubDate.toISOString()}
+                >
                   {post.data.image
                     ? <img src={post.data.image} alt={post.data.title} class="mv-card-img" loading="lazy" onError={(e) => { e.target.src = '/assets/blog-placeholder-1.svg'; }} />
                     : <img src="/assets/blog-placeholder-1.svg" alt="placeholder" class="mv-card-img" loading="lazy" />

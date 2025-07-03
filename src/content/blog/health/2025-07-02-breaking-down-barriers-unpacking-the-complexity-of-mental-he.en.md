@@ -4,7 +4,6 @@ description: "The Anatomy of Mental Health"
 pubDate: 2025-07-02
 category: "health"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 As we navigate the complexities of modern life, it's no secret that mental health has taken center stage. The statistics are stark: one in four people globally will experience a mental disorder each year (WHO, 2023). Yet, despite this increased awareness, many of us still struggle to understand and address the intricacies of mental health. It's time to shift our focus from mere awareness to tangible action.

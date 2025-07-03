@@ -1,10 +1,9 @@
 ---
 title: "Uzayda Yaşananlar Astronot Deneyimleri"
-description: "Uzayda yaşamak, astronotlar için olağanüstü bir deneyimidir. Uzaydaki yaşam koşulları, Dünyadakilerden tamamen farklıdır. Astronotlar, uzay boşluğunda hareket etmek, sıfır yerçekimi ortamında çalış..."
+description: "Uzayda yaşamak, astronotlar için olağanüstü bir deneyimidir. Uzaydaki yaşam koşulları, Dünyadakilerden tamamen farklıdır. Astronotlar, uzay boşluğunda hareke..."
 pubDate: 2025-07-02
-category: "space"
+category: space
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Uzayda Yaşananlar: Astronot Deneyimleri

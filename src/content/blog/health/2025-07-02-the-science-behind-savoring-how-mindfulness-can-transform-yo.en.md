@@ -4,7 +4,6 @@ description: "Discover how mindful eating practices can transform your relations
 pubDate: 2025-07-02
 category: "health"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 ### **Beyond the Plate: Cultivating Mindfulness in Everyday Life**

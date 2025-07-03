@@ -1,10 +1,9 @@
 ---
 title: "Motivasyon Bilimine Giriş İnsan Davranışına Yön Veren Güç"
-description: "Motivasyon bilimi, insan davranışını yönlendiren güce odaklanan bir psikoloji alanıdır. Bu bilim dalı, insanların niçin belli davranışları sergilediğini, hangi faktörlerin motivasyonunu artırdığını..."
+description: "Motivasyon bilimi, insan davranışını yönlendiren güce odaklanan bir psikoloji alanıdır. Bu bilim dalı, insanların niçin belli davranışları sergilediğini, han..."
 pubDate: 2025-07-02
-category: "psychology"
+category: psychology
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Motivasyon Bilimine Giriş

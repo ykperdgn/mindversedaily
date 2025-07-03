@@ -1,10 +1,9 @@
 ---
 title: "Kişilik Psikolojisi İnsan Davranışlarının Anahtarı"
-description: "Kişilik psikolojisi, insan davranışlarını anlamaya çalışarak, kişiliğin gelişimini, yapısını ve çeşitliliğini inceleyen bir psikoloji alanıdır. Kişilik, bir个人的 benzersizliğinin temelidir ve insan i..."
+description: "Kişilik psikolojisi, insan davranışlarını anlamaya çalışarak, kişiliğin gelişimini, yapısını ve çeşitliliğini inceleyen bir psikoloji alanıdır. Kişilik, bir个..."
 pubDate: 2025-07-02
-category: "psychology"
+category: psychology
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Kişilik Psikolojisi Nedir?

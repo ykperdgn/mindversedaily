@@ -1,10 +1,9 @@
 ---
-title: ""Düşünceyi Değiştir, Yaşamını Dönüştür"
+title: "Düşünceyi Değiştir, Yaşamını Dönüştür"
 description: "Son çalışmalar, Bilişsel Davranışçı Terapi'nin (CBT) travma sonrası stres bozukluğu (PTSD) tedavi..."
 pubDate: 2025-07-01
 category: psychology
 tags: []
-image: /assets/blog-placeholder-1.svg
 ---
 
 En yaygın kullanılan ve araştırılmış terapi biçimlerinden biri BBT'dir. Aaron Beck tarafından geliştirilen BBT, olumsuz düşünce kalıplarını, davranışlarını ve duygularını tanımaya ve değiştirmeye odaklanır. Depresyon ve anksiyete gibi zihinsel sağlık sorunlarına katkıda bulunan çarpık düşünceyi tanımlayarak, müşteriler düşüncelerini daha olumlu ve gerçekçi bir ışıkta yeniden çerçeveleyebilir.
@@ -23,7 +22,7 @@ Son yıllarda, bilinçlilik tabanlı terapileri, yani bilinçlilik tabanlı stre
 
 Çalışmalar, bilinçlilik tabanlı terapilerinin depresyon ve anksiyete semptomlarını azaltmada etkili olduğunu göstermiştir. 2019 yılında Journal of Consulting and Clinical Psychology'de yayınlanan bir çalışmada, BTS'nin kontrol grubuna göre depresyon ve anksiyete semptomlarında önemli azalmalara neden olduğu bulundu.
 
-## Kabul ve Taahhüt Terapisi (ACT)
+## Kabul ve Tğhhüt Terapisi (ACT)
 
 Steven C. Hayes tarafından geliştirilen ACT, kanıta dayalı bir yaklaşım olup, psikolojik esnekliği ve değerlere dayalı eylemi geliştirmeye odaklanır. Bu terapi, müşterilerin düşünce, duygu ve deneyimlerini yargısız kabul etmesini ve değerlerine dayalı hayat hedeflerine doğru harekete geçmesini teşvik eder.
 

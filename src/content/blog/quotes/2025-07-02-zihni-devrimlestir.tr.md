@@ -4,7 +4,6 @@ description: "Türkçe: MindVerse Daily'den keskin araştırmalar ve içgörüle
 pubDate: 2025-07-02
 category: quotes
 tags: []
-image: /assets/blog-placeholder-1.svg
 ---
 
 Son Araştırmalar, Zorluklara karşı Üstün Gelmek için Zihniyetimizin Derin Etkisini Ortaya Koydu

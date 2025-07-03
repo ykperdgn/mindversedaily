@@ -2,12 +2,11 @@
 title: "Medieval Döneminin Yeniden Keşfi"
 description: "Medieval dönemi, 5inci ve 15inci yüzyılları kapsayan bir zaman dilimi olarak, Avrupada sosyal, ekonomik ve kültürel duraklama olarak görülmektedir...."
 pubDate: 2025-07-01
-category: "history"
+category: history
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
-Medieval dönemi, 5'inci ve 15'inci yüzyılları kapsayan bir zaman dilimi olarak, Avrupa'da sosyal, ekonomik ve kültürel duraklama olarak görülmektedir. Ancak son bilimsel bulgular ve uzman görüşleri, bu pivotal dönemin daha karmaşık ve nuanceslu bir resmini ortaya koymuştur.
+Medieval dönemi, 5'inci ve 15'inci yüzyılları kapsayan bir zaman dilimi olarak, Avrupa'da sosyal, ekonomik ve kültürel duraklama olarak görülmektedir. Ancak son bilimsel bulgular ve uzman görüşleri, bu pivotal dönemin daha çıkarmaşık ve nuanceslu bir resmini ortaya koymuştur.
 
 Arkeolojik keşifler, medieval insanların günlük hayatlarını aydınlatmıştır. Örneğin, İngiltere'deki Wharram Percy yerleşim yerinde yapilan kazılar, tarım pratiklerini geliştirme ve verimlilik tekniklerinin kullanımını göstermiştir. Aynı zamanda, medieval mezarlıklarından insan kalıntılarının analizinde, şaşırtıcı derecede sosyal hareketlilik bulunmuştur.
 
@@ -25,4 +24,4 @@ Gothic design'in yükselişine bakarsak, bu stil, Avrupa'da 12'inci ve 14'inci y
 
 Örnek olarak, Cambridge Üniversitesi'nden araştırmacılar, medieval matematikçilerinin Gothic kemerlerinin ve vaults'un oranlarını hesaplamada yeni teknikler geliştirdiğini göstermiştir. Bu, mimarlar daha kompleks ve yenilikçi yapılar yaratmaya izin etmiştir.
 
-Sonuç olarak, recent bilimsel bulgular ve uzman görüşleri, medieval döneminin daha karmaşık ve nuanceslu bir resmini ortaya koymuştur. Tarım pratiklerinden ticaret rotalarına, tıbbi advances'ten mimarlığa kadar, tüm alanlarda gelişmeler kaydetmiştir. Bu yeni bulguları ve eski algılamaları yeniden değerlendirenwhile, medieval döneminin bir zaman değil, aynı zamanda yenilikçi, yaratıcı ve büyüyen bir dönem olduğunu gösteriyor.
+Sonuç olarak, recent bilimsel bulgular ve uzman görüşleri, medieval döneminin daha çıkarmaşık ve nuanceslu bir resmini ortaya koymuştur. Tarım pratiklerinden ticaret rotalarına, tıbbi advances'ten mimarlığa kadar, tüm alanlarda gelişmeler kaydetmiştir. Bu yeni bulguları ve eski algılamaları yeniden değerlendirenwhile, medieval döneminin bir zaman değil, aynı zamanda yenilikçi, yaratıcı ve büyüyen bir dönem olduğunu gösteriyor.

@@ -4,7 +4,6 @@ description: "The Birth of Telescope Technology"
 pubDate: 2025-07-01
 category: "space"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 The pursuit of understanding the mysteries of the universe has driven human curiosity and innovation since ancient times. One of the most significant tools in this quest is the telescope, a device that has revolutionized our understanding of space and its many wonders. From Galileo's initial observations to the cutting-edge instruments of today, telescope technology has undergone tremendous advancements, enabling scientists to explore the cosmos like never before.

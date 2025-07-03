@@ -4,7 +4,6 @@ description: "Meet the trio of hormones that orchestrate our emotional responses
 pubDate: 2025-07-02
 category: "love"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Meet the trio of hormones that orchestrate our emotional responses in romantic relationships:

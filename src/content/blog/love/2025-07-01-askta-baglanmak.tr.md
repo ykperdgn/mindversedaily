@@ -1,10 +1,9 @@
 ---
-title: ""Aşkta Bağlanmak"
+title: "Aşkta Bağlanmak"
 description: "Türkçe: Bağlanma teorisi, güvenli, endişeli-kaygılı ve kaçınan olmak üzere üç temel bağlanma stil..."
 pubDate: 2025-07-01
 category: love
 tags: []
-image: /assets/blog-placeholder-1.svg
 ---
 
 İlişki Stilleri: Aşk, Yakınlık ve Bağın Anahtarı

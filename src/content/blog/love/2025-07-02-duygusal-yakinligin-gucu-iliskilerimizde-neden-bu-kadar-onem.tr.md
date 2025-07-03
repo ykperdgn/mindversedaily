@@ -1,10 +1,9 @@
 ---
 title: "Duygusal Yakınlığın Gücü İlişkilerimizde Neden Bu Kadar Önemli?"
-description: "Duygusal yakınlık, insan ilişkilerinde en temel ve vazgeçilmez unsurlardan biri olan duygusal bağlantıyı oluşturmamızı sağlar. Bu makalede, duygusal yakınlığın ne olduğu, neden önemli olduğunu ve i..."
+description: "Duygusal yakınlık, insan ilişkilerinde en temel ve vazgeçilmez unsurlardan biri olan duygusal bağlantıyı oluşturmamızı sağlar. Bu makalede, duygusal yakınlığ..."
 pubDate: 2025-07-02
-category: "love"
+category: love
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Duygusal yakınlık, bir ilişki içerisinde iki kişi arasındaki duygusal bağlantıyı oluşturmamızı sağlar. Bu bağlantıyı oluşturmak için karşılıklı güven, saygı, anlayış ve duygusal destek gerekmektedir. Duygusal yakınlık, ilişkilerimizde güveni, sadakati ve birlikte olma duygusunu güçlendirir.

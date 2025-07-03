@@ -1,10 +1,9 @@
 ---
 title: "Sağlığın Sırları Preventif Tıp Yöntemleri"
-description: "Sağlığımızı korumak ve geliştirmek amacıyla yapılan preventif tıp yöntemleri, hastalıkların önlenmesine yardımcı olmaktadır. Bu makalede, preventif tıp nedir, neden önemlidir ve hangi yöntemleri iç..."
+description: "Sağlığımızı korumak ve geliştirmek amacıyla yapılan preventif tıp yöntemleri, hastalıkların önlenmesine yardımcı olmaktadır. Bu makalede, preventif tıp nedir..."
 pubDate: 2025-07-02
-category: "health"
+category: health
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Sağlığımızın Sırları: Preventif Tıp Yöntemleri

@@ -4,7 +4,6 @@ description: "From ancient philosophers to modern-day scientists, the wisest min
 pubDate: 2025-07-01
 category: "quotes"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Throughout human history, wise individuals have shared their insights, observations, and experiences with the world, leaving behind a rich legacy of wisdom that continues to inspire and guide us today. From the ancient Greeks to modern-day scientists, thinkers, and leaders, their quotes and teachings offer a window into the human experience, revealing universal truths that transcend time and space.

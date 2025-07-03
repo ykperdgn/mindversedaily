@@ -4,7 +4,6 @@ description: "Discover cutting-edge research and insights from MindVerse Daily i
 pubDate: 2025-07-02
 category: "health"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 In 2023, researchers from Stanford University introduced AI-powered fitness coaching, leveraging machine learning algorithms to create personalized workout routines. This breakthrough has since been adopted by numerous top fitness brands, offering users a tailored approach to achieving their goals. Studies have shown that AI-coached workouts lead to increased motivation, improved performance, and enhanced overall well-being (1).

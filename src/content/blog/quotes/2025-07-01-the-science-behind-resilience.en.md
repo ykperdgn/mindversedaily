@@ -4,7 +4,6 @@ description: "Recent findings from the University of California, Berkeley, sugge
 pubDate: 2025-07-01
 category: "quotes"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 ## The Role of Resilience Quotes

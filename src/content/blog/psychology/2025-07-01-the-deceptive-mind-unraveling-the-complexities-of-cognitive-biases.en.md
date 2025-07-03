@@ -4,7 +4,6 @@ description: "Cognitive biases are systematic errors in thinking that affect our
 pubDate: 2025-07-01
 category: "psychology"
 tags: []
-image: "https://images.pexels.com/photos/6933049/pexels-photo-6933049.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
 ---
 
 Cognitive biases are an inherent part of the human experience. They are the result of our brain's tendency to take shortcuts, relying on mental heuristics and rules of thumb to navigate the complexities of the world. While these biases can be helpful in many situations, they can also lead to errors in judgment, perpetuate stereotypes, and influence our behavior in unintended ways.

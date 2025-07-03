@@ -1,10 +1,9 @@
 ---
-title: "Türkçe başlık"
+title: "Mutluluğun Ötesi"
 description: "Mutluluğun Ötesi"
 pubDate: 2025-07-02
 category: psychology
 tags: []
-image: /assets/blog-placeholder-1.svg
 ---
 
 Belirsizlik çağına girmiş bir dünyada, insan refahı anlayışımızı devrimleştirme potansiyeline sahip bir alan var: pozitif psikoloji. Bu makalede, en son araştırmaları ve uzman görüşlerini derinlemesine inceliyoruz ve bu hızla gelişen disiplinin taze bir perspektifini ortaya koyuyoruz.
@@ -31,4 +30,4 @@ Pozitif psikoloji, sadece iyi hissetme disiplinine değil, insanlığın gizli p
 
 3. Kusurluluk kabulü, kendini kabul, kendini merhamet ve genel iyi oluş için zorunludur.
 
-Bu ilkeleri günlük yaşama dahil ederken, pozitif psikolojinin tam potansiyelini açığa çıkarma yolunda bir adım daha yakın olacaksınız.
+Bu ilkeleri günlük yaşama dahil ederken, pozitif psikolojinin tam potansiyelini açığa çıçıkarma yolunda bir adım daha yakın olacaksınız.

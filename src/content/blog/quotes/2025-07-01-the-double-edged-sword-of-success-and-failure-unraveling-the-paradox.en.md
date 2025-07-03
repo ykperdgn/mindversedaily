@@ -4,7 +4,6 @@ description: "Success and failure are two sides of the same coin, yet we often v
 pubDate: 2025-07-01
 category: "quotes"
 tags: []
-image: "https://images.pexels.com/photos/6620633/pexels-photo-6620633.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
 ---
 
 The Double-Edged Sword of Success and Failure: Unraveling the Paradox

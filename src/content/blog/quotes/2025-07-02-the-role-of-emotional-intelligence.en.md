@@ -4,7 +4,6 @@ description: "Discover cutting-edge research and insights from MindVerse Daily i
 pubDate: 2025-07-02
 category: "quotes"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Emotional intelligence (EQ) is another crucial component in fostering career inspiration. A study by the Harvard Business Review (2024) found that individuals with high EQ are more likely to experience job satisfaction and have better relationships with colleagues. This is because they possess the ability to understand and manage their emotions, as well as empathize with others.

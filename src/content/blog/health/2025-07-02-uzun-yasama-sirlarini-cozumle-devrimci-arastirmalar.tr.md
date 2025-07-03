@@ -1,10 +1,9 @@
 ---
 title: "Uzun Yaşama Sırlarını Çözümle! Devrimci Araştırmalar"
-description: "Türkçe: Uzun Ömürün Şifresini Çözmek Bölüm 1"
+description: "Türkçe: Uzun Ömürün Şifresini Çöçözmek Bölüm 1"
 pubDate: 2025-07-02
 category: health
 tags: []
-image: /assets/blog-placeholder-1.svg
 ---
 
 İnsan ömrünü uzatma ve sağlıklı yaşlanma yolunda ilerlerken, kırılgan araştırmalar uzun ömürlülüğün sırlarını aydınlatıyor. Bu makalede, 2023-2025 yılları arasındaki en son bulguları keşfedecek ve bu alanda en umut verici gelişmeleri keşfedeceğiz. Daha uzun, daha sağlıklı bir yaşam için ilham alınmaya hazır olun!
@@ -15,7 +14,7 @@ Bu genlerden biri, NPRC2 olarak adlandırılan, kromozomlarımızın koruyucu ka
 
 **Bölüm 2: Kalorik Kısıtlamanın Yeniden Değerlendirilmesi**
 
-Araştırmacılar, vücudun kalorik kısıtlamaya maruz kaldığında, "CR-uyumlu" olarak adlandırılan belli genlerin aktivasyonunu keşfetti. Bu genler, hücre metabolizması ve enerji üretiminde kritik roller oynayan SIRT1 ve AMPK'yi içerir. Bu genleri belirledikten sonra, bilim insanları, CR'nin faydalarını taklit eden yeni terapötik yaklaşımlar geliştirebilir.
+Araştırmacılar, vücudun kalorik kısıtlamaya maruz kaldığında, CR-uyumlu" olarak adlandırılan belli genlerin aktivasyonunu keşfetti. Bu genler, hücre metabolizması ve enerji üretiminde kritik roller oynayan SIRT1 ve AMPK'yi içerir. Bu genleri belirledikten sonra, bilim insanları, CR'nin faydalarını taklit eden yeni terapötik yaklaşımlar geliştirebilir.
 
 **Bölüm 3: Mikrobiyom Bağlantısı**
 

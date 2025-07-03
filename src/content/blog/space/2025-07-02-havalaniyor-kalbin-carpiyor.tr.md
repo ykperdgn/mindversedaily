@@ -1,10 +1,9 @@
 ---
-title: ""Havalanıyor, Kalbin Çarpıyor!"
+title: "Havalanıyor, Kalbin Çarpıyor!"
 description: "Örneğin, NASA'nın 2019-2020 astronot aday sınıfı. Bu 12 birey, yoğun 2 yıllık eğitim programına k..."
 pubDate: 2025-07-02
 category: space
 tags: []
-image: /assets/blog-placeholder-1.svg
 ---
 
 Uzay Yolcuları için Yolculuk Uzun Süre Önce Başlar
@@ -26,7 +25,7 @@ Uzay yolcuları, kozmosu kat ederken, dünyanın unobstructed manzarasına tanı
 
 Örneğin, Chris Hadfield'in 2013 yılında ABD Senatosu Ticaret, Bilim ve Ulaşım Komitesi önünde verdiği şahitlik, uzaydan dünyayı seyretmenin duygusal etkisini vurgulamıştır:
 
-"En çok beni şaşırtan şey, dünyanın ne kadar güzel olduğuydu. Sonsuz bir karanlığın içindeki küçük mavi nokta... Kendinizle gözle görürseniz, her şeyi değiştirir."
+En çok beni şaşırtan şey, dünyanın ne kadar güzel olduğuydu. Sonsuz bir karanlığın içindeki küçük mavi nokta... Kendinizle gözle görürseniz, her şeyi değiştirir."
 
 ## Zihinsel zorluklar: İzolasyona uyum sağlama
 
@@ -48,7 +47,7 @@ Bu etkileri azaltmak için NASA, yenilikçi stratejiler uygulamıştır:
 
 Uzay keşifinin sınırlarını ilerlettikçe, uzay yolcularının deneyimleri, bireysel uzay yolcularının ötesinde uzaktaki etkileri olduğunu unutmamız gerekir. Bu öncülerin hikayeleri, gelecek neslin STEM alanlarında (bilim, teknoloji, mühendislik ve matematik) kariyerlerine yönelmesine ilham verir, topluluk duygusu ve ortak amaç hissi uyandırır.
 
-Sonuç olarak, uzay yolcularının deneyimleri, fiziksel ve zihinsel zorluklar, nefes kesici manzaralar ve dünyamızla derin bir bağlantı olan karmaşık bir dokuma gibidir. Uzaya giderek ilerledikçe, bu uzay yolcularının iyilik ve dayanıklılığını öncelikli hale getirirken, insan bilgisinin ilerletmesine katkılarını da onurlandırmamız gerekir.
+Sonuç olarak, uzay yolcularının deneyimleri, fiziksel ve zihinsel zorluklar, nefes kesici manzaralar ve dünyamızla derin bir bağlantı olan çıkarmaşık bir dokuma gibidir. Uzaya giderek ilerledikçe, bu uzay yolcularının iyilik ve dayanıklılığını öncelikli hale getirirken, insan bilgisinin ilerletmesine katkılarını da onurlandırmamız gerekir.
 
 **Çıkarılacak İpler:**
 

@@ -4,7 +4,6 @@ description: "In the digital age, technology has become an indispensable tool fo
 pubDate: 2025-07-02
 category: "psychology"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 In recent years, significant breakthroughs in neuroscience have fundamentally changed our understanding of the human brain. Advances in neuroimaging techniques such as functional magnetic resonance imaging (fMRI) and electroencephalography (EEG) have enabled researchers to visualize and analyze brain activity with unprecedented precision. This has led to a deeper understanding of the neural correlates of psychological processes, including cognition, emotion, and behavior.

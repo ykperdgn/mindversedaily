@@ -4,7 +4,6 @@ description: "Türkçe açıklama: MindVerse Daily'de psikoloji kategorisinde so
 pubDate: 2025-07-02
 category: psychology
 tags: []
-image: /assets/blog-placeholder-1.svg
 ---
 
 2023 yılında Stanford Üniversitesi'ndeki araştırmacılar, küresel dikkat seviyelerinde şaşırtıcı bir düşüş bulduklarını açıklayan bir çalışmaya imza attı. Çalışma, katılımcıların yüzde 75'inden fazlasının sürekli olarak dağılmış hissettiğini ve ortalama dikkat süresi sadece 2-5 dakika olduğunu ortaya koydu. Bu endişe verici trend, kişisel ve profesyonel yaşantımız serta genel refahımız bakımından uzantıları olan ciddi sonuçlara sahiptir.
@@ -13,7 +12,7 @@ image: /assets/blog-placeholder-1.svg
 
 Son yıllarda nörogörüntüleme alanında yaşanan gelişmeler, beynin dikkat dağıtımındaki olağanüstü yeteneğini ortaya koydu. 2024 yılında NeuroImage dergisinde yayınlanan bir çalışmada, funktionel manyetik rezonans görüntüleme (fMRI) kullanılarak dikkat seçimindeki nöral mekanizmaları araştırıldı. Bulgular, dikkat sürecinin yüksek derecede dağıtıldığını ve birden fazla beyin bölgesinin birlikte çalıştığını ortaya koydu.
 
-Anahtar bulgulardan biri, "dikkat ağı" olarak adlandırılan kompleks bir sistemin tespit edilmesiydi. Bu sistem, ön frontal korteks, anterior singulat korteks ve parietal lob'dan oluşuyor ve eldeki görev üzerine odaklanmamızı sağlayarak alakasız uyarıcılardan bizi koruyor.
+Anahtar bulgulardan biri, dikkat ağı" olarak adlandırılan kompleks bir sistemin tespit edilmesiydi. Bu sistem, ön frontal korteks, anterior singulat korteks ve parietal lob'dan oluşuyor ve eldeki görev üzerine odaklanmamızı sağlayarak alakasız uyarıcılardan bizi koruyor.
 
 ## **Dikkat Geliştirme Stratejileri: Mindfulness'ten Teknolojiye**
 

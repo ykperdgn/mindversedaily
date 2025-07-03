@@ -1,10 +1,9 @@
 ---
 title: "Alternatif Tıp Yöntemleri Sağlığımızı Korumanın Farklı Yolları"
-description: "Alternatif tıp yöntemleri, modern tıbbın yanı sıra, insan sağlığını korumak ve hastalıkları tedavi etmek amacıyla kullanılan yöntemlerdir. Bu yöntemler, doğanın gücüyle birlikte, insan bedeninin ke..."
+description: "Alternatif tıp yöntemleri, modern tıbbın yanı sıra, insan sağlığını korumak ve hastalıkları tedavi etmek amacıyla kullanılan yöntemlerdir. Bu yöntemler, doğa..."
 pubDate: 2025-07-02
-category: "health"
+category: health
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Alternatif tıp yöntemleri, insan sağlığını korumak ve hastalıkları tedavi etmek amacıyla kullanılan yöntemlerdir. Bu yöntemler, modern tıbbın yanı sıra, insan bedeninin kendi kendini iyileştirme yeteneğini desteklemektedir. Alternatif tıp yöntemleri, çeşitli kültürlerde yıllardır kullanılmaktadır ve günümüzde de popülerliği artmaktadır.

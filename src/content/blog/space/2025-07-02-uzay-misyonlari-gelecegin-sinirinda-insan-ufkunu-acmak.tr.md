@@ -1,10 +1,9 @@
 ---
 title: "Uzay Misyonları Geleceğin Sınırında İnsan Ufkunu Açmak"
-description: "Uzay misyonları, insanlığın uzaydaki varlığını sürdürme ve keşfetme arzusunun bir sonucudur. Son yıllarda uzay ajansları ve özel şirketler, uzayda insan yaşamlığını sağlamak için birçok misyon başl..."
+description: "Uzay misyonları, insanlığın uzaydaki varlığını sürdürme ve keşfetme arzusunun bir sonucudur. Son yıllarda uzay ajansları ve özel şirketler, uzayda insan yaşa..."
 pubDate: 2025-07-02
-category: "space"
+category: space
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Uzay Misyonlarının Tarihçesi

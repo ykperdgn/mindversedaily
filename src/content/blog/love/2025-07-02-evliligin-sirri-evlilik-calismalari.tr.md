@@ -1,10 +1,9 @@
 ---
 title: "Evliliğin Sırrı Evlilik Çalışmaları"
-description: "Evlilik, iki kişinin bir araya gelerek ortak bir yaşam kurmasıdır. Ancak, bu birlikteliğin başarılı olabilmesi için çiftlerin birbirlerini tanımaları, iletişim kurmaları ve sorunlarını birlikte aşm..."
+description: "Evlilik, iki kişinin bir araya gelerek ortak bir yaşam kurmasıdır. Ancak, bu birlikteliğin başarılı olabilmesi için çiftlerin birbirlerini tanımaları, iletiş..."
 pubDate: 2025-07-02
-category: "love"
+category: love
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Evlilik, insanların en önemli ve en özel kararlarından biridir. İki kişinin bir araya gelerek ortak bir yaşam kurması, birlikte büyümeleri ve birlikte yaşlılıklarına kadar yaşamalarıdır. Ancak, evliliğin başarılı olabilmesi için çiftlerin birbirlerini tanımaları, iletişim kurmaları ve sorunlarını birlikte aşmaları gerekir.

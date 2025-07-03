@@ -4,7 +4,6 @@ description: "Son yıllarda uzay araştırması, teknoloji, bilimsel keşifler v
 pubDate: 2025-07-01
 category: space
 tags: []
-image: /assets/blog-placeholder-1.svg
 ---
 
 İnsanlar olarak, uzayın uçsuz bucaksız genişliği her zaman bizi cezbediyor, bilinmeyen şeyleri keşfetme ve anlama içgüdüsel arzusu tarafından yönlendiriliyor. Uzay keşfi, bir zamanlar bilim kurgu alanına ait iken, şimdi gerçek bir olgu haline geliyor, son gelişmeler bizi yeni bir dönemine interstellar keşfine doğru fırlatıyor. NASA'nın Artemis misyonundan SpaceX ve Blue Origin gibi özel oyunculara kadar, uzay yarışında hiç bu kadar yoğun olmamıştı, insanlık kozmosa dev bir adım atmak üzere.
@@ -41,4 +40,4 @@ Yeniden kullanılabilir roketlerin ve özel uzay istasyonlarının geliştirilme
 
 Artemis misyonu ve SpaceX ve Blue Origin gibi özel girişimler, uzay keşfinin yeni bir dönemine giriyor, işbirliği, yenilik ve evreni anlama ortak arzusu tarafından yönlendiriliyor. Kozmosa daha fazla ilerledikçe, belki de evrenin gizemlerini keşfedeceğiz ve belki de bilinmeyen şeyleri keşfedeceğiz.
 
-Carl Sagan'ın sözleriyle, "Bir yerde, şaşırtıcı bir şey keşfedilecek." Uzay keşfinin geleceği, muazzam vaat ediyor ve bu olağanüstü yolculuğa başladığımızda, belki de şaşırtıcı ve bilinmeyen şeyleri keşfedeceğiz.
+Carl Sagan'ın sözleriyle, Bir yerde, şaşırtıcı bir şey keşfedilecek." Uzay keşfinin geleceği, muazzam vğt ediyor ve bu olağanüstü yolculuğa başladığımızda, belki de şaşırtıcı ve bilinmeyen şeyleri keşfedeceğiz.

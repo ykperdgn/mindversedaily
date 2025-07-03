@@ -1,10 +1,9 @@
 ---
 title: "Kozmik Radyasyon Uzaydaki Tehlikeli Düşman"
-description: "Kozmik radyasyon, uzayda bulunan ve insan sağlığına zararlı olabilecek enerji parçacıklarının yayılmasıdır. Bu radyasyonun kaynakları, güneş patlamaları ve uzak yıldızlardır. Uzaydaki radyasyon sev..."
+description: "Kozmik radyasyon, uzayda bulunan ve insan sağlığına zararlı olabilecek enerji parçacıklarının yayılmasıdır. Bu radyasyonun kaynakları, güneş patlamaları ve u..."
 pubDate: 2025-07-02
-category: "space"
+category: space
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Kozmik radyasyon, uzayda bulunan ve insan sağlığına zararlı olabilecek enerji parçacıklarının yayılmasıdır. Bu radyasyonun kaynakları, güneş patlamaları ve uzak yıldızlardır. Güneş patlamaları, güneşimizin yüzeyinde meydana gelen patlamalardır. Bu patlamalar sırasında, enerji parçacıkları uzaya yayılır ve Dünya'yı çevreleyen manyetik alan tarafından yönlendirilir. Uzak yıldızlar ise, süpernova patlamaları sırasında enerji parçacıklarını uzaya yayırlar.

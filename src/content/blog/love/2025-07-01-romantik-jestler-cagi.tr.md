@@ -4,7 +4,6 @@ description: "Aşkın ve sevginin ifadesinde asırlardır köşe taşı olan rom
 pubDate: 2025-07-01
 category: love
 tags: []
-image: https://images.pexels.com/photos/18417067/pexels-photo-18417067.jpeg?auto=compress&cs=tinysrgb&h=650&w=940
 ---
 
 Romantik Jestler: İlişkilerin Kalbini Çalma Sanatı
@@ -13,7 +12,7 @@ Romantik jestler, aşk hikâyelerinin, masalların ve Sevgililer Günü reklamla
 
 Son yıllarda, bilim insanları ve ilişki uzmanları, romantik jestlerin psikolojisi üzerinde daha fazla çalışmaya başladılar. Bulguları, romantik jestlerin beynimizin ödül sistemiyle bağlantılı olduğunu gösterdi. Bu jestler, dopamin, oksitosin ve serotonin gibi iyi hissetme kimyasallarını salgılar. Bu nörotransmitterler, duygusal yanıtları, sosyal bağları ve bağlanmayı düzenleyen kritik bileşenleridir.
 
-Aşk uzmanı ve biyolojik antropolog Dr. Helen Fisher, romantik jestlerin dopamin salgıladığını ve bu kimyasalın zevk, heyecan ve motivasyonla ilişkili olduğunu açıklar. "Romantik bir jest aldığımızda, beynimiz bizi ödül olarak dopaminle ödüllendirir, böylece iyi hissetmemizi sağlar ve davranışı tekrar etmemizi teşvik eder" diye açıklar. Bu nöral yanıt o kadar güçlüdür ki, beynimizi tekrar şekillendirerek aşk ve bağlanmaya daha açık hale getirir.
+Aşk uzmanı ve biyolojik antropolog Dr. Helen Fisher, romantik jestlerin dopamin salgıladığını ve bu kimyasalın zevk, heyecan ve motivasyonla ilişkili olduğunu açıklar. Romantik bir jest aldığımızda, beynimiz bizi ödül olarak dopaminle ödüllendirir, böylece iyi hissetmemizi sağlar ve davranışı tekrar etmemizi teşvik eder" diye açıklar. Bu nöral yanıt o kadar güçlüdür ki, beynimizi tekrar şekillendirerek aşk ve bağlanmaya daha açık hale getirir.
 
 Romantik jestlerin bir diğer kritik yönü, duygusal zekâ ve empatiyi göstermesidir. Partnerimizin ihtiyaçlarını, arzularını ve duygularını anladığında, derin bir bakım mesajı gönderir. Duygusal Fokuslu Terapi (DFT) geliştiricisi Dr. Sue Johnson, duygusal yanıtın sağlam, aşk dolu bir ilişkinin inşa edilmesindeki kritik faktörlerinden biri olduğunu belirtir. "Partnerimiz duygusal ihtiyaçlarımızı karşıladığında, güvenlik ve güven duygusu oluşturur, böylece bağlantılarımızı derinleştirerek açılırız" diye açıklar.
 

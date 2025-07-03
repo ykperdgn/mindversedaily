@@ -4,7 +4,6 @@ description: "Türkçe açıklama: Uzay Tıbbının Sınavları"
 pubDate: 2025-07-02
 category: space
 tags: []
-image: /assets/blog-placeholder-1.svg
 ---
 
 Uzay Araştırmaları ve İnsan Yerleşimi Artmaya Devam Ediyor, Uzay Tıbbının Önemi Aşırı Değerlendirilemez. İnsanlar Daha Önce Uzayda Bulunmaktan Daha Uzağa Gidiyor, Dünyanın Dışında Yaşama Desteği İçin Yenilikçi Tıbbi Çözümlere İhtiyaç Duyuluyor. Bu Makalede, Uzay Tıbbında Son Gelişmeleri İnceleyecek ve Gelecekteki Sağlık için Çığır Açan Araştırmanın Yolunu Açacak.

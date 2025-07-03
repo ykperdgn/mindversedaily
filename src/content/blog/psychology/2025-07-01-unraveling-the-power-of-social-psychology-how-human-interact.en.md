@@ -1,10 +1,17 @@
+---
+title: "Unraveling The Power Of Social Psychology How Human Interact.En"
+description: "Discover the latest research and insights in psychology category on MindVerse Daily."
+pubDate: 2025-07-02
+category: psychology
+tags: []
+---
+
 ﻿---
 title: "Unraveling the Power of Social Psychology How Human Interactions Shape Our Thoughts, Feelings, and Behaviors"
 description: "Discover the fascinating world of human psychology with insights into behavior, mental health, cognitive science, and the latest psychological research."
 pubDate: 2025-07-01
 category: "psychology"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Social psychology is a dynamic field that explores how social interactions shape our thoughts, feelings, and behaviors. This branch of psychology delves into the intricacies of human relationships, examining how we perceive and respond to others, as well as the societal norms that influence our actions.

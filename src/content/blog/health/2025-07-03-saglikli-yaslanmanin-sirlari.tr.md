@@ -1,10 +1,9 @@
 ---
-title: ""Sağlıklı Yaşlanmanın Sırları"
+title: "Sağlıklı Yaşlanmanın Sırları"
 description: "Yaşlandıkça vücudumuz fiziksel ve zihinsel refahımızı etkileyen doğal değişikliklere uğrar. Yaşla..."
 category: health
 pubDate: 2025-07-03
-heroImage: /assets/blog-placeholder-1.svg
-tags: ["health"]
+tags: [health"]
 ---
 
 Yaşlanma Sürecinde Sağlığa Erişmek

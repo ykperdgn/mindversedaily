@@ -1,10 +1,9 @@
 ---
-title: "Türkçe başlık"
-description: "Türkçe açıklama: Gizemli Megalitler: Stonehenge'in Taş Sırlarını Çözme"
+title: "Gizemli Megalitler: Stonehenge'in Taş Sırlarını Çözme"
+description: "Gizemli Megalitler: Stonehenge'in Taş Sırlarını Çözme"
 pubDate: 2025-07-02
 category: history
 tags: []
-image: /assets/blog-placeholder-1.svg
 ---
 
 İnsanlık tarihindeki derinliklerine dalmaya devam ederken, eski uygarlıkların çözülmeyi bekleyen bir gizem hazinesi bıraktıklarını keşfetmek şaşırtıcıdır. Mısır'ın göz alıcı piramitlerinden Machu Picchu'nun gizemli harabelerine kadar, bu eski kültürlerremarkable başarıları ve açıklanamayan fenomenleriyle hayal gücümüzü devam ettiriyor.
@@ -39,4 +38,4 @@ Bu makalede, Stonehenge'in yapımına, Maya takvimlerinin gizemlerine ve Petra'n
 
 2. Yenilikçi yaklaşımlar, eski takvimlerde ve anıtlarda önceden bilinmeyen desenler ve yapılar ortaya çıkarabilir.
 
-3. Arkeolojik kazılar, eski uygarlıkların kültürleri ve toplumu hakkında yeni kanıtlar ortaya çıkarmaya devam ediyor.
+3. Arkeolojik kazılar, eski uygarlıkların kültürleri ve toplumu hakkında yeni kanıtlar ortaya çıçıkarmaya devam ediyor.

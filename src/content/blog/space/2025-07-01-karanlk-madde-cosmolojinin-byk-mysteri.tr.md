@@ -2,9 +2,8 @@
 title: "Karanlık Madde Cosmolojinin Büyük Mysteri"
 description: "Karanlık madde, astronomi alanında uzun zamandır bir gizemi oluşturur, toplam kütle-enerji yoğunluğunun yaklaşık yüzde 27sini oluşturur. İleri bilims..."
 pubDate: 2025-07-01
-category: "space"
+category: space
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Karanlık madde, astronomi alanında uzun zamandır bir gizemi oluşturur, toplam kütle-enerji yoğunluğunun yaklaşık yüzde 27'sini oluşturur. İleri bilimsel keşifler, bu enigmatik maddinin rolünü iyileştirerek evrenin şekillendirilmesine katkıda bulundu.

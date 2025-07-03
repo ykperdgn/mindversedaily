@@ -3,7 +3,6 @@ title: "Unlocking the Secrets to Healthy Aging Latest Research and Practical Ins
 description: "As we age, our bodies undergo a range of natural changes that can impact our physical and mental well-being. While aging is inevitable, the good news ..."
 category: "health"
 pubDate: 2025-07-03
-heroImage: "/assets/blog-placeholder-1.svg"
 tags: ["health"]
 ---
 

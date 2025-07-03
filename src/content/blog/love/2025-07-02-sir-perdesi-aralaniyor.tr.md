@@ -4,7 +4,6 @@ description: "Özel biri ile ilk kez karşılaştığınızda, iyi göz teması 
 pubDate: 2025-07-02
 category: love
 tags: []
-image: /assets/blog-placeholder-1.svg
 ---
 
 Çekimlilik Bilimine Giriş
@@ -33,6 +32,6 @@ Bilim insanları, çekimlilik mekanizmalarının temelini uzun süredir açıkla
 
 Özet: **Yapıcı çatışmaya açık olun**: Çatışmaları, ilişkiniz için bir tehdit olarak değil, büyüme ve daha derin bağlantı için fırsatlar olarak görün. Aktif dinlemeyi uygulayın, açık fikirli olun ve sorunları sağlıklı bir şekilde çözün.
 
-Sonuç olarak, çekimlilik bilimine ilişkin önceki düşüncelerden daha karmaşık ve çok yönlüdür. CD38, hikâye anlatımı, empati ve çatışma çözümleme mekanizmalarını anladığımızda, aşk ve ilişkilerimize yönelik yaklaşımımızı devrimleştirebiliriz. Çekimlilik sadece fiziksel kimyaya veya süperfisyel özelliklere değil, bizi bir araya getiren daha derin bağlantılar ve duygusal bağlara da dayanır.
+Sonuç olarak, çekimlilik bilimine ilişkin önceki düşüncelerden daha çıkarmaşık ve çok yönlüdür. CD38, hikâye anlatımı, empati ve çatışma çözümleme mekanizmalarını anladığımızda, aşk ve ilişkilerimize yönelik yaklaşımımızı devrimleştirebiliriz. Çekimlilik sadece fiziksel kimyaya veya süperfisyel özelliklere değil, bizi bir araya getiren daha derin bağlantılar ve duygusal bağlara da dayanır.
 
-Özet: **Karmaşıklığı kabul edin**: Çekimlilik, biyoloji, psikoloji ve sosyoloji gibi çeşitli faktörlerin etkisi altında karmaşık bir fenomen olduğunu kabul edin. Bu karmaşıklığı kabul ederek, daha anlamlı ve kalıcı ilişkiler geliştirebilirsiniz.
+Özet: **Karmaşıklığı kabul edin**: Çekimlilik, biyoloji, psikoloji ve sosyoloji gibi çeşitli faktörlerin etkisi altında çıkarmaşık bir fenomen olduğunu kabul edin. Bu çıkarmaşıklığı kabul ederek, daha anlamlı ve kalıcı ilişkiler geliştirebilirsiniz.

@@ -4,7 +4,6 @@ description: "The Challenges of Space Medicine"
 pubDate: 2025-07-02
 category: "space"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 As the world becomes increasingly reliant on space exploration and habitation, the importance of space medicine cannot be overstated. With humans venturing further into space than ever before, the need for innovative medical solutions to support life beyond Earth has become a pressing concern. In this article, we'll delve into the latest advancements in space medicine, exploring how cutting-edge research is paving the way for a healthier future in space.

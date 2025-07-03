@@ -4,7 +4,6 @@ description: "Erken Günler: Kısa Tarihçe"
 pubDate: 2025-07-01
 category: space
 tags: []
-image: /assets/blog-placeholder-1.svg
 ---
 
 Uzaydaki Dünyalar: Exoplanet Keşfinin Tarihçesi
@@ -49,7 +48,7 @@ Son yıllarda, exoplanetlerin yaşama kabiliyeti üzerine çalışılmıştır, 
 
 NASA'nın Ames Araştırma Merkezi'nde exoplanet uzmanı Dr. Natalie Batalha, gelecekte exoplanet keşfinin neler getireceğini konuştu:
 
-"Sonraki on yıl, onaylanmış exoplanet sayısında önemli bir artış olacak, yeni misyonlar gibi Transit Exoplanet Survey Satellite (TESS) ve James Webb Uzay Teleskobu (JWST) sayesinde. Ayrıca, bu gezegenlerin atmosferik özelliklerini daha iyi anlayacak ve yaşam için gerekli koşullarını keşfetmeye çalışacağız."
+Sonraki on yıl, onaylanmış exoplanet sayısında önemli bir artış olacak, yeni misyonlar gibi Transit Exoplanet Survey Satellite (TESS) ve James Webb Uzay Teleskobu (JWST) sayesinde. Ayrıca, bu gezegenlerin atmosferik özelliklerini daha iyi anlayacak ve yaşam için gerekli koşullarını keşfetmeye çalışacağız."
 
 Dr. Batalha, keşif続inin önemine vurgu yaptı:
 

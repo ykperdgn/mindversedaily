@@ -4,7 +4,6 @@ description: "The Roots of the Renaissance"
 pubDate: 2025-07-01
 category: "history"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 The Renaissance began to take shape in the 14th century, particularly in Italy. This was a time when the Black Death had decimated Europe, leading to social and economic upheaval. In response, cities like Florence and Venice experienced rapid growth, as merchants and artisans sought new opportunities. This urbanization created a fertile ground for artistic innovation, as patronage from wealthy families and guilds allowed artists to experiment and push boundaries.

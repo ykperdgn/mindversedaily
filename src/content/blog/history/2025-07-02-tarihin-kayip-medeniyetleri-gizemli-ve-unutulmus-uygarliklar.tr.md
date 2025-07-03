@@ -1,10 +1,9 @@
 ---
 title: "Tarihin Kayıp Medeniyetleri Gizemli ve Unutulmuş Uygarlıklar"
-description: "Tarih boyunca, insanlık çeşitli uygarlıkların yükseliş ve çöküşünü gördü. Birçoğu, bugün bize kalan kalıntılar ve belgelerle birlikte unutuldu. Bu makale, tarihin kayıp medeniyetlerini keşfetmek iç..."
+description: "Tarih boyunca, insanlık çeşitli uygarlıkların yükseliş ve çöküşünü gördü. Birçoğu, bugün bize kalan kalıntılar ve belgelerle birlikte unutuldu. Bu makale, ta..."
 pubDate: 2025-07-02
-category: "history"
+category: history
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Tarihin derinliklerinde, gizemli ve unutulmuş uygarlıkların izlerini takip etmek heyecan verici bir macera olur. Bu makale, tarihin kayıp medeniyetlerini keşfetmek için bir yolculuk olacak. Dünyanın dört bir yanında, bugün bize kalan kalıntılar ve belgelerle birlikte unutulmuş uygarlıkların hikâyelerini okuyalım.

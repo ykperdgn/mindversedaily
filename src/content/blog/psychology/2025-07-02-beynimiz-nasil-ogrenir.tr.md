@@ -1,12 +1,9 @@
 ---
 title: "Beynimiz Nasıl Öğrenir?"
-description: "Here is the translated description in Turkish, under 150 characters:
-
-Bilgilerin Çoğundan Kişiselleştirilmiş Bilgilerin Elde Edilmesine Dönüşüm"
+description: "Bilgilerin Çoğundan Kişiselleştirilmiş Bilgilerin Elde Edilmesine Dönüşüm"
 pubDate: 2025-07-02
 category: psychology
 tags: []
-image: /assets/blog-placeholder-1.svg
 ---
 
 **Öğrenmeyi Yeniden Çerçevelemek: Bilgi Aşırı Yükünden Kişisel Bilgiliere**

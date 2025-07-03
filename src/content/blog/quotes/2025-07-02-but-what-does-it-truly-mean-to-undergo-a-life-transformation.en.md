@@ -4,7 +4,6 @@ description: "This growth mindset is characterized by an openness to learning, e
 pubDate: 2025-07-02
 category: "quotes"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 This growth mindset is characterized by an openness to learning, experimentation, and taking calculated risks. By embracing this mindset, individuals can rewire their brains to become more resilient, adaptable, and open to new experiences.

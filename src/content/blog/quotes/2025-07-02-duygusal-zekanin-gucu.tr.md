@@ -4,7 +4,6 @@ description: "MindVerse Daily'de araştırma ve içgörüler kategorisinde en so
 pubDate: 2025-07-02
 category: quotes
 tags: []
-image: /assets/blog-placeholder-1.svg
 ---
 
 Kariyer İlhamına Yol Açan Unsurlar
@@ -41,4 +40,4 @@ O halde, bireyler kariyer ilhamını nasıl geliştirebilir? İşte bazı uygula
 
 **Son Alıntı:**
 
-"Geleceğinizi tahmin etmenin en iyi yolu, onu yaratmaktır." - Simon Sinek
+Geleceğinizi tahmin etmenin en iyi yolu, onu yaratmaktır." - Simon Sinek

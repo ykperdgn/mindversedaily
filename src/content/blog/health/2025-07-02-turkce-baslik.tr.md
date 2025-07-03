@@ -1,10 +1,9 @@
 ---
-title: "Türkçe başlık"
-description: "Türkçe açıklama: Zihinsel Sağlığın Anatomisi"
+title: "Zihinsel Sağlığın Anatomisi"
+description: "Zihinsel Sağlığın Anatomisi"
 pubDate: 2025-07-02
 category: health
 tags: []
-image: /assets/blog-placeholder-1.svg
 ---
 
 Modern hayatın komplekslikleri içerisinde, ruh sağlığının merkezi(stage) haline geldiği sır değil. İstatistikler çarpıcı: her yıl dünya çapında dört kişiden biri ruh hastalığına yakalanacak (DSÖ, 2023). Buna rağmen, birçoklarımız hala ruh sağlığının inceliklerini anlamaya ve ele almaya çalışıyor. Artık farkındalık yerine somut eyleme odaklanmamız gerekiyor.
@@ -13,7 +12,7 @@ Modern hayatın komplekslikleri içerisinde, ruh sağlığının merkezi(stage) 
 
 Ruh sağlığını真正 anlamak için, multifasetli doğasını önce kabul etmemiz gerekiyor. Popüler inanca rağmen, ruh sağlığı bireysel deneyimler veya koşullar ile tek başına tanımlanmıyor. Aksine, kültürel normlar, ekonomik koşullar ve çevre baskıları gibi toplumsal faktörlerle derinlemesine ilişkili (Kessler et al., 2024).
 
-"Ruh yükü" kavramını düşünün - özellikle kadınlar tarafından ev içi sorumlulukları ve duyguları yönetme yükünü taşıyan görünmez yük (Budge et al., 2023). Bu fenomen, ruh sağlığımızı şekillendirmede toplumsal beklentilerin oynadığı rolünü kabul etmemizin önemini vurguluyor.
+Ruh yükü" kavramını düşünün - özellikle kadınlar tarafından ev içi sorumlulukları ve duyguları yönetme yükünü taşıyan görünmez yük (Budge et al., 2023). Bu fenomen, ruh sağlığımızı şekillendirmede toplumsal beklentilerin oynadığı rolünü kabul etmemizin önemini vurguluyor.
 
 Ruh sağlığı farkındalığı genellikle ruh hastalıklarına ilişkin damgalanmayı azaltmaya odaklanıyor. Buna rağmen, bu yaklaşım bir korku ve utanç kültürünü oluşturabilir (Link & Phelan, 2025). Bunun yerine, bizim için anlamlı bağlantılar ve destek için bir katalizör olarak açıklığı teşvik etmemiz gerekiyor.
 

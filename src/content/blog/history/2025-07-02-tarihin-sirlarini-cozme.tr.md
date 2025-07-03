@@ -1,13 +1,12 @@
 ---
-title: ""Tarihin Sırlarını Çözme"
+title: "Tarihin Sırlarını Çözme"
 description: "Türkçe: Dijital Çağ için Miras Çalışmalarını Yeniden Düşünmek"
 pubDate: 2025-07-02
 category: history
 tags: []
-image: /assets/blog-placeholder-1.svg
 ---
 
-Tarihçiler olarak, atalarımızın hikayelerine ve onlar tarafından bırakılan miraslara uzun süredir ilgi duyduk. Ama eğer yalnızca bu hikayeleri ortaya çıkarmakla kalmayıp, aynı zamanda onları gelişmiş yöntemler ve araçlarla analiz edebilseydik? Bu, miras çalışmaları adlı hızla ortaya çıkan alanın vaadi, bireylerin, olayların ve kültürlerin kalıcı etkisini anlamak için tarih araştırmalarıyla veri odaklı yaklaşımları birleştirmektir.
+Tarihçiler olarak, atalarımızın hikayelerine ve onlar tarafından bırakılan miraslara uzun süredir ilgi duyduk. Ama eğer yalnızca bu hikayeleri ortaya çıçıkarmakla kalmayıp, aynı zamanda onları gelişmiş yöntemler ve araçlarla analiz edebilseydik? Bu, miras çalışmaları adlı hızla ortaya çıkan alanın vğdi, bireylerin, olayların ve kültürlerin kalıcı etkisini anlamak için tarih araştırmalarıyla veri odaklı yaklaşımları birleştirmektir.
 
 **Dijital Çağda Miras Çalışmalarını Yeniden Düşünmek**
 

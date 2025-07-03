@@ -4,7 +4,6 @@ description: "Happiness is not something ready made. It must be achieved by the 
 pubDate: 2025-07-01
 category: "quotes"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 "Happiness is not something ready made. It must be achieved by the cultivation of one's own forest, in the way that happiness grows from its own roots."

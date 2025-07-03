@@ -4,7 +4,6 @@ description: "Türkçe: Bu büyüme zihniyeti, öğrenmeye açık olma, deney ya
 pubDate: 2025-07-02
 category: quotes
 tags: []
-image: /assets/blog-placeholder-1.svg
 ---
 
 Bu büyüme zihniyeti, öğrenmeye açık olma, deneyime açık olma ve hesaplı risk alma ile karakterizedir. Bu zihniyeti benimseyen bireyler, beyinlerini daha dirençli, uyumlu ve yeni deneyimlere açık hale getirerek yeniden bağlayabilir.
@@ -27,13 +26,13 @@ Bugünün hızlı dünyada, mükemmellik her şeyin üzerinde değer görürken,
 
 3. **Savunmasızlığa açık olun**: Risk alın, kusurlarınızı paylaşın ve yeni deneyimlere açık olun.
 
-4. **Bakım önceliğinizi belirleyin**: Ruhunuzu, bedeninizin ve ruhunuzun beslendiği faaliyetlere zaman ayırın.
+4. **Bakım önceliğinizi belirleyin**: Ruhunuzu, bedeninizin ve ruhunuzun beslendiği fğliyetlere zaman ayırın.
 
 Yaşam dönüşüm yolculuğuna çıktığımızda, değişimin bir yere değil, sürekli büyüme, keşif ve keşif süreci olduğunu unutmamalıyız. Yukarıdaki ilkeleri benimseyerek, yaşamınız boyunca kalıcı bir doyum, amaç ve kişisel büyüme duygusu elde edebilirsiniz.
 
 **Sonuç**
 
-Yaşam dönüşümü bir yolculuktur, bir yer değildir. Cesaret, savunmasızlık ve risk alma isteği gerektirir. Modern yaşamın karmaşıklıklarını gezinirken, mental, duygusal ve fiziksel iyiliğimizi öncelikleştirmeliyiz. Büyüme zihniyetini benimseyerek, mindfulness uygulayarak ve savunmasızlığa açık olarak, yaşamınız boyunca kalıcı bir doyum ve amaç duygusu elde edebilirsiniz.
+Yaşam dönüşümü bir yolculuktur, bir yer değildir. Cesaret, savunmasızlık ve risk alma isteği gerektirir. Modern yaşamın çıkarmaşıklıklarını gezinirken, mental, duygusal ve fiziksel iyiliğimizi öncelikleştirmeliyiz. Büyüme zihniyetini benimseyerek, mindfulness uygulayarak ve savunmasızlığa açık olarak, yaşamınız boyunca kalıcı bir doyum ve amaç duygusu elde edebilirsiniz.
 
 **Referanslar:**
 

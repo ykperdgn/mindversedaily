@@ -1,13 +1,12 @@
 ---
 title: "Bilinç Çalışmaları İnsan Zihninin Gizemli Dünyası"
-description: "Bilinç çalışması, insan zihninin en gizemli ve karmaşık yönünü araştırmaya yönelik bir alandır. Bu makalede, bilinç çalışmasının temel kavramlarını, tarihçesini ve güncel gelişmeleri ele alacağız. ..."
+description: "Bilinç çalışması, insan zihninin en gizemli ve çıkarmaşık yönünü araştırmaya yönelik bir alandır. Bu makalede, bilinç çalışmasının temel kavramlarını, tarihç..."
 pubDate: 2025-07-02
-category: "psychology"
+category: psychology
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
-Bilinç çalışması, psikolojinin en önemli dallarından biridir. İnsan zihninin çalışmasına ilişkin gizemli yönünü araştırmaya yönelik bu alan, beyin faaliyetlerini, duygularımızı, düşüncelerimizi ve davranışlarımızı anlamamıza yardımcı olur.
+Bilinç çalışması, psikolojinin en önemli dallarından biridir. İnsan zihninin çalışmasına ilişkin gizemli yönünü araştırmaya yönelik bu alan, beyin fğliyetlerini, duygularımızı, düşüncelerimizi ve davranışlarımızı anlamamıza yardımcı olur.
 
 Tarihçe:
 
@@ -19,7 +18,7 @@ Bilinç çalışmasında, bilinç, bilinç altı ve üst bilinç kavramları mer
 
 Güncel Gelişmeler:
 
-Bilinç çalışmasında, güncel olarak beyin faaliyetlerini inceleyen manyetik rezonans görüntüleme (MRI) ve elektroensefalografi (EEG) gibi teknolojiler kullanılır. Bunlar, bilinç çalışmasına ilişkin yeni keşiflere yol açmıştır. Örneğin, bilinç çalışması, beyin faaliyetlerinin uyku ve rüya sırasında nasıl çalıştığını ortaya çıkarmıştır.
+Bilinç çalışmasında, güncel olarak beyin fğliyetlerini inceleyen manyetik rezonans görüntüleme (MRI) ve elektroensefalografi (EEG) gibi teknolojiler kullanılır. Bunlar, bilinç çalışmasına ilişkin yeni keşiflere yol açmıştır. Örneğin, bilinç çalışması, beyin fğliyetlerinin uyku ve rüya sırasında nasıl çalıştığını ortaya çıkarmıştır.
 
 Pratik Uygulamalar:
 

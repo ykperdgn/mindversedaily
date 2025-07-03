@@ -4,7 +4,6 @@ description: "Reinventing the Wheel The Rise of Digital Humanities"
 pubDate: 2025-07-02
 category: "history"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 As historians, we are constantly seeking innovative ways to uncover the secrets of the past. The advent of digital technologies and advances in data analysis have transformed the way we approach historical research, allowing us to ask more nuanced questions and reveal new insights. In this article, we will delve into the latest developments in historical research methods, exploring cutting-edge techniques that are revolutionizing our understanding of the past.

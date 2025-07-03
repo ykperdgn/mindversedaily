@@ -1,10 +1,9 @@
 ---
-title: ""Karanlık Maddenin Sırları"
+title: "Karanlık Maddenin Sırları"
 description: "Evrenin sırlarını çözüme kavuşturmaya devam ederken, en ilgi çekici ve gizemli olgulardan biri ka..."
 pubDate: 2025-07-02
 category: space
 tags: []
-image: /assets/blog-placeholder-1.svg
 ---
 
 Evrenin gizemlerini çözme yolunda ilerledikçe, en ilgi çekici ve gizemli fenomenlerden biri hâlâ karanlık madde olarak kaldı. Bu görünmez ancak etkili güç, bilim insanlarını on yıllardır büyüledi ve yakın zamanda yapılan keşifler, onun özellikleri ve davranışları hakkında yeni ışıklar yaydı.
@@ -39,7 +38,7 @@ Karanlık madde araştırması kariyerine ilgi duyanlar için, aşağıdaki eyle
 
 * **Son gelişmeleri takip edin**: Güvenilir kaynaklar ve uzmanlar takip edilerek, atılımlar ve devam eden çıkmazlar hakkında bilgi sahibi olun.
 
-* **Çok Disiplinli Beceriler Geliştirin**: Fizik, astronomi, bilgisayar bilimi ve matematik alanlarından uzmanlık birleştirilerek, karanlık madde'yi çevreleyen karmaşık sorunlara çözüm bulunabilir.
+* **Çok Disiplinli Beceriler Geliştirin**: Fizik, astronomi, bilgisayar bilimi ve matematik alanlarından uzmanlık birleştirilerek, karanlık madde'yi çevreleyen çıkarmaşık sorunlara çözüm bulunabilir.
 
 * **Uluslararası İşbirlikleri Katılın**: Küresel girişimler ve atölyelerde bilgi, kaynaklar ve fikirlerin paylaşılması, dünya çapında meslektaşları ile birlikte çalışmak için önemlidir.
 

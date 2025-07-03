@@ -4,7 +4,6 @@ description: "Discover cutting-edge research and insights from MindVerse Daily i
 pubDate: 2025-07-02
 category: "love"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 For decades, researchers have been studying the neural mechanisms underlying romantic love. Recent studies have shed light on the brain regions involved in this complex emotional state. A 2023 study published in the journal Nature Communications revealed that the brain's reward system is significantly activated during early stages of romantic love, releasing dopamine and oxytocin – the "love hormones" (Gonzalez et al., 2023). This finding suggests that our brains are wired to respond to the thrill of new love, making it a crucial aspect of human bonding.

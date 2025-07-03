@@ -1,10 +1,9 @@
 ---
 title: "Sağlıklı Yaşamın Temeli Beslenme Bilimi"
-description: "Beslenme bilimi, vücudumuzun sağlıklı çalışmasını sağlayan temel öğeleri inceleyen bilim dalıdır. Sağlıklı beslenme alışkanlıkları edinerek, kronik hastalıkların oluşumunu önleyebilir ve yaşam kali..."
+description: "Beslenme bilimi, vücudumuzun sağlıklı çalışmasını sağlayan temel öğeleri inceleyen bilim dalıdır. Sağlıklı beslenme alışkanlıkları edinerek, kronik hastalıkl..."
 pubDate: 2025-07-02
-category: "health"
+category: health
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Beslenme bilimi, bir bilim dalı olarak vücudumuzun sağlıklı çalışmasını sağlayan temel öğeleri incelemektedir. Sağlıklı beslenme alışkanlıkları edinerek, kronik hastalıkların oluşumunu önleyebilir ve yaşam kalitemizi artırabiliriz. Bugün, beslenme bilimi, sağlık profesyonelleri, beslenme uzmanları, doktorlar ve araştırmacıların birlikte çalışarak, sağlıklı beslenme ilkelerini oluşturmak ve hastalık risklerini azaltmak için çalışmaktadır.

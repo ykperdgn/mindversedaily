@@ -1,10 +1,9 @@
 ---
-title: ""Modern Yaşamın Zorlukları"
+title: "Modern Yaşamın Zorlukları"
 description: "Nöroplastisitenin Yükselişi: Psikolojik İyileşmede Devrim Yaratan"
 pubDate: 2025-07-02
 category: psychology
 tags: []
-image: /assets/blog-placeholder-1.svg
 ---
 
 **Nöroplastisitenin Yükselişi: Psikolojik İyileşmede Oyun Değiştirici**

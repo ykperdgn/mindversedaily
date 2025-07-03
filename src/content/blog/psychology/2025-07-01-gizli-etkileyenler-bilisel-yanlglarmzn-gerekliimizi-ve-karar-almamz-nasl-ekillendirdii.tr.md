@@ -1,10 +1,9 @@
 ---
 title: "Gizli Etkileyenler: Bilişsel Yanılgılarımızın Gerçekliğimizi ve Karar Almamızı Nasıl Şekillendirdiği"
-description: "Bilişsel yanılgılar, günlük yaşantımızda derin bir etkisi olan sistemli düşünme ve karar alma hatalarıdır. Onaylama yanılmasından Dunning-Kruger etkisine kadar, bu yanılgılar bizi yanlış yönlendirerek, önemli ayrıntıları gözden kaçırmaya ve kötü kararlar almaya yol açabilir. Bu makalede, bilişsel yanılgıların son bilimsel bulgularını inceleyeceğiz, nedenlerini, sonuçlarını ve bunları aşmak için stratejileri keşfedeceğiz."
+description: "Bilişsel yanılgılar, günlük yaşantımızda derin bir etkisi olan sistemli düşünme ve karar alma hatalarıdır. Onaylama yanılmasından Dunning-Kruger etkisine kad..."
 pubDate: 2025-07-01
-category: "psychology"
+category: psychology
 tags: []
-image: "https://images.pexels.com/photos/4226264/pexels-photo-4226264.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
 ---
 
 Bilişsel yanılgılar, görünmez kuklacılar gibi, düşünce, duygu ve davranışlarımızı farkında olmadan yönlendirirler.Bunlar, akıl yürütme veya mantık hataları değil, bilişsel makinelerimizde bulunan içsel kusurlardır ve irrasyonel yargılar ve kararlar almaya yol açarlar. İyi haber, bu yanılgıların farkına vararak, onların etkisini azaltmak ve daha bilgili, rasyonel kararlar almak için adımlar atabiliriz.

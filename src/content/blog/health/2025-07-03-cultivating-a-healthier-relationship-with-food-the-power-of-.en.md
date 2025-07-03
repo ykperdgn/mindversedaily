@@ -3,7 +3,6 @@ title: "Cultivating a Healthier Relationship with Food The Power of Mindful Eati
 description: "Hook Imagine savoring each bite of your meal, fully immersed in the flavors, textures, and aromas. No distractions, no rushing, just you and your foo..."
 category: "health"
 pubDate: 2025-07-03
-heroImage: "/assets/blog-placeholder-1.svg"
 tags: ["health"]
 ---
 

@@ -4,7 +4,6 @@ description: "This article takes readers on a fascinating journey through the an
 pubDate: 2025-07-01
 category: "history"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Unraveling the Fabric of Time: A Journey Through Historical Inventions and Recent Breakthroughs

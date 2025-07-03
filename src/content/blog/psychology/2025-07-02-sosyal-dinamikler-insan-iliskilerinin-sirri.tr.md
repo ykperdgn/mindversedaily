@@ -1,10 +1,9 @@
 ---
 title: "Sosyal Dinamikler İnsan İlişkilerinin Sırrı"
-description: "Sosyal dinamikler, insanlar arasındaki etkileşimleri ve bu etkileşimlerin sonucunda ortaya çıkan grup dinamiklerini inceler. Bu alanda yapılan araştırmalar, insan davranışlarını ve grup içindeki ik..."
+description: "Sosyal dinamikler, insanlar arasındaki etkileşimleri ve bu etkileşimlerin sonucunda ortaya çıkan grup dinamiklerini inceler. Bu alanda yapılan araştırmalar, ..."
 pubDate: 2025-07-02
-category: "psychology"
+category: psychology
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Sosyal dinamikler, psikolojide insan ilişkilerinin incelenmesi olarak tanımlanır. Bu alan, insan davranışlarını, grup içindeki iktidar mücadelelerini ve bu mücadelelerin sonucunda ortaya çıkan grup dinamiklerini inceler. Sosyal dinamikler, günlük yaşamımızda karşılaştığımız pek çok durumun arkasında yatan nedenleri açıklar. Örneğin, bir işyerinde çalışanların arasındaki ilişkileri, arkadaş gruplarındaki iktidar mücadelelerini ve aile içindeki güç dengesini sosyal dinamikler çerçevesinde inceleyebiliriz.

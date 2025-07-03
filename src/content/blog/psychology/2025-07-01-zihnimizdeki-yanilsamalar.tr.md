@@ -1,15 +1,14 @@
 ---
-title: ""Zihnimizdeki Yanılsamalar"
+title: "Zihnimizdeki Yanılsamalar"
 description: "Türkçe: Bilişsel yanlılıklar, algı, bellek ve karar vermede sistemli hatalardır. Rasyonel seçim y..."
 pubDate: 2025-07-01
 category: psychology
 tags: []
-image: https://images.pexels.com/photos/6933049/pexels-photo-6933049.jpeg?auto=compress&cs=tinysrgb&h=650&w=940
 ---
 
 Bilişsel Yanılgılar: İnsan Deneyiminin Parçası
 
-Bilişsel yanlıgılar, insan deneyiminin temel bir parçasıdır. Bunlar, beynimizin dünyadaki karmaşıklıkları yönetmek için mental kısayollarına ve eldeki kurallarına güvenme eğiliminden kaynaklanır. Bu yanlıgılar birçok durumda yardımcı olabilir, ancak yargı hatalarına, stereotiplerin devamına ve davranışlarımızı istem dışı yönde etkilemesine neden olabilir.
+Bilişsel yanlıgılar, insan deneyiminin temel bir parçasıdır. Bunlar, beynimizin dünyadaki çıkarmaşıklıkları yönetmek için mental kısayollarına ve eldeki kurallarına güvenme eğiliminden kaynaklanır. Bu yanlıgılar birçok durumda yardımcı olabilir, ancak yargı hatalarına, stereotiplerin devamına ve davranışlarımızı istem dışı yönde etkilemesine neden olabilir.
 
 En iyi bilinen bilişsel yanlıgılar arasında, mevcut inançlarımızı onaylayan bilgiyi arama ve buna daha fazla önem vermeye, tersine kanıtlanmamış kanıtları görmezden gelme eğilimimiz olan onaylama yanlıgı yer alır. Bu yanlıgı, sosyal medya çağında özellikle zararlıdır, çünkü algoritmalar genellikle dünyamızla uyumlu bilgileri sunar, bu da bizim yanlıgılarımızı pekiştiren bir yankı odası etkisi yaratır.
 
@@ -29,4 +28,4 @@ Son gelişmelerde, yapay zeka ve makine öğrenimi de bilişsel yanlıgılarım�
 
 Sonuç olarak, bilişsel yanlıgılar insan psikolojisinin temel bir parçası olup, algımızı, belleğimizi ve karar verme sürecimizi derinlemesine etkiler. Bu yanlıgıları aşmak zor olabilir, ancak son bilimsel bulgular, bunlar aşmak için nöral mekanizmalarını aydınlatmıştır. Aktif açık görüşlü olma, karar verme sürecinde yavaşlama ve büyüme zihniyetini geliştirmek, daha bilinçli ve rasyonel kararlar alma yeteneğimizi geliştirebilir. Ayrıca, yapay zeka sistemlerinin yanlıgıları ve stereotipleri devam ettirmemelidir, çünkü bu, daha adil ve eşit bir toplum yaratmaya yardımcı olur.
 
-Antik Yunan filozofu Aristoteles'in dediği gibi, "Eğitilmiş bir zihnin özelliği, bir düşünceyi kabul etmeden onu düşünmeye çalışmaktır." Bilişsel yanlıgılarımızı tanımak ve aşmak, daha bilinçli, daha empatik ve daha rasyonel düşünürler haline gelmemizi sağlar.
+Antik Yunan filozofu Aristoteles'in dediği gibi, Eğitilmiş bir zihnin özelliği, bir düşünceyi kabul etmeden onu düşünmeye çalışmaktır." Bilişsel yanlıgılarımızı tanımak ve aşmak, daha bilinçli, daha empatik ve daha rasyonel düşünürler haline gelmemizi sağlar.

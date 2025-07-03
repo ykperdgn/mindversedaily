@@ -1,12 +1,9 @@
 ---
-title: "Geçmişin Şifresini Çözmek
-
-(It literally means "Deciphering the Code of the Past", and it's short and catchy, under 60 characters)"
+title: "Geçmişin Şifresini Çözmek"
 description: "Çarkı Yeniden İcat Etme: Dijital Beşeri Bilimler Çağı"
 pubDate: 2025-07-02
 category: history
 tags: []
-image: /assets/blog-placeholder-1.svg
 ---
 
 Tarihçiler olarak, sürekli olarak geçmişin sırlarını keşfetmek için yenilikçi yöntemler arıyoruz. Dijital teknolojilerin gelişmesi ve veri analizi alanındaki ilerlemeler, tarihi araştırma yöntemlerimizi dönüştürdü, böylece daha incelmiş sorular sormamızı ve yeni bilgiler elde etmemizi sağladı. Bu makalede, tarihi araştırma yöntemlerindeki son gelişmeleri keşfedeceğiz, geçmişin anlayışımızı dönüştüren öncü teknikleri inceleyeceğiz.
@@ -31,7 +28,7 @@ Bu ilkeleri benimseyerek ve tarihi araştırma yöntemlerindeki son gelişmeleri
 
 Referanslar:
 
-[1] "Tarihi Araştırma için Makine Öğrenimi: Metin Analizi Üzerine Bir Çalışma" (2023)
+[1] Tarihi Araştırma için Makine Öğrenimi: Metin Analizi Üzerine Bir Çalışma" (2023)
 
 [2] "Tarihi Araştırma'yı Bağlamlaştırma: Günümüz Yorumları Üzerine Bir Çalışma" (2024)
 

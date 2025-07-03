@@ -4,7 +4,6 @@ description: "The Medieval Mindset Challenging Preconceptions"
 pubDate: 2025-07-02
 category: "history"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 As we delve into the annals of history, the medieval period often remains a mystical realm shrouded in mystery. The era between the 5th and 15th centuries is commonly perceived as a time of knights, castles, and chivalry – but what lies beneath this romanticized façade? Recent discoveries and cutting-edge research have shed new light on this pivotal moment in human history, revealing surprising facets and hidden truths.

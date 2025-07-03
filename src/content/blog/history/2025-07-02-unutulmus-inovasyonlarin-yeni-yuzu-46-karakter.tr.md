@@ -1,15 +1,12 @@
 ---
 title: "Unutulmuş İnovasyonların Yeni Yüzü"
-
-(46 karakter)"
 description: "MindVerse Daily'den güncel bilgiler"
 pubDate: 2025-07-02
 category: history
 tags: []
-image: /assets/blog-placeholder-1.svg
 ---
 
-Eski teknolojilerin en ilgi çekici yönlerinden biri, karmaşık problemleri çözmek için desen tanıma kullanımına dairdir. Örneğin, MÖ 3500 civarında Mezopotamya'da (modern Irak) yaşayan eski Sümerler, ileri bir aritmetik ve geometri sistemi geliştirdiler. Matematiksel desen anlayışı onlara zigguratlar, sulama sistemleri ve hatta muhasebe uygulamaları inşa etmek için izin verdi.
+Eski teknolojilerin en ilgi çekici yönlerinden biri, çıkarmaşık problemleri çöçözmek için desen tanıma kullanımına dairdir. Örneğin, MÖ 3500 civarında Mezopotamya'da (modern Irak) yaşayan eski Sümerler, ileri bir aritmetik ve geometri sistemi geliştirdiler. Matematiksel desen anlayışı onlara zigguratlar, sulama sistemleri ve hatta muhasebe uygulamaları inşa etmek için izin verdi.
 
 Bugün, teknoloji inovasyonunda desen tanıma hâlâ kritik bir yön olarak kalmıştır. Yapay zeka (YZ) ve makine öğrenmesi algoritmaları, büyük veri miktarlarında desen tanıma üzerine dayanır. Aynı ilke, malzeme biliminde de uygulanır, burada araştırmacılar yeni malzemelerin davranışını tahmin etmek için bilgisayar simülasyonlarını kullanırlar.
 
@@ -27,7 +24,7 @@ Antikythera mekanizması dışında, son yıllarda birçok eski teknoloji keşfe
 
 * Eski Mısırlılar, MÖ 1500 civarında cam yapımı sanatını ustalaştı. Bu bilgi, nesiller boyunca aktarılarak, modern cam üretimine etkiledi.
 
-* Eski Çin uygarlığı, MÖ 200 civarında mekanik saatler geliştirdi. İnsan gücüyle çalışan bu cihazlar, modern saat mekanizmaları tasarımına öncülük etti.
+* Eski Çin uygarlığı, MÖ 200 civarında mekanik sğtler geliştirdi. İnsan gücüyle çalışan bu cihazlar, modern sğt mekanizmaları tasarımına öncülük etti.
 
 **Eski Teknolojilerinin Sırlarını Açıklamak: Modern İnovatörler için Pratik Tavsiyeler**
 

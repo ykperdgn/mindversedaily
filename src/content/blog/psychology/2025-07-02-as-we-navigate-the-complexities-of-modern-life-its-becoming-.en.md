@@ -4,7 +4,6 @@ description: "The Rise of Neuroplasticity A Game-Changer in Psychological Healin
 pubDate: 2025-07-02
 category: "psychology"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 **The Rise of Neuroplasticity: A Game-Changer in Psychological Healing**

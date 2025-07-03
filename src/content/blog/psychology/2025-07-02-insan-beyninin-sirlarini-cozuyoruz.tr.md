@@ -4,7 +4,6 @@ description: "Dijital çağda, teknoloji klinik psikolojide vazgeçilmez bir ara
 pubDate: 2025-07-02
 category: psychology
 tags: []
-image: /assets/blog-placeholder-1.svg
 ---
 
 Son yıllarda, nörobilimdeki önemli kırılma noktaları, insan beyni hakkındaki anlayışımızı temelinden değiştirdi. Fonksiyonel manyetik rezonans görüntüleme (fMRI) ve elektroensefalografi (EEG) gibi nörogörüntüleme tekniklerindeki ilerlemeler, araştırmacıların beyin aktivitesini görülmemiş bir kesinlikle görselleştirmelerine ve analiz etmelerine olanak sağladı. Bu, psikolojik süreçlerin nöral korelasyonlarının, biliş, duygu ve davranış dahil, daha derin bir anlayışına yol açtı.
@@ -15,7 +14,7 @@ Dijital çağda, teknoloji klinik psikolojide vazgeçilmez bir araç haline geld
 
 ## **İnsan Faktörü: Merhamet ve Empati Neden Önemli**
 
-Klinik psikolojideki karmaşıklıkları, teknoloji ve nörobilimle birlikte giderek, temel önemini unutmamamız gereken insan bağlantısını göz önünde bulundurmamız gerekir. Klinik psikologlar, mental sağlık zorluklarıyla mücadele eden bireylere merhametli ve empatik destek sağlamak için benzersiz bir konumdadır.
+Klinik psikolojideki çıkarmaşıklıkları, teknoloji ve nörobilimle birlikte giderek, temel önemini unutmamamız gereken insan bağlantısını göz önünde bulundurmamız gerekir. Klinik psikologlar, mental sağlık zorluklarıyla mücadele eden bireylere merhametli ve empatik destek sağlamak için benzersiz bir konumdadır.
 
 2023 yılında Pozitif Psikoloji Dergisi'nde yayınlanan bir çalışmada, terapist-müvekkil ilişkisi, sıcak, empati ve anlama ile karakterize edilen, tedavi sonucunun önemli bir öngörüsü olarak bulundu (3). Bu, klinik psikolojide insan faktörlerinin oynadığı kritik rolünü vurgular, teknolojiyi hizmetlerimizdeki geliştirmek için kullanırken.
 
@@ -31,7 +30,7 @@ Klinik psikologlar olarak, alanındaki son gelişmeler ve eğilimlerini takip et
 
 **Sonuç**
 
-Klinik psikoloji, nörobilim, teknoloji ve insanlık arasındaki bir devrimin ön saflarında yer alıyor. Bu kompleks manzarayı gezinirken, uyarlanabilir, yenilikçi ve ihtiyacı olanlara merhametli destek sağlamak için taahhüt altına girmemiz gerekir. Bu ortaya çıkan trendleri ve gelişmeleri benimseyerek, klinik psikologlar dünya çapında bireylerin yaşamlarına anlamlı bir etki yapabilirler.
+Klinik psikoloji, nörobilim, teknoloji ve insanlık arasındaki bir devrimin ön saflarında yer alıyor. Bu kompleks manzarayı gezinirken, uyarlanabilir, yenilikçi ve ihtiyacı olanlara merhametli destek sağlamak için tğhhüt altına girmemiz gerekir. Bu ortaya çıkan trendleri ve gelişmeleri benimseyerek, klinik psikologlar dünya çapında bireylerin yaşamlarına anlamlı bir etki yapabilirler.
 
 **Kaynaklar**
 

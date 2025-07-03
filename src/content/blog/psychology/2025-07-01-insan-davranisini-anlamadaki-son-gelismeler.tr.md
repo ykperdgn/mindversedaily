@@ -1,21 +1,20 @@
 ---
 title: "İnsan Davranışını Anlamadaki Son Gelişmeler"
-description: "İnsanlar, kişiliğin karmaşıklığını yüzyıl boyunca merak etmiş, kim olduğumuzun sırrını çözmeye ça..."
+description: "İnsanlar, kişiliğin çıkarmaşıklığını yüzyıl boyunca merak etmiş, kim olduğumuzun sırrını çözmeye ça..."
 pubDate: 2025-07-01
 category: psychology
 tags: []
-image: /assets/blog-placeholder-1.svg
 ---
 
 Kişilik, yüzyıllar boyunca insan hayal gücünü cezbeden çok yönlü ve dinamik bir kavramdır. Eski Yunan filozoflarından modern psikologlarına kadar, bizi yönlendiren nedir sorusuna cevap bulmak, sürekli bir arayıştır. Son yıllarda psikoloji alanı, kişiliğin gizemlerini çözmede önemli ilerleme kaydetmiştir, bu da insan davranışını daha iyi anlamamıza yol açmıştır.
 
-En çok tanınan kişilik çerçevelerinden biri, Beş Büyük Kişilik Özelliği veya Beş Faktör Modeli (FFM) dir. Paul Costa ve Robert McCrae tarafından geliştirilen bu model, beş geniş boyuta göre bireyleri kategorize eder: Açıklık, İrade, Dışadönüklük, Uyumluuluk ve Sinirlilik (OCEAN). Her boyut, yüksekten düşüğe kadar değişen nitelikleri temsil eder ve bireyin davranışını, duygusal tepkilerini ve başkalarıyla etkileşimini etkiler.
+En çok tanınan kişilik çerçevelerinden biri, Beş Büyük Kişilik Özelliği veya Beş Faktör Modeli (FFM) dir. Paul Costa ve Robert McCrae tarafından geliştirilen bu model, beş geniş boyuta göre bireyleri kategorize eder: Açıklık, İrade, Dışadönüklük, Uyumlüluk ve Sinirlilik (OCEAN). Her boyut, yüksekten düşüğe kadar değişen nitelikleri temsil eder ve bireyin davranışını, duygusal tepkilerini ve başkalarıyla etkileşimini etkiler.
 
 Son araştırmalar, kişiliğimizin oluşmasında genetik ve çevresel faktörlerin rolünü incelemiştir. Araştırma, genetiklerin kişilik gelişiminde %30 ila %60 arasında bir rol oynadığını göstermiştir (Vukasović & Bratko, 2015). Ancak, çevre faktörlerisuch as yetiştirme, yaşam deneyimleri ve sosyal etkileşimler de kişiliğin oluşmasında derin bir etkiye sahiptir.
 
 Kişiliğin genetik yönü, yeni yaklaşımların geliştirilmesine yol açmıştır, Örneğin, Çoklu Genetik Skor (PGS) yöntemi. Bu teknik, bir bireyin genetik verilerini analiz ederek kişilik özelliklerini tahmin eder, böylece onların güçlerini ve zayıflıklarını daha iyi anlarız. Nature Genetics dergisinde yayınlanan bir çalışmada, PGS'nin dışadönüklük ve sinirlilik gibi kişilik özelliklerini %60 ila %80 arasında bir doğrulukla tahmin edebildiği bulundu (Lee et al., 2018).
 
-FFM'ye ek olarak, son yıllarda diğer kişilik çerçeveleri de ön plana çıkmıştır. Myers-Briggs Tip Indicator (MBTI), Isabel Briggs Myers ve Katharine Cook Briggs tarafından geliştirilmiştir ve bireyleri 16 kişilik tipine göre kategorize eder. MBTI, eğitim ve profesyonel ortamlarda yaygın olarak kullanılsa da, geçerliliği ve güvenilirliği tartışılmıştır.
+FFM'ye ek olarak, son yıllarda diğer kişilik çerçeveleri de ön plana çıkmıştır. Myers-Briggs Tip Indicator (MBTI), Isabel Briggs Myers ve Katharine Cök Briggs tarafından geliştirilmiştir ve bireyleri 16 kişilik tipine göre kategorize eder. MBTI, eğitim ve profesyonel ortamlarda yaygın olarak kullanılsa da, geçerliliği ve güvenilirliği tartışılmıştır.
 
 Başka bir öne çıkan çerçeve, HEXACO modelidir, Ashton ve Lee tarafından geliştirilmiştir (2007). Bu model, FFM'yi altıncı bir boyuta, Sincerity-Humility boyutuna genişletir, bu boyut da dürüstlük, adililik ve alçakgönüllülük gibi nitelikleri kapsar. HEXACO modeli, kişiliğin daha iyi anlaşılması için daha kapsamlı ve sağlam bir çerçeve olarak gösterilmiştir.
 

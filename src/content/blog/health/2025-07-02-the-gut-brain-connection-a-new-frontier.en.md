@@ -4,7 +4,6 @@ description: "Takeaway The next time youre tempted to skip a meal or indulge in 
 pubDate: 2025-07-02
 category: "health"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Recent research has shed light on the extraordinary relationship between our gut microbiome and brain function. The discovery of a two-way communication network between these two previously disparate systems has opened up new avenues for understanding and treating neurological disorders, such as depression, anxiety, and Parkinson's disease.

@@ -4,7 +4,6 @@ description: "Emotional intelligence (EI) has long been recognized as a crucial 
 pubDate: 2025-07-02
 category: "psychology"
 tags: []
-image: "https://images.pexels.com/photos/6933094/pexels-photo-6933094.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
 ---
 
 Emotional intelligence, a concept introduced by psychologists Peter Salovey and John D. Mayer in 1990, refers to the ability to recognize and understand emotions in oneself and others, and to use this awareness to guide thought and behavior. EI has been linked to a range of positive outcomes, including improved relationships, better mental health, and enhanced job performance. Despite its significance, the neural mechanisms underlying EI have only recently begun to be fully understood.

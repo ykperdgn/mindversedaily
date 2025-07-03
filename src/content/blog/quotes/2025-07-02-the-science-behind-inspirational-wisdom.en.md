@@ -4,7 +4,6 @@ description: "Beyond Clichés Unconventional Inspirational Wisdom"
 pubDate: 2025-07-02
 category: "quotes"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 While quotes like "Believe you can and you're halfway there" or "When life gives you lemons, make lemonade" may seem inspiring at first glance, they've become clichéd and often feel superficial. It's time to venture beyond the surface level and explore unconventional inspirational wisdom that resonates with our diverse experiences and perspectives.

@@ -1,10 +1,9 @@
 ---
 title: "Tarih Süzgeçinden Geçen Sözler Etkili İfadeler ve Anlamları"
-description: "Tarih boyunca, pek çok ünlü kişinin, olayın ve dönemin ruhunu yansıtan sözleri olmuştur. Bu sözler, insanlık tarihi boyunca, ilham kaynağı olmuş ve nesilden nesile aktarılmıştır. Bu makalede, tarih..."
+description: "Tarih boyunca, pek çok ünlü kişinin, olayın ve dönemin ruhunu yansıtan sözleri olmuştur. Bu sözler, insanlık tarihi boyunca, ilham kaynağı olmuş ve nesilden ..."
 pubDate: 2025-07-02
-category: "quotes"
+category: quotes
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Tarih, insanlığın geçmişine ışık tutan bir aynadır. Geçmişte yaşanan olaylar, kişilikler ve durumlar, bize bugünümüzü anlamamızı ve yarınımızı şekillendirmemizi sağlıyor. Tarih süzgeçinden geçen sözler, işte bu olayların, kişiliklerin ve durumların bir yansımasıdır. Bu sözler, insanlık tarihine ışık tutan birer ışığın parıltısı gibidir.

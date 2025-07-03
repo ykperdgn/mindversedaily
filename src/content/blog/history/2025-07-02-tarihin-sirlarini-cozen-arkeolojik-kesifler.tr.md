@@ -1,10 +1,9 @@
 ---
 title: "Tarihın Sırlarını Çözen Arkeolojik Keşifler"
-description: "Arkeolojik keşifler, insanlığın geçmişine ışık tutarak, tarihi olayları ve uygarlıklarını aydınlatıyor. Bu keşifler, antik kentler, mezarlar, yazıtlar ve eserler aracılığıyla, bizim için bilinmeyen..."
+description: "Arkeolojik keşifler, insanlığın geçmişine ışık tutarak, tarihi olayları ve uygarlıklarını aydınlatıyor. Bu keşifler, antik kentler, mezarlar, yazıtlar ve ese..."
 pubDate: 2025-07-02
-category: "history"
+category: history
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Arkeolojik Keşiflerin Önemi

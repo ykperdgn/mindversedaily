@@ -4,7 +4,6 @@ description: "Asteroit Madenciliği Çağı: Uzay Araştırma'nın Yeni Dönemi"
 pubDate: 2025-07-02
 category: space
 tags: []
-image: /assets/blog-placeholder-1.svg
 ---
 
 İnsanlığın kaynakları ve hayatta kalma mücadelesi devam ederken, asteroid çalışmaları evrenimizi anlama konusunda kritik bir bileşen haline geliyor. Teknolojinin gelişmesi ve uluslararası işbirliği ile asteroid çalışmaları önemli bir sıçrama yaptı, güneş sistemi'nin eski kalıntılarına dair yeni bilgiler ortaya çıkardı.

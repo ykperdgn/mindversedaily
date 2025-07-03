@@ -1,10 +1,9 @@
 ---
 title: "Liderlik Bilgeliği Başarıya Giden Yolun Haritası"
-description: "Liderlik bilgeliği, liderlerin sahip olduğu en önemli özelliklerden biri olup, ekibinin başarısına katkı sağlar. İyi liderler, bilgeliği ile karar alır, ekibini güçlendirir ve başarıya ulaşır. Bu m..."
+description: "Liderlik bilgeliği, liderlerin sahip olduğu en önemli özelliklerden biri olup, ekibinin başarısına katkı sağlar. İyi liderler, bilgeliği ile karar alır, ekib..."
 pubDate: 2025-07-02
-category: "quotes"
+category: quotes
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Liderlik Bilgeliği: Nedir?
@@ -17,7 +16,7 @@ Liderlik bilgeliğinin özellikleri arasında şu noktalar sayılabilir:
 
 * İyi iletişim kurma: Liderler, ekibinin ihtiyacını anlayarak, açık ve net bir şekilde iletişim kurarlar.
 
-* Problem çözme: Liderler, sorunları çözmek için yaratıcı ve yenilikçi çözümler geliştirirler.
+* Problem çözme: Liderler, sorunları çöçözmek için yaratıcı ve yenilikçi çözümler geliştirirler.
 
 * Vizyon sahibi olma: Liderler, geleceğe yönelik bir vizyon sahibi olup, ekibinin başarısına katkı sağlar.
 

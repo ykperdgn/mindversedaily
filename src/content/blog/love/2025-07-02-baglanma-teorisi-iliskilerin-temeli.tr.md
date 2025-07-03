@@ -1,10 +1,9 @@
 ---
 title: "Bağlanma Teorisi İlişkilerin Temeli"
-description: "Bağlanma teorisi, insan ilişkilerinin temeline inerek, karşılıklı bağlanmanın nasıl oluştuğunu ve bunun sonuçlarını inceler. Bu teoride, çocukluğumuzdaki deneyimlerimizin yetişkinlikteki ilişkileri..."
+description: "Bağlanma teorisi, insan ilişkilerinin temeline inerek, karşılıklı bağlanmanın nasıl oluştuğunu ve bunun sonuçlarını inceler. Bu teoride, çocukluğumuzdaki den..."
 pubDate: 2025-07-02
-category: "love"
+category: love
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Bağlanma Teorisi Nedir?

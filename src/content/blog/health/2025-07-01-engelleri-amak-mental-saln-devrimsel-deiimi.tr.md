@@ -1,10 +1,9 @@
 ---
 title: "Engelleri Aşmak Mental Sağlığın Devrimsel Değişimi"
-description: "Mental sağlık uzun bir yol kat etti ve artık genel sağlık açısından vazgeçilmez bir parçası haline geldi. Son bilimsel keşifler ve gelişmeler mental sağlık anlayışımızı dönüştürdü, tanı, tedavi ve ..."
+description: "Mental sağlık uzun bir yol kat etti ve artık genel sağlık açısından vazgeçilmez bir parçası haline geldi. Son bilimsel keşifler ve gelişmeler mental sağlık a..."
 pubDate: 2025-07-01
-category: "health"
+category: health
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 # Engelleri Aşmak: Mental Sağlığın Devrimsel Değişimi

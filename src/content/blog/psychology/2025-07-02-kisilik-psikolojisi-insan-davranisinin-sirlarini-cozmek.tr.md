@@ -1,10 +1,9 @@
 ---
-title: "Kişilik Psikolojisi İnsan Davranışının Sırlarını Çözmek"
-description: "Kişilik psikolojisi, insan davranışının altında yatan psikolojik faktörlerin incelenmesini konu edinir. Kişilik, birey olarak bizim kim olduğumuz ve çevreyle ilgili olarak davranma şeklimizi belirt..."
+title: "Kişilik Psikolojisi İnsan Davranışının Sırlarını Çöçöçözmek"
+description: "Kişilik psikolojisi, insan davranışının altında yatan psikolojik faktörlerin incelenmesini konu edinir. Kişilik, birey olarak bizim kim olduğumuz ve çevreyle..."
 pubDate: 2025-07-02
-category: "psychology"
+category: psychology
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Kişilik psikolojisi, psikolojinin en önemli alt dallarından biridir. Kişilik, insan davranışının en temel belirleyicilerinden biri olarak kabul edilir. Kişilik, bireyin düşünce, duygu ve davranış şekillerini belirten kompleks bir kavramdır. Kişilik psikolojisi, bu kompleks kavramı inceleyerek insan davranışının altında yatan psikolojik faktörlerin anlaşılmasına yardımcı olur.

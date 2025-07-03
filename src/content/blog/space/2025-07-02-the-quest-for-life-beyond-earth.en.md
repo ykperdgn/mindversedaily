@@ -4,7 +4,6 @@ description: "Exploring Mars exploration breakthroughs, from NASA's Perseverance
 pubDate: 2025-07-02
 category: "space"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 One of the most significant advancements in Mars exploration is the ongoing search for signs of life. NASA's Perseverance rover has been instrumental in this quest, with its findings suggesting that ancient Martian lakes may have harbored microbial life. This discovery has sent shockwaves through the scientific community, reinvigorating interest in the possibility of finding evidence of extraterrestrial life.

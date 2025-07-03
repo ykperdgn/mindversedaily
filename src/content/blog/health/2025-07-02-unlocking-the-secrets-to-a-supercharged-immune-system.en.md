@@ -4,7 +4,6 @@ description: "Section 1 The Gut-Immune Connection"
 pubDate: 2025-07-02
 category: "health"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 As we navigate the complexities of modern life, our bodies are constantly battling internal and external invaders. The immune system, our body's defense mechanism, plays a crucial role in keeping us safe from harm. However, with the increasing prevalence of chronic diseases, it's essential to understand how to boost our immune systems for optimal health.

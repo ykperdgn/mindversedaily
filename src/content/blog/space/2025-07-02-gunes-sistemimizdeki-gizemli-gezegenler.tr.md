@@ -1,10 +1,9 @@
 ---
 title: "Güneş Sistemimizdeki Gizemli Gezegenler"
-description: "Gezegen bilimi, güneş sistemimizi oluşturan gezegenlerin yapısını, özellikleri ve evrimlerini inceleyen bir bilim dalıdır. Bu bilim dalı, yıldızların oluşumu, gezegenlerin yapısı, atmosferleri ve y..."
+description: "Gezegen bilimi, güneş sistemimizi oluşturan gezegenlerin yapısını, özellikleri ve evrimlerini inceleyen bir bilim dalıdır. Bu bilim dalı, yıldızların oluşumu..."
 pubDate: 2025-07-02
-category: "space"
+category: space
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Giriş

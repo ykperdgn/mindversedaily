@@ -4,7 +4,6 @@ description: "Case Study The Revitalization of Traditional Music"
 pubDate: 2025-07-02
 category: "history"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 In recent years, there's been a growing recognition of the significance of intangible heritage – the traditions, customs, and practices that make up the essence of our cultural identities. The United Nations Educational, Scientific and Cultural Organization (UNESCO) has identified this type of heritage as being just as valuable as tangible artifacts, emphasizing its importance in fostering community cohesion, promoting social justice, and preserving linguistic diversity.

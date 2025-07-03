@@ -1,10 +1,9 @@
 ---
 title: "Sağlığımızı Koruma Yolları Hastalık Önleme Stratejileri"
-description: "Sağlığımızı korumak için alınan önlemlerin önemi büyüktür. Hastalık önleme, sağlığın korunması açısından kritik bir role sahiptir. Bu makalede, hastalık önleme yollarını ve stratejilerini ele alaca..."
+description: "Sağlığımızı korumak için alınan önlemlerin önemi büyüktür. Hastalık önleme, sağlığın korunması açısından kritik bir role sahiptir. Bu makalede, hastalık önle..."
 pubDate: 2025-07-02
-category: "health"
+category: health
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Sağlığımızı Korumak İçin Alınan Önlemlerin Önemi
@@ -17,7 +16,7 @@ Düzenli sağlık kontrolleri, hastalıkların erken tespit edilmesine yardımc�
 
 Sağlıklı Beslenme
 
-Sağlıklı beslenme, sağlığımızı korumak için alınan önlemlerin başında gelir. Sağlıklı beslenme, vücudumuzun sağlıklı olmasına yardımcı olur ve olası hastalıkların önlenmesine yardımcı olur. Sağlıklı beslenme, kronik hastalıkların önlenmesine yardımcı olur. Sağlıklı beslenme için alınması gereken önlemler nelerdir? Sağlıklı beslenme için, sebze ve meyve tüketimini artırmalı,Fast food ve şekerli yiyeceklerden uzak durmalıyız.
+Sağlıklı beslenme, sağlığımızı korumak için alınan önlemlerin başında gelir. Sağlıklı beslenme, vücudumuzun sağlıklı olmasına yardımcı olur ve olası hastalıkların önlenmesine yardımcı olur. Sağlıklı beslenme, kronik hastalıkların önlenmesine yardımcı olur. Sağlıklı beslenme için alınması gereken önlemler nelerdir? Sağlıklı beslenme için, sebze ve meyve tüketimini artırmalı,Fast föd ve şekerli yiyeceklerden uzak durmalıyız.
 
 Düzenli Spor Yapma
 

@@ -1,10 +1,9 @@
 ---
 title: "Tıbbi Atılımlar Sağlık Sektörünü Dönüştüren Devrimler"
-description: "Tıbbi atılımlar, sağlık sektörünü dönüştüren devrimlerdir. Son yıllarda, tıbbi teknolojinin hızla gelişmesi, hastalıkların tanısı ve tedavisinde yeni olanaklar sunmuştur. Bu makalede, tıbbi atılıml..."
+description: "Tıbbi atılımlar, sağlık sektörünü dönüştüren devrimlerdir. Son yıllarda, tıbbi teknolojinin hızla gelişmesi, hastalıkların tanısı ve tedavisinde yeni olanakl..."
 pubDate: 2025-07-02
-category: "health"
+category: health
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Tıbbi atılımlar, sağlık sektörünü dönüştüren devrimlerdir. Son yıllarda, tıbbi teknolojinin hızla gelişmesi, hastalıkların tanısı ve tedavisinde yeni olanaklar sunmuştur. Tıbbi atılımlar, sağlık hizmetlerinin kalitesini artırmaya yardımcı olurken, aynı zamanda sağlık harcamalarının azaltılmasına da katkı sağlamıştır.

@@ -4,7 +4,6 @@ description: "Türkçe: Geleneksel Müziğin Canlandırılması Durum Çalışma
 pubDate: 2025-07-02
 category: history
 tags: []
-image: /assets/blog-placeholder-1.svg
 ---
 
 Son yıllarda, kültürel kimliklerimizdeki özün oluşturan gelenek, adet ve uygulamaların önemi giderek tanınmaya başlanmıştır. Birleşmiş Milletler Eğitim, Bilim ve Kültür Örgütü (UNESCO), bu tür mirasın somut eserler kadar değerli olduğunu belirterek, topluluk birliğini sağlamada, sosyal adaleti ilerletmede ve dilsel çeşitliliğin korunmasında önemini vurgulamıştır.
@@ -33,7 +32,7 @@ Koruma çalışmalarınızı geliştirmek için dijital araçları yatırın, sa
 
 Uzman Görüşleri: **Kültürel Miras Korumanın İklim Eylemi Katalizörü**
 
-Dr. Maria Rodriguez, kültürel miras ve iklim değişikliği alanında önde gelen bir uzman, kültürel miras korunmasının iklim eylemi katalizörü olabileceğini vurgulamıştır. "Kültürel mirasımızı koruyarak, yalnızca kolektif anılarımızı korumuyor, aynı zamanda sürdürülebilir kalkınma ve çevre yönetimini de destekliyoruz."
+Dr. Maria Rodriguez, kültürel miras ve iklim değişikliği alanında önde gelen bir uzman, kültürel miras korunmasının iklim eylemi katalizörü olabileceğini vurgulamıştır. Kültürel mirasımızı koruyarak, yalnızca kolektif anılarımızı korumuyor, aynı zamanda sürdürülebilir kalkınma ve çevre yönetimini de destekliyoruz."
 
 Uygulanabilir Sonuç: **İklim Duyarlı Koruma Uygulamalarını Entegre Edin**
 

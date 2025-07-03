@@ -4,7 +4,6 @@ description: "Discover cutting-edge research and insights from MindVerse Daily i
 pubDate: 2025-07-02
 category: "psychology"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 In 2023, researchers at Stanford University published a groundbreaking study on global attention levels, revealing a staggering decline in focused attention among adults. The study found that over 75% of participants reported feeling constantly distracted, with an average attention span of mere 2-5 minutes. This alarming trend has far-reaching implications for our personal and professional lives, as well as our overall well-being.

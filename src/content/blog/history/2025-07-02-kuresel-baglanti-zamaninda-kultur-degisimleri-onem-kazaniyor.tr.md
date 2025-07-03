@@ -4,7 +4,6 @@ description: "Kültürel Değişimler Tarihi"
 pubDate: 2025-07-02
 category: history
 tags: []
-image: /assets/blog-placeholder-1.svg
 ---
 
 **Kültürel Değişimlerindeki Evrim**

@@ -4,7 +4,6 @@ description: "Türkçe: Tarihindeki en ikonik liderlerden biri olan Büyük İsk
 pubDate: 2025-07-01
 category: history
 tags: []
-image: https://images.pexels.com/photos/31741556/pexels-photo-31741556.jpeg?auto=compress&cs=tinysrgb&h=650&w=940
 ---
 
 Büyük İskender, Dünya Tarihine Yön Verdi

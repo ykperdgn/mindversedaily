@@ -1,10 +1,9 @@
 ---
 title: "İlham Verici Bilgeliğin Gücü Hayatımıza Yön Veren Sözlü Rehberlerimiz"
-description: "İlham verici bilgeliğin gücü, hayatımızın her方面ında yön veren sözlü rehberlerimizdir. Bu rehberler, bizim için ilham kaynağı oluşturur ve hayatımıza anlam kazandırır. Bu makalede, ilham verici bilg..."
+description: "İlham verici bilgeliğin gücü, hayatımızın her方面ında yön veren sözlü rehberlerimizdir. Bu rehberler, bizim için ilham kaynağı oluşturur ve hayatımıza anlam ka..."
 pubDate: 2025-07-02
-category: "quotes"
+category: quotes
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 İlham Verici Bilgeliğin Gücü

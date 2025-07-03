@@ -4,7 +4,6 @@ description: "The Forgotten Genius of Antikythera"
 pubDate: 2025-07-02
 category: "history"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 One of the most fascinating aspects of ancient technologies is the manner in which they employed pattern recognition to solve complex problems. For instance, the ancient Sumerians of Mesopotamia (modern-day Iraq) developed a sophisticated system of arithmetic and geometry around 3500 BCE. This understanding of mathematical patterns enabled them to construct elaborate ziggurats, irrigation systems, and even accountancy practices.

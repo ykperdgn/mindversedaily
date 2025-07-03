@@ -1,10 +1,9 @@
 ---
 title: "Büyük İskender'in Süren Mirası: Efsanevi Liderin Gizemlerini Çözme"
-description: "Tarihindeki en ikonik liderlerden biri olan Büyük İskender, antik dünyaya derin bir iz bıraktı. Fetihlerinden idari reformlarına kadar, Büyük İskender'in etkisi hala bugün hissediliyor. Son arkeolojik keşifler ve bilimsel bulgular, bu efsanevi liderin yaşamı ve saltanatı üzerine yeni bir perspektif sunuyor."
+description: "Tarihindeki en ikonik liderlerden biri olan Büyük İskender, antik dünyaya derin bir iz bıraktı. Fetihlerinden idari reformlarına kadar, Büyük İskender'in etk..."
 pubDate: 2025-07-01
-category: "history"
+category: history
 tags: []
-image: "https://images.pexels.com/photos/6034019/pexels-photo-6034019.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
 ---
 
 # Büyük İskender'in Süren Mirası: Efsanevi Liderin Gizemlerini Çözme

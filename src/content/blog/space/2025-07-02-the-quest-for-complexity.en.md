@@ -4,7 +4,6 @@ description: "Discover cutting-edge research and insights from MindVerse Daily i
 pubDate: 2025-07-02
 category: "space"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 In 2023, a groundbreaking study published in the journal Nature revealed that the universe has been growing more complex over billions of years. Researchers analyzed data from NASA's Hubble Space Telescope and found that galaxies have been accumulating more stars, gas, and dust as they evolve. This increase in complexity is not limited to individual galaxies; it's a universal trend that affects the cosmos as a whole.

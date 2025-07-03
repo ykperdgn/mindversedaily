@@ -1,10 +1,17 @@
+---
+title: "Unraveling The Devastating Legacy Of World Wars A Comprehens.En"
+description: "Discover the latest research and insights in history category on MindVerse Daily."
+pubDate: 2025-07-02
+category: history
+tags: []
+---
+
 ﻿---
 title: "Unraveling the Devastating Legacy of World Wars A Comprehensive Guide to Understanding the Causes, Consequences, and Impact on Humanity"
 description: "Journey through time with fascinating historical insights, archaeological discoveries, and stories that shaped our world and continue to influence us today."
 pubDate: 2025-07-01
 category: "history"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 The concept of world war is a relatively modern phenomenon, with the first global conflict occurring in the early 20th century. World War I, also known as the Great War, was a global catastrophe that lasted from 1914 to 1918 and involved most of the major powers of Europe, including Germany, France, Britain, Austria-Hungary, Italy, and Russia. The war resulted in the deaths of millions of people and left deep scars on European society.

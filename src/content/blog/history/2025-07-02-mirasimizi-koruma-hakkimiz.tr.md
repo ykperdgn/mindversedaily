@@ -1,10 +1,9 @@
 ---
 title: "Mirasımızı Koruma Hakkımız"
-description: "Miras koruma, insanlığın kültürel ve tarihi mirasının gelecek nesillere aktarılması için gerekli olan bir süreçtir. Tarihi eserlerin, anıtların ve kültürel varlıkların korunması, bir toplumun kimli..."
+description: "Miras koruma, insanlığın kültürel ve tarihi mirasının gelecek nesillere aktarılması için gerekli olan bir süreçtir. Tarihi eserlerin, anıtların ve kültürel v..."
 pubDate: 2025-07-02
-category: "history"
+category: history
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Miras koruma, insanlığın kültür ve tarihine ait olan tüm değerlerin korunması,restore edilmesi ve gelecek nesillere aktarılması için yapılan bir dizi çalışmadır. Bu koruma süreci, tarihi eserlerin, anıtların, müzelere ait koleksiyonların, arşivlerin ve kütüphanelerin korunması, restore edilmesi ve yönetilmesini kapsamaktadır. Miras koruma, bir toplumun kimliğini, tarihi ve kültürel zenginliğini belirleyen en önemli faktörlerden biridir.
@@ -13,7 +12,7 @@ Tarihçe: Miras koruma kavramı, tarihi eserlerin korunması için yapılan ilk 
 
 Önemi: Miras koruma, bir toplumun kimliğini ve zenginliğini belirleyen en önemli faktörlerden biridir. Tarihi eserlerin, anıtların ve kültürel varlıkların korunması, bir toplumun tarihine ve kültürüne sahip çıkmasını sağlar. Ayrıca, miras koruma, turizmi ve ekonomik kalkınmayı da destekler.
 
-Yöntemleri: Miras koruma yöntemleri, tarihi eserlerin durumu, derecesi ve türü dikkate alınarak belirlenir. En yaygın yöntemler arasında restore etme, konservasyon, restorasyon, yenileme ve yeniden inşaat yer almaktadır.
+Yöntemleri: Miras koruma yöntemleri, tarihi eserlerin durumu, derecesi ve türü dikkate alınarak belirlenir. En yaygın yöntemler arasında restore etme, konservasyon, restorasyon, yenileme ve yeniden inşğt yer almaktadır.
 
 Türkiye'deki Uygulamaları: Türkiye, tarihi eserlerin zenginliği bakımından dünya çapında önemli bir yere sahiptir. Türkiye'de miras koruma, Kültür ve Turizm Bakanlığı tarafından yönetilmektedir. Bakanlık, tarihi eserlerin korunması, restore edilmesi ve yönetilmesi için çeşitli projeler ve programlar hayata geçirmektedir.
 

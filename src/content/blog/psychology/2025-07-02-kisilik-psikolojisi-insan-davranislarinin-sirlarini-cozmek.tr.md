@@ -1,10 +1,9 @@
 ---
-title: "Kişilik Psikolojisi İnsan Davranışlarının Sırlarını Çözmek"
-description: "Kişilik psikolojisi, insan davranışlarını ve düşüncelerini inceleyen bir psikoloji alanıdır. Kişilik, bir insanın kendine özgü düşünce, duygu ve davranış örüntüleridir. Bu makale, kişilik psikoloji..."
+title: "Kişilik Psikolojisi İnsan Davranışlarının Sırlarını Çöçöçözmek"
+description: "Kişilik psikolojisi, insan davranışlarını ve düşüncelerini inceleyen bir psikoloji alanıdır. Kişilik, bir insanın kendine özgü düşünce, duygu ve davranış örü..."
 pubDate: 2025-07-02
-category: "psychology"
+category: psychology
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Kişilik Psikolojisinin Temel Kavramları

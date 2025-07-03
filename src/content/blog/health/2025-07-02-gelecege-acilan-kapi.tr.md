@@ -4,10 +4,9 @@ description: "Türkçe açıklama: Sağlık Hizmetlerinde Yapay Zeka'nın Yükse
 pubDate: 2025-07-02
 category: health
 tags: []
-image: /assets/blog-placeholder-1.svg
 ---
 
-Yeni bir on yılda sağlık sektörü büyük bir değişime hazırlanıyor. Teknolojilerin, veri analizlerinin ve insan merkezli tasarımının bir araya gelmesi, sağlık teknolojisi (healthtech) alanında yeni bir dönem başlatıyor. Bu dönüşümlü manzara, hasta sonuçlarını iyileştirmek, sağlık hizmetlerini geliştirmek ve doktor-hasta ilişkisini yeniden tanımlamak için büyük umut vaat ediyor.
+Yeni bir on yılda sağlık sektörü büyük bir değişime hazırlanıyor. Teknolojilerin, veri analizlerinin ve insan merkezli tasarımının bir araya gelmesi, sağlık teknolojisi (healthtech) alanında yeni bir dönem başlatıyor. Bu dönüşümlü manzara, hasta sonuçlarını iyileştirmek, sağlık hizmetlerini geliştirmek ve doktor-hasta ilişkisini yeniden tanımlamak için büyük umut vğt ediyor.
 
 **Sağlık Sektöründe Yapay Zeka'nın Yükselişi**
 

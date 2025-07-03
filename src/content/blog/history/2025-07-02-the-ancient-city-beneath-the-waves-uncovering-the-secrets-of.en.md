@@ -4,7 +4,6 @@ description: "Discover cutting-edge research and insights from MindVerse Daily i
 pubDate: 2025-07-02
 category: "history"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Off the coast of Egypt lies the sunken city of Thonis-Heraklion, a metropolis that was once home to over 250,000 people. In 2023, archaeologists made a stunning breakthrough when they discovered the remains of this ancient city beneath the Mediterranean Sea. This incredible find has shed new light on the rise and fall of ancient civilizations in the region, offering insights into trade networks, cultural exchange, and the impact of natural disasters.

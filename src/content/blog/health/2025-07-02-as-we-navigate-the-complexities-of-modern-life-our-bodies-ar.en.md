@@ -4,7 +4,6 @@ description: "The Intersection of Physiology and Biochemistry"
 pubDate: 2025-07-02
 category: "health"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 **The Intersection of Physiology and Biochemistry**

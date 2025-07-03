@@ -1,10 +1,9 @@
 ---
 title: "Egzersiz Fizyolojisi İnsan Vücudu ile Sporun Sırrı"
-description: "Egzersiz fizyolojisi, insan vücudunun физikal aktiviteleri sırasında meydana gelen fizyolojik değişimleri inceler. Bu bilim dalı, sporcuların ve sağlık profesyonellerinin, egzersizlerin vücudumuz ü..."
+description: "Egzersiz fizyolojisi, insan vücudunun физikal aktiviteleri sırasında meydana gelen fizyolojik değişimleri inceler. Bu bilim dalı, sporcuların ve sağlık profe..."
 pubDate: 2025-07-02
-category: "health"
+category: health
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Egzersiz Fizyolojisi Nedir?

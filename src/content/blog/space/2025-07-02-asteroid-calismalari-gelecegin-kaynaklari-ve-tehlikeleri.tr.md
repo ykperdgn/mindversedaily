@@ -1,10 +1,9 @@
 ---
 title: "Asteroid Çalışmaları Geleceğin Kaynakları ve Tehlikeleri"
-description: "Asteroid çalışmaları, uzay araştırmalarının en önemli alanlarından biri haline geliyor. Bu çalışmalarda, asteroidlerin kaynakları ve tehlikeleri inceleniyor. Asteroidler, gezegenlerimiz için potans..."
+description: "Asteroid çalışmaları, uzay araştırmalarının en önemli alanlarından biri haline geliyor. Bu çalışmalarda, asteroidlerin kaynakları ve tehlikeleri inceleniyor...."
 pubDate: 2025-07-02
-category: "space"
+category: space
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Asteroid Çalışmaları: Giriş

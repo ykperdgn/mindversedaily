@@ -4,7 +4,6 @@ description: "Recent studies have shown that CBT is particularly effective in tr
 pubDate: 2025-07-01
 category: "psychology"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 One of the most widely used and researched forms of therapy is CBT. Developed by Aaron Beck, CBT focuses on identifying and changing negative thought patterns, behaviors, and emotions. By recognizing the distorted thinking that contributes to mental health issues like depression and anxiety, clients can learn to reframe their thoughts in a more positive and realistic light.

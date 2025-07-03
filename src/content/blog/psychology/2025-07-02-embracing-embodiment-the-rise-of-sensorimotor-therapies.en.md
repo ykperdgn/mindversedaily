@@ -4,7 +4,6 @@ description: "Discover cutting-edge research and insights from MindVerse Daily i
 pubDate: 2025-07-02
 category: "psychology"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 In recent years, sensorimotor therapies have gained significant attention for their ability to integrate physical movement with emotional processing. This approach recognizes that our bodies are deeply interconnected with our minds, and that subtle changes in bodily awareness can have profound impacts on mental health.

@@ -3,7 +3,6 @@ title: "Protecting Your Health Effective Disease Prevention Strategies for a Lon
 description: "As the old adage goes, prevention is the best medicine. In todays world, where diseases and illnesses are rampant, taking proactive steps to preven..."
 category: "health"
 pubDate: 2025-07-03
-heroImage: "/assets/blog-placeholder-1.svg"
 tags: ["health"]
 ---
 

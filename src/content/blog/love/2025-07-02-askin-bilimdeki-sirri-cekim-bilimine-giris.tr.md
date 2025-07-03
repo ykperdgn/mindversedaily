@@ -1,10 +1,9 @@
 ---
 title: "Aşkın Bilimdeki Sırrı Çekim Bilimine Giriş"
-description: "Çekim bilimi, insan ilişkilerinde meydana gelen çekim gücünü inceleyen bir bilim dalıdır. Bu makalede, aşkın bilimdeki sırrını keşfedecek ve çekim bilimine giriş yaparak, insanların neden birbirler..."
+description: "Çekim bilimi, insan ilişkilerinde meydana gelen çekim gücünü inceleyen bir bilim dalıdır. Bu makalede, aşkın bilimdeki sırrını keşfedecek ve çekim bilimine g..."
 pubDate: 2025-07-02
-category: "love"
+category: love
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 slug: "2025-07-02-askin-bilimdeki-sirri-cekim-bilimine-giristr"
 ---
 

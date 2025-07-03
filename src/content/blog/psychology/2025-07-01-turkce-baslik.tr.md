@@ -1,10 +1,9 @@
 ---
-title: "Türkçe başlık"
+title: "Bilişsel Yanılgılar: Düşüncelerimizi, Duygularımızı ve Davranışlarımızı Yönlendiren Görünmez Kuklacılar"
 description: "Bilişsel yanlılıklar, günlük yaşantımızda derin etkileri olan düşünce ve karar verme hatalarıdır...."
 pubDate: 2025-07-01
 category: psychology
 tags: []
-image: https://images.pexels.com/photos/8900007/pexels-photo-8900007.jpeg?auto=compress&cs=tinysrgb&h=650&w=940
 ---
 
 Bilişsel Yanılgılar: Düşüncelerimizi, Duygularımızı ve Davranışlarımızı Yönlendiren Görünmez Kuklacılar
@@ -25,4 +24,4 @@ Diğer bir strateji, karar alma sürecinde yavaşlama ve adım geri atmaktır. B
 
 Son olarak, entelektüel alçakgönüllüğü geliştirme de, bilişsel yanılgılarımızı aşmamıza yardımcı olabilir. Bu, bilgimizin sınırlarını tanımaya ve emin olmadığımız veya bilmediğimiz şeyleri kabul etmeye çalışmaktır. Kişilik ve Sosyal Psikoloji Dergisi'nde yayınlanan bir çalışmada, entelektüel alçakgönüllüğü yüksek olan kişilerin, aktif açık zihinliktir ve bilişsel yanılgılarına düşme olasılıklarının daha düşük olduğunu buldu (5).
 
-Sonuç olarak, bilişsel yanılgılar günlük yaşantımızda derin bir impact sahiptir. Bu yanılgıları farkında olarak ve onları aşmaya çalışarak, daha bilgili, rasyonel kararlar almaya çalışabilir ve kritik düşünce becerilerimizi geliştirebiliriz. Eski Yunan filozofu Aristoteles'in dediği gibi, "Eğitilmiş bir zihin, bir düşünceyi kabul etmeden önce onu eğlendirebilmektir." Bu tür entelektüel merakı ve alçakgönüllüğü geliştirerek, gerçekliğimizi şekillendiren görünmez kuklacılara daha az açık olabiliriz.
+Sonuç olarak, bilişsel yanılgılar günlük yaşantımızda derin bir impact sahiptir. Bu yanılgıları farkında olarak ve onları aşmaya çalışarak, daha bilgili, rasyonel kararlar almaya çalışabilir ve kritik düşünce becerilerimizi geliştirebiliriz. Eski Yunan filozofu Aristoteles'in dediği gibi, Eğitilmiş bir zihin, bir düşünceyi kabul etmeden önce onu eğlendirebilmektir." Bu tür entelektüel merakı ve alçakgönüllüğü geliştirerek, gerçekliğimizi şekillendiren görünmez kuklacılara daha az açık olabiliriz.

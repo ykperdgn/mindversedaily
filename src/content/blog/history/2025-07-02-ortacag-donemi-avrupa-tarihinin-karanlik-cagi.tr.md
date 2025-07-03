@@ -1,10 +1,9 @@
 ---
 title: "Ortaçağ Dönemi Avrupa Tarihinin Karanlık Çağı"
-description: "Ortaçağ dönemi, Avrupa tarihinde 5. ve 15. yüzyıllar arasında yer alan bir dönemdir. Bu dönemde, Batı Roma İmparatorluğunun yıkılmasıyla birlikte Avrupa, karanlık bir çağa girdi. Feodalizm, kilisen..."
+description: "Ortaçağ dönemi, Avrupa tarihinde 5. ve 15. yüzyıllar arasında yer alan bir dönemdir. Bu dönemde, Batı Roma İmparatorluğunun yıkılmasıyla birlikte Avrupa, kar..."
 pubDate: 2025-07-02
-category: "history"
+category: history
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Ortaçağ dönemi, Avrupa tarihi'nde çok yönlü bir dönüm noktası olmuştur. Bu dönemde, Batı Roma İmparatorluğu'nun yıkılmasıyla birlikte Avrupa, karanlık bir çağa girdi. 5. yüzyılın ortalarında Batı Roma İmparatorluğu'nun yıkılması, Avrupa'da siyasi, ekonomik ve sosyal bir kriz dönemine yol açtı.

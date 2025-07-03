@@ -1,10 +1,17 @@
+---
+title: "Debunking The Myths 10 Shockingly Common Cognitive Biases Th.En"
+description: "Discover the latest research and insights in psychology category on MindVerse Daily."
+pubDate: 2025-07-02
+category: psychology
+tags: []
+---
+
 ﻿---
 title: "Debunking the Myths 10 Shockingly Common Cognitive Biases That Shape Your Reality"
 description: "Discover the fascinating world of human psychology with insights into behavior, mental health, cognitive science, and the latest psychological research."
 pubDate: 2025-07-01
 category: "psychology"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Cognitive biases are mental shortcuts that influence our perceptions, judgments, and decision-making processes. These biases can be both conscious and unconscious, and they often lead us to make irrational or suboptimal choices. As humans, we rely on cognitive biases to simplify complex information, speed up decision-making, and conserve mental energy. However, these biases can also lead to errors in judgment, miscalculations, and poor decisions.

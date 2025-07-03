@@ -1,10 +1,9 @@
 ---
 title: "Kişisel Gelişim Yolculuğunda İlham Veren Sözler"
-description: "Kişisel gelişim sözleri, bizi motive eder, ilham verir ve yaşamımıza yön verir. Bu sözler, kendimizi keşfetmemize, eksikliklerimizi gidermemize ve hedeflerimize ulaşmamıza yardımcı olur. İşte, kişi..."
+description: "Kişisel gelişim sözleri, bizi motive eder, ilham verir ve yaşamımıza yön verir. Bu sözler, kendimizi keşfetmemize, eksikliklerimizi gidermemize ve hedeflerim..."
 pubDate: 2025-07-02
-category: "quotes"
+category: quotes
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Kişisel gelişim sözleri, yaşamımıza yön veren ve bizi motive eden en önemli etkenlerdir. Bu sözler, kendimizi keşfetmemize, eksikliklerimizi gidermemize ve hedeflerimize ulaşmamıza yardımcı olur. Kişisel gelişim sözleri, bizi ileri taşımaya yardımcı olur ve yaşamımıza anlam kazandırır.

@@ -1,10 +1,17 @@
+---
+title: "Unleashing Revolution A Timeline Of Social Movements That Sh.En"
+description: "Discover the latest research and insights in history category on MindVerse Daily."
+pubDate: 2025-07-02
+category: history
+tags: []
+---
+
 ﻿---
 title: "Unleashing Revolution A Timeline of Social Movements That Shaped History"
 description: "Journey through time with fascinating historical insights, archaeological discoveries, and stories that shaped our world and continue to influence us today."
 pubDate: 2025-07-01
 category: "history"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Social movements have been a cornerstone of human history, driving change and shaping societies for centuries. From abolition to suffrage, civil rights to feminist movements, these collective efforts have consistently challenged the status quo, demanding justice, equality, and human dignity. In recent years, social movements have continued to evolve, incorporating new technologies, strategies, and tactics to amplify their impact.

@@ -1,10 +1,9 @@
 ---
 title: "Beyin-Bağırsak Bağlantısı"
-description: "Türkçe: "Sonraki sefer yemek atlamak veya tatlı bir tedaviye kapılmak isterken, bağırsaklarınızın..."
+description: "Bağırsak mikrobiyomu ve beyin fonksiyonu arasındaki şaşırtıcı ilişki"
 pubDate: 2025-07-02
 category: health
 tags: []
-image: /assets/blog-placeholder-1.svg
 ---
 
 Son araştırmalar, bağırsak mikrobiyomumuz ve beyin fonksiyonumuz arasındaki olağanüstü ilişkiyi aydınlatmıştır. Bu iki раніше ayrı sistem arasındaki iki yönlü iletişim ağı keşfi, depresyon, anksiyete ve Parkinson hastalığı gibi nörolojik bozuklukların anlaşılması ve tedavisi için yeni yollar açmıştır.
@@ -19,7 +18,7 @@ Polifenoller, meyvelerde, sebzelerde ve baklagillerde bulunan bir bileşik sın�
 
 Özet: Polifenollerin faydalarını elde etmek için, günlük yemeklerinize renkli meyveler ve sebzelerden oluşan bir çeşitlilik ekleyin. Günde en az 5 porsiyon hedefleyin ve yaratıcı mutfak yaratıcılığınızı serbest bırakın!
 
-## **Mikrobiyom Devrimi: Fermentasyonun Sırlarını Çözmek**
+## **Mikrobiyom Devrimi: Fermentasyonun Sırlarını Çöçözmek**
 
 Fermente edilmiş yiyecekler, yüzyıllardır birçok kültürde temel bir bileşen olmuştur, ancak mikrobiyom araştırmalarında son gelişmeler, onların olağanüstü faydalarını aydınlatmıştır. Yoğurt, kimchi ve benzeri probiyotik açısından zengin yiyecekler, bağırsak mikrobiyomumuzu dönüştürmekte ve genel sağlığımıza etki etmektedir.
 

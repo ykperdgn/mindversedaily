@@ -1,10 +1,9 @@
 ---
 title: "Bilinç Çalışmaları Zihnimizi Anlamak ve Geliştirmek"
-description: "Bilinç çalışmaları, psikolojideki en önemli konulardan biri olup, insanın zihinsel süreçlerini ve davranışlarını anlamaya yardımcı olur. Bu makalede, bilinç çalışmaları nedir, nasıl çalışır ve günl..."
+description: "Bilinç çalışmaları, psikolojideki en önemli konulardan biri olup, insanın zihinsel süreçlerini ve davranışlarını anlamaya yardımcı olur. Bu makalede, bilinç ..."
 pubDate: 2025-07-02
-category: "psychology"
+category: psychology
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Bilinç çalışmaları, psikolojideki en eski ve en önemli konulardan biri olup, insanın zihinsel süreçlerini ve davranışlarını anlamaya yardımcı olur. Bilinç çalışmaları, insanın farkındalık düzeyini artırmaya, düşünce ve duygularını yönetmeye ve davranışlarını değiştirmeye yardımcı olur. Son yıllarda, bilinç çalışmaları ile ilgili çok sayıda araştırma yapılmış olup, bu araştırmaların sonucunda, insanların zihinsel süreçlerini ve davranışlarını anlamaya yardımcı olur.

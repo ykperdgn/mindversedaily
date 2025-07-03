@@ -1,10 +1,9 @@
 ---
 title: "Mutluluk Felsefesi Hayatın Anlamını Bulmak"
-description: "Mutluluk felsefesi, insanlığın en temel arayışlarından biridir. Bu felsefe, hayatın anlamını bulmak ve mutlu olmak için gerekli şartları araştırır. Bu yazıda, mutluluk felsefesinin temellerini, ünl..."
+description: "Mutluluk felsefesi, insanlığın en temel arayışlarından biridir. Bu felsefe, hayatın anlamını bulmak ve mutlu olmak için gerekli şartları araştırır. Bu yazıda..."
 pubDate: 2025-07-02
-category: "quotes"
+category: quotes
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Mutluluk Felsefesinin Temelleri

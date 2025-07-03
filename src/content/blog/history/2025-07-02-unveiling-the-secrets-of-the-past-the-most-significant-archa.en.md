@@ -4,7 +4,6 @@ description: "Cracking the Code Deciphering Ancient Languages"
 pubDate: 2025-07-02
 category: "history"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 As we delve into the mysteries of human history, archaeologists have made groundbreaking discoveries that rewrite our understanding of the past. In this article, we'll explore the most remarkable archaeological breakthroughs of 2023-2025, shedding light on the latest findings and their implications for our understanding of ancient civilizations.

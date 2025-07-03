@@ -4,7 +4,6 @@ description: "Ünlü bir örnek, 111 ışık yılı uzaklıkta küçük bir yıl
 pubDate: 2025-07-02
 category: space
 tags: []
-image: /assets/blog-placeholder-1.svg
 ---
 
 Son yıllarda, Dünya dışı yaşam belirtilerini tespit etmek için birkaç çığır açıcı girişim başlatıldı. NASA'nın Exoplanet Exploration programı, 2010 yılından bu yana 4.000'den fazla eksoplanet keşfetti. Avrupa Uzay Ajansı (ESA) da 2026 yılında fırlatılması planlanan PLATO misyonuyla önemli adımlar attı.
@@ -15,7 +14,7 @@ Diğer umut verici işaretler arasında, güneş sistemimizde cüce gezegen Cere
 
 ## **İyi Şans: Uzman Görüşleri**
 
-Definitif extraterrestrial yaşam kanıtı bulmak hala uzak bir hedef olsa da, uzmanlar olasılığın arttığını düşünüyor. Dr. Sara Seager, bir ünlü eksoplanet bilimcisi, "eksoplanet atmosferleri ve yüzeyleri hakkında daha fazla şey öğrenmekteyiz, bu gezegenlerin bazılarının yaşamı destekleyebileceği giderek daha olası görünüyor" diyor (4).
+Definitif extraterrestrial yaşam kanıtı bulmak hala uzak bir hedef olsa da, uzmanlar olasılığın arttığını düşünüyor. Dr. Sara Seager, bir ünlü eksoplanet bilimcisi, eksoplanet atmosferleri ve yüzeyleri hakkında daha fazla şey öğrenmekteyiz, bu gezegenlerin bazılarının yaşamı destekleyebileceği giderek daha olası görünüyor" diyor (4).
 
 Dr. Michael Busch, NASA astrobiyologu, aynı fikirdedir: "Ceres'te organik moleküllerin tespiti, basit yaşam formlarının güneş sistemimizde başka yerde var olabileceğini gösteriyor. Bu, keşif ve yeni keşifler için yeni yollar açıyor" (5).
 

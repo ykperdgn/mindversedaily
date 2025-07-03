@@ -4,12 +4,11 @@ description: "Fizyoloji ve Biyokimyanın Kesişimi"
 pubDate: 2025-07-02
 category: health
 tags: []
-image: /assets/blog-placeholder-1.svg
 ---
 
 **Fizyoloji ve Biyokimya Kesişimi**
 
-Egzersiz biyokimyası, fiziksel aktivite, biyokimyasal süreçler ve insan fizyolojisi arasındaki kompleks etkileşimleri inceleyen bilimsel bir alandır. Bu disiplinler arası alan, egzersizin biyolojik yapımız üzerindeki derin etkilerini ortaya çıkarmaya başlayan araştırmacılar sayesinde son yıllarda önemli bir ivme kazanmıştır. Egzersizin tetiklediği biyokimyasal yolları inceleyerek, atletik performansın optimize edilmesini, kronik hastalıkların önlenmesini ve genel hayat kalitesinin geliştirilmesini sağlayabiliriz.
+Egzersiz biyokimyası, fiziksel aktivite, biyokimyasal süreçler ve insan fizyolojisi arasındaki kompleks etkileşimleri inceleyen bilimsel bir alandır. Bu disiplinler arası alan, egzersizin biyolojik yapımız üzerindeki derin etkilerini ortaya çıçıkarmaya başlayan araştırmacılar sayesinde son yıllarda önemli bir ivme kazanmıştır. Egzersizin tetiklediği biyokimyasal yolları inceleyerek, atletik performansın optimize edilmesini, kronik hastalıkların önlenmesini ve genel hayat kalitesinin geliştirilmesini sağlayabiliriz.
 
 **Biyokimyasal Güç Merkezi: Egzersizle İndüklenen Hormonal Yanıtlar**
 

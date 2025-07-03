@@ -4,7 +4,6 @@ description: "The Burden of Chronic Diseases"
 pubDate: 2025-07-02
 category: "health"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 **The Burden of Chronic Diseases**

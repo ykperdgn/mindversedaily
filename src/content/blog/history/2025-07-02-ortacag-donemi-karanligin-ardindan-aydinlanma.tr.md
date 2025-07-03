@@ -1,10 +1,9 @@
 ---
 title: "Ortaçağ Dönemi Karanlığın Ardından Aydınlanma"
-description: "Ortaçağ dönemi, Batı dünyasında 5. yüzyıldan 15. yüzyıla kadar süren bir dönemdir. Bu dönemde Roma İmparatorluğunun yıkılmasından sonra Avrupada karanlık bir çağ başladı. Ancak, bu karanlığın ardın..."
+description: "Ortaçağ dönemi, Batı dünyasında 5. yüzyıldan 15. yüzyıla kadar süren bir dönemdir. Bu dönemde Roma İmparatorluğunun yıkılmasından sonra Avrupada karanlık bir..."
 pubDate: 2025-07-02
-category: "history"
+category: history
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Ortaçağ Dönemi: Tanımı ve Sınırları

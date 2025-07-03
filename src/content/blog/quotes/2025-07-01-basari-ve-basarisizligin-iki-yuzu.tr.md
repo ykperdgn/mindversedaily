@@ -4,12 +4,11 @@ description: "Başarı ve başarısızlık aynı madenin iki yüzüdür, ancak b
 pubDate: 2025-07-01
 category: quotes
 tags: []
-image: https://images.pexels.com/photos/6620633/pexels-photo-6620633.jpeg?auto=compress&cs=tinysrgb&h=650&w=940
 ---
 
-Başarı ve Başarısızlığın Çift Kenarlı Kılıcı: Paradoksu Çözmek
+Başarı ve Başarısızlığın Çift Kenarlı Kılıcı: Paradoksu Çöçözmek
 
-"Başarı nihai değildir, başarısızlık ölümcül değildir: Devam etmenin cesareti sayılır." - Winston Churchill
+Başarı nihai değildir, başarısızlık ölümcül değildir: Devam etmenin cesareti sayılır." - Winston Churchill
 
 Başarıya ulaşmak için çabalarken, genellikle büyük olmak ve başarısızlık korkusu arasında bölünürüz. Bu karşıtlık, ünlü kişiliklerin, girişimcilerin ve düşünce liderlerinin alıntılarında yansıtılır, onlar başarı ve başarısızlığın önemini vurgulamaya devam ederler. Ancak, neden bu iki görünüşte karşıt sonucun uzlaşmasına güçlük çekiyoruz? Cevap, başarı ve başarısızlığın kompleks etkileşimini anlamak ve aslında aynı madalyonun iki yüzü olduklarını tanımaktır.
 

@@ -4,7 +4,6 @@ description: "Dijital çağda, teknoloji klinik psikolojide vazgeçilmez bir ara
 pubDate: 2025-07-02
 category: psychology
 tags: []
-image: /assets/blog-placeholder-1.svg
 ---
 
 Son yıllarda, nöroloji alanındaki önemli keşifler insan beyni hakkındaki anlayışımızı temelinden değiştirdi. Fonksiyonel manyetik rezonans görüntüleme (fMRI) ve elektroensefalografi (EEG) gibi nöroimaging tekniklerindeki ilerlemeler, araştırmacıların beyin aktivitesini görülmemiş bir hassasiyetle görselleştirmesine ve analiz etmesine olanak sağladı. Bu, psikolojik süreçlerin, biliş, duygu ve davranışın nöral korelatlarını daha derin bir şekilde anlamamıza yol açtı.
@@ -15,7 +14,7 @@ Dijital çağda, teknoloji klinik psikolojide vazgeçilmez bir araç haline geld
 
 ## **İnsan Faktörü: Merhamet ve Empatinin Önemi**
 
-Klinik psikolojide teknoloji ve nörolojiyi kullanarak karmaşık durumlarla mücadele ederken, insan bağlantısının temel önemini unutmamalıyız. Klinik psikologlar, ruh sağlığı zorluklarıyla mücadele eden bireylere merhametli ve empatetik destek sağlamaya özel bir şekilde konumlandırılmışlardır.
+Klinik psikolojide teknoloji ve nörolojiyi kullanarak çıkarmaşık durumlarla mücadele ederken, insan bağlantısının temel önemini unutmamalıyız. Klinik psikologlar, ruh sağlığı zorluklarıyla mücadele eden bireylere merhametli ve empatetik destek sağlamaya özel bir şekilde konumlandırılmışlardır.
 
 2023 yılında Yayınlanan Pozitif Psikoloji Dergisi'nde bir çalışmaya göre, terapist-müşteri ilişkisi, ılımlılık, empati ve anlayış tarafından karakterize edilir, tedavi sonucu için önemli bir prediktör olarak bulundu (3). Bu, klinik psikolojide insan faktörlerinin, teknolojiyi hizmetlerimizde geliştirmeye çalışırken oynadığı kritik rolünü vurgulamaktadır.
 

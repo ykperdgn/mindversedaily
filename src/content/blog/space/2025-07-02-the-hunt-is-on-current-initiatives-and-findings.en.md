@@ -4,7 +4,6 @@ description: "One notable example is the discovery of K2-18b, a super-Earth that
 pubDate: 2025-07-02
 category: "space"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 In recent years, several groundbreaking initiatives have been launched to detect signs of life beyond Earth. NASA's Exoplanet Exploration program has discovered over 4,000 exoplanets since its inception in 2010. The European Space Agency (ESA) has also made significant strides with its PLATO mission, set to launch in 2026.

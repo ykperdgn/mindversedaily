@@ -1,15 +1,14 @@
 ---
-title: "Türkçe başlık"
+title: "Girişimcilik Alıntılarının Psikolojik Etkisi"
 description: "MindVerse Daily'denQuotes kategorisinde son araştırma ve keşifleri keşfedin."
 pubDate: 2025-07-02
 category: quotes
 tags: []
-image: /assets/blog-placeholder-1.svg
 ---
 
 Girişimcilik Alıntılarının Psikolojik Etkisi
 
-Son araştırmalar, girişimcilik alıntılarının psikolojik etkisini ortaya koydu. 2023 yılında İşletme Girişimi Dergisi'nde yayınlanan bir çalışmaya göre, motivasyonel alıntıları içselleştiren girişimciler, zorlukların karşısında daha fazla direnç ve uyum gösterme olasılığı daha yüksek (1). Bu olgu, bir kişiden diğerine ilham veren sözlerin yayılmasına neden olan "motivasyon kıtılması" olarak bilinir.
+Son araştırmalar, girişimcilik alıntılarının psikolojik etkisini ortaya koydu. 2023 yılında İşletme Girişimi Dergisi'nde yayınlanan bir çalışmaya göre, motivasyonel alıntıları içselleştiren girişimciler, zorlukların karşısında daha fazla direnç ve uyum gösterme olasılığı daha yüksek (1). Bu olgu, bir kişiden diğerine ilham veren sözlerin yayılmasına neden olan motivasyon kıtılması" olarak bilinir.
 
 Richard Branson, Virgin Group'un kurucusu, bu olguyu gözler önüne seriyor. "Like a Rolling Stone" kitabında favori alıntısını paylaşıyor: "Geleceğinizi tahmin etmenin en iyi yolu onu yaratmaktır." Bu zihin değişimi, girişimcilik yolculuğunu yönlendirdi ve onu hesaplı riskler almaya güç verdi.
 
@@ -47,4 +46,4 @@ Sonuç olarak, girişimcilik alıntıları sadece bilge sözler değil, motivasy
 
 1. İşletme Girişimi Dergisi (2023). "Girişimcilikte Motivasyon Kıtılması."
 
-3. Hootsuite (2025). "Küresel Dijital Trendler Raporu."
+3. Hötsuite (2025). "Küresel Dijital Trendler Raporu."

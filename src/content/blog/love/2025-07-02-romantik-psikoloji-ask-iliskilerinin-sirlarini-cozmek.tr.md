@@ -1,13 +1,12 @@
 ---
-title: "Romantik Psikoloji Aşk İlişkilerinin Sırlarını Çözmek"
-description: "Romantik psikoloji, insan ilişkilerinin en karmaşık ve heyecan verici alanlarından biri olan aşk ilişkilerini inceleyen bir bilim dalıdır. Bu makalede, romantik psikolojinin temel ilkelerini, aşk i..."
+title: "Romantik Psikoloji Aşk İlişkilerinin Sırlarını Çöçöçözmek"
+description: "Romantik psikoloji, insan ilişkilerinin en çıkarmaşık ve heyecan verici alanlarından biri olan aşk ilişkilerini inceleyen bir bilim dalıdır. Bu makalede, rom..."
 pubDate: 2025-07-02
-category: "love"
+category: love
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
-Romantik psikoloji, insan ilişkilerinin en derin ve karmaşık alanlarından biri olan aşk ilişkilerini inceleyen bir bilim dalıdır. Bu alandaki araştırmalar, aşk ilişkilerinin gelişimini, bu ilişkilerin başarısı için gerekli koşulları ve bu ilişkilerin bozulmasına neden olan faktörleri incelemektedir.
+Romantik psikoloji, insan ilişkilerinin en derin ve çıkarmaşık alanlarından biri olan aşk ilişkilerini inceleyen bir bilim dalıdır. Bu alandaki araştırmalar, aşk ilişkilerinin gelişimini, bu ilişkilerin başarısı için gerekli koşulları ve bu ilişkilerin bozulmasına neden olan faktörleri incelemektedir.
 
 Aşk İlişkilerinin Gelişimi
 
@@ -37,4 +36,4 @@ Sonuç
 
 ----------
 
-Romantik psikoloji, insan ilişkilerinin en karmaşık ve heyecan verici alanlarından biri olan aşk ilişkilerini inceleyen bir bilim dalıdır. Aşk ilişkilerinin gelişimi, bu ilişkilerin başarısı için gerekli koşulları ve bu ilişkilerin bozulmasına neden olan faktörleri incelemektedir. Çiftlerin, birbirlerine karşı olan saygı, güven, iletişim ve empati duygularına dayanarak birlikte yaşamaları, aşk ilişkilerinin başarısı için en önemli koşullardan biri olarak görülür.
+Romantik psikoloji, insan ilişkilerinin en çıkarmaşık ve heyecan verici alanlarından biri olan aşk ilişkilerini inceleyen bir bilim dalıdır. Aşk ilişkilerinin gelişimi, bu ilişkilerin başarısı için gerekli koşulları ve bu ilişkilerin bozulmasına neden olan faktörleri incelemektedir. Çiftlerin, birbirlerine karşı olan saygı, güven, iletişim ve empati duygularına dayanarak birlikte yaşamaları, aşk ilişkilerinin başarısı için en önemli koşullardan biri olarak görülür.

@@ -1,10 +1,9 @@
 ---
 title: "Kariyer İlhamı Hayallerinizi Gerçekleştirmek için İlham Veren Sözler"
-description: "Kariyer ilhamı, hayallerinizi gerçekleştirme yolunda atmanız gereken ilk adım olabilir. İşte size ilham veren sözler ve kariyer gelişiminizi destekleyen pratik tavsiyeler."
+description: "Kariyer ilhamı, hayallerinizi gerçekleştirme yolunda atmanız gereken ilk adım olabilir. İşte size ilham veren sözler ve kariyer gelişiminizi destekleyen prat..."
 pubDate: 2025-07-02
-category: "quotes"
+category: quotes
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Kariyer ilhamı, hayatımızda bizi motive eden ve hedeflerimize ulaşmaya çalıştığımızda bizi destekleyen en önemli faktördür. Çevremizdeki insanlar, kişisel deneyimlerimiz ve okumadığımız kitaplar bizi ilham verebilir. Ancak bazen bu ilhamı bulmak zor olabilir. İşte size kariyer ilhamı için ilham veren sözler ve praktik tavsiyeler.

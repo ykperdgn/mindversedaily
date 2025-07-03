@@ -1,10 +1,9 @@
 ---
 title: "Tarihi İcatların Etkisi İnsan Hayatına Yön Veren Devrimler"
-description: "İnsan tarihi, icatların ve keşiflerin etkisi altında şekillenmiştir. Bu makale, tarihi icatların insan hayatına olan etkilerini inceliyor. İcatların günlük hayatımızdaki rollerini, bilim ve teknolo..."
+description: "İnsan tarihi, icatların ve keşiflerin etkisi altında şekillenmiştir. Bu makale, tarihi icatların insan hayatına olan etkilerini inceliyor. İcatların günlük h..."
 pubDate: 2025-07-02
-category: "history"
+category: history
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 İnsanlık, tarih boyunca icatların ve keşiflerin etkisi altında gelişmiştir. İcatlar, insan hayatına yön vermiştir. Bazı icatlar, günlük hayatımızın bir parçası haline gelmiştir. Diğerleri, bilim ve teknolojideki ilerlemelere yol açmıştır. Bu makale, tarihi icatların insan hayatına olan etkilerini inceliyor.

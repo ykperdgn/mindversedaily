@@ -1,10 +1,9 @@
 ---
 title: "Çocuk Psikolojisi Gelişim Sürecinde Çocukların Zihinsel ve Duygusal İhtiyaçları"
-description: "Çocuk psikolojisi, çocukların zihinsel, duygusal ve sosyal gelişimini inceleyen bir alandır. Bu makalede, çocukların gelişim sürecinde karşılaştıkları zorlukları, onları etkileyen faktörleri ve onl..."
+description: "Çocuk psikolojisi, çocukların zihinsel, duygusal ve sosyal gelişimini inceleyen bir alandır. Bu makalede, çocukların gelişim sürecinde karşılaştıkları zorluk..."
 pubDate: 2025-07-02
-category: "psychology"
+category: psychology
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Çocukluk dönemi, insan gelişiminin en önemli ve en hızlı olduğu dönemdir. Bu dönemde, çocuklar zihinsel, duygusal ve sosyal becerilerini geliştirirler. Ancak, bu gelişim sürecinde çocuklar çeşitli zorluklarla karşılaşırlar. Örneğin, sosyalleşme, dil geliştirme, duygusal düzenleme ve_problem çözme gibi becerilerin geliştirilmesi gerekir.

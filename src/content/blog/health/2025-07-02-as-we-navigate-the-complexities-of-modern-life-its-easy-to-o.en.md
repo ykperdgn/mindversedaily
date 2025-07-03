@@ -4,7 +4,6 @@ description: "The Metabolic Revolution A Shift in Perspective"
 pubDate: 2025-07-02
 category: "health"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 **The Metabolic Revolution: A Shift in Perspective**

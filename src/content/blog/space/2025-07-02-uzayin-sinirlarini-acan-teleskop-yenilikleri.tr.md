@@ -1,10 +1,9 @@
 ---
 title: "Uzayın Sınırlarını Açan Teleskop Yenilikleri"
-description: "Uzayın derinliklerini keşfetmek için kullanılan teleskoplar, son yıllarda önemli yeniliklere sahne oldu. Bu makalede, teleskop yeniliklerinin uzay araştırmalarına olan etkisini ve bilim insanlarını..."
+description: "Uzayın derinliklerini keşfetmek için kullanılan teleskoplar, son yıllarda önemli yeniliklere sahne oldu. Bu makalede, teleskop yeniliklerinin uzay araştırmal..."
 pubDate: 2025-07-02
-category: "space"
+category: space
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Uzayın Sınırlarını Açan Teleskop Yenilikleri

@@ -1,10 +1,9 @@
 ---
 title: "Mutluluk Felsefesi Hayatın Anlamını Bulmak - Güncel Araştırmalar"
-description: "Mutluluk felsefesi, hayatın anlamını bulmak ve olumlu duyguları yaşamak için gerekli olan felsefi yaklaşımları inceleyen bir alan olarak karşımıza çıkar. Bu felsefe, mutluluğun nedir, nasıl elde ed..."
+description: "Mutluluk felsefesi, hayatın anlamını bulmak ve olumlu duyguları yaşamak için gerekli olan felsefi yaklaşımları inceleyen bir alan olarak karşımıza çıkar. Bu ..."
 pubDate: 2025-07-02
-category: "quotes"
+category: quotes
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Mutluluk Felsefesinin Temel İlkeleri

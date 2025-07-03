@@ -1,10 +1,9 @@
 ---
 title: "Yaşam Uzunluğu Araştırması: Sağlıklı Yaşlanmanın Bilimsel Temelleri"
-description: "Son bilimsel araştırmalar, yaşam uzunluğunu etkileyen faktörleri ve sağlıklı yaşlanma stratejilerini aydınlatıyor. Telomer biyolojisinden epigenetiğe kadar uzun yaşamın sırları."
+description: "Son bilimsel araştırmalar, yaşam uzunluğunu etkileyen faktörleri ve sağlıklı yaşlanma stratejilerini aydınlatıyor. Telomer biyolojisinden epigenetiğe kadar u..."
 pubDate: 2025-07-01
-category: "health"
+category: health
 tags: ["yaşam uzunluğu", "sağlıklı yaşlanma", "telomer", "epigenetik", "uzun ömür"]
-image: "https://images.pexels.com/photos/3059398/pexels-photo-3059398.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
 ---
 
 # Yaşam Uzunluğu Araştırması: Sağlıklı Yaşlanmanın Bilimsel Temelleri
@@ -49,7 +48,7 @@ Yeni biyobelirteçlerin ve görüntüleme tekniklerinin geliştirilmesi, yaşa b
 
 ## Sonuç
 
-Son bulgular, yaşlanma araştırmalarının karmaşık bir etkileşim ağını aydınlatmıştır. Telomer biyolojisinden epigenetiğe, bağırsak mikrobiyomundan genetiğe kadar bilim insanları yaşlanma mekanizmalarını anlama ve önleyici müdahale olanakları sunma konusunda önemli adımlar atmışlardır.
+Son bulgular, yaşlanma araştırmalarının çıkarmaşık bir etkileşim ağını aydınlatmıştır. Telomer biyolojisinden epigenetiğe, bağırsak mikrobiyomundan genetiğe kadar bilim insanları yaşlanma mekanizmalarını anlama ve önleyici müdahale olanakları sunma konusunda önemli adımlar atmışlardır.
 
 Gelecekte, yaşam tarzı müdahalelerini yenilikçi tedavi stratejileri ile birleştiren kapsamlı bir yaklaşım benimsenmelidir. Bu sayede sağlıklı yaşlanmayı destekleyen toplumsal yenilikler de öncelik kazanmalıdır.
 

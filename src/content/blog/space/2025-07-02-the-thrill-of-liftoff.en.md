@@ -4,7 +4,6 @@ description: "Take, for example, NASAs 2019-2020 astronaut candidate class. Thes
 pubDate: 2025-07-02
 category: "space"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 For astronauts, the journey begins long before they blast off into space. Months or even years of rigorous training prepare them for the physical and mental demands of space travel. This arduous process includes simulating zero-gravity environments, learning Russian (a crucial language in space exploration), and practicing emergency procedures.

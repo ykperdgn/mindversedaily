@@ -1,10 +1,9 @@
 ---
 title: "Başarı Yolunda İhtişamı Yakalayın Hayatınızı Değiştirecek Başarı Sözleri"
-description: "Başarı, hepimizin ulaşmak istediği bir noktadır. Ancak, bu noktaya ulaşmak için neler yapmamız gerektiğini bilmemiz gerekir. İşte, hayatınızı değiştirecek başarı sözleri! Bu sözler, sizin için ilha..."
+description: "Başarı, hepimizin ulaşmak istediği bir noktadır. Ancak, bu noktaya ulaşmak için neler yapmamız gerektiğini bilmemiz gerekir. İşte, hayatınızı değiştirecek ba..."
 pubDate: 2025-07-02
-category: "quotes"
+category: quotes
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Başarı, herkesin ulaşmak istediği bir noktadır. Ancak, bu noktaya ulaşmak için neler yapmamız gerektiğini bilmemiz gerekir. İşte, hayatınızı değiştirecek başarı sözleri! Bu sözler, sizin için ilham kaynağı olacak ve başarı yolunda ilerlemenizi sağlayacak.

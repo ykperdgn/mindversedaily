@@ -1,10 +1,9 @@
 ---
 title: "Antik Dünyanın Sırları Gizemli Uygarlıkların İzinde"
-description: "Antik dünyadaki uygarlıkların bıraktığı gizemli izler, insanlığın merakını hep cezbeder. Mısır, Yunan, Roma, Çin ve Maya uygarlıkları gibi tarihi medeniyetler, bizlere bugün dahi çözemediğimiz sırl..."
+description: "Antik dünyadaki uygarlıkların bıraktığı gizemli izler, insanlığın merakını hep cezbeder. Mısır, Yunan, Roma, Çin ve Maya uygarlıkları gibi tarihi medeniyetle..."
 pubDate: 2025-07-02
-category: "history"
+category: history
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Antik Dünyanın Sırları: Gizemli Uygarlıkların İzinde

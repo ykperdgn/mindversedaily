@@ -2,9 +2,8 @@
 title: "Kozmikçıkların Gizemi"
 description: "Laser Interferometer Gravitational-Wave Observatory (LIGO)"
 pubDate: 2025-07-01
-category: "space"
+category: space
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Kozmos, bir uçsuz bucaksız gizem ve harika oluşturuyor, bilim insanlarını ve hayranları birlikte hayran bırakıyor. Işık ve ölüm yıldızların doğuşundan, karanlık madde kosmosun derinliklerinde yayıldığına kadar, kosmosun çeşitli olayları ve süreçlerinin our understanding of the universe'u şekillendirmeye devam ediyor.

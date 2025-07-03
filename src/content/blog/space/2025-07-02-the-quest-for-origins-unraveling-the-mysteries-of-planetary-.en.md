@@ -4,7 +4,6 @@ description: "Discover cutting-edge research and insights from MindVerse Daily i
 pubDate: 2025-07-02
 category: "space"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Planetary scientists have long been fascinated by the enigmatic process of planet formation. Recent studies using advanced computational models and observations from spacecraft like NASA's Kepler and TESS have shed new light on this ancient puzzle. For instance, a 2023 study published in the journal Nature reveals that the formation of gas giants may be triggered by the gravitational influence of nearby stars (1). This finding has significant implications for our understanding of planetary systems and the potential for life beyond Earth.

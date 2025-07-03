@@ -4,7 +4,6 @@ description: "Reimagining Legacy Studies for the Digital Age"
 pubDate: 2025-07-02
 category: "history"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 As historians, we have long been fascinated by the stories of our ancestors and the legacies they left behind. But what if we could not only uncover these stories but also analyze them using cutting-edge methods and tools? This is the promise of legacy studies, a rapidly emerging field that combines historical research with data-driven approaches to understand the lasting impact of individuals, events, and cultures.

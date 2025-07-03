@@ -4,7 +4,6 @@ description: "Zihinsel Sağlık Anatomisi"
 pubDate: 2025-07-02
 category: health
 tags: []
-image: /assets/blog-placeholder-1.svg
 ---
 
 Çağdaş yaşamın kompleksiteleri içerisinde, zihinsel sağlık merkezde yer almıştır. İstatistikler açık: her yıl küresel olarak dört kişiden biri zihinsel bozukluk yaşayacaktır (DSÖ, 2023). Ancak, bu artan farkındalığa rağmen, zihinsel sağlığın inceliklerini anlamak ve ele almak için hâlâ mücadele ediyoruz. Artık farkındalıktan somut eyleme geçme zamanı geldi.
@@ -13,7 +12,7 @@ image: /assets/blog-placeholder-1.svg
 
 Zihinsel sağlığın kavramını gerçekten kavrayabilmek için, önce onun çok yönlü doğasını kabul etmemiz gerekir. Halkın inandığı aksine, zihinsel sağlık sadece bireysel deneyimler veya koşullar tarafından tanımlanmaz. Aksine, kültürel normlar, ekonomik koşullar ve çevresel baskılar gibi toplumsal faktörlerle derinlemesine ilişkili hale gelir (Kessler et al., 2024).
 
-"Zihinsel yük" kavramını düşünün - özellikle kadınlar tarafından taşınan, ev içi sorumlulukları ve duyguları yönetme görünmez yükü (Budge et al., 2023). Bu fenomen, zihinsel sağlığımızı şekillendirmede toplumsal beklentilerin oynadığı rolü kabul etmenin önemini vurgular.
+Zihinsel yük" kavramını düşünün - özellikle kadınlar tarafından taşınan, ev içi sorumlulukları ve duyguları yönetme görünmez yükü (Budge et al., 2023). Bu fenomen, zihinsel sağlığımızı şekillendirmede toplumsal beklentilerin oynadığı rolü kabul etmenin önemini vurgular.
 
 Zihinsel sağlık farkındalığı, genellikle zihinsel hastalık etrafındaki stigma azaltmaya odaklanılır. Bununla birlikte, bu yaklaşım korku ve utanç kültürünü oluşturabilir (Link & Phelan, 2025). Bunun yerine, gerçek anlamda bağlantıları ve desteklemek için açıklık oluşturmak amacıyla kırılganlığı teşvik etmemiz gerekir.
 

@@ -4,7 +4,6 @@ description: "The detection of gravitational waves by LIGO and VIRGO collaborati
 pubDate: 2025-07-02
 category: "space"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 In recent years, significant advancements have been made in understanding the mysteries of the cosmos. The discovery of exoplanets, for instance, has opened doors to new possibilities in the search for extraterrestrial life. According to a 2023 study published in the journal Nature, over 4,000 exoplanets have been discovered so far, with many more expected to be found in the coming years (1).

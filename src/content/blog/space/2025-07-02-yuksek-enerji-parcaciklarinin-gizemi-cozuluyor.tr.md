@@ -4,7 +4,6 @@ description: "MindVerse Daily'de uzay kategorisinde son araştırma ve keşifler
 pubDate: 2025-07-02
 category: space
 tags: []
-image: /assets/blog-placeholder-1.svg
 ---
 
 Kozmik Radyasyon: Uzayda İnsan Kaşifliğine Bağlı Bir Bağlantı
@@ -19,7 +18,7 @@ Kozmik radyasyon, uzayda insan kaşifliğine önemli bir engel oluşturur. Yüks
 
 Uluslararası Uzay İstasyonu (IUİ), kozmik radyasyonun etkilerini azaltmak için bir test alanı olarak hizmet etmiştir. IUİ deneylerinden elde edilen veriler, bilim insanlarının, uzay araçlarını ve habitatlarını bu yüksek enerji parçacıklarından korumak için stratejiler geliştirmelerine olanak sağlamıştır (3). Bu bulgular, Ay, Mars ve ötesine yönelik gelecek görevler için önemli sonuçlar doğurmaktadır.
 
-## **Potansiyeli Açığa Çıkarma: Uygulamalar ve Fırsatlar**
+## **Potansiyeli Açığa Çıçıkarma: Uygulamalar ve Fırsatlar**
 
 Kozmik radyasyon, sadece bilimsel ilgi değil, aynı zamanda pratik uygulamalar için de fırsatlar sunar. Örneğin:
 

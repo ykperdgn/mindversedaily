@@ -4,7 +4,6 @@ description: "Türkçe açıklama: MindVerse Daily'de quotes kategorisinde en so
 pubDate: 2025-07-02
 category: quotes
 tags: []
-image: /assets/blog-placeholder-1.svg
 ---
 
 Liderlikteki Bilgelik: Etkili Liderliğin Sırrı
@@ -61,9 +60,9 @@ Unutmayın, liderlik bilgelikliği, değişmeyen bir özellik değildir - öz ya
 
 2. Duygusal zeka, liderlerin kendi duygularını ve başkalarının duygularını tanımasını ve düzenlemesini sağlar.
 
-3. Anlatım, bağlantı kurmak, karmaşık fikirler iletme ve eylem ilham etmek için güçlü bir araçtır.
+3. Anlatım, bağlantı kurmak, çıkarmaşık fikirler iletme ve eylem ilham etmek için güçlü bir araçtır.
 
-4. Alçakgönüllülük, bilge liderler için vazgeçilmezdir, dinleme, hatalardan öğrenme, başkalarını öne çıkarma ve çeşitli perspektiflerin değerini tanır.
+4. Alçakgönüllülük, bilge liderler için vazgeçilmezdir, dinleme, hatalardan öğrenme, başkalarını öne çıçıkarma ve çeşitli perspektiflerin değerini tanır.
 
 **Kaynaklar:**
 

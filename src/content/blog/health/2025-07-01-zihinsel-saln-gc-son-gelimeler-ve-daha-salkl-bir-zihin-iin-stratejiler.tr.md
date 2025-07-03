@@ -1,10 +1,9 @@
 ---
 title: "Zihinsel Sağlığın Gücü: Son Gelişmeler ve Daha Sağlıklı bir Zihin için Stratejiler"
-description: "Zihinsel sağlık artık bir tabu konusu değildir ve son yıllarda yapılan bilimsel araştırmalar, zihinsel sağlığımızı öncelikli hale getirmezin önemini ortaya koymuştur. Sosyal medya kullanımının özsaygımıza etkisinden, mindfulness ve meditasyonun faydalarına kadar, bu makale, zihinsel sağlığın en son gelişmelerini keşfeder ve zihin sağlığımızı geliştirmek için pratik stratejiler sunar."
+description: "Zihinsel sağlık artık bir tabu konusu değildir ve son yıllarda yapılan bilimsel araştırmalar, zihinsel sağlığımızı öncelikli hale getirmezin önemini ortaya k..."
 pubDate: 2025-07-01
-category: "health"
+category: health
 tags: []
-image: "https://images.pexels.com/photos/32736878/pexels-photo-32736878.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
 ---
 
 # Zihinsel Sağlığın Gücü: Son Gelişmeler ve Daha Sağlıklı Bir Zihin İçin Stratejiler
@@ -25,7 +24,7 @@ Peki, şükran pratiğini günlük rutinimize nasıl entegre edebiliriz? Bir str
 
 Uyku, zihinsel sağlığın başka bir stratejisi olarak ortaya çıkmıştır. Sleep dergisinde yayınlanan bir çalışmaya göre, uyku bozuklukları, anksiyete ve depresyonun yaygın bir semptomudur ve uyku kalitesini iyileştirmek, zihinsel sağlığımızda önemli iyileşmelere neden olmaktadır. Bu, uyku düzenleme ve beyin chứcksiyonunu geliştirmeye yardımcı olmasından kaynaklanmaktadır.
 
-Peki, uyku kalitesini nasıl iyileştirebiliriz? Bir strateji, uyku düzenimizi kurmaktır, 7-9 saatlik uyku hedeflemektedir. Diğer bir yaklaşım, yatmadan önce rahatlatıcı bir rutini oluşturmaktır, örneğin kitap okumak veya sıcak bir banyo yapmak.
+Peki, uyku kalitesini nasıl iyileştirebiliriz? Bir strateji, uyku düzenimizi kurmaktır, 7-9 sğtlik uyku hedeflemektedir. Diğer bir yaklaşım, yatmadan önce rahatlatıcı bir rutini oluşturmaktır, örneğin kitap okumak veya sıcak bir banyo yapmak.
 
 Son olarak, son yıllarda yapılan araştırmalar, zihinsel sağlığın başka bir stratejisi olarak, kendini şefkat pratiğini vurgulamıştır. Self and Identity dergisinde yayınlanan bir çalışmaya göre, kendini şefkat pratiği yapan bireyler, zihinsel sağlığında önemli iyileşmeler yaşamaktadır. Bu, kendini şefkat pratiğinin kendini eleştirme duygularını azaltmaya ve kendine karşı daha şefkatli bir tavır geliştirmeye yardımcı olmasından kaynaklanmaktadır.
 

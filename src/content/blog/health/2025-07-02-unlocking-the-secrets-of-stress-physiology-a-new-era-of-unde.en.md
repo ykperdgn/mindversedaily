@@ -4,7 +4,6 @@ description: "The Stress Paradox From Enemy to Ally"
 pubDate: 2025-07-02
 category: "health"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 **The Stress Paradox: From Enemy to Ally**

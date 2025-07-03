@@ -4,7 +4,6 @@ description: "Section 1 The Rise of the Minoans"
 pubDate: 2025-07-02
 category: "history"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 In recent years, archaeologists and historians have made groundbreaking discoveries that shed new light on some of history's most enigmatic lost civilizations. From the Minoans to the Mayans, these ancient cultures continue to captivate our imagination and inspire us to explore the depths of human achievement.

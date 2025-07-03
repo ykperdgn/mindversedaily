@@ -4,7 +4,6 @@ description: "Discover cutting-edge research and insights from MindVerse Daily i
 pubDate: 2025-07-02
 category: "space"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 According to a 2023 study published in the Journal of Spacecraft and Rockets, there are now over 36,000 pieces of space junk orbiting the Earth, with the majority being small particles and fragments. This staggering number has increased by an astonishing 10% annually since 2010, making it one of the fastest-growing environmental concerns in space exploration.

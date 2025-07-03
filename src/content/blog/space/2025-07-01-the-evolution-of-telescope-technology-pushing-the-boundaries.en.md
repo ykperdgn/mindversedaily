@@ -4,7 +4,6 @@ description: "The Early Years Refracting Telescopes"
 pubDate: 2025-07-01
 category: "space"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 The first telescopes were invented by Hans Lippershey, a Dutch spectacle maker, in 1608. These refracting telescopes used lenses to bend and focus light, allowing astronomers to study the night sky with unprecedented clarity. The invention of the telescope marked the beginning of a new era in astronomy, enabling scientists like Galileo Galilei and Johannes Kepler to make groundbreaking discoveries about the universe.

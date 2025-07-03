@@ -4,7 +4,6 @@ description: "Discover cutting-edge research and insights from MindVerse Daily i
 pubDate: 2025-07-02
 category: "quotes"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Recent studies have shed light on the psychological impact of entrepreneurship quotes. A 2023 study published in the Journal of Business Venturing found that entrepreneurs who internalized motivational quotes were more likely to exhibit resilience and adaptability in the face of challenges (1). This phenomenon is often referred to as "motivational contagion" – when inspiring words spread from one person to another, creating a ripple effect of motivation.

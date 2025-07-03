@@ -4,7 +4,6 @@ description: "Discover cutting-edge research and insights from MindVerse Daily i
 pubDate: 2025-07-02
 category: "space"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 In 2023, scientists at the Laser Interferometer Gravitational-Wave Observatory (LIGO) made a monumental discovery: gravitational waves were not just a theoretical concept, but a tangible phenomenon. These ripples in spacetime, predicted by Albert Einstein's theory of general relativity, are produced when massive objects like black holes or neutron stars collide. The detection of gravitational waves has opened up new avenues for understanding the universe, allowing us to peer into the distant past and witness cosmic events that occurred long before our time.

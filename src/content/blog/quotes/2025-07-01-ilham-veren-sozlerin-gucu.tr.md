@@ -1,10 +1,9 @@
 ---
-title: ""İlham Veren Sözlerin Gücü"
+title: "İlham Veren Sözlerin Gücü"
 description: "Türkçe: İlham veren alıntılar yüzyıllardır motivasyon ve rehberlik kaynağı olmuştur. Fakat onları..."
 pubDate: 2025-07-01
 category: quotes
 tags: []
-image: https://images.pexels.com/photos/7563656/pexels-photo-7563656.jpeg?auto=compress&cs=tinysrgb&h=650&w=940
 ---
 
 İlham Veren Sözler: Kişisel Gelişim ve Dönüşüm için Bilim Temelli Bir Araç

@@ -4,7 +4,6 @@ description: "Cognitive biases are systematic errors in thinking that can lead t
 pubDate: 2025-07-01
 category: "psychology"
 tags: []
-image: "https://images.pexels.com/photos/6932518/pexels-photo-6932518.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
 ---
 
 The human brain is a remarkable organ, capable of processing vast amounts of information and making complex decisions in a matter of seconds. However, this incredible machinery is not immune to errors. Cognitive biases, also known as thinking errors or heuristics, are systematic deviations from rational thinking that can lead to inaccurate judgments and poor decision-making. These biases are not the result of laziness, lack of intelligence, or poor education, but rather an inherent part of the brain's functioning.

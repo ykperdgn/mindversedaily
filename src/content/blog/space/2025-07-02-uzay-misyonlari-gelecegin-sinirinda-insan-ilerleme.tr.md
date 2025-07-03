@@ -1,10 +1,9 @@
 ---
 title: "Uzay Misyonları Geleceğin Sınırında İnsan İlerleme"
-description: "Uzay misyonları, insanlığın uzayı keşfetme ve yerleşme amacına ulaşmak için yürütülen çalışmalardır. Bu makalede, uzay misyonlarının tarihçesi, türleri, yararları ve gelecekteki hedefleri anlatılma..."
+description: "Uzay misyonları, insanlığın uzayı keşfetme ve yerleşme amacına ulaşmak için yürütülen çalışmalardır. Bu makalede, uzay misyonlarının tarihçesi, türleri, yara..."
 pubDate: 2025-07-02
-category: "space"
+category: space
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Uzay Misyonlarının Tarihçesi

@@ -4,7 +4,6 @@ description: "This is a major breakthrough, said Dr. Michael Meyer, NASAs chief 
 pubDate: 2025-07-01
 category: "space"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Space exploration missions have been a cornerstone of human progress for decades, pushing the boundaries of our understanding of the universe and its many mysteries. From the dawn of the Space Age to present day, space agencies around the world have sent numerous spacecraft on various missions, yielding groundbreaking discoveries that continue to shape our knowledge of the cosmos.

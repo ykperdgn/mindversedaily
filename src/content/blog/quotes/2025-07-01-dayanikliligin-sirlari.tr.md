@@ -4,7 +4,6 @@ description: "Kaliforniya Üniversitesi'nden yeni bulgular, doğaya kısa sürel
 pubDate: 2025-07-01
 category: quotes
 tags: []
-image: /assets/blog-placeholder-1.svg
 ---
 
 ## Dayanıklılık Sloganlarının Rolü
@@ -31,7 +30,7 @@ Dayanıklılık alıntılarını günlük yaşama dahil etmek, bu değerli özel
 
 Psikoloji ve mindfulness alanlarında uzman birkaç kişi, dayanıklılık alıntılarının önemine ilişkin görüşlerini paylaştı:
 
-"Dayanıklılık alıntıları, negatif düşünceleri ve duyguları yeniden çerçevelemek için güçlü bir araç olabilir. Yükseltici mesajlara maruz kalmak, hayat görüşümüzü daha olumlu hale getirmemize yardımcı olabilir." - Dr. Kelly McGonigal, Stanford Üniversitesi
+Dayanıklılık alıntıları, negatif düşünceleri ve duyguları yeniden çerçevelemek için güçlü bir araç olabilir. Yükseltici mesajlara maruz kalmak, hayat görüşümüzü daha olumlu hale getirmemize yardımcı olabilir." - Dr. Kelly McGonigal, Stanford Üniversitesi
 
 "Günlük yaşama ilham verici alıntıları dahil etmek, dayanıklılığın geliştirilmesi için basit ancak etkili bir yol olabilir. Kişisel değerleriniz ve hedeflerinizle uyumlu alıntıları seçmek önemlidir." - Dr. Marsha Linehan, Massachusetts General Hospital
 

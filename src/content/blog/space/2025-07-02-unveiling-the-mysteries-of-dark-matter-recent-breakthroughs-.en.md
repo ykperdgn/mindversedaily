@@ -4,7 +4,6 @@ description: "As we continue to unravel the mysteries of the universe, one of th
 pubDate: 2025-07-02
 category: "space"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 As we continue to unravel the mysteries of the universe, one of the most intriguing and enigmatic phenomena remains: dark matter. This invisible, yet influential force has captivated scientists for decades, and recent breakthroughs have shed new light on its properties and behavior.

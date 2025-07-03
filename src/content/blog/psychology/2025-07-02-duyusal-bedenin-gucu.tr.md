@@ -1,10 +1,9 @@
 ---
-title: ""Duyusal Bedenin Gücü"
+title: "Duyusal Bedenin Gücü"
 description: "MindVerse Daily'de psikoloji kategorisinde son araştırma ve analizleri keşfedin."
 pubDate: 2025-07-02
 category: psychology
 tags: []
-image: /assets/blog-placeholder-1.svg
 ---
 
 Son yıllarda, sensör-motor tedavileri, fiziksel hareketi duygusal işleme ile birleştirmeleri nedeniyle dikkate değer bir ilgi gördüler. Bu yaklaşım, bedenimizin zihinlerimizle derinlemesine bağlantılı olduğunu ve bedensel farkındalıktaki küçük değişikliklerin zihinsel sağlığımızda derin etkileri olabileceğini tanır.

@@ -4,7 +4,6 @@ description: "Discover cutting-edge research and insights from MindVerse Daily i
 pubDate: 2025-07-02
 category: "space"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Galaxy formation is a multidisciplinary field that draws from astronomy, astrophysics, computer simulations, and theoretical models. At its core lies the quest to comprehend how the first galaxies emerged around 13 billion years ago, during the era known as the Dark Ages of the universe. The prevailing theory suggests that these ancient galaxies were massive, with sizes rivaling those of present-day ellipticals.

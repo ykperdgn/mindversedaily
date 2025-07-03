@@ -4,7 +4,6 @@ description: "The Mysterious Nature of Black Holes"
 pubDate: 2025-07-02
 category: "space"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 As we venture into the vast expanse of space, humanity is faced with an enigmatic phenomenon that continues to fascinate and bewilder us – black holes. These cosmic monsters have long been a subject of fascination and terror, their mysteries waiting to be unraveled by scientists and enthusiasts alike.

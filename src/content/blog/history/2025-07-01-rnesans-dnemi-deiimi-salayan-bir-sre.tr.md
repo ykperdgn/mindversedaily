@@ -1,13 +1,12 @@
 ---
 title: "Rönesans Dönemi Değişimi Sağlayan Bir Süre"
-description: "14.yüzyılın sonundan 17.yüzyılın başına kadar sürecek olan Rönesans dönemi, insan tarihi açısından belirleyici bir dönemi temsil eder. Bu dönemde, sanat, bilim, felsefe ve siyaset alanlarında öneml..."
+description: "14.yüzyılın sonundan 17.yüzyılın başına kadar sürecek olan Rönesans dönemi, insan tarihi açısından belirleyici bir dönemi temsil eder. Bu dönemde, sanat, bil..."
 pubDate: 2025-07-01
-category: "history"
+category: history
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
-**Sonbilimsel bulgular:** Rönesans dönemiyle ilgili son bilimsel bulgular, bu dönemin karmaşıklığını açığa çıkararak, insan tarihi açısından belirleyici bir anda daha ince bir anlayış sunmuştur. Tarihçiler göre, Rönesans, ani ya da homojen bir olgu değildi; bunun yerine, Avrupa'daki birkaç yüzyıllık süreçte yavaşça gelişmiştir.
+**Sonbilimsel bulgular:** Rönesans dönemiyle ilgili son bilimsel bulgular, bu dönemin çıkarmaşıklığını açığa çıkararak, insan tarihi açısından belirleyici bir anda daha ince bir anlayış sunmuştur. Tarihçiler göre, Rönesans, ani ya da homojen bir olgu değildi; bunun yerine, Avrupa'daki birkaç yüzyıllık süreçte yavaşça gelişmiştir.
 
 **Klasik kültür:** Bu dönemde, klasik Yunan ve Roma kültürüne yeniden ilgi duyulmuştur. Bu kültürün sanatsal, edebî ve bilimsel uğraşlara derin bir etkisi olmuştur. Antik düşünürlerin yazıları özellikle Aristoteles'in yazıları unutulmuş ya da kaybolmuştu; ancak, bu fikirlerin tekrar ortaya çıkması, bilim adamlarının doğal dünya ve insan doğası hakkındaki anlayışlarını değiştirmiştir.
 
@@ -21,4 +20,4 @@ image: "/assets/blog-placeholder-1.svg"
 
 **Mühendislik:** Rönesans dönemi, mühendisliğin gelişmesinde de belirginleşmiştir. Büyük bina gibi St. Peter's Basilica ve Palazzo Farnese'in inşa edilmesi bu dönemin mühendislik potansiyeline tanıklık etmiştir. Leonardo da Vinci'nin girişimi, tekstil ve metallurgi gibi sanayi alanlarında yenilikçi makinelerin tasarımına yol açmıştır.
 
-**Sonuç:** Rönesans dönemi, insan tarihi açısından belirleyici bir dönemdir. Bu dönemde, sanat, bilim, felsefe ve siyaset alanlarında önemli gelişmeler olmuştur. Son bilimsel bulgular, bu dönemin karmaşıkluğunu açığa çıkararak, insan tarihi açısından belirleyici bir anda daha ince bir anlayış sunmuştur.
+**Sonuç:** Rönesans dönemi, insan tarihi açısından belirleyici bir dönemdir. Bu dönemde, sanat, bilim, felsefe ve siyaset alanlarında önemli gelişmeler olmuştur. Son bilimsel bulgular, bu dönemin çıkarmaşıkluğunu açığa çıkararak, insan tarihi açısından belirleyici bir anda daha ince bir anlayış sunmuştur.

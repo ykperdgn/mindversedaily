@@ -1,10 +1,9 @@
 ---
 title: "Karanlık Maddenin Sırlarına Yolculuk Uzaydaki Gizemli Varlığın Araştırılması"
-description: "Karanlık madde, evrenin yüzde 27sini oluşturan fakat hala bilinmeyen bir madde türüdür. Bilim insanları, bu gizemli varlığın doğasını understands anlamak için yıllardır araştırma yapmaktadır. Bu ma..."
+description: "Karanlık madde, evrenin yüzde 27sini oluşturan fakat hala bilinmeyen bir madde türüdür. Bilim insanları, bu gizemli varlığın doğasını understands anlamak içi..."
 pubDate: 2025-07-02
-category: "space"
+category: space
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Karanlık Maddenin Keşfi

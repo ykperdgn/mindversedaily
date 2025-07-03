@@ -4,7 +4,6 @@ description: "The Rise of Asteroid Mining A New Era for Space Exploration"
 pubDate: 2025-07-02
 category: "space"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 As humanity's quest for resources and survival continues, the field of asteroid studies has emerged as a vital component of our understanding of the universe. With advancements in technology and international cooperation, the study of asteroids has taken a significant leap forward, revealing new insights into these ancient remnants of the solar system.

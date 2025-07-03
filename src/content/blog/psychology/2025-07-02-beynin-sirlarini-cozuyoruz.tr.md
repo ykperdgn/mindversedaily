@@ -4,7 +4,6 @@ description: "MindVerse Daily'de psikoloji kategorisinde çığır açan araşt�
 pubDate: 2025-07-02
 category: psychology
 tags: []
-image: /assets/blog-placeholder-1.svg
 ---
 
 Son yıllarda yapılan araştırmalar, beyinlerimizin duygular, içgüdü ve rasyonel düşünme arasındaki kompleks etkileşim sonucu karar vermeye.programlandığını ortaya koydu. 2023 yılında Nature Communications dergisinde yayınlanan bir çalışmaya göre, beyinimizin ödül sistemi karar verme sürecini yönlendiriyor ve ventral striatum, ödül ve cezaların değerlendirilmesinde kritik bir rol oynuyor (1). Bu nöral aktivite, duygusal durumumuzla yakından bağlantılı, bu yüzden karar verme süreçlerimizi etkileyen duygularımızı anlamak çok önemli.

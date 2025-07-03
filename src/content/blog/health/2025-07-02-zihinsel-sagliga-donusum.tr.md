@@ -1,15 +1,14 @@
 ---
-title: ""Zihinsel Sağlığa Dönüşüm"
+title: "Zihinsel Sağlığa Dönüşüm"
 description: "Son yıllarda, zihinsel refah için git-gel çözüm olarak bilinçli meditasyon öne çıktı. İyi bir ned..."
 pubDate: 2025-07-02
 category: health
 tags: []
-image: /assets/blog-placeholder-1.svg
 ---
 
 **Mental Wellness'da Devrim Yaratan 3 Anahtar**
 
-Dr. Tamara Russell, alanındaki önde gelen uzmanlara göre, "Anahtar, yalnızca uygulamanın kendisi değil, aynı zamanda beyin kimyasını nasıl yeniden şekillendirdiğidir." Zihinfulness meditasyonu, serotonin ve dopamine gibi nörotransmitterlerin üretimini artırmaya yardımcı olur, bunlar ruh halinin düzenlenmesinde kritik bir rol oynar (2).
+Dr. Tamara Russell, alanındaki önde gelen uzmanlara göre, Anahtar, yalnızca uygulamanın kendisi değil, aynı zamanda beyin kimyasını nasıl yeniden şekillendirdiğidir." Zihinfulness meditasyonu, serotonin ve dopamine gibi nörotransmitterlerin üretimini artırmaya yardımcı olur, bunlar ruh halinin düzenlenmesinde kritik bir rol oynar (2).
 
 Çıkarım: Günlük rutininize zihinfulness meditasyonunu dahil edin, hatta sadece günde 5-10 dakika bile olsa. Headspace veya Calm gibi rehberli uygulamalarla başlayıp, bağımsız uygulamaya geçiş yapabilirsiniz.
 

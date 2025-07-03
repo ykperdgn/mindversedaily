@@ -4,7 +4,6 @@ description: "Cultural heritage is the backbone of a nations identity, comprisin
 pubDate: 2025-07-01
 category: "history"
 tags: []
-image: "https://images.pexels.com/photos/32802433/pexels-photo-32802433.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
 ---
 
 Cultural heritage is a treasure trove of historical, artistic, and cultural assets that have been accumulated over time, reflecting the values, beliefs, and traditions of a community or nation. It encompasses a wide range of tangible and intangible elements, including monuments, artifacts, literature, music, dance, and oral traditions. The preservation and promotion of cultural heritage are essential for understanding our shared history, fostering cultural diversity, and promoting social cohesion.

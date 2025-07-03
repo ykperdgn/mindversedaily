@@ -4,7 +4,6 @@ description: "MindVerse Daily'den güncel bilgiler"
 pubDate: 2025-07-02
 category: love
 tags: []
-image: /assets/blog-placeholder-1.svg
 ---
 
 Aşkın Evrensel Dili
@@ -15,7 +14,7 @@ Aşkın kültürleri, sınırları ve zamanı aşan evrensel bir dil olduğu hal
 
 Son yıllarda nörobilimdeki yeni keşifler, romantik aşkın nöral mekanizmalarına yeni bir ışık tutuyor. 2023 yılında Nature Communications dergisinde yayınlanan bir çalışmaya göre, beyinimizin ödül sistemi aşkın yoğun duyguları deneyimlediğinde aktive oluyor ve dopamin ile endorfin salgılayarak euforia hissi yaratıyor (Kosfeld et al., 2023). Bu keşif, neden aşık olduğumuzun anlaşılmasına önemli katkılar sağlayacak.
 
-Ayrıca, "kucaklama hormonu" olarak bilinen oksitosin üzerinde yapılan araştırmalar, bu nörotransmitterin sosyal bağlanma ve bağlanmaya kritik bir rol oynadığını gösteriyor. 2025 yılında Hormones and Behavior dergisinde yayınlanan bir çalışmaya göre, oksitosin seviyeleri fiziksel temas ve yakınlık sırasında artış gösteriyor ve duygusal bağlantımızı pekiştiriyor (Hsu et al., 2025).
+Ayrıca, kucaklama hormonu" olarak bilinen oksitosin üzerinde yapılan araştırmalar, bu nörotransmitterin sosyal bağlanma ve bağlanmaya kritik bir rol oynadığını gösteriyor. 2025 yılında Hormones and Behavior dergisinde yayınlanan bir çalışmaya göre, oksitosin seviyeleri fiziksel temas ve yakınlık sırasında artış gösteriyor ve duygusal bağlantımızı pekiştiriyor (Hsu et al., 2025).
 
 **Bölüm 2: Aşkın Psikolojisi**
 

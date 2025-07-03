@@ -4,7 +4,6 @@ description: "Takeaway Gene editing holds immense promise for treating genetic d
 pubDate: 2025-07-02
 category: "health"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 In recent years, gene editing has emerged as a powerful tool for treating genetic diseases. The advent of CRISPR-Cas9 technology has enabled scientists to precision-edit DNA with unprecedented accuracy. This breakthrough has far-reaching implications for the treatment of inherited disorders, such as sickle cell anemia and muscular dystrophy.

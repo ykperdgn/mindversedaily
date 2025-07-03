@@ -1,10 +1,9 @@
 ---
-title: ""Entegratif Tıp Devrimi"
+title: "Entegratif Tıp Devrimi"
 description: "MindVerse Daily'de sağlık kategorisinde son araştırma ve içgörüler keşfedin."
 pubDate: 2025-07-02
 category: health
 tags: []
-image: /assets/blog-placeholder-1.svg
 ---
 
 ## **Modern Çağda Bitkiselcilik: Botanikaller**

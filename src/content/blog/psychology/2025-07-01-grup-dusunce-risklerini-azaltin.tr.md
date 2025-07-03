@@ -1,10 +1,9 @@
 ---
-title: ""Grup Düşünce Risklerini Azaltın!"
+title: "Grup Düşünce Risklerini Azaltın!"
 description: "Grup dinamikleri, bireylerin grup ortamında birbirleriyle nasıl etkileştiğini inceleyen bir çalışmadır."
 pubDate: 2025-07-01
 category: psychology
 tags: []
-image: /assets/blog-placeholder-1.svg
 ---
 
 Grup Dinamikleri: Bireylerin Bir Grup İçinde Etkileşimi
@@ -13,9 +12,9 @@ Grup dinamikleri, bireylerin bir grup içinde birbirleriyle nasıl etkileştiği
 
 Grup dinamikleri alanının en temel kavramlarından biri, sosyal kimlik teorisi (SIT) olarak adlandırılır. Henri Tajfel ve John Turner tarafından 1970'lerde geliştirilen SIT, bireylerin kendilerini gruplarına ait oldukları için grup değerleri, normları ve hedefleriyle özdeşleştiğini ileri sürer. Bunun sonucunda, grup normlarına uymaya ve grup kimliğiyle uyumlu davranışlara yönelmeye daha fazla eğilimli oluruz.
 
-Son yıllarda yapılan araştırmalar, SIT'nin grup dinamikleri içindeki rolünü daha iyi anlamamızı sağlamıştır. Örneğin, 2020 yılında Group Processes & Intergroup Relations dergisinde yayınlanan bir çalışmaya göre, bireyler gruplarını tehdit altında veya marjinal olarak algıladıklarında, grup normlarına uymaya ve diğer grup üyelerine zarar vermeye daha fazla eğilimli olur. Bu olgu, "iç grup favoritizmi" olarak adlandırılır ve gruplararası ilişkiler için önemli sonuçları olabilir.
+Son yıllarda yapılan araştırmalar, SIT'nin grup dinamikleri içindeki rolünü daha iyi anlamamızı sağlamıştır. Örneğin, 2020 yılında Group Processes & Intergroup Relations dergisinde yayınlanan bir çalışmaya göre, bireyler gruplarını tehdit altında veya marjinal olarak algıladıklarında, grup normlarına uymaya ve diğer grup üyelerine zarar vermeye daha fazla eğilimli olur. Bu olgu, iç grup favoritizmi" olarak adlandırılır ve gruplararası ilişkiler için önemli sonuçları olabilir.
 
-Grup dinamikleri alanının başka bir kritik yönü, sosyal etkileşim kavramıdır. Bu, grup içindeki etkileşim sonucu bireylerin tutum, inanç veya davranışlarında meydana gelen değişiklikleri ifade eder. Sosyal etkileşim, ikna, uyum ve itaat gibi çeşitli biçimlerde gerçekleşebilir. Araştırma, grupların yüksek düzeyde birleşme, güven ve paylaşılan hedeflere sahip oldukları zaman sosyal etkileşime daha fazla açık olduklarını göstermiştir.
+Grup dinamikleri alanının başka bir kritik yönü, sosyal etkileşim kavramıdır. Bu, grup içindeki etkileşim sonucu bireylerin tutum, inanç veya davranışlarında meydana gelen değişiklikleri ifade eder. Sosyal etkileşim, ikna, uyum ve itğt gibi çeşitli biçimlerde gerçekleşebilir. Araştırma, grupların yüksek düzeyde birleşme, güven ve paylaşılan hedeflere sahip oldukları zaman sosyal etkileşime daha fazla açık olduklarını göstermiştir.
 
 Sosyal etkileşimin bir örneği, "grup düşünce" olgusudur. Bu, grupların yanlış varsayımlar veya ilgili bilgileri göz ardı ederek karar alma sürecinde çatışma veya uyum sağlamaya çalıştıklarında meydana gelir. Grup düşünce, 1961 yılında Küba'ya yapılan Domino Körfezi istilasında ABD hükümeti ve askeri liderlerinin kritik olmayan planlarını uygulamaya çalıştıklarında meydana geldi.
 

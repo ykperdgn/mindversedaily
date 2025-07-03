@@ -1,10 +1,9 @@
 ---
 title: "Kişisel Gelişim Sözleri Hayatınızı Değiştirecek İlham Verici Sözler"
-description: "Kişisel gelişim sözleri, bizi motive eden, ilham veren ve hayatımızı değiştiren sözlerdir. İşte bu makalede, sizi kişisel gelişim yolculuğunda destekleyecek en etkili ve ilham verici sözleri toplad..."
+description: "Kişisel gelişim sözleri, bizi motive eden, ilham veren ve hayatımızı değiştiren sözlerdir. İşte bu makalede, sizi kişisel gelişim yolculuğunda destekleyecek ..."
 pubDate: 2025-07-02
-category: "quotes"
+category: quotes
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Kişisel gelişim, hayatımızın her alanında kendimizi geliştirmeye ve iyileştirmeye çalıştığımız bir süreçtir. Bu süreçte, bizi motive eden ve ilham veren sözler çok önemlidir. Çünkü sözler, bizim düşünce yapımızı, duygularımızı ve davranışlarımızı etkileyebilir. İşte bu nedenle, kişisel gelişim sözleri, hayatımızı değiştirecek bir güçtedir.

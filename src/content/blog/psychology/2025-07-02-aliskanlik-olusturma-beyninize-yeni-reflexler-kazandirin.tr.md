@@ -1,10 +1,9 @@
 ---
 title: "Alışkanlık Oluşturma Beyninize Yeni Reflexler Kazandırın"
-description: "Alışkanlık oluşturma, günlük hayatımızda küçük değişiklikler yaparak, uzun vadede büyük sonuçlar elde etmemizi sağlar. Bu makalede, alışkanlık oluşturma sürecini, psikolojik açıdan inceleyecek ve b..."
+description: "Alışkanlık oluşturma, günlük hayatımızda küçük değişiklikler yaparak, uzun vadede büyük sonuçlar elde etmemizi sağlar. Bu makalede, alışkanlık oluşturma süre..."
 pubDate: 2025-07-02
-category: "psychology"
+category: psychology
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Alışkanlık Oluşturma: Nedir ve Nasıl Çalışır?

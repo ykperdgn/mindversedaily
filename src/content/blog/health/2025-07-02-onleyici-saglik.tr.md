@@ -4,7 +4,6 @@ description: "Son yıllarda sağlık alanında büyük bir değişim yaşandı. 
 pubDate: 2025-07-02
 category: health
 tags: []
-image: /assets/blog-placeholder-1.svg
 ---
 
 **Kronik Hastalıkların Yükselişi**: Diyabet, hipertansiyon ve obezite gibi kronik durumların küresel yaygınlığı devam etmektedir. Önleyici tıp, bu sorunları kaynağında ele almak için kritik bir çerçeve sunar.

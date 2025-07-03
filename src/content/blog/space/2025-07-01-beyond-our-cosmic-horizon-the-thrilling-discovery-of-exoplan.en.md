@@ -1,10 +1,17 @@
+---
+title: "Beyond Our Cosmic Horizon The Thrilling Discovery Of Exoplan.En"
+description: "Discover the latest research and insights in space category on MindVerse Daily."
+pubDate: 2025-07-02
+category: space
+tags: []
+---
+
 ﻿---
 title: "Beyond Our Cosmic Horizon The Thrilling Discovery of Exoplanets and What They Reveal About the Universes Secrets"
 description: "Explore the mysteries of the cosmos with cutting-edge space science discoveries, astronomical breakthroughs, and the latest research in space exploration."
 pubDate: 2025-07-01
 category: "space"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 The discovery of exoplanets has revolutionized our understanding of the universe, revealing that planets are abundant throughout the cosmos. Since the first exoplanet was detected in the 1990s, thousands of new worlds have been discovered, each one offering a unique window into the formation and evolution of planetary systems.

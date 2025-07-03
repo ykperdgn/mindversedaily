@@ -1,10 +1,9 @@
 ---
 title: "Çekim Biliminin Sırları Aşk İlişkilerindeki Rolü"
-description: "Çekim bilimi, insan davranışlarını ve ilişkilerini anlamamıza yardımcı olan bir alan olarak karşımıza çıkıyor. Bu makalede, çekim biliminin aşk ilişkilerindeki rolünü inceleyeceğiz. Çekim biliminin..."
+description: "Çekim bilimi, insan davranışlarını ve ilişkilerini anlamamıza yardımcı olan bir alan olarak karşımıza çıkıyor. Bu makalede, çekim biliminin aşk ilişkilerinde..."
 pubDate: 2025-07-02
-category: "love"
+category: love
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Çekim Biliminin Temelleri

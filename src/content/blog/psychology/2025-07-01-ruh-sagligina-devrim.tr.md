@@ -1,10 +1,9 @@
 ---
-title: ""Ruh Sağlığına Devrim"
+title: "Ruh Sağlığına Devrim"
 description: "Psikoloji alanı sürekli gelişim halinde, her yıl yeni terapi teknikleri ve bilimsel bulgular orta..."
 pubDate: 2025-07-01
 category: psychology
 tags: []
-image: https://images.pexels.com/photos/6933309/pexels-photo-6933309.jpeg?auto=compress&cs=tinysrgb&h=650&w=940
 ---
 
 Psikoloji alanı, teknoloji, nörobilim ve insan zihni anlayışımızdaki gelişmelere bağlı olarak önemli bir dönüşüm geçiriyor. Son yıllarda, yenilikçi terapi teknikleri ve mental sağlık tedavi yaklaşımlarımızı yeniden şekillendiren öncü araştırmalar ortaya çıktı. Sanal gerçeklik maruz bırakma tedavisi ve psikodeliklerin kullanımı gibi en son gelişmeler, mental sağlık sorunlarıyla mücadele etme şeklimizi devrimleştiriyor.
@@ -19,7 +18,7 @@ Araştırma, psikodeliklerin derin duygusal içgörü sağlamaya ve bakış aç�
 
 Bilişsel-davranışsal terapi (BDT) de önemli gelişmeler gösteriyor. BDT, mental sağlık tedavisinde uzun süredir köşe taşı olan, olumsuz düşünce kalıplarını tanımlama ve meydan okuma üzerine odaklanıyor. Ancak yakın zamanda yapılan gelişmeler, daha nüanslı ve etkili yaklaşımların geliştirilmesine yol açtı.
 
-En umut verici gelişmelerden biri, değerlere dayalı eylem üzerinde odaklanan bir BDT şekli olan kabul ve taahhüt terapisinin (ATT) kullanımında görülüyor. ATT, hastaların olumsuz düşünce veya duygularına karşı mücadele etmek yerine, temel değerlerine uygun yaşamaya odaklanmalarını teşvik ediyor.
+En umut verici gelişmelerden biri, değerlere dayalı eylem üzerinde odaklanan bir BDT şekli olan kabul ve tğhhüt terapisinin (ATT) kullanımında görülüyor. ATT, hastaların olumsuz düşünce veya duygularına karşı mücadele etmek yerine, temel değerlerine uygun yaşamaya odaklanmalarını teşvik ediyor.
 
 Çalışmalar, ATT'nin depresyon, anksiyete ve travma gibi bir dizi mental sağlık koşulunda yüksek derecede etkili olabileceğini gösterdi. Bu yaklaşım, duygusal dayanıklılığı teşvik ediyor ve hastaların zorlu durumlar karşısında bile değerlerine göre harekete geçmelerine yardımcı oluyor.
 

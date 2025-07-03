@@ -1,14 +1,10 @@
 ---
-title: "Çocuk Zihninin Sırlarını Çözün!
-
-Unlock the Secrets of a Child's Mind!)
-
-This title is short, catchy, and conveys the idea of exploring and understanding the complexities of a child's mind, which is the main theme of the original English title."
+title: "Çocuk Zihninin Sırlarını Çözün!"
 description: "Erken Çocukluk Çağının Keşfedilmemiş Bölgesi - Bölüm 1"
 pubDate: 2025-07-02
 category: psychology
 tags: []
-image: /assets/blog-placeholder-1.svg
+---
 ---
 
 **Erken Çocukluk Döneminin Keşfedilmemiş Bölgesi**

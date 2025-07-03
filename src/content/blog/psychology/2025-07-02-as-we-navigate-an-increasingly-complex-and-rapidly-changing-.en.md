@@ -4,7 +4,6 @@ description: "Reframing Learning From Information Overload to Personalized Insig
 pubDate: 2025-07-02
 category: "psychology"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 **Reframing Learning: From Information Overload to Personalized Insights**

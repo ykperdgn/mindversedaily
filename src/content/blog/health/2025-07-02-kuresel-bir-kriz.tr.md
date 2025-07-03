@@ -4,7 +4,6 @@ description: "Türkçe: Fonksiyonel tıp, kronik hastalıkların temel nedenleri
 pubDate: 2025-07-02
 category: health
 tags: []
-image: /assets/blog-placeholder-1.svg
 ---
 
 Kronik Hastalıklar Artık Gelişmiş Ülkelerin Sorunu Değil
@@ -31,7 +30,7 @@ Bu temel faktörleri ele alarak, işlevsel tıp uygulayıcıları John'un belirt
 
 ### İşlevsel Tıpın Bilimsel Dayanağı
 
-Kanıtlar biriktiriliyor: işlevsel tıp, epigenetik, mikrobiyomik ve sistem biyolojisi alanlarındaki en son araştırmalara dayanmaktadır. 2024 yılında yayınlanan "Kronik Hastalıkta Epigenetik Faktörler" (Klinik Epigenetik Dergisi) çalışması, çevre faktörlerinin gen ekspresyonunu şekillendirmede oynadığı rolü vurguluyor.
+Kanıtlar biriktiriliyor: işlevsel tıp, epigenetik, mikrobiyomik ve sistem biyolojisi alanlarındaki en son araştırmalara dayanmaktadır. 2024 yılında yayınlanan Kronik Hastalıkta Epigenetik Faktörler" (Klinik Epigenetik Dergisi) çalışması, çevre faktörlerinin gen ekspresyonunu şekillendirmede oynadığı rolü vurguluyor.
 
 2025 yılında yayınlanan bir başka kırıcı çalışmada, araştırmacılar, **bağırsak mikrobiyomu modülasyonu**nu, irritabl bağırsak sendromu (IBS) belirtilerini önemli ölçüde iyileştirdiğini buldu. Bu, işlevsel tıbbın bağırsak sağlığına ve gut-brain ekseni arasındaki çift yönlü iletişime odaklanmasının önemini vurguluyor.
 

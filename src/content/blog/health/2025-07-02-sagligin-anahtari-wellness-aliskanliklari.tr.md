@@ -1,10 +1,9 @@
 ---
 title: "Sağlığın Anahtarı Wellness Alışkanlıkları"
-description: "Wellness, vücudumuzun fiziksel, zihinsel ve duygusal sağlığını korumak için gerekli olan sağlıklı alışkanlıklar bütününü ifade eder. Sağlıklı yaşamak için, wellness alışkanlıklarını benimsemek ve b..."
+description: "Wellness, vücudumuzun fiziksel, zihinsel ve duygusal sağlığını korumak için gerekli olan sağlıklı alışkanlıklar bütününü ifade eder. Sağlıklı yaşamak için, w..."
 pubDate: 2025-07-02
-category: "health"
+category: health
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Wellness Alışkanlıklarının Önemi

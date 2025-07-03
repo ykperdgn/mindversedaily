@@ -1,10 +1,9 @@
 ---
 title: "Kozmik Radyasyon Uzaydaki Gizli Tehlike"
-description: "Kozmik radyasyon, uzayda bulunan yüksek enerjili parçacıkların oluşturduğu bir tür radyasyondur. Bu radyasyon, Dünyanın manyetik alanını geçer ve canlılara zarar verebilir. Uzay araştırmaları ve uz..."
+description: "Kozmik radyasyon, uzayda bulunan yüksek enerjili parçacıkların oluşturduğu bir tür radyasyondur. Bu radyasyon, Dünyanın manyetik alanını geçer ve canlılara z..."
 pubDate: 2025-07-02
-category: "space"
+category: space
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Kozmik Radyasyon Nedir?

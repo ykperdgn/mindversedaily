@@ -4,7 +4,6 @@ description: "Communication Healthy relationships rely on open, honest, and resp
 pubDate: 2025-07-02
 category: "love"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Relationship health is not just about avoiding conflicts or having a good time together. It's a complex interplay of factors that can either strengthen or weaken the bond between two people. According to a 2023 study published in the Journal of Social and Personal Relationships, relationship health is characterized by three key components: communication, intimacy, and emotional intelligence (Klohnen & Van Valen, 2023).

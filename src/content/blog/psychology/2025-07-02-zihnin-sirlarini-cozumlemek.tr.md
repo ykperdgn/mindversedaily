@@ -4,7 +4,6 @@ description: "Türkçe: Erken Çocukluk Döneminin Keşfedilmemiş Bölgesi (Sec
 pubDate: 2025-07-02
 category: psychology
 tags: []
-image: /assets/blog-placeholder-1.svg
 ---
 
 **Erken Çocukluk Çağının Keşfedilmemiş Bölgesi**

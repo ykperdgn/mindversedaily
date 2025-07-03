@@ -4,10 +4,9 @@ description: "Rönesansın Kökleri"
 pubDate: 2025-07-01
 category: history
 tags: []
-image: /assets/blog-placeholder-1.svg
 ---
 
-Rönesans, 14. yüzyılda özellikle İtalya'da şekil almaya başladı. Avrupa'yı kırıp geçiren Kara Ölüm'den sonra sosyal ve ekonomik çalkantılar yaşanırken, kentler gibi Floransa ve Venedik hızlı bir büyüme yaşadı. Ticaret erbabı ve zanaatkârlar yeni fırsatlar ararken, kentleşme sanatçıların yenilikçi eserler yaratmalarına izin veren zengin aileler ve zanaatkar loncalarından gelen himayenin yeşerdiği bir ortam yarattı.
+Rönesans, 14. yüzyılda özellikle İtalya'da şekil almaya başladı. Avrupa'yı kırıp geçiren Kara Ölüm'den sonra sosyal ve ekonomik çalkantılar yaşanırken, kentler gibi Floransa ve Venedik hızlı bir büyüme yaşadı. Ticaret erbabı ve zanğtkârlar yeni fırsatlar ararken, kentleşme sanatçıların yenilikçi eserler yaratmalarına izin veren zengin aileler ve zanğtkar loncalarından gelen himayenin yeşerdiği bir ortam yarattı.
 
 ## Sanatçı Yenilikleri
 
@@ -23,15 +22,15 @@ Rönesans ayrıca önemli bilimsel keşiflerin yaşandığı bir dönemdi. Galil
 
 Rönesans dönemi, kültürel, bilimsel ve sanatsal dönüşümün derin bir dönemiydi. Bu dönemde, tarihin en ikonik figürlerinden bazıları, Leonardo da Vinci'den Galileo Galilei'ye kadar çıktı. Son araştırmalar, bu dönem hakkında yeni bilgiler ortaya çıkardı, ticaret, ticaret ve entelektüel araştırma yoluyla yaratıcı yeniliği nasıl tetiklediğini vurguladı.
 
-Bu insanlık tarihinin dönüm noktasına bakarken, Rönesans'ın bugünkü ilerlemelerinin çoğuna temel oluşturduğunu açıkça görüyoruz. Sanat, edebiyat, bilim ve teknoloji alanlarında, Rönesans döneminde insanlığın potansiyeli sınırsız görünüyordu. Modern yaşamın karmaşıklıklarını gezinirken, bu olağanüstü dönemin derslerini unutmamalı ve büyüklük için çabalaya devam etmeliyiz.
+Bu insanlık tarihinin dönüm noktasına bakarken, Rönesans'ın bugünkü ilerlemelerinin çoğuna temel oluşturduğunu açıkça görüyoruz. Sanat, edebiyat, bilim ve teknoloji alanlarında, Rönesans döneminde insanlığın potansiyeli sınırsız görünüyordu. Modern yaşamın çıkarmaşıklıklarını gezinirken, bu olağanüstü dönemin derslerini unutmamalı ve büyüklük için çabalaya devam etmeliyiz.
 
 Kaynaklar:
 
-1. Guido Alfani, "Orta Çağ İtalya'sında Ticaretin Kentleşme Üzerindeki Etkisi" (Ekonomik Tarih Dergisi, 2016)
+1. Guido Alfani, Orta Çağ İtalya'sında Ticaretin Kentleşme Üzerindeki Etkisi" (Ekonomik Tarih Dergisi, 2016)
 
 2. Luca Borghi ve diğerleri, "Leonardo'nun Vitruvius Adamı Üzerine Yeni Bir Bakış: Sanat Eserini Ç Studyo etmek için X-Işını CT Taraması Kullanımı" (PLOS BİR, 2015)
 
-3. Robert B. Barnes, "Matbaa ve Protestan Reformasyonu" (Disiplinlerarası Tarih Dergisi, 2004)
+3. Robert B. Barnes, "Matbğ ve Protestan Reformasyonu" (Disiplinlerarası Tarih Dergisi, 2004)
 
 4. Peter S. Brown, "Galileo'nun Gökyüzü Gözlemleri: Bilim Düşüncesinin Gelişimi Üzerine bir Çalışma" (Tarih Araştırmaları, 2012)
 

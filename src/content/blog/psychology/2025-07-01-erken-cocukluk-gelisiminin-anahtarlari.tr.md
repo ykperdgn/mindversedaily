@@ -4,7 +4,6 @@ description: "Çocukluğun ilk yılları, hızla büyüme, keşif ve keşfin yo�
 pubDate: 2025-07-01
 category: psychology
 tags: []
-image: https://images.pexels.com/photos/28599721/pexels-photo-28599721.png?auto=compress&cs=tinysrgb&h=650&w=940
 ---
 
 Çocukluğun İlk Yılları: Gelişimin ve Dönüşümün Zamanı

@@ -1,10 +1,9 @@
 ---
 title: "Uzay Misyonları Geleceğin Sınırında İnsanlık"
-description: "Uzay misyonları, insanlığın uzayı keşfetme ve araştırma çabalarının bir sonucu olarak, son yıllarda giderek önem kazanıyor. Bu makalede, uzay misyonlarının tarihçesi, farklı ülkelerin uzay ajanslar..."
+description: "Uzay misyonları, insanlığın uzayı keşfetme ve araştırma çabalarının bir sonucu olarak, son yıllarda giderek önem kazanıyor. Bu makalede, uzay misyonlarının t..."
 pubDate: 2025-07-02
-category: "space"
+category: space
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Uzay Misyonlarının Tarihçesi

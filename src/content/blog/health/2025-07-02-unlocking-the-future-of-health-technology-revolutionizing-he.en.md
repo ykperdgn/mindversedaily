@@ -4,7 +4,6 @@ description: "The Rise of Artificial Intelligence in Healthcare"
 pubDate: 2025-07-02
 category: "health"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 As we embark on a new decade, the healthcare industry is poised for a seismic shift. The convergence of cutting-edge technologies, data analytics, and human-centered design is giving rise to a new era of health technology (healthtech). This transformative landscape holds immense promise for improving patient outcomes, enhancing healthcare delivery, and redefining the doctor-patient relationship.

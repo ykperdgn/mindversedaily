@@ -4,7 +4,6 @@ description: "As we navigate the complexities of modern relationships, its essen
 pubDate: 2025-07-02
 category: "love"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 As we navigate the complexities of modern relationships, it's essential to stay abreast of the latest developments in love science. In this article, we'll delve into the cutting-edge research and expert insights that will help you better understand the intricacies of romantic love.

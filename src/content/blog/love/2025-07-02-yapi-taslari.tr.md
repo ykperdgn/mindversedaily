@@ -4,12 +4,11 @@ description: "Türkçe: Sağlıklı ilişkiler açık, samimi ve saygılı ileti
 pubDate: 2025-07-02
 category: love
 tags: []
-image: /assets/blog-placeholder-1.svg
 ---
 
 İlişki Sağlığı: İki Kişinin Arasındaki Bağın Güçlendirilmesi veya Zayıf Düşmesi
 
-İlişki sağlığı, çatışmalarından kaçınma ya da birlikte iyi zaman geçirme değildir. İki kişi arasındaki bağın güçlendirilmesi ya da zayıflamasına neden olan karmaşık faktörlerin bir araya gelmesidir. 2023 yılında Sosyal ve Kişisel İlişkiler Dergisi'nde yayınlanan bir çalışmaya göre, ilişki sağlığı üç ana bileşenden oluşur: iletişim, içtenlik ve duygusal zeka (Klohnen ve Van Valen, 2023).
+İlişki sağlığı, çatışmalarından kaçınma ya da birlikte iyi zaman geçirme değildir. İki kişi arasındaki bağın güçlendirilmesi ya da zayıflamasına neden olan çıkarmaşık faktörlerin bir araya gelmesidir. 2023 yılında Sosyal ve Kişisel İlişkiler Dergisi'nde yayınlanan bir çalışmaya göre, ilişki sağlığı üç ana bileşenden oluşur: iletişim, içtenlik ve duygusal zeka (Klohnen ve Van Valen, 2023).
 
 * **İletişim**: Sağlıklı ilişkiler, açık, samimi ve saygılı iletişimine dayanır. Bu, birbirinizin sözünü dinlemek, yargılanma ya da reddedilme korkusu olmadan düşüncelerini ve duygularını ifade etmek ve değişen koşullara uyum sağlamak anlamına gelir.
 
@@ -45,7 +44,7 @@ RHQ'yı kullanarak ilişkinizi boyutlarına göre yerleştirebilir ve güçlü y
 
 5. **İçtenliği önceliğin**: Fiziksel ve duygusal yakınlaşmaya zaman ayırın, ister tarih gecesi, romantik kaçışlar ya da sadece el ele tutmak olsun.
 
-Modern yaşamın karmaşıklıklarına rağmen, ilişki sağlığını öncelik vermek gerekir. Bunu yaparak, sevdiğiniz insanlarla bağlarınızı güçlendirir ve bir aitlik, mutluluk ve doygunluk duygusu geliştirirsiniz. Unutmayın, sağlıklı bir ilişki, bir destinasyon değil, bir yolculuktur. Bugün kendiniz ve bağlantılarınız için yatırım yapın.
+Modern yaşamın çıkarmaşıklıklarına rağmen, ilişki sağlığını öncelik vermek gerekir. Bunu yaparak, sevdiğiniz insanlarla bağlarınızı güçlendirir ve bir aitlik, mutluluk ve doygunluk duygusu geliştirirsiniz. Unutmayın, sağlıklı bir ilişki, bir destinasyon değil, bir yolculuktur. Bugün kendiniz ve bağlantılarınız için yatırım yapın.
 
 **Özet:**
 

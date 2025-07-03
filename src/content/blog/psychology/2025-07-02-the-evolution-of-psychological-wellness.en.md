@@ -4,7 +4,6 @@ description: "Discover cutting-edge research and insights from MindVerse Daily i
 pubDate: 2025-07-02
 category: "psychology"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 In recent years, there has been a significant shift in our understanding of psychological wellness. Gone are the days when mental health was seen as a purely individual issue; today, we recognize that psychological wellness is intricately linked to our physical and social environments. This paradigmatic shift has led to a renewed focus on prevention rather than intervention, with experts emphasizing the importance of early intervention and proactive measures to support overall well-being.

@@ -4,7 +4,6 @@ description: "At its core, attachment theory proposes three primary attachment s
 pubDate: 2025-07-01
 category: "love"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Attachment styles refer to the patterns of interaction we develop in our early relationships with caregivers, which can have a profound impact on how we approach love, intimacy, and connection throughout our lives. In this article, we'll delve into the concept of attachment styles, exploring recent scientific findings and expert insights that shed light on what shapes our romantic relationships.

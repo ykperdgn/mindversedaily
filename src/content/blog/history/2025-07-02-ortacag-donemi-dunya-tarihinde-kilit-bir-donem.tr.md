@@ -1,10 +1,9 @@
 ---
 title: "Ortaçağ Dönemi Dünya Tarihinde Kilit Bir Dönem"
-description: "Ortaçağ dönemi, yaklaşık 500-1500 yılları arasında uzanan ve Avrupa tarihinde kilit bir dönem olarak bilinen bir zaman dilimidir. Bu dönemde, Avrupada feodalizm, Kilisenin iktidarı ve krallıkların ..."
+description: "Ortaçağ dönemi, yaklaşık 500-1500 yılları arasında uzanan ve Avrupa tarihinde kilit bir dönem olarak bilinen bir zaman dilimidir. Bu dönemde, Avrupada feodal..."
 pubDate: 2025-07-02
-category: "history"
+category: history
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Ortaçağ Dönemi: Giriş

@@ -2,9 +2,8 @@
 title: "Teknolojik Tarih İnsan İnovasyonu ve Gelişimi"
 description: "İnsanlık teknolojik tarihini, yenilik, deneyime dayanan bir iplik olarak düşünmeliyiz. Taş aletlerin en eski çeşitlerinden son smartphonesa kadar, in..."
 pubDate: 2025-07-01
-category: "history"
+category: history
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 İnsanlık teknolojik tarihini, yenilik, deneyime dayanan bir iplik olarak düşünmeliyiz. Taş aletlerin en eski çeşitlerinden son smartphones'a kadar, insan yaratıcılığı hep mümkün olanın sınırlarını zorlamıştır. Yeni bir teknoloji çağı öncesi, bu yolculuğumuzun sonuçlarını gözden geçirmemiz gerekir.

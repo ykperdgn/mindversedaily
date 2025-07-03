@@ -2,9 +2,8 @@
 title: "Kültürel Miras"
 description: "Kültürel miras, geçmiş kuşaklardan aktarılan sanatçı, tarihi ve kültürel varlıkların tümüne verilen isimdir. Bunlar, bizim paylaştığımız insan deneyim..."
 pubDate: 2025-07-01
-category: "history"
+category: history
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Kültürel miras, geçmiş kuşaklardan aktarılan sanatçı, tarihi ve kültürel varlıkların tümüne verilen isimdir. Bunlar, bizim paylaştığımız insan deneyimi bağlantısına olan somut bir bağlantı sağlarlar. Geçmişi yansımaları, bugün kimlik ve topluluk bilincini oluşturur.

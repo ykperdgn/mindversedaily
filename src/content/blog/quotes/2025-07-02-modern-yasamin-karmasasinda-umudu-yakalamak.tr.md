@@ -4,7 +4,6 @@ description: "Türkçe açıklama: İlham Veren Öykülerin Bilim Arkası"
 pubDate: 2025-07-02
 category: quotes
 tags: []
-image: /assets/blog-placeholder-1.svg
 ---
 
 **İlham Veren Hikayelerin Bilimi**
@@ -17,7 +16,7 @@ Hikayecilik, mesajları iletme, deneyimleri paylaşma ve başkalarını ilham et
 
 2. **Stephen Hawking**: 21 yaşında motor nöron hastalığı teşhisi konmasına rağmen, Stephen Hawking 50 yıl daha yaşayarak olasılıkları aşmıştır. Onun ilham veren hikayesi, potansiyelimizin kısıtlarımız tarafından belirlenmediğini hatırlatmaktadır.
 
-**İlham Veren Hikayelerin Potansiyelini Açığa Çıkarma**
+**İlham Veren Hikayelerin Potansiyelini Açığa Çıçıkarma**
 
 1. **İlham Veren İçeriği Araştır**: Sosyal medyada ilham veren insanları takip edin, olağanüstü bireyler hakkında kitaplar ve makaleler okuyun ya da inanılmaz hikayelerle ilgili belgeseller izleyin.
 

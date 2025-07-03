@@ -4,7 +4,6 @@ description: "Discover cutting-edge research and insights from MindVerse Daily i
 pubDate: 2025-07-02
 category: "space"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Cosmic radiation refers to high-energy particles that originate from outside our solar system. These particles, primarily composed of protons, helium nuclei, and heavier ions, are accelerated by powerful astrophysical processes, such as supernovae explosions or active galactic nuclei. The energy released in these events propels charged particles across vast distances, allowing them to interact with the interstellar medium and our planet.

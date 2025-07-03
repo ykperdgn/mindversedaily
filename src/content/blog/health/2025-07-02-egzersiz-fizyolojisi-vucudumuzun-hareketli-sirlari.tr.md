@@ -1,10 +1,9 @@
 ---
 title: "Egzersiz Fizyolojisi Vücudumuzun Hareketli Sırları"
-description: "Egzersiz fizyolojisi, vücudumuzun fiziksel aktiviteleri sırasında nasıl çalıştığını ve bizi sağlıklı kılan mekanizmaları inceler. Bu yazıda, egzersiz fizyolojisi temel kavramlarını, faydalarını ve ..."
+description: "Egzersiz fizyolojisi, vücudumuzun fiziksel aktiviteleri sırasında nasıl çalıştığını ve bizi sağlıklı kılan mekanizmaları inceler. Bu yazıda, egzersiz fizyolo..."
 pubDate: 2025-07-02
-category: "health"
+category: health
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Vücudumuz,Complex bir mekanizmadır ve hareket etmesini sağlayan birçok faktör vardır. Egzersiz fizyolojisi, bu faktörlerin nasıl çalıştığını ve birbirleriyle nasıl etkileştiğini inceler. Bu bilim dalı, vücudumuzun fiziksel aktiviteleri sırasında hangi fizyolojik değişiklikler meydana geldiğini ve bu değişikliklerin bizi nasıl etkilediğini araştırır.

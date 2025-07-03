@@ -1,15 +1,14 @@
 ---
-title: ""Modern Yaşamın Fırtınasında Bedenimizin Çığlığı"
+title: "Modern Yaşamın Fırtınasında Bedenimizin Çığlığı"
 description: "Fizyoloji ve Biyokimyanın Kesişimi"
 pubDate: 2025-07-02
 category: health
 tags: []
-image: /assets/blog-placeholder-1.svg
 ---
 
 **Fizyoloji ve Biyokimya Kesişimi**
 
-Egzersiz biyokimyası, fiziksel aktivite, biyokimyasal süreçler ve insan fizyolojisi arasındaki karmaşık etkileşimleri inceleyen bilim dalıdır. Bu disiplinler arası alan, son yıllarda egzersizin biyolojik yapımız üzerindeki derin etkisini ortaya çıkarmaya başlayan araştırmacılar sayesinde önemli bir ivme kazanmıştır. Egzersizin tetiklediği biyokimyasal yolları inceleyerek, atletik performansın optimize edilmesini, kronik hastalıkların önlenmesini ve genel yaşam kalitesinin artırılmasını sağlayabiliriz.
+Egzersiz biyokimyası, fiziksel aktivite, biyokimyasal süreçler ve insan fizyolojisi arasındaki çıkarmaşık etkileşimleri inceleyen bilim dalıdır. Bu disiplinler arası alan, son yıllarda egzersizin biyolojik yapımız üzerindeki derin etkisini ortaya çıçıkarmaya başlayan araştırmacılar sayesinde önemli bir ivme kazanmıştır. Egzersizin tetiklediği biyokimyasal yolları inceleyerek, atletik performansın optimize edilmesini, kronik hastalıkların önlenmesini ve genel yaşam kalitesinin artırılmasını sağlayabiliriz.
 
 **Biyokimyasal Güç Merkezi: Egzersizle Tetiklenen Hormonal Yanıtlar**
 

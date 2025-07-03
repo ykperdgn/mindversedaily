@@ -4,12 +4,11 @@ description: "İlişkilerimizde aşkı anlamak ve ifade etmek için aşk dilleri
 pubDate: 2025-07-01
 category: love
 tags: []
-image: https://images.pexels.com/photos/9762615/pexels-photo-9762615.jpeg?auto=compress&cs=tinysrgb&h=650&w=940
 ---
 
 Aşkın Dilleri Kavramı: Bir Kültür Olarak Yaygınlaşan Bir Fikir
 
-Gary Chapman'ın 1992 yılında yayınlanan "The 5 Love Languages: The Secret to Love That Lasts" kitabında ilk kez tanıttığı aşkın dilleri kavramı, kültürel bir olguya dönüşmüş durumda. Her bir kişinin aşkın birincil ve ikincil dili olduğunu ve bu dilin aşkın nasıl alındığını ve ifade edildiğini belirlediğini iddia eden bu fikir, dünya çapında milyonlarca kişi tarafından benimsenmiş durumda. Ancak, herhangi bir popüler fikir gibi, aşkın dilleri kavramının arkasında yatan bilimi, özellikle aşk ve ilişkiler alanında incelemek çok önemlidir.
+Gary Chapman'ın 1992 yılında yayınlanan The 5 Love Languages: The Secret to Love That Lasts" kitabında ilk kez tanıttığı aşkın dilleri kavramı, kültürel bir olguya dönüşmüş durumda. Her bir kişinin aşkın birincil ve ikincil dili olduğunu ve bu dilin aşkın nasıl alındığını ve ifade edildiğini belirlediğini iddia eden bu fikir, dünya çapında milyonlarca kişi tarafından benimsenmiş durumda. Ancak, herhangi bir popüler fikir gibi, aşkın dilleri kavramının arkasında yatan bilimi, özellikle aşk ve ilişkiler alanında incelemek çok önemlidir.
 
 Aşkın Dilleri: Bir Hatırlatma
 

@@ -4,10 +4,8 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev --host 0.0.0.0 --port 4321",
-    "build": "astro build",
-    "preview": "astro preview",
+    "build": "astro build",    "preview": "astro preview",
     "astro": "astro",
-    "fetch-gnews": "ts-node scripts/fetch-gnews-content.ts",
     "auto:content": "python scripts/master_automation.py content",
     "auto:deploy": "python scripts/master_automation.py deploy",
     "auto:health": "python scripts/master_automation.py health",

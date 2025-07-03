@@ -1,10 +1,9 @@
 ---
 title: "Dünyanın Unutulmuş Mirasları Kayıp Medeniyetler"
-description: "Tarih sayfalarında yer alan fakat unutulmuş olan medeniyetler, insanlığın kültür ve uygarlık geçmişine ışık tutarlar. Bu makalede, dünyamızın farklı bölgelerinde yer alan kayıp medeniyetlerin hikay..."
+description: "Tarih sayfalarında yer alan fakat unutulmuş olan medeniyetler, insanlığın kültür ve uygarlık geçmişine ışık tutarlar. Bu makalede, dünyamızın farklı bölgeler..."
 pubDate: 2025-07-02
-category: "history"
+category: history
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Kayıp medeniyetler, insanlığın uygarlık geçmişine ışık tutan fakat unutulmuş olan toplumlardır. Tarih sayfalarında yer alan bu medeniyetler, bugünkü kültürümüzün temellerini oluşturmuşlardır. Dünyamızın farklı bölgelerinde yer alan kayıp medeniyetlerin hikayelerini keşfedeceğiz.

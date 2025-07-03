@@ -4,7 +4,6 @@ description: "The Science Behind Mindfulness Quotes"
 pubDate: 2025-07-02
 category: "quotes"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 **The Science Behind Mindfulness Quotes**

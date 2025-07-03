@@ -4,7 +4,6 @@ description: "Section 1 The Science Behind Mindfulness Psychology"
 pubDate: 2025-07-02
 category: "psychology"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 **Section 1: The Science Behind Mindfulness Psychology**

@@ -1,10 +1,9 @@
 ---
-title: ""Kültürlerarası Bağlantı Zamanı"
+title: "Kültürlerarası Bağlantı Zamanı"
 description: "Kültürel Değişimlerin Evrimi"
 pubDate: 2025-07-02
 category: history
 tags: []
-image: /assets/blog-placeholder-1.svg
 ---
 
 **Kültürel Değişimlerin Evrimi**

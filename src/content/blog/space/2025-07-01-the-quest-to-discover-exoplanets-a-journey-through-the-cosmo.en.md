@@ -4,7 +4,6 @@ description: "The Early Days A Brief History"
 pubDate: 2025-07-01
 category: "space"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 The concept of exoplanets dates back to the 19th century when astronomers like Percival Lowell and Thomas Wright hypothesized about the possibility of other worlds orbiting stars. However, it wasn't until the 1990s that the first exoplanet was discovered using radial velocity methods – a technique that measures the star's wobble caused by an orbiting planet.

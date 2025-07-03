@@ -1,10 +1,17 @@
+---
+title: "Swiping Right On Sanity Navigating Modern Datings Crazy Rule.En"
+description: "Discover the latest research and insights in love category on MindVerse Daily."
+pubDate: 2025-07-02
+category: love
+tags: []
+---
+
 ﻿---
 title: "Swiping Right on Sanity Navigating Modern Datings Crazy Rules and Finding Love in the Digital Age"
 description: "Explore the science of love, relationships, and human connection with expert insights into romance, dating psychology, and building meaningful bonds."
 pubDate: 2025-07-01
 category: "love"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 In today's fast-paced, digitally-driven world, modern dating has become a complex and multifaceted phenomenon that is constantly evolving. With the rise of online dating, social media, and shifting societal norms, the way we approach relationships has undergone significant transformations in recent years.

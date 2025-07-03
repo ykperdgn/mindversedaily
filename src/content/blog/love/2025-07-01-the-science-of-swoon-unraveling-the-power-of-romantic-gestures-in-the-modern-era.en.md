@@ -4,7 +4,6 @@ description: "Romantic gestures have been a cornerstone of expressing love and a
 pubDate: 2025-07-01
 category: "love"
 tags: []
-image: "https://images.pexels.com/photos/18417067/pexels-photo-18417067.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
 ---
 
 Romantic gestures have been a staple of love stories, fairy tales, and Valentine's Day commercials for as long as we can remember. Who can resist the charms of a surprise getaway, a heartfelt love letter, or a candlelit dinner for two? But beyond the swoon-inducing moments, what makes romantic gestures so effective in capturing our hearts and strengthening our relationships?

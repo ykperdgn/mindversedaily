@@ -4,7 +4,6 @@ description: "In recent years, theres been a seismic shift in the healthcare lan
 pubDate: 2025-07-02
 category: "health"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 1. **Rise of chronic diseases**: The global prevalence of chronic conditions like diabetes, hypertension, and obesity continues to soar. Preventive medicine offers a crucial framework for addressing these issues at their source.

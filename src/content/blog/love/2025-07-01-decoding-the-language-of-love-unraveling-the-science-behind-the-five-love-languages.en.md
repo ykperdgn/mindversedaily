@@ -4,7 +4,6 @@ description: "The concept of love languages has taken the world by storm, helpin
 pubDate: 2025-07-01
 category: "love"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 The concept of love languages has become a ubiquitous topic in modern relationships. Coined by Dr. Gary Chapman in his 1992 book "The Five Love Languages: The Secret to Love That Lasts," the idea suggests that people express and receive love in different ways, which he categorizes into five primary languages: Words of Affirmation, Quality Time, Receiving Gifts, Acts of Service, and Physical Touch. While the concept has been widely accepted and applied, recent scientific findings have added a new layer of understanding to this phenomenon.

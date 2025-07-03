@@ -4,7 +4,6 @@ description: "For centuries, the notion of love has been shrouded in mystique, w
 pubDate: 2025-07-02
 category: "love"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 For centuries, the notion of love has been shrouded in mystique, with romantic notions of passionate attachment and eternal devotion dominating our understanding. However, recent findings from neuroscience and evolutionary biology are rewriting the script on what we thought we knew about love.

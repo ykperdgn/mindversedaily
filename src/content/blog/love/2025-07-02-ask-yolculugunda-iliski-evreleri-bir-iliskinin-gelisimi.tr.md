@@ -1,10 +1,9 @@
 ---
 title: "Aşk Yolculuğunda İlişki Evreleri Bir İlişkinin Gelişimi"
-description: "İlişkiler, insan yaşamında en önemli konulardan biri olarak görülür. Birbirlerini seven çiftler, ilişkilerini geliştirmek ve sağlamlaştırmak için çeşitli evrelerden geçerler. İlişki evreleri, bir i..."
+description: "İlişkiler, insan yaşamında en önemli konulardan biri olarak görülür. Birbirlerini seven çiftler, ilişkilerini geliştirmek ve sağlamlaştırmak için çeşitli evr..."
 pubDate: 2025-07-02
-category: "love"
+category: love
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 İlişkilerin Gelişimi

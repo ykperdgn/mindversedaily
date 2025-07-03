@@ -4,7 +4,6 @@ description: "Türkçe: MindVerse Daily'de uzay kategorisinde yenilikçi araşt�
 pubDate: 2025-07-02
 category: space
 tags: []
-image: /assets/blog-placeholder-1.svg
 ---
 
 Kozmos'a Daha Derin Girerken: Uzay Gözlemlerinde Son Gelişmeler ve Gelecek

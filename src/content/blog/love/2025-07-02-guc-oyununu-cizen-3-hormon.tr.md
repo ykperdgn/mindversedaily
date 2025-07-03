@@ -4,14 +4,13 @@ description: "Romantik ilişkilerdeki duygusal tepkilerimizi yönlendiren üç h
 pubDate: 2025-07-02
 category: love
 tags: []
-image: /assets/blog-placeholder-1.svg
 ---
 
 Romantik İlişkilerimizde Duygusal Tepkilerimizi Yöneten Üçlü Hormon:
 
-1. **Oksitosin**: "Kucaklama hormonu" olarak adlandırılan oksitosin, fiziksel temas, yakınlaşma ve sosyal bağlanma sırasında salınır. Güven, bağlanma ve sevgi feelingsini güçlendirir.
+1. **Oksitosin**: Kucaklama hormonu" olarak adlandırılan oksitosin, fiziksel temas, yakınlaşma ve sosyal bağlanma sırasında salınır. Güven, bağlanma ve sevgi feelingsini güçlendirir.
 
-2. **Vazopressin**: "Monogami hormonu" olarak bilinen vazopressin, çift-bağlama davranışlarını düzenler, uzun vadeli taahhüt ve bağlılığa teşvik eder.
+2. **Vazopressin**: "Monogami hormonu" olarak bilinen vazopressin, çift-bağlama davranışlarını düzenler, uzun vadeli tğhhüt ve bağlılığa teşvik eder.
 
 3. **Dopamin**: Bu nörotransmitter, ödül işleme, zevk ve motivasyonu sağlar. Romantik etkileşimlerde salınır, heyecan ve beklenti duygusunu yaratır.
 
@@ -57,4 +56,4 @@ Son araştırmalar, ilişkilerimizde hormonların inceliklerini açıklığa kav
 
 3. **Yeni deneyimleri benimsemek**: Birlikte yeni deneyimler edinerek, dopamin salınımını artırmaya çalışarak ilişkinin heyecanını sürdürür.
 
-Sonuç olarak, ilişkilerimizde hormonların anlaşılması, romantik ilişkilerimizin karmaşıklıklarını yönetmemize yardımcı olur. Oksitosin, vazopressin ve dopamin'in birlikte çalışması, partnerlerimizle daha derin bağlanmaya çalışmamıza yardımcı olur. Bireysel farkların ilişkilerimizde oynadığı kritik rolü unutmayın.
+Sonuç olarak, ilişkilerimizde hormonların anlaşılması, romantik ilişkilerimizin çıkarmaşıklıklarını yönetmemize yardımcı olur. Oksitosin, vazopressin ve dopamin'in birlikte çalışması, partnerlerimizle daha derin bağlanmaya çalışmamıza yardımcı olur. Bireysel farkların ilişkilerimizde oynadığı kritik rolü unutmayın.

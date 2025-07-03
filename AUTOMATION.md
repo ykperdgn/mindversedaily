@@ -16,7 +16,6 @@ ollama pull llama3.1:8b
 
 ### 3. API Anahtarları (.env dosyası)
 ```
-GNEWS_API_KEY=your_key
 GROQ_API_KEY=your_key
 PIXABAY_API_KEY=your_key
 PEXELS_API_KEY=your_key

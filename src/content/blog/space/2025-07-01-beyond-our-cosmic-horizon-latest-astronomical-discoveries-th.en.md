@@ -1,10 +1,17 @@
+---
+title: "Beyond Our Cosmic Horizon Latest Astronomical Discoveries Th.En"
+description: "Discover the latest research and insights in space category on MindVerse Daily."
+pubDate: 2025-07-02
+category: space
+tags: []
+---
+
 ﻿---
 title: "Beyond Our Cosmic Horizon Latest Astronomical Discoveries that are Rewriting the Universes Story"
 description: "Explore the mysteries of the cosmos with cutting-edge space science discoveries, astronomical breakthroughs, and the latest research in space exploration."
 pubDate: 2025-07-01
 category: "space"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 The universe has been a source of fascination for humans since ancient times, and in recent years, astronomical discoveries have continued to captivate scientists and the general public alike. From the detection of exoplanets to the exploration of distant galaxies, new findings are constantly expanding our understanding of the cosmos.

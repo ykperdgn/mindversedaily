@@ -1,13 +1,12 @@
 ---
-title: "Sessiz Devrim Modern Çağda Ruh Sağlığını Açığa Çıkarmak"
-description: "Ruh sağlığı, bugün dünyanın hızlı tempolu dünyasında genel sağlıkımın kritik bir yönü olarak ortaya çıkmıştır. Bu makale, en son araştırmaları keşfediyor, ruh sağlığının fiziksel sağlığa etkisi, te..."
+title: "Sessiz Devrim Modern Çağda Ruh Sağlığını Açığa Çıçıçıkarmak"
+description: "Ruh sağlığı, bugün dünyanın hızlı tempolu dünyasında genel sağlıkımın kritik bir yönü olarak ortaya çıkmıştır. Bu makale, en son araştırmaları keşfediyor, ru..."
 pubDate: 2025-07-01
-category: "health"
+category: health
 tags: []
-image: "https://images.pexels.com/photos/4101143/pexels-photo-4101143.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
 ---
 
-# Sessiz Devrim: Modern Çağda Ruh Sağlığını Açığa Çıkarmak
+# Sessiz Devrim: Modern Çağda Ruh Sağlığını Açığa Çıçıkarmak
 
 Ruh sağlığı, uzun yıllar boyunca sağlık bakımının büyük planında göz ardı edilmiş, fiziksel sağlık endişelerinin gölgesine bırakılmıştır.Ancak son yıllarda, ruh sağlığının genel sağlıkımın kritik bir yönü olarak sessiz bir devrim yaşanmıştır. Dünyanın modern yaşamın zorluklarıyla mücadele ettiği bugün, ruh sağlığının önemi abartılamaz. Bu makale, en son bilimsel bulguları keşfediyor, ruh sağlığının fiziksel sağlığa etkisi, teknolojinin ruh sağlığını teşvik etmedeki rolü ve ruh sağlığını geliştirmek için yenilikçi yaklaşımlar keşfediyor.
 
