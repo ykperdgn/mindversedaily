@@ -1,0 +1,35 @@
+---
+import { getCollection } from 'astro:content';
+
+const allPosts = await getCollection('blog');
+console.log('=== CONTENT DEBUG ===');
+console.log('Total posts:', allPosts.length);
+
+// Show first 10 post IDs
+console.log('Sample post IDs:');
+allPosts.slice(0, 10).forEach((post, i) => {
+  console.log(`${i+1}. ID: "${post.id}" | Title: "${post.data.title}"`);
+});
+
+// Count by extension patterns
+const patterns = {
+  'ends with .en.md': allPosts.filter(p => p.id.endsWith('.en.md')).length,
+  'ends with .tr.md': allPosts.filter(p => p.id.endsWith('.tr.md')).length,
+  'contains .en.': allPosts.filter(p => p.id.includes('.en.')).length,
+  'contains .tr.': allPosts.filter(p => p.id.includes('.tr.')).length,
+  'contains en': allPosts.filter(p => p.id.includes('en')).length,
+  'contains tr': allPosts.filter(p => p.id.includes('tr')).length
+};
+
+console.log('Pattern analysis:', patterns);
+---
+
+<html>
+<body>
+<h1>Debug Content Structure</h1>
+<p>Check browser console for detailed output</p>
+<script>
+  console.log('Client-side debug page loaded');
+</script>
+</body>
+</html>

@@ -484,47 +484,73 @@ const homeKeywords = `${SITE_KEYWORDS}, blog, güncel haberler, bilimsel araşt�
             <span class="mind-gradient">Mind</span><span class="verse-gradient">Verse</span>
             <span class="daily-subtitle">Daily</span>
           </h1>
-          <p class="mv-desc">Bilim, sağlık, psikoloji ve güncel konulardan en kaliteli içerikler</p>        </section>
+          <p class="mv-desc">Bilim, sağlık, psikoloji ve güncel konulardan en kaliteli içerikler</p>        </section>        <!-- Arama Widget -->
+        <SearchWidget lang="tr" />        <!-- En Son Yazılar -->
+        <section class="mv-grid-section">
+          <h2 class="mv-section-title">En Son Yazılar</h2>
+          <ul class="mv-grid">
+            {posts.slice(0, 9).map((post) => (
+              <li class="mv-card">
+                <a
+                  href={`/blog/${post.slug}/`}
+                  data-post-title={post.data.title}
+                  data-post-description={post.data.description}
+                  data-post-category={post.data.category}
+                  data-post-date={post.data.pubDate.toISOString()}
+                >
+                  <article>
+                    <h3 class="mv-card-title">{post.data.title}</h3>
+                    <p class="mv-card-summary">{post.data.description}</p>
+                    <div class="mv-card-meta">
+                      <span class="category-badge">{categoryNamesTR[post.data.category] || post.data.category}</span>
+                      <time datetime={post.data.pubDate.toISOString()}>
+                        {post.data.pubDate.toLocaleDateString('tr-TR', {
+                          year: 'numeric',
+                          month: 'long',
+                          day: 'numeric',
+                        })}
+                      </time>
+                    </div>
+                  </article>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
 
-        <!-- Arama Widget -->
-        <SearchWidget lang="tr" />
+        <!-- Kategoriler -->
+        <section class="categories-grid" style="margin: 3rem 0 2rem 0;">
+          <h2 style="text-align: center; margin-bottom: 1.5rem; color: #1e293b;">Kategoriler</h2>
+          <div class="mv-categories-home" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; max-width: 800px; margin: 0 auto;">
+            {categories.map(cat => (
+              <a
+                href={`/${cat}`}
+                class="category-card"
+                style="
+                  display: block;
+                  padding: 1.5rem;
+                  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+                  border-radius: 1rem;
+                  text-decoration: none;
+                  color: #1e293b;
+                  transition: transform 0.2s ease;
+                  text-align: center;
+                  border: 2px solid #e2e8f0;
+                "
+                onmouseover="this.style.transform='translateY(-2px)'; this.style.borderColor='#3b82f6';"
+                onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='#e2e8f0';"
+              >
+                <div style="font-size: 2rem; margin-bottom: 0.5rem;">{categoryIcons[cat]}</div>
+                <div style="font-weight: 600; margin-bottom: 0.5rem;">{categoryNamesTR[cat]}</div>
+                <div style="font-size: 0.9rem; color: #64748b;">Yazıları keşfet</div>
+              </a>
+            ))}
+          </div>
+        </section>
 
         <!-- Astroloji Widget -->
         <AstrologyWidget />
 
-        <section class="mv-grid-section">
-          <h2 class="mv-section-title">Son Yazılar</h2>
-          <ul class="mv-grid">
-            {posts.slice(0, 8).map(post => {
-              // Türkçe post için doğru URL oluştur
-              const slug = post.slug || post.id;
-              const postUrl = `/${slug}`;
-              return (              <li class="mv-card">
-                <a
-                  href={postUrl}
-                  data-post-title={post.data.title}
-                  data-post-description={post.data.description || post.body.slice(0, 120) + '...'}
-                  data-post-category={post.data.category || 'Genel'}
-                  data-post-date={post.data.pubDate.toISOString()}
-                >
-                  {post.data.image
-                    ? <img src={post.data.image} alt={post.data.title} class="mv-card-img" loading="lazy" onError={(e) => { e.target.src = '/assets/blog-placeholder-1.svg'; }} />
-                    : <img src="/assets/blog-placeholder-1.svg" alt="placeholder" class="mv-card-img" loading="lazy" />
-                  }
-                  <div class="mv-card-content">
-                    <div class="mv-card-title">{post.data.title}</div>
-                    <div class="mv-card-summary">{post.data.description || post.body.slice(0, 120) + '...'}</div>
-                    <div class="mv-card-meta">
-                      <span class="category-badge">{categoryNamesTR[post.data.category] || post.data.category || 'Genel'}</span>
-                      <span>{post.data.pubDate.toLocaleDateString()}</span>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              );
-            })}
-          </ul>
-        </section>
       </main>
       <Footer />
     </div>

@@ -399,10 +399,15 @@ const categoryKeywords = {
 							<p>Bu kategoride henüz yazı bulunmuyor.</p>
 							<a href="/">Ana sayfaya dön</a>
 						</div>
-					) : (						<ul class="mv-grid">
-							{filteredPosts.map(post => (
+					) : (						<ul class="mv-grid">							{filteredPosts.map(post => (
 								<li class="mv-card">
-									<a href={post.id ? `/${post.id}` : '#'}>
+									<a
+										href={post.id ? `/${post.id}` : '#'}
+										data-post-title={post.data.title}
+										data-post-description={post.data.description || ''}
+										data-post-category={post.data.category || ''}
+										data-post-date={post.data.pubDate.toISOString()}
+									>
 										{post.data.image ? (
 											<img
 												src={post.data.image}

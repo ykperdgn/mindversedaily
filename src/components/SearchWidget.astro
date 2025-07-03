@@ -7,7 +7,7 @@ export interface Props {
 
 const {
   lang = 'tr',
-  placeholder = lang === 'tr' ? 'Makalelerde ara...' : 'Search articles...',
+  placeholder = lang === 'tr' ? 'Makale başlıklarında ara...' : 'Search article titles...',
   buttonText = lang === 'tr' ? 'Ara' : 'Search'
 } = Astro.props;
 ---
@@ -266,33 +266,102 @@ const {
     let allPosts = [];
     let searchTimeout;
 
-    // Fetch all posts when component loads
-    async function loadPosts() {
-      try {
-        const response = await fetch(`/api/posts.json?lang=${lang}`);
-        if (response.ok) {
-          allPosts = await response.json();
-        }
-      } catch (error) {
-        console.error('Error loading posts:', error);
-        // Fallback: scrape posts from the current page
-        fallbackLoadPosts();
-      }
-    }    // Fallback method to get posts from current page
-    function fallbackLoadPosts() {
+    // Category translations for Turkish
+    const categoryTranslations = {
+      'health': 'Sağlık',
+      'psychology': 'Psikoloji',
+      'history': 'Tarih',
+      'space': 'Uzay',
+      'quotes': 'Alıntılar',
+      'love': 'Aşk',
+      'business': 'İş Dünyası',
+      'science': 'Bilim',
+      'world': 'Dünya'
+    };
+
+    // Load posts from current page content
+    function loadPosts() {
+      console.log(`Loading posts for language: ${lang}`);
+
+      // Get all post cards with data attributes from current page
       const postCards = document.querySelectorAll('[data-post-title]');
-      allPosts = Array.from(postCards).map(card => {
+      console.log('Found post cards on current page:', postCards.length);
+
+      // Convert post cards to searchable format
+      const currentPagePosts = Array.from(postCards).map(card => {
+        const category = card.getAttribute('data-post-category') || '';
+        const categoryDisplayName = lang === 'tr' ? (categoryTranslations[category] || category) : category;
+        const title = card.getAttribute('data-post-title') || '';
+        const description = card.getAttribute('data-post-description') || '';
+
         return {
-          title: card.getAttribute('data-post-title') || '',
-          description: card.getAttribute('data-post-description') || '',
-          category: card.getAttribute('data-post-category') || '',
+          title: title,
+          description: description,
+          category: category,
+          categoryDisplayName: categoryDisplayName,
           date: card.getAttribute('data-post-date') || '',
           url: card.href || '#'
         };
       }).filter(post => post.title);
+
+      allPosts = currentPagePosts;
+      console.log(`Loaded ${allPosts.length} posts for ${lang} from current page`);
+
+      // If we're on homepage, also load from category pages
+      if (window.location.pathname === '/' || window.location.pathname === '/en') {
+        loadFromCategoryPages();
+      }
     }
 
-    // Search function
+    // Load additional posts from category pages
+    async function loadFromCategoryPages() {
+      const categories = ['health', 'psychology', 'history', 'space', 'quotes', 'love', 'business'];
+      const baseUrl = lang === 'tr' ? '/' : '/en/';
+
+      console.log(`Loading from category pages for ${lang}`);
+
+      for (const category of categories) {
+        try {
+          const categoryUrl = `${baseUrl}${category}`;
+          const response = await fetch(categoryUrl);
+
+          if (response.ok) {
+            const html = await response.text();
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, 'text/html');
+
+            // Find post cards in this category page
+            const categoryPostCards = doc.querySelectorAll('[data-post-title]');
+            console.log(`Found ${categoryPostCards.length} posts in ${category} category`);
+
+            // Add these posts to our collection
+            Array.from(categoryPostCards).forEach(card => {
+              const postCategory = card.getAttribute('data-post-category') || category;
+              const categoryDisplayName = lang === 'tr' ? (categoryTranslations[postCategory] || postCategory) : postCategory;
+              const title = card.getAttribute('data-post-title') || '';
+              const description = card.getAttribute('data-post-description') || '';
+
+              if (title && !allPosts.some(p => p.title === title)) {
+                allPosts.push({
+                  title: title,
+                  description: description,
+                  category: postCategory,
+                  categoryDisplayName: categoryDisplayName,
+                  date: card.getAttribute('data-post-date') || '',
+                  url: card.href || '#'
+                });
+              }
+            });
+          }
+        } catch (error) {
+          console.log(`Failed to load category ${category}:`, error);
+        }
+      }
+
+      console.log(`Total posts loaded for ${lang}: ${allPosts.length}`);
+    }
+
+    // Search function - Only search in titles
     function performSearch(query) {
       if (!query.trim()) {
         hideResults();
@@ -300,12 +369,18 @@ const {
       }
 
       const searchTerm = query.toLowerCase().trim();
+      console.log('Searching for:', searchTerm, 'in', allPosts.length, 'posts');
+
       const results = allPosts.filter(post => {
-        return post.title.toLowerCase().includes(searchTerm) ||
-               post.description.toLowerCase().includes(searchTerm) ||
-               post.category.toLowerCase().includes(searchTerm);
+        // Only search in post titles
+        const titleMatch = post.title.toLowerCase().includes(searchTerm);
+        if (titleMatch) {
+          console.log('Found match in title:', post.title);
+        }
+        return titleMatch;
       });
 
+      console.log(`Found ${results.length} results for "${searchTerm}"`);
       displayResults(results, query);
     }
 
@@ -320,8 +395,8 @@ const {
 
       if (results.length === 0) {
         const noResultsText = lang === 'tr'
-          ? 'Aramanızla eşleşen makale bulunamadı'
-          : 'No articles found matching your search';
+          ? 'Aramanızla eşleşen makale başlığı bulunamadı'
+          : 'No article titles found matching your search';
 
         resultsList.innerHTML = `
           <div class="no-results">
@@ -333,9 +408,9 @@ const {
         resultsList.innerHTML = results.map(post => `
           <a href="${post.url}" class="result-item">
             <div class="result-title">${highlightText(post.title, query)}</div>
-            <div class="result-description">${highlightText(post.description, query)}</div>
+            <div class="result-description">${post.description}</div>
             <div class="result-meta">
-              <span class="result-category">${post.category}</span>
+              <span class="result-category">${post.categoryDisplayName || post.category}</span>
             </div>
           </a>
         `).join('');
