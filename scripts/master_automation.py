@@ -124,10 +124,8 @@ class MasterAutomationSystem:
             return False, "Timeout"
         except Exception as e:
             self.logger.error(f"❌ {description} error: {e}")
-            return False, str(e)
-
-    def create_daily_content(self):
-        """Günlük içerik üretimi"""
+            return False, str(e)    def create_daily_content(self):
+        """Günlük içerik üretimi - Unified Generator kullanarak"""
         if self.is_running:
             self.logger.warning("⚠️ Content creation already in progress")
             return False
@@ -135,18 +133,28 @@ class MasterAutomationSystem:
         self.is_running = True
 
         try:
-            self.logger.info("🌅 Starting daily content creation")
+            self.logger.info("🌅 Starting daily content creation with Unified Generator")
 
-            # Advanced scheduler kullan
+            # Get content generation config
+            content_config = self.config.get("content_generation", {}).get("automatic", {})
+
+            if not content_config.get("enabled", True):
+                self.logger.info("📴 Automatic content generation is disabled")
+                return False
+
+            # Use unified content generator for automatic mode (English only)
+            command = f"python scripts/unified_content_generator.py --mode auto --language en --count {content_config.get('articles_per_run', 1)}"
+
             success, output = self.run_command(
-                "python scripts/advanced_scheduler.py",
-                "Daily content creation",
+                command,
+                "Daily content creation (Auto/English/Groq)",
                 timeout=1800  # 30 minutes
             )
 
             if success:
                 self.last_content_time = datetime.now()
                 self.logger.info("✅ Daily content creation completed")
+                self.logger.info(f"📊 Output: {output}")
 
                 # Auto deploy if enabled
                 if self.config["deployment"]["deploy_after_content"]:

@@ -139,6 +139,110 @@ def call_ollama(prompt: str, model: str = OLLAMA_MODEL) -> str:
         print(f"❌ Ollama API error: {e}")
         raise
 
+def parse_turkish_article_fields(article_text: str, category: str, image_fetcher=None) -> Tuple[str, str, str, str]:
+    """Parse title, description, image and content from generated Turkish article"""
+    lines = article_text.strip().splitlines()
+
+    # Remove empty lines and unwanted lines
+    clean_lines = []
+    for line in lines:
+        line = line.strip()
+        if not line:
+            continue
+        # Skip unwanted patterns
+        line_lower = line.lower()
+        if any(pattern in line_lower for pattern in [
+            "sen bir türk gazeteci", "görev:", "başla!", "konu:", "kategori:",
+            "makale yapısı", "kalite kriterleri", "zorunlu format", "uyarı:",
+            "yasak olan", "sadece türkçe", "son kontrol"
+        ]):
+            continue
+        clean_lines.append(line)
+
+    if not clean_lines:
+        return f"Yeni {category.title()} Makalesi", f"MindVerse Daily'den {category} kategorisinde güncel makale", "/assets/blog-placeholder-1.svg", "Makale içeriği yüklenemedi."
+
+    # Extract title from first line (usually after ##)
+    title = None
+    description = None
+    content_start_idx = 0
+
+    # Look for a proper title in first 3 lines
+    for i, line in enumerate(clean_lines[:3]):
+        # Remove markdown headers
+        clean_line = line.strip('#').strip()
+
+        # Skip if it's too short or too long for a title
+        if len(clean_line) < 10 or len(clean_line) > 100:
+            continue
+
+        # Skip if it looks like a section header
+        if any(header in clean_line.lower() for header in [
+            'giriş', 'sonuç', 'tavsiye', 'öneri', 'başlık', 'açıklama'
+        ]):
+            continue
+
+        # This looks like a good title
+        if not title:
+            title = clean_line
+            content_start_idx = i + 1
+            break
+
+    # If no title found, use first meaningful line
+    if not title and clean_lines:
+        title = clean_lines[0].strip('#').strip()
+        content_start_idx = 1
+
+    # Extract description from content (first paragraph after title)
+    for line in clean_lines[content_start_idx:content_start_idx+5]:
+        if len(line) > 50 and not line.startswith('#') and not line.startswith('##'):
+            description = line[:150] + "..." if len(line) > 150 else line
+            break
+
+    # Fallbacks for Turkish
+    if not title:
+        turkish_categories = {
+            "health": "Sağlık",
+            "psychology": "Psikoloji",
+            "history": "Tarih",
+            "space": "Uzay",
+            "quotes": "Alıntılar",
+            "love": "Aşk"
+        }
+        cat_turkish = turkish_categories.get(category, category.title())
+        title = f"Yeni {cat_turkish} Makalesi"
+
+    if not description:
+        turkish_categories = {
+            "health": "sağlık",
+            "psychology": "psikoloji",
+            "history": "tarih",
+            "space": "uzay",
+            "quotes": "alıntılar",
+            "love": "aşk"
+        }
+        cat_turkish = turkish_categories.get(category, category)
+        description = f"MindVerse Daily'den {cat_turkish} kategorisinde güncel araştırmalar ve uzman görüşleri"
+
+    # Clean title and description
+    title = clean_frontmatter_value(title)
+    description = clean_frontmatter_value(description)
+
+    # Get full content
+    content = "\n\n".join(clean_lines).strip()
+    if len(content) < 200:
+        content = f"# {title}\n\n{description}\n\nDetaylı makale içeriği burada yer alacak."
+
+    # Get image
+    image = "/assets/blog-placeholder-1.svg"
+    if image_fetcher:
+        try:
+            image = image_fetcher.get_relevant_image(category, title)
+        except:
+            pass
+
+    return title, description, image, content
+
 def parse_article_fields(article_text: str, category: str, image_fetcher=None) -> Tuple[str, str, str, str]:
     """Parse title, description, image and content from generated article"""
     # Clean the article text first
@@ -260,11 +364,26 @@ def parse_article_fields(article_text: str, category: str, image_fetcher=None) -
     return title, description, image, content
 
 def clean_turkish_translation(text: str) -> str:
-    """Clean up common English words that slip into Turkish translations"""
+    """ULTRA AGGRESSİVE İngilizce temizleyici - Hiç İngilizce kelime bırakmaz!"""
 
-    # Common problematic patterns
+    # ULTRA AGGRESSIVE İngilizce temizleme
     replacements = {
-        # Common English words that slip through
+        # En yaygın İngilizce kelimeler - tamamen temizle
+        r'\bhealth\b': 'sağlık',
+        r'\bscience\b': 'bilim',
+        r'\bresearch\b': 'araştırma',
+        r'\bstudies\b': 'çalışmalar',
+        r'\blifestyle\b': 'yaşam tarzı',
+        r'\bwell-being\b': 'refah',
+        r'\bprocessed\b': 'işlenmiş',
+        r'\bwhole grain\b': 'tam tahıl',
+        r'\bparticipants\b': 'katılımcılar',
+        r'\bdigestive\b': 'sindirim',
+        r'\bomega-3\s+fatty\s+acids\b': 'omega-3 yağ asitleri',
+        r'\bGI\s+health\b': 'sindirim sağlığı',
+        r'\bdigestive\s+health\s+science\b': 'sindirim sağlığı bilimi',
+
+        # İngilizce bağlaçlar ve artikeller
         r'\blike\b': 'gibi',
         r'\band\b': 've',
         r'\bthe\b': '',
@@ -275,45 +394,105 @@ def clean_turkish_translation(text: str) -> str:
         r'\bwith\b': 'ile',
         r'\bby\b': 'tarafından',
         r'\bfrom\b': 'den',
-        r'\bwell-being\b': 'refah',
-        r'\bprocessed\b': 'işlenmiş',
-        r'\bwhole grain\b': 'tam tahıl',
-        r'\blifestyle\b': 'yaşam tarzı',
-        r'\bresearch shows\b': 'araştırmalar gösteriyor',
-        r'\bstudies have found\b': 'çalışmalar buldu',
-        r'\bcompared to\b': 'ile karşılaştırıldığında',
-        r'\brecent years\b': 'son yıllarda',
-        r'\bindividuals who\b': 'kişiler',
-        r'\banother trend\b': 'başka bir eğilim',
-        r'\ba study published\b': 'yayınlanan bir çalışma',
-        r'\bJournal of\b': 'Dergisi',
 
-        # Fix common mixed language phrases
-        r'Journal of Clinical Endocrinology and Metabolism': 'Klinik Endokrinoloji ve Metabolizma Dergisi',
-        r'Journal of Nutrition': 'Beslenme Dergisi',
-        r'Journal of Women\'s Health': 'Kadın Sağlığı Dergisi',
-        r'National Sleep Foundation': 'Ulusal Uyku Vakfı',
+        # İngilizce zamir ve sıfatlar
+        r'\btheir\b': 'onların',
+        r'\bwho\b': 'olan',
+        r'\bwhen\b': 'zaman',
+        r'\bwhich\b': 'hangi',
+        r'\bthat\b': 'o',
+        r'\bthis\b': 'bu',
+        r'\bthese\b': 'bunlar',
+        r'\bthose\b': 'şunlar',
 
-        # Common sentence starters
-        r'^In recent years,': 'Son yıllarda,',
-        r'^Research shows': 'Araştırmalar gösteriyor',
-        r'^Studies have found': 'Çalışmalar bulmuştur',
+        # İngilizce cümle kalıpları - tamamen Türkçeleştir
+        r'\bresearch\s+shows\b': 'araştırmalar gösteriyor',
+        r'\bstudies\s+have\s+found\b': 'çalışmalar bulmuştur',
+        r'\bparticipants\s+who\s+consumed\b': 'katılımcıların',
+        r'\bcompared\s+to\b': 'ile karşılaştırıldığında',
+        r'\brecent\s+years\b': 'son yıllarda',
+        r'\bindividuals\s+who\b': 'kişiler',
+        r'\banother\s+trend\b': 'başka bir eğilim',
+        r'\ba\s+study\s+published\b': 'yayınlanan bir çalışma',
+        r'\bJournal\s+of\b': 'Dergisi',
+        r'\bshowed\s+significant\s+improvements\b': 'önemli iyileşmeler gösterdi',
+        r'\bimprovements\s+their\b': 'iyileştirmeler',
+
+        # Teknik terimler - Türkçeleştir
+        r'\bholistik\s+refah\b': 'bütüncül sağlık',
+        r'\bwellness\b': 'esenlik',
+        r'\bholistic\b': 'bütüncül',
+        r'\bomega-3\s+esterleri\b': 'omega-3 yağ asitleri',
+        r'\besterleri\b': 'yağ asitleri',
+
+        # Journal isimleri - Türkçeleştir
+        r'Journal\s+of\s+Clinical\s+Endocrinology\s+and\s+Metabolism': 'Klinik Endokrinoloji ve Metabolizma Dergisi',
+        r'Journal\s+of\s+Nutrition': 'Beslenme Dergisi',
+        r'Journal\s+of\s+Women\'s\s+Health': 'Kadın Sağlığı Dergisi',
+        r'National\s+Sleep\s+Foundation': 'Ulusal Uyku Vakfı',
+
+        # Cümle başları - Türkçeleştir
+        r'^In\s+recent\s+years,': 'Son yıllarda,',
+        r'^Research\s+shows': 'Araştırmalar gösteriyor',
+        r'^Studies\s+have\s+found': 'Çalışmalar bulmuştur',
         r'^Furthermore,': 'Ayrıca,',
         r'^However,': 'Ancak,',
         r'^Moreover,': 'Dahası,',
+        r'^Additionally,': 'Ek olarak,',
+        r'^In\s+addition,': 'Bunun yanında,',
 
-        # Clean up double spaces and weird punctuation
-        r'\s+': ' ',
-        r'\s+,': ',',
-        r'\s+\.': '.',
+        # Karma İngilizce-Türkçe ifadeler temizle
+        r'\ba\s+diet\s+rich\s+fiber\b': 'lif açısından zengin bir diyet',
+        r'\brich\s+in\b': 'açısından zengin',
+        r'\bhigh\s+in\b': 'yüksek miktarda',
+        r'\blow\s+in\b': 'düşük miktarda',
+
+        # Son temizlik - kalan İngilizce kelimeler için
+        r'\benergy\b': 'enerji',
+        r'\bprotein\b': 'protein',
+        r'\bvitamin\b': 'vitamin',
+        r'\bmineral\b': 'mineral',
+        r'\bfiber\b': 'lif',
+        r'\bcarbohydrate\b': 'karbonhidrat',
+        r'\bfat\b': 'yağ',
+        r'\bsugar\b': 'şeker',
+        r'\bsalt\b': 'tuz',
+        r'\bwater\b': 'su',
+        r'\bexercise\b': 'egzersiz',
+        r'\bfitness\b': 'fitness',
+        r'\btraining\b': 'antrenman',
+        r'\bworkout\b': 'egzersiz',
+        r'\bstress\b': 'stres',
+        r'\bsleep\b': 'uyku',
+        r'\bdiet\b': 'diyet',
+        r'\bnutrition\b': 'beslenme',
+        r'\bfood\b': 'gıda',
+        r'\bmeal\b': 'öğün',
+        r'\bbreakfast\b': 'kahvaltı',
+        r'\blunch\b': 'öğle yemeği',
+        r'\bdinner\b': 'akşam yemeği',
+        r'\bsnack\b': 'atıştırmalık',
+
+        # Noktalama ve boşluk düzeltmeleri
+        r'\s+': ' ',  # Çoklu boşlukları tek boşluğa çevir
+        r'\s+,': ',',  # Virgül öncesi boşluk kaldır
+        r'\s+\.': '.',  # Nokta öncesi boşluk kaldır
+        r'\s+;': ';',  # Noktalı virgül öncesi boşluk kaldır
+        r'\s+:': ':',  # İki nokta öncesi boşluk kaldır
     }
 
-    # Apply replacements
+    # Tüm değişiklikleri uygula
     import re
     for pattern, replacement in replacements.items():
         text = re.sub(pattern, replacement, text, flags=re.IGNORECASE)
 
-    return text.strip()
+    # Ek temizlik - başta/sonda boşluk kaldır
+    text = text.strip()
+
+    # Çift boşlukları tek boşluğa çevir (son kontrol)
+    text = re.sub(r'\s+', ' ', text)
+
+    return text
 
 def load_existing_titles() -> Dict[str, Set[str]]:
     """Load existing article titles to avoid duplicates"""
@@ -733,6 +912,183 @@ def comprehensive_content_generation():
 
     return total_articles
 
+def generate_turkish_content_only():
+    """Generate ONLY Turkish content directly using Ollama"""
+    print(f"🇹🇷 Direkt Türkçe içerik oluşturuluyor...")
+    print(f"📊 Hedef: {ARTICLES_PER_CATEGORY} benzersiz makale/kategori ({len(CATEGORIES)} kategori)")
+    print(f"📝 Toplam Türkçe makale: {ARTICLES_PER_CATEGORY * len(CATEGORIES)}")
+
+    # Load existing titles to ensure uniqueness
+    existing_titles = load_existing_titles()
+    print(f"📚 Yüklendi: {len(existing_titles['tr'])} mevcut TR başlık")
+
+    # Initialize image fetcher
+    image_fetcher = ImageFetcher()
+
+    # Create content directory
+    content_base_dir = os.path.join(os.path.dirname(__file__), "..", "src", "content", "blog")
+
+    total_created = 0
+    date = datetime.datetime.utcnow().strftime("%Y-%m-%d")
+
+    # Track used subtopics to ensure maximum variety
+    used_subtopics = set()
+
+    for category in CATEGORIES:
+        print(f"\n📂 Kategori işleniyor: {category.upper()}")
+        category_dir = os.path.join(content_base_dir, category)
+        os.makedirs(category_dir, exist_ok=True)
+
+        # Get ALL available subtopics for this category
+        available_subtopics = SUBTOPICS[category].copy()
+        random.shuffle(available_subtopics)
+
+        created_count = 0
+        category_titles = set()  # Track titles within this category
+
+        for i in range(ARTICLES_PER_CATEGORY):
+            max_attempts = 5
+            article_created = False
+
+            for attempt in range(max_attempts):
+                try:
+                    # Select a unique subtopic
+                    subtopic = available_subtopics[i % len(available_subtopics)]
+
+                    # Add variation if we've used this subtopic before
+                    if subtopic in used_subtopics:
+                        subtopic_variations = [
+                            f"{subtopic} araştırmaları",
+                            f"{subtopic} yenilikleri",
+                            f"{subtopic} buluşları",
+                            f"{subtopic} bilimi",
+                            f"{subtopic} çalışmaları"
+                        ]
+                        subtopic = subtopic_variations[attempt % len(subtopic_variations)]
+
+                    used_subtopics.add(subtopic)
+
+                    print(f"  📝 Türkçe makale oluşturuluyor {i+1}/{ARTICLES_PER_CATEGORY}: {subtopic}")                    # Türkçe içerik için ULTRA GÜÇLÜ prompt - Kaliteli uzun makale
+                    tr_prompt = f"""SEN BİR TÜRK GAZETECİ VE UZMAN YAZARSIN!
+
+GÖREV: '{subtopic}' konusunda '{category}' kategorisinde 1200-1500 kelimelik profesyonel Türkçe makale yaz.
+
+🚫 KESİN YASAK OLAN İNGİLİZCE KELİMELER:
+- health, science, research, studies, lifestyle, well-being, processed
+- participants, omega-3, fatty acids, digestive, GI health
+- like, and, the, of, to, in, for, with, by, from
+- TAMAMEN TÜRKÇE YAZ! TEK İNGİLİZCE KELİME YOKTUR!
+
+✅ SADECE TÜRKÇE KULLAN:
+- "sağlık" (health), "bilim" (science), "araştırma" (research)
+- "çalışmalar" (studies), "yaşam tarzı" (lifestyle)
+- "katılımcılar" (participants), "sindirim sistemi" (digestive system)
+- "omega-3 yağ asitleri" (omega-3 fatty acids)
+
+📝 MAKALE YAPISI (ZORUNLU FORMAT):
+
+## Giriş (150-200 kelime)
+- Konuya çekici başlangıç
+- Problemin önemini vurgula
+- Makalenin içeriğini özetle
+
+## [Ana Başlık 1] (250-300 kelime)
+- Konunun temel bilgileri
+- Güncel Türkiye araştırmaları
+- Türk uzmanların görüşleri
+
+## [Ana Başlık 2] (250-300 kelime)
+- Derinlemesine analiz
+- Uygulama örnekleri
+- Pratik bilgiler
+
+## [Ana Başlık 3] (250-300 kelime)
+- Son gelişmeler
+- Gelecek eğilimleri
+- Uzman tavsiyeleri
+
+## Uygulanabilir Tavsiyeler (200-250 kelime)
+- 5-7 somut önerı
+- Günlük yaşama adapte edilebilir
+- Türk kültürüne uygun
+
+## Sonuç (150-200 kelime)
+- Ana noktaları özetle
+- Okuyucuya motivasyon ver
+- Eylem çağrısı
+
+🎯 KALİTE KRİTERLERİ:
+- Her paragraf en az 3-4 cümle
+- Akıcı ve doğal Türkçe
+- Bilimsel ama anlaşılır dil
+- Somut örnekler ver
+- Türkiye'den referanslar kullan
+
+⚠️ SON KONTROL:
+- Hiç İngilizce kelime var mı? ❌
+- 1200+ kelime var mı? ✅
+- Başlıklar net mi? ✅
+- Akıcı Türkçe mi? ✅
+
+Konu: {subtopic}
+Kategori: {category}
+
+BAŞLA! (Sadece makale içeriğini yaz, başka açıklama yapma)"""
+
+                    turkish_article = call_ollama(tr_prompt)
+                    time.sleep(3)  # Rate limiting for better quality
+
+                    # Parse Turkish article with specialized function
+                    tr_title, tr_description, tr_image, tr_content = parse_turkish_article_fields(
+                        turkish_article, category, image_fetcher
+                    )
+
+                    # Clean Turkish content
+                    tr_content = clean_turkish_translation(tr_content)
+
+                    # Strict uniqueness check
+                    title_lower = tr_title.lower()
+                    if title_lower in existing_titles["tr"] or title_lower in category_titles:
+                        print(f"    ⚠️ Duplicate title detected: '{tr_title}' - generating new one (attempt {attempt + 1})")
+                        tr_title = generate_unique_title(category, subtopic, "tr", existing_titles["tr"], attempt + 1)
+                        title_lower = tr_title.lower()
+
+                    # Final uniqueness verification
+                    if title_lower not in existing_titles["tr"] and title_lower not in category_titles:
+                        existing_titles["tr"].add(title_lower)
+                        category_titles.add(title_lower)
+
+                        # Create file names
+                        tr_slug = slugify(tr_title)
+                        tr_filepath = os.path.join(category_dir, f"{date}-{tr_slug}.tr.md")
+
+                        # Write Turkish article
+                        write_article(tr_filepath, tr_title, tr_description, date, category, tr_image, tr_content)
+
+                        created_count += 1
+                        total_created += 1
+                        article_created = True
+
+                        print(f"    ✅ Oluşturuldu: {tr_title[:60]}...")
+                        break
+                    else:
+                        print(f"    ⚠️ Hala aynı başlık, tekrar deneniyor...")
+
+                except Exception as e:
+                    print(f"    ❌ Deneme {attempt + 1} başarısız {subtopic}: {e}")
+                    continue
+
+            if not article_created:
+                print(f"    ❌ {subtopic} için {max_attempts} denemeden sonra makale oluşturulamadı")
+
+        print(f"  📊 Kategori {category}: {created_count} benzersiz Türkçe makale oluşturuldu")
+
+    print(f"\n🎉 TÜRKÇE içerik oluşturma tamamlandı!")
+    print(f"📊 Toplam benzersiz Türkçe makale: {total_created}")
+    print(f"📂 Makaleler kaydedildi: {content_base_dir}")
+    print(f"🇹🇷 Türk ziyaretçiler için hazır!")
+    return total_created
+
 def auto_deploy():
     """Deploy the site automatically"""
     try:
@@ -789,7 +1145,7 @@ if __name__ == "__main__":
     print("1. 🇺🇸 SADECE İngilizce içerik oluştur (20 makale/kategori)")
     print("2. 🔄 Mevcut İngilizce içerikleri Türkçeye çevir")
     print("3. 🌐 Kapsamlı oluşturma (İngilizce + Türkçe çeviri)")
-    print("4. ⚡ Eski sistem (İngilizce ve Türkçe aynı anda)")
+    print("4. 🇹🇷 SADECE Türkçe içerik oluştur (Direkt Ollama ile)")
 
     choice = input("\nSeçiminizi yapın (1-4): ").strip()
 
@@ -803,8 +1159,8 @@ if __name__ == "__main__":
         print("\n🌐 Kapsamlı içerik oluşturma başlıyor...")
         comprehensive_content_generation()
     elif choice == "4":
-        print("\n⚡ Eski sistem kullanılıyor...")
-        generate_bulk_content()
+        print("\n🇹🇷 SADECE Türkçe içerik oluşturuluyor...")
+        generate_turkish_content_only()
     else:
         print("❌ Geçersiz seçim!")
         exit(1)

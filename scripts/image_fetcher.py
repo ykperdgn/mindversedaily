@@ -223,10 +223,23 @@ class ImageFetcher:
 
         # Başlığı kelimelerine ayır ve temizle
         words = title.lower().replace('-', ' ').replace(':', '').split()
-        keywords = [word for word in words if word not in stop_words and len(word) > 2]
-
-        # İlk 3-4 anahtar kelimeyi al
+        keywords = [word for word in words if word not in stop_words and len(word) > 2]        # İlk 3-4 anahtar kelimeyi al
         return ' '.join(keywords[:4])
+
+    def get_image_for_category(self, category):
+        """Kategori için uygun görsel al"""
+        # Kategori bazlı varsayılan başlıklar
+        category_titles = {
+            'health': 'Health and Wellness Research',
+            'psychology': 'Psychology and Mental Health',
+            'history': 'Historical Discoveries',
+            'space': 'Space Exploration',
+            'quotes': 'Inspirational Wisdom',
+            'love': 'Relationship Psychology'
+        }
+
+        title = category_titles.get(category, f"{category.title()} Research")
+        return self.get_image_for_content(title, category, f"Latest research in {category}")
 
 # Test fonksiyonu
 if __name__ == "__main__":
