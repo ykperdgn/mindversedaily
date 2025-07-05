@@ -43,6 +43,11 @@ const categories = availableCategories.length > 0
   ? availableCategories.sort()
   : ["health", "psychology", "history", "space", "quotes", "love"];
 
+// Kategori kontrolü: Eğer mevcut kategoriler arasında yoksa 404 göster
+if (!categories.includes(category)) {
+  throw Astro.redirect('/', 302);
+}
+
 const categoryIcons = {
   health: "🧬",
   psychology: "🧠",
@@ -50,6 +55,7 @@ const categoryIcons = {
   space: "🚀",
   quotes: "💬",
   love: "❤️"
+  // business, science, world gibi olmayan kategoriler buraya eklenmiyor
 };
 
 const categoryTitles = {
@@ -59,6 +65,7 @@ const categoryTitles = {
   space: "Uzay",
   quotes: "Alıntılar",
   love: "Aşk"
+  // business, science, world gibi olmayan kategoriler buraya eklenmiyor
 };
 
 const categoryDescriptions = {

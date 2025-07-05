@@ -2,7 +2,6 @@
 import BaseHead from '../../components/BaseHead.astro';
 import HeaderEN from '../../components/HeaderEN.astro';
 import Footer from '../../components/Footer.astro';
-import AstrologyWidgetEN from '../../components/AstrologyWidgetEN.astro';
 import SearchWidget from '../../components/SearchWidget.astro';
 import { SITE_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS } from '../../consts';
 import { getCollection } from 'astro:content';
@@ -24,7 +23,7 @@ const availableCategories = [...new Set(posts.map(post => post.data.category).fi
 
 const categories = availableCategories.length > 0
   ? availableCategories
-  : ["health", "psychology", "history", "space", "quotes", "love"];
+  : ["health", "psychology", "history", "space", "quotes", "love", "horoscope"];
 
 const categoryIcons = {
   health: "🧬",
@@ -706,8 +705,7 @@ const enDescription = "MindVerse Daily: Latest news, research and in-depth analy
 							</a>
 						))}
 					</div>
-				</section><!-- English Astrology Widget -->
-				<AstrologyWidgetEN />
+				</section>
 
 			</main>
 

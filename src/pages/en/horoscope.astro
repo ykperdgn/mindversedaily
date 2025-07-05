@@ -50,7 +50,7 @@ const pageDescription = 'Daily, weekly and monthly horoscope readings. Astrology
     .horoscope-main {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 8rem 1rem 2rem 1rem; /* Header için üstten padding */
+      padding: 2rem 1rem 2rem 1rem !important;
     }
 
     .horoscope-hero {
@@ -83,13 +83,13 @@ const pageDescription = 'Daily, weekly and monthly horoscope readings. Astrology
     }
 
     .hero-icon {
-      font-size: 4rem;
+      font-size: 3rem;
       margin-bottom: 1rem;
       animation: float 3s ease-in-out infinite;
     }
 
     .hero-title {
-      font-size: 3rem;
+      font-size: 2.2rem;
       font-weight: 900;
       margin-bottom: 1rem;
       text-shadow: 0 2px 4px rgba(0,0,0,0.3);
@@ -126,12 +126,13 @@ const pageDescription = 'Daily, weekly and monthly horoscope readings. Astrology
     }
 
     .zodiac-emoji {
-      font-size: 3rem;
+      font-size: 2.2rem !important;
+      display: block !important;
       margin-bottom: 1rem;
     }
 
     .zodiac-name {
-      font-size: 1.3rem;
+      font-size: 1.1rem !important;
       font-weight: bold;
       margin-bottom: 0.5rem;
       color: #2d1b69;
@@ -139,7 +140,7 @@ const pageDescription = 'Daily, weekly and monthly horoscope readings. Astrology
 
     .zodiac-element {
       color: #666;
-      font-size: 0.9rem;
+      font-size: 0.85rem !important;
       margin-bottom: 1rem;
     }
 
@@ -262,9 +263,9 @@ const pageDescription = 'Daily, weekly and monthly horoscope readings. Astrology
         <div class="zodiac-overview">
           {Object.entries(zodiacSigns).map(([key, sign]) => (
             <div class="zodiac-card" data-sign={key}>
-              <div class="zodiac-emoji">{sign.emoji}</div>
-              <div class="zodiac-name">{sign.name}</div>
-              <div class="zodiac-element">{sign.element} Element</div>
+              <div class="zodiac-emoji" style="font-size:3rem;">{sign.emoji}</div>
+              <div class="zodiac-name" style="font-size:1.3rem;">{sign.name}</div>
+              <div class="zodiac-element" style="font-size:0.9rem;">{sign.element} Element</div>
               <div class="zodiac-action">View Readings</div>
             </div>
           ))}

@@ -347,6 +347,65 @@ const { className = '' } = Astro.props;
   margin-bottom: 1rem;
 }
 
+.tarot-card-flip {
+  width: 90px;
+  height: 140px;
+  perspective: 700px;
+  margin: 0.5rem;
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+}
+.tarot-card-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(.4,2,.6,1);
+  transform-style: preserve-3d;
+  position: relative;
+}
+.tarot-card-flip.flipped .tarot-card-inner {
+  transform: rotateY(180deg);
+}
+.tarot-card-front, .tarot-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  background: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tarot-card-front {
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  z-index: 2;
+}
+.tarot-card-back {
+  transform: rotateY(180deg);
+  background: #fff;
+  color: #222;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tarot-svg-card svg {
+  width: 70px;
+  height: 110px;
+  display: block;
+  margin: 0 auto;
+}
+.palmistry-svg-line svg {
+  width: 90px;
+  height: 90px;
+  display: block;
+  margin: 0 auto;
+}
+
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }

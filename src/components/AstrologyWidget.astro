@@ -380,6 +380,56 @@ const { className = '' } = Astro.props;
 }
 </style>
 
+<script type="module">
+import { getGroqInterpretation } from '../lib/groqApi.ts';
+import { tarotCardImages, palmistryImages } from '../lib/astroImages';
+import ChartWheelV2 from '../lib/ChartWheelV2.js';
+
+// Horoscope yorumunu Groq ile getir
+async function fetchGroqHoroscope(sign, type) {
+  const signNames = {
+    'koc': 'Koç', 'boga': 'Boğa', 'ikizler': 'İkizler', 'yengec': 'Yengeç', 'aslan': 'Aslan', 'basak': 'Başak', 'terazi': 'Terazi', 'akrep': 'Akrep', 'yay': 'Yay', 'oglak': 'Oğlak', 'kova': 'Kova', 'balik': 'Balık'
+  };
+  const typeNames = { daily: 'günlük', weekly: 'haftalık', monthly: 'aylık' };
+  const prompt = `${signNames[sign]} burcu için ${typeNames[type]} astroloji yorumu hazırla. Kısa, özgün ve Türkçe yaz.`;
+  try {
+    const result = await getGroqInterpretation(prompt);
+    return result;
+  } catch (e) {
+    return 'Yorum alınamadı.';
+  }
+}
+
+// Aşk uyumu Groq
+async function fetchGroqCompatibility(sign1, sign2) {
+  const signNames = {
+    'koc': 'Koç', 'boga': 'Boğa', 'ikizler': 'İkizler', 'yengec': 'Yengeç', 'aslan': 'Aslan', 'basak': 'Başak', 'terazi': 'Terazi', 'akrep': 'Akrep', 'yay': 'Yay', 'oglak': 'Oğlak', 'kova': 'Kova', 'balik': 'Balık'
+  };
+  const prompt = `${signNames[sign1]} ve ${signNames[sign2]} burçlarının aşk uyumunu, güçlü ve zayıf yönlerini, ilişki potansiyelini detaylı ve Türkçe analiz et. Sonunda 1-10 arası bir uyum puanı ver.`;
+  try {
+    const result = await getGroqInterpretation(prompt);
+    return result;
+  } catch (e) {
+    return 'Aşk uyumu yorumu alınamadı.';
+  }
+}
+
+// Kozmik öngörü Groq
+async function fetchGroqCosmicForecast() {
+  const prompt = `Bu haftanın kozmik enerjisini, astrolojik açıdan önemli gezegen hareketlerini ve genel temaları Türkçe ve özgün şekilde özetle.`;
+  try {
+    const result = await getGroqInterpretation(prompt);
+    return result;
+  } catch (e) {
+    return 'Kozmik öngörü alınamadı.';
+  }
+}
+
+window.fetchGroqHoroscope = fetchGroqHoroscope;
+window.fetchGroqCompatibility = fetchGroqCompatibility;
+window.fetchGroqCosmicForecast = fetchGroqCosmicForecast;
+</script>
+
 <script>
 // Astrology Widget JavaScript
 document.addEventListener('DOMContentLoaded', function() {
@@ -422,7 +472,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Tab değişimi
   tabBtns.forEach(tab => {
-    tab.addEventListener('click', function() {
+    tab.addEventListener('click', function(e) {
+      e.preventDefault(); // Sayfa yenilemeyi engelle
+      e.stopPropagation(); // Event bubbling engelle
       if (!currentSign) return;
 
       // Tab durumunu güncelle
@@ -432,11 +484,16 @@ document.addEventListener('DOMContentLoaded', function() {
       currentType = this.dataset.type;
       loadHoroscope(currentSign, currentType);
     });
-  });  // Horoskop yükleme fonksiyonu (detaylı mock data)
+  });  // Horoskop yükleme fonksiyonu
   async function loadHoroscope(sign, type) {
     showLoading(resultContent);
-
-    // Detaylı ve farklı horoskop verileri
+    // Groq ile dinamik yorum
+    if (window.fetchGroqHoroscope) {
+      const content = await window.fetchGroqHoroscope(sign, type);
+      resultContent.innerHTML = `<div class="horoscope-content">${content.replace(/\n/g, '<br>')}</div>`;
+      return;
+    }
+    // Mock fallback
     const detailedHoroscopes = {
       'koc': {
         'daily': '♈ **Koç Burcu - 1 Temmuz Günlük Yorumu**\n\n🔥 Mars enerjisiyle dolu bir gün sizi bekliyor! Sabah saatlerinde aldığınız haber hayatınızda önemli bir dönüm noktası olabilir.\n\n**⏰ Saatlik Rehber:**\n• **09:00-12:00** - İş görüşmeleri için ideal zaman\n• **14:00-16:00** - Yaratıcı projelerinize odaklanın\n• **19:00-21:00** - Sosyal aktiviteler ve arkadaşlarla buluşma\n\n**💰 Para:** Beklenmedik bir gelir kapıda. Ancak büyük harcamalardan kaçının.\n**💕 Aşk:** Eski bir arkadaşınızdan romantik mesaj alabilirsiniz.\n**🏥 Sağlık:** Enerji seviyeniz yüksek, spor yapmak için mükemmel gün.',
@@ -455,7 +512,6 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     };
 
-    // Diğer burçlar için varsayılan template
     const generateDynamicContent = (sign, type) => {
       const signNames = {
         'yengec': 'Yengeç ♋', 'aslan': 'Aslan ♌', 'basak': 'Başak ♍',
@@ -493,7 +549,8 @@ document.addEventListener('DOMContentLoaded', function() {
         ]
       };
 
-      const randomAdvice = advices[type][Math.floor(Math.random() * advices[type].length)];      return `✨ **${signNames[sign]} ${periods[type]} Yorumu**\n\n${randomAdvice}\n\n🔮 **Ana Tema:** Dönüşüm ve yenilenme\n💫 **Tavsiye:** İç sesinizi dinleyin\n⭐ **Şans:** Ortalamanın üstünde\n\n*Detaylı yorumlar için horoscope bölümündeki özel yazılarımızı okuyabilirsiniz.*`;
+      const randomAdvice = advices[type][Math.floor(Math.random() * advices[type].length)];
+      return `✨ **${signNames[sign]} ${periods[type]} Yorumu**\n\n${randomAdvice}\n\n🔮 **Ana Tema:** Dönüşüm ve yenilenme\n💫 **Tavsiye:** İç sesinizi dinleyin\n⭐ **Şans:** Ortalamanın üstünde\n\n*Detaylı yorumlar için horoscope bölümündeki özel yazılarımızı okuyabilirsiniz.*`;
     };
 
     setTimeout(() => {
@@ -509,13 +566,12 @@ document.addEventListener('DOMContentLoaded', function() {
           ${content.replace(/\n/g, '<br>')}
         </div>
       `;
-    }, 1000); // Daha hızlı horoscope loading
+    }, 1000);
   }
   // Aşk uyumu kontrol
   function checkCompatibilityInputs() {
     const sign1 = sign1Select.value;
     const sign2 = sign2Select.value;
-    // Aynı burçlar da karşılaştırılabilir (kendi kendini tanıma)
     compatibilityBtn.disabled = !sign1 || !sign2;
   }
 
@@ -527,7 +583,13 @@ document.addEventListener('DOMContentLoaded', function() {
     showLoading(compatibilityContent);
     compatibilityResult.style.display = 'block';
 
-    // Detaylı compatibility analizi
+    if (window.fetchGroqCompatibility) {
+      const content = await window.fetchGroqCompatibility(sign1, sign2);
+      compatibilityContent.innerHTML = `<div class="compatibility-groq">${content.replace(/\n/g, '<br>')}</div>`;
+      document.getElementById('compatibility-score').textContent = '?';
+      return;
+    }
+
     const generateDetailedCompatibility = (s1, s2) => {
       const signDetails = {
         'koc': { name: 'Koç', element: 'Ateş', planet: 'Mars', traits: ['enerjik', 'lider', 'aceleci'] },
@@ -556,17 +618,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
       let baseScore = elementCompatibility[info1.element][info2.element];
 
-      // Aynı burç bonusu
       if (s1 === s2) {
         baseScore = 9;
       }
 
-      // Aynı gezegen bonusu
       if (info1.planet === info2.planet) {
         baseScore += 1;
       }
 
-      // Final score (1-10 arası)
       const finalScore = Math.min(10, Math.max(1, baseScore + Math.floor(Math.random() * 2 - 1)));
 
       const levelMessages = {
@@ -592,10 +651,11 @@ document.addEventListener('DOMContentLoaded', function() {
         ]
       };
 
-      const score = Math.max(5, finalScore); // Minimum 5 puan
+      const score = Math.max(5, finalScore);
       const messageKey = score >= 9 ? 9 : score >= 8 ? 8 : score >= 7 ? 7 : score >= 6 ? 6 : 5;
       const messages = levelMessages[messageKey];
-      const selectedMessage = messages[Math.floor(Math.random() * messages.length)];      const detailedAnalysis = `
+      const selectedMessage = messages[Math.floor(Math.random() * messages.length)];
+      const detailedAnalysis = `
 **🎭 Kişilik Analizi:**
 • **${info1.name}:** ${info1.traits.join(', ')}
 • **${info2.name}:** ${info2.traits.join(', ')}
@@ -623,11 +683,16 @@ ${s1 === s2 ?
       const compatibility = generateDetailedCompatibility(sign1, sign2);
       document.getElementById('compatibility-score').textContent = compatibility.score;
       document.getElementById('compatibility-content').innerHTML = compatibility.content.replace(/\n/g, '<br>');
-    }, 800); // Daha hızlı sonuç
+    }, 800);
   });
-  // Kozmik öngörü yükleme (mock data)
   async function loadCosmicForecast() {
     showLoading(cosmicContent);
+
+    if (window.fetchGroqCosmicForecast) {
+      const content = await window.fetchGroqCosmicForecast();
+      cosmicContent.innerHTML = `<div class="cosmic-forecast-content">${content.replace(/\n/g, '<br>')}</div>`;
+      return;
+    }
 
     const cosmicMessages = [
       '🌌 **Kozmik Enerji Raporu**\n\nBu hafta Merkür retrograd döneminden çıkıyor. İletişimde dikkatli olun.\n\n⭐ **Ana Tema:** Yenilenme\n🔮 **Tavsiye:** Meditasyon yapın\n💫 **Fırsat:** Yaratıcı projeler',
@@ -647,7 +712,6 @@ ${s1 === s2 ?
 
   refreshCosmicBtn.addEventListener('click', loadCosmicForecast);
 
-  // Loading gösterimi
   function showLoading(element) {
     element.innerHTML = `
       <div class="loading">
@@ -657,10 +721,8 @@ ${s1 === s2 ?
     `;
   }
 
-  // Sayfa yüklendiğinde kozmik öngörüyü yükle
   loadCosmicForecast();
 
-  // Global functions
   window.loadHoroscope = loadHoroscope;
 });
 </script>

@@ -4,7 +4,8 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev --host 0.0.0.0 --port 4321",
-    "build": "astro build",    "preview": "astro preview",
+    "build": "astro build",
+    "preview": "astro preview",
     "astro": "astro",
     "auto:content": "python scripts/master_automation.py content",
     "auto:deploy": "python scripts/master_automation.py deploy",
@@ -24,11 +25,17 @@
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.0",
+    "@astrojs/react": "^4.3.0",
     "@astrojs/rss": "^4.0.12",
     "@astrojs/sitemap": "^3.4.1",
+    "astral": "^0.1.0",
     "astro": "^5.10.1",
+    "astronomia": "^4.1.1",
     "axios": "^1.10.0",
     "dotenv": "^17.0.0",
+    "jspdf": "^3.0.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
     "sharp": "^0.34.2",
     "ts-node": "^10.9.2"
   }

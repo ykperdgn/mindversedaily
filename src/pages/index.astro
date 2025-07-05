@@ -2,8 +2,8 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import AstrologyWidget from '../components/AstrologyWidget.astro';
 import SearchWidget from '../components/SearchWidget.astro';
+import AstroAstrologyApp from '../components/AstroAstrologyApp.jsx';
 import { SITE_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS, SITE_LANG } from '../consts';
 import { getCollection } from 'astro:content';
 
@@ -485,38 +485,7 @@ const homeKeywords = `${SITE_KEYWORDS}, blog, güncel haberler, bilimsel araşt�
             <span class="daily-subtitle">Daily</span>
           </h1>
           <p class="mv-desc">Bilim, sağlık, psikoloji ve güncel konulardan en kaliteli içerikler</p>        </section>        <!-- Arama Widget -->
-        <SearchWidget lang="tr" />        <!-- En Son Yazılar -->
-        <section class="mv-grid-section">
-          <h2 class="mv-section-title">En Son Yazılar</h2>
-          <ul class="mv-grid">
-            {posts.slice(0, 9).map((post) => (
-              <li class="mv-card">
-                <a
-                  href={`/blog/${post.slug}/`}
-                  data-post-title={post.data.title}
-                  data-post-description={post.data.description}
-                  data-post-category={post.data.category}
-                  data-post-date={post.data.pubDate.toISOString()}
-                >
-                  <article>
-                    <h3 class="mv-card-title">{post.data.title}</h3>
-                    <p class="mv-card-summary">{post.data.description}</p>
-                    <div class="mv-card-meta">
-                      <span class="category-badge">{categoryNamesTR[post.data.category] || post.data.category}</span>
-                      <time datetime={post.data.pubDate.toISOString()}>
-                        {post.data.pubDate.toLocaleDateString('tr-TR', {
-                          year: 'numeric',
-                          month: 'long',
-                          day: 'numeric',
-                        })}
-                      </time>
-                    </div>
-                  </article>
-                </a>
-              </li>
-            ))}
-          </ul>
-        </section>
+        <SearchWidget lang="tr" />
 
         <!-- Kategoriler -->
         <section class="categories-grid" style="margin: 3rem 0 2rem 0;">
@@ -548,8 +517,13 @@ const homeKeywords = `${SITE_KEYWORDS}, blog, güncel haberler, bilimsel araşt�
           </div>
         </section>
 
-        <!-- Astroloji Widget -->
-        <AstrologyWidget />
+        <!-- Astro React Astrology App (deneme) -->
+        <section style="margin: 3rem 0; display:flex; justify-content:center; width:100%; max-width:100vw; padding:0;">
+          <div style="width:100%; max-width:1400px; margin:0 auto;">
+            <h2 class="section-title" style="text-align:center;">🔮 Astroloji Yorumları</h2>
+            <AstroAstrologyApp client:load />
+          </div>
+        </section>
 
       </main>
       <Footer />
