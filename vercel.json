@@ -65,7 +65,7 @@
   ],
   "functions": {
     "api/chart.py": {
-      "runtime": "vercel-python"
+      "runtime": "vercel-python@3.12"
     }
   }
 }
