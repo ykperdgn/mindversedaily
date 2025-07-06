@@ -134,13 +134,12 @@ async function fetchCoordsFromCityEN(city, country) {
   }
 }
 
-// --- English Tarot Card Draw ---
+// --- Tarot Card Component: uses local /assets/tarot images and provided English meanings
 function TarotCardGenerativeEN() {
   const CARDS = React.useMemo(
     () => Object.entries(WILDWOOD_TAROT_EN).map(([title, meaning]) => {
       const base = title.includes(' * ') ? title.split(' * ')[0] : title;
       const file = base.replace(/\s+/g, '_') + '.png';
-      // Support for future reversed meanings: if meaning is an object, {upright, reversed}
       return { title, meaning, file };
     }),
     []
@@ -167,6 +166,18 @@ function TarotCardGenerativeEN() {
     }, 2000);
   };
 
+  // Responsive: stack cards vertically on mobile, shrink card size
+  const isMobile = typeof window !== 'undefined' && window.innerWidth <= 600;
+  const cardContainerStyle = isMobile
+    ? { flexDirection: 'column', gap: 12, alignItems: 'center', width: '100%' }
+    : { flexDirection: 'row', gap: 18, justifyContent: 'center', width: '100%' };
+  const cardStyle = isMobile
+    ? { minWidth: 0, width: 120, maxWidth: '90vw', margin: '0 auto', alignItems: 'center' }
+    : { minWidth: 180, alignItems: 'center' };
+  const imgStyle = isMobile
+    ? { width: 90, height: 140, objectFit: 'cover', borderRadius: 8, marginBottom: 8, boxShadow: '0 2px 8px #0007', transform: undefined, transition: 'transform 0.3s' }
+    : { width: 120, height: 186, objectFit: 'cover', borderRadius: 8, marginBottom: 8, boxShadow: '0 2px 8px #0007', transform: undefined, transition: 'transform 0.3s' };
+
   if (loadingCard) return (
     <div style={{border:'2px solid #ffd700', borderRadius:16, padding:16, width:'100%', background:'#222', color:'#ffd700', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', margin:'1rem auto', boxSizing:'border-box'}}>
       <div>Preparing your cards... 🔮</div>
@@ -175,33 +186,39 @@ function TarotCardGenerativeEN() {
 
   return (
     <div style={{border:'2px solid #ffd700', borderRadius:16, padding:16, width:'100%', background:'#222', color:'#ffd700', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', margin:'1rem auto', boxSizing:'border-box'}}>
-      <div style={{display:'flex', flexDirection:'row', gap:18, justifyContent:'center', marginBottom:12}}>
+      <div style={{display:'flex', ...cardContainerStyle, marginBottom:12}}>
         {cards.length === 0 ? (
-          <div style={{color:'#888', fontSize:16, textAlign:'center', minWidth:180}}>No cards drawn yet.</div>
+          <div style={{color:'#888', fontSize:16, textAlign:'center', minWidth: isMobile ? 0 : 180}}>No cards drawn yet.</div>
         ) : cards.map((card, i) => (
-          <div key={i} style={{display:'flex', flexDirection:'column', alignItems:'center', minWidth:180}}>
+          <div key={i} style={{display:'flex', flexDirection:'column', ...cardStyle}}>
             <div style={{fontWeight:'bold', marginBottom:6, fontSize:17, color:'#ffd700', textAlign:'center'}}>{card.title}</div>
-            <img src={`/assets/tarot/${card.file}`} alt={card.title} style={{width:120, height:186, objectFit:'cover', borderRadius:8, marginBottom:8, boxShadow:'0 2px 8px #0007', transform: card.reversed ? 'rotate(180deg)' : 'none', transition:'transform 0.3s'}} />
+            <img src={`/assets/tarot/${card.file}`} alt={card.title} style={{...imgStyle, transform: card.reversed ? 'rotate(180deg)' : 'none'}} />
             <div style={{marginTop:4, color:'#fff', fontSize:14, textAlign:'center'}}>
               <b>{card.reversed ? 'Reversed Meaning:' : 'Meaning:'}</b><br/>
-              {/* If meaning is an object, use .reversed or .upright, else fallback */}
               {typeof card.meaning === 'object' ? (card.reversed ? (card.meaning.reversed || card.meaning.upright) : card.meaning.upright) : card.meaning}
             </div>
           </div>
         ))}
       </div>
-      <button onClick={handleDraw} style={{marginTop:12, padding:'10px 28px', borderRadius:8, background:'#ffd700', color:'#181825', fontWeight:'bold', border:'none', fontSize:18}}>
+      <button onClick={handleDraw} style={{marginTop:12, padding:'10px 28px', borderRadius:8, background:'#ffd700', color:'#181825', fontWeight:'bold', border:'none', fontSize:18, width: isMobile ? '100%' : undefined}}>
         {cards.length === 0 ? 'Draw 3 Cards 🔮' : 'Draw Again 🔮'}
       </button>
     </div>
   );
 }
 
-// --- Tarot Grid EN ---
-function TarotGridEN() {
+// --- Tarot Grid EN (faithful to Turkish layout/logic) ---
+function TarotGridEN({ trigger }) {
+  React.useEffect(() => {
+    if (trigger > 0) {
+      const drawButton = document.querySelector('button[onClick]');
+      if (drawButton) drawButton.click();
+    }
+  }, [trigger]);
+
   return (
-    <div style={{width:'100%', display:'flex', flexDirection:'column', alignItems:'center', margin:'2rem 0 0 0'}}>
-      <div style={{width:'100%', display:'flex', justifyContent:'center'}}>
+    <div style={{display:'flex', justifyContent:'center', alignItems:'flex-start', margin:'2rem 0'}}>
+      <div style={{width:'100%'}}>
         <TarotCardGenerativeEN />
       </div>
     </div>
@@ -230,6 +247,18 @@ function parseDateTimeInput(val) {
     return { date: `${v.slice(0,4)}-${v.slice(4,6)}-${v.slice(6,8)}`, time: `${v.slice(8,10)}:${v.slice(10,12)}` };
   }
   return { date: val, time: '' };
+}
+
+// --- Result Box Component ---
+function ResultBoxEN({ result, shareUrl }) {
+  if (!result) return null;
+  const isMobile = typeof window !== 'undefined' && window.innerWidth <= 600;
+  return (
+    <div style={{background:'#181825', borderRadius:12, padding: isMobile ? 10 : 16, color:'#fff', whiteSpace:'pre-line', marginTop:16, position:'relative', width:'100%', boxSizing:'border-box', overflowWrap:'break-word', fontSize: isMobile ? 14 : 16}}>
+      <div style={{paddingTop: isMobile ? 20 : 32}}>{result}</div>
+      {shareUrl && <div style={{fontSize:12, color:'#34d399', marginTop:12, wordBreak:'break-all'}}>Shareable link: <a href={shareUrl} target="_blank" rel="noopener noreferrer" style={{color:'#34d399', textDecoration:'underline'}}>{shareUrl}</a></div>}
+    </div>
+  );
 }
 
 // --- Main App Component ---
@@ -261,6 +290,7 @@ export default function AstroAstrologyAppEN(props) {
   const [sinastriLoading, setSinastriLoading] = useState(false);
   const [citySearchLoading, setCitySearchLoading] = useState(false);
   const [partnerCitySearchLoading, setPartnerCitySearchLoading] = useState(false);
+  const tarotSectionRef = React.useRef(null);
 
   const handleBirthChange = e => {
     const { name, value } = e.target;
@@ -350,8 +380,15 @@ export default function AstroAstrologyAppEN(props) {
   };
 
   const handleTarotButton = () => {
-    window.__drawTarotCardEN = true;
-    setShowTarot(v => !v);
+    setShowTarot(true);
+    setTimeout(() => {
+      if (tarotSectionRef.current) {
+        tarotSectionRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }, 100);
+    if (typeof window !== 'undefined') {
+      window.__drawTarotCardEN = (window.__drawTarotCardEN || 0) + 1;
+    }
   };
 
   // --- SEO: AstroAstrologyAppEN component meta for better search visibility ---
@@ -541,14 +578,12 @@ export default function AstroAstrologyAppEN(props) {
         </div>
       </div>
       {/* Tarot section moved below Sinastri and Horary */}
-      <div style={{ width: '100%', maxWidth: 420, margin: '0 auto 32px auto', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <div ref={tarotSectionRef} style={{ width: '100%', maxWidth: 420, margin: '0 auto 32px auto', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <h2 style={{ fontSize: 20, fontWeight: 600, color: '#ffd700', marginBottom: 8, textAlign: 'center' }}>Tarot</h2>
-        <TarotGridEN />
+        <TarotGridEN trigger={typeof window !== 'undefined' ? window.__drawTarotCardEN : 0} />
       </div>
       {result && (
-        <div id={result && result.startsWith('Please provide a detailed, professional, and friendly English natal chart interpretation') ? 'natal-interpretation-result' : 'general-interpretation-result'} style={{ background: '#181825', borderRadius: 12, padding: 16, color: '#fff', whiteSpace: 'pre-line', marginTop: 16, position: 'relative', width: '100%', boxSizing: 'border-box', overflowWrap: 'break-word' }}>
-          <div style={{ paddingTop: 32 }}>{result}</div>
-        </div>
+        <ResultBoxEN result={result} shareUrl={shareUrl} />
       )}
       <div style={{ color: '#888', textAlign: 'center', marginTop: 32 }}>
         <b>Astrology AI Premium (English)</b><br />

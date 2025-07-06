@@ -404,6 +404,18 @@ function TarotCardGenerative() {
     }, 2000);
   };
 
+  // Responsive: stack cards vertically on mobile, shrink card size
+  const isMobile = typeof window !== 'undefined' && window.innerWidth <= 600;
+  const cardContainerStyle = isMobile
+    ? { flexDirection: 'column', gap: 12, alignItems: 'center', width: '100%' }
+    : { flexDirection: 'row', gap: 18, justifyContent: 'center', width: '100%' };
+  const cardStyle = isMobile
+    ? { minWidth: 0, width: 120, maxWidth: '90vw', margin: '0 auto', alignItems: 'center' }
+    : { minWidth: 180, alignItems: 'center' };
+  const imgStyle = isMobile
+    ? { width: 90, height: 140, objectFit: 'cover', borderRadius: 8, marginBottom: 8, boxShadow: '0 2px 8px #0007', transform: undefined, transition: 'transform 0.3s' }
+    : { width: 120, height: 186, objectFit: 'cover', borderRadius: 8, marginBottom: 8, boxShadow: '0 2px 8px #0007', transform: undefined, transition: 'transform 0.3s' };
+
   if (loadingCard) return (
     <div style={{border:'2px solid #ffd700', borderRadius:16, padding:16, width:'100%', background:'#222', color:'#ffd700', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', margin:'1rem auto', boxSizing:'border-box'}}>
       <div>Kartlar hazırlanıyor... 🔮</div>
@@ -412,22 +424,21 @@ function TarotCardGenerative() {
 
   return (
     <div style={{border:'2px solid #ffd700', borderRadius:16, padding:16, width:'100%', background:'#222', color:'#ffd700', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', margin:'1rem auto', boxSizing:'border-box'}}>
-      <div style={{display:'flex', flexDirection:'row', gap:18, justifyContent:'center', marginBottom:12}}>
+      <div style={{display:'flex', ...cardContainerStyle, marginBottom:12}}>
         {cards.length === 0 ? (
-          <div style={{color:'#888', fontSize:16, textAlign:'center', minWidth:180}}>Henüz kart çekilmedi.</div>
+          <div style={{color:'#888', fontSize:16, textAlign:'center', minWidth: isMobile ? 0 : 180}}>Henüz kart çekilmedi.</div>
         ) : cards.map((card, i) => (
-          <div key={i} style={{display:'flex', flexDirection:'column', alignItems:'center', minWidth:180}}>
+          <div key={i} style={{display:'flex', flexDirection:'column', ...cardStyle}}>
             <div style={{fontWeight:'bold', marginBottom:6, fontSize:17, color:'#ffd700', textAlign:'center'}}>{card.title}</div>
-            <img src={`/assets/tarot/${card.file}`} alt={card.title} style={{width:120, height:186, objectFit:'cover', borderRadius:8, marginBottom:8, boxShadow:'0 2px 8px #0007', transform: card.reversed ? 'rotate(180deg)' : 'none', transition:'transform 0.3s'}} />
+            <img src={`/assets/tarot/${card.file}`} alt={card.title} style={{...imgStyle, transform: card.reversed ? 'rotate(180deg)' : 'none'}} />
             <div style={{marginTop:4, color:'#fff', fontSize:14, textAlign:'center'}}>
               <b>{card.reversed ? 'Ters Anlam:' : 'Anlam:'}</b><br/>
-              {/* If meaning is an object, use .reversed or .upright, else fallback */}
               {typeof card.meaning === 'object' ? (card.reversed ? (card.meaning.reversed || card.meaning.upright) : card.meaning.upright) : card.meaning}
             </div>
           </div>
         ))}
       </div>
-      <button onClick={handleDraw} style={{marginTop:12, padding:'10px 28px', borderRadius:8, background:'#ffd700', color:'#181825', fontWeight:'bold', border:'none', fontSize:18}}>
+      <button onClick={handleDraw} style={{marginTop:12, padding:'10px 28px', borderRadius:8, background:'#ffd700', color:'#181825', fontWeight:'bold', border:'none', fontSize:18, width: isMobile ? '100%' : undefined}}>
         {cards.length === 0 ? '3 Kart Çek 🔮' : 'Tekrar Çek 🔮'}
       </button>
     </div>
@@ -435,7 +446,14 @@ function TarotCardGenerative() {
 }
 
 // --- Ayrı Tarot Grid Bileşeni ---
-function TarotGrid() {
+function TarotGrid({ trigger }) {
+  React.useEffect(() => {
+    if (trigger > 0) {
+      const drawButton = document.querySelector('button[onClick]');
+      if (drawButton) drawButton.click();
+    }
+  }, [trigger]);
+
   return (
     <div style={{display:'flex', justifyContent:'center', alignItems:'flex-start', margin:'2rem 0'}}>
       <div style={{width:'100%'}}>
@@ -464,15 +482,16 @@ function ResultBox({ result, shareUrl }) {
       handleCopy();
     }
   };
+  const isMobile = typeof window !== 'undefined' && window.innerWidth <= 600;
   if (!result) return null;
   if (hasForbiddenWords(result)) {
-    return <div style={{background:'#181825', borderRadius:12, padding:16, color:'#f87171', marginTop:16, fontWeight:'bold', width:'100%', boxSizing:'border-box', overflowWrap:'break-word'}}>⚠️ Yanıt beklenenden farklı, İngilizce veya hatalı terimler içeriyor. Lütfen tekrar deneyin.</div>;
+    return <div style={{background:'#181825', borderRadius:12, padding: isMobile ? 10 : 16, color:'#f87171', marginTop:16, fontWeight:'bold', width:'100%', boxSizing:'border-box', overflowWrap:'break-word', fontSize: isMobile ? 14 : 16}}>⚠️ Yanıt beklenenden farklı, İngilizce veya hatalı terimler içeriyor. Lütfen tekrar deneyin.</div>;
   }
   if (isEnglishOrMixed(result)) {
-    return <div style={{background:'#181825', borderRadius:12, padding:16, color:'#f87171', marginTop:16, fontWeight:'bold', width:'100%', boxSizing:'border-box', overflowWrap:'break-word'}}>⚠️ Yanıt beklenenden farklı dilde geldi. Lütfen daha açık bir soru sorun veya tekrar deneyin.</div>;
+    return <div style={{background:'#181825', borderRadius:12, padding: isMobile ? 10 : 16, color:'#f87171', marginTop:16, fontWeight:'bold', width:'100%', boxSizing:'border-box', overflowWrap:'break-word', fontSize: isMobile ? 14 : 16}}>⚠️ Yanıt beklenenden farklı dilde geldi. Lütfen daha açık bir soru sorun veya tekrar deneyin.</div>;
   }
   return (
-    <div style={{background:'#181825', borderRadius:12, padding:16, color:'#fff', whiteSpace:'pre-line', marginTop:16, position:'relative', width:'100%', boxSizing:'border-box', overflowWrap:'break-word'}}>
+    <div style={{background:'#181825', borderRadius:12, padding: isMobile ? 10 : 16, color:'#fff', whiteSpace:'pre-line', marginTop:16, position:'relative', width:'100%', boxSizing:'border-box', overflowWrap:'break-word', fontSize: isMobile ? 14 : 16}}>
       <div style={{display:'flex', flexDirection:'row', gap:12, position:'absolute', top:10, right:16, zIndex:2}}>
         <button onClick={handleCopy} title="Kopyala" style={{background:'none', border:'none', color:'#a78bfa', fontSize:18, cursor:'pointer', padding:4}}>
           {copied ? '✔️' : '📋'}
@@ -486,7 +505,7 @@ function ResultBox({ result, shareUrl }) {
           </button>
         )}
       </div>
-      <div style={{paddingTop:32}}>{result}</div>
+      <div style={{paddingTop: isMobile ? 20 : 32}}>{result}</div>
       {shareUrl && <div style={{fontSize:12, color:'#34d399', marginTop:12, wordBreak:'break-all'}}>Paylaşılabilir link: <a href={shareUrl} target="_blank" rel="noopener noreferrer" style={{color:'#34d399', textDecoration:'underline'}}>{shareUrl}</a></div>}
     </div>
   );
@@ -528,6 +547,7 @@ function App() {
   // Scroll/odak için ref'ler
   const transitRef = useRef(null);
   const sinastriRef = useRef(null);
+  const tarotSectionRef = React.useRef(null);
 
   const handleBirthChange = e => {
     const { name, value } = e.target;
@@ -746,6 +766,15 @@ function App() {
 
   const handleTarotButton = () => {
     setShowTarot(true);
+    setTimeout(() => {
+      if (tarotSectionRef.current) {
+        tarotSectionRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }, 100);
+    // Eğer kartlar otomatik çekilmiyorsa, TarotCardGenerative'a prop ile tetikleyici gönderilebilir
+    if (typeof window !== 'undefined') {
+      window.__drawTarotCardTR = (window.__drawTarotCardTR || 0) + 1;
+    }
   };
 
   React.useEffect(() => {
@@ -898,9 +927,9 @@ function App() {
           )}
         </div>
       </div>
-      <div style={{ width: '100%', maxWidth: 420, margin: '0 auto 32px auto', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <div ref={tarotSectionRef} style={{ width: '100%', maxWidth: 420, margin: '0 auto 32px auto', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <h2 style={{ fontSize: 20, fontWeight: 600, color: '#ffd700', marginBottom: 8, textAlign: 'center' }}>Tarot</h2>
-        <TarotGrid />
+        <TarotGrid trigger={typeof window !== 'undefined' ? window.__drawTarotCardTR : 0} />
       </div>
       {planetPositions && Object.keys(planetPositions).length > 0 && <ChartWheelV2 positions={planetPositions} />}
       {transitResult && !isEnglishOrMixed(transitResult) && (
