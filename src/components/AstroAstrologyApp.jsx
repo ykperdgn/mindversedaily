@@ -513,6 +513,7 @@ function App() {
   const transitRef = useRef(null);
   const sinastriRef = useRef(null);
   const tarotSectionRef = React.useRef(null);
+  const resultRef = React.useRef(null);
 
   const handleBirthChange = e => {
     const { name, value } = e.target;
@@ -592,6 +593,11 @@ function App() {
       const prompt = `Aşağıdaki doğum haritası bilgilerine göre, kullanıcının güçlü ve zayıf yönlerini, kariyer ve kişisel tavsiyelerini, sade, akıcı ve profesyonel Türkçe ile özetle. ${TURKISH_FORCE}\n\nDoğum tarihi: ${birth.date}\nŞehir: ${birth.city || '-'}\nÜlke: ${birth.country || '-'}\nEnlem: ${lat}, Boylam: ${lon}\nGezegenler: ${planetStr}`;
       const resAI = await ensureTurkishAIResponse(prompt);
       setResult(resAI);
+      setTimeout(() => {
+        if (resultRef.current) {
+          resultRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }, 200);
     } catch (e) {
       setError(e.message);
     }
@@ -829,7 +835,7 @@ function App() {
       {/* Gezegen tablosu: yalnızca pozisyonlar doluysa göster */}
       {planetPositions && Object.keys(planetPositions).length > 0 && <PlanetTable positions={planetPositions} />}
       {error && !result && <div style={{color:'#f87171', marginBottom:16}}>{error}</div>}
-      {result && <ResultBox result={result} shareUrl={shareUrl} containerStyle={{width:'100%',boxSizing:'border-box',overflowWrap:'break-word'}} />}
+      {result && <div ref={resultRef}><ResultBox result={result} shareUrl={shareUrl} containerStyle={{width:'100%',boxSizing:'border-box',overflowWrap:'break-word'}} /></div>}
       <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 24, marginBottom: 32 }}>
         <div style={{ minWidth: 320, flex: 1, maxWidth: 420, order: 1 }}>
           <h2 style={{ fontSize: 20, fontWeight: 600, color: '#38bdf8', marginBottom: 8 }}>Sinastri</h2>

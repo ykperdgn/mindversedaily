@@ -186,7 +186,12 @@ const fullTitle = title.includes('MindVerse') ? title : `${title} | ${SITE_TITLE
 <meta name="google-adsense-account" content="ca-pub-3096725438789562">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3096725438789562" crossorigin="anonymous"></script>
 
-<!-- Google Analytics -->
+<!-- Google Analytics: Geliştirici trafiğini hariç tut -->
+<script>
+  if (location.hostname === 'localhost') {
+    window['ga-disable-G-B91B93QXHJ'] = true;
+  }
+</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-B91B93QXHJ"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -196,6 +201,8 @@ const fullTitle = title.includes('MindVerse') ? title : `${title} | ${SITE_TITLE
     page_title: document.title,
     page_location: window.location.href
   });
+  // Manuel event örneği: buton tıklama
+  // gtag('event', 'click', { event_category: 'button', event_label: 'MyButton' });
 </script>
 
 <!-- Google Search Console verification -->

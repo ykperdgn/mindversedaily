@@ -291,6 +291,7 @@ export default function AstroAstrologyAppEN(props) {
   const [citySearchLoading, setCitySearchLoading] = useState(false);
   const [partnerCitySearchLoading, setPartnerCitySearchLoading] = useState(false);
   const tarotSectionRef = React.useRef(null);
+  const resultRef = React.useRef(null);
 
   const handleBirthChange = e => {
     const { name, value } = e.target;
@@ -342,6 +343,32 @@ export default function AstroAstrologyAppEN(props) {
     setLoading(false);
   }, [input]);
 
+  const handleCalcPlanets = async e => {
+    e.preventDefault();
+    setLoading(true);
+    setError('');
+    setResult('');
+    setPlanetPositions(null);
+    try {
+      if (!birth.date || !birth.lat || !birth.lon) throw new Error('Please fill in all fields.');
+      const dateObj = new Date(birth.date);
+      const lat = parseFloat(birth.lat);
+      const lon = parseFloat(birth.lon);
+      if (isNaN(lat) || isNaN(lon)) throw new Error('Enter valid coordinates.');
+      const prompt = `Please provide a detailed, professional, and friendly English natal chart interpretation for the following birth data.\n\nName: ${userInfo.name || '-'}\nGender: ${userInfo.gender || '-'}\nBirth date & time: ${birth.date}${birth.date && birth.date.includes('T') ? '' : ''}\nLatitude: ${birth.lat}\nLongitude: ${birth.lon}\nCity: ${birth.city || '-'}\nCountry: ${birth.country || '-'}`;
+      const res = await getGroqInterpretationEN(prompt);
+      setResult(res);
+      setTimeout(() => {
+        if (resultRef.current) {
+          resultRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }, 200);
+    } catch (e) {
+      setError(e.message);
+    }
+    setLoading(false);
+  };
+
   const handleTransit = async () => {
     if (!planetPositions) return;
     setLoading(true);
@@ -361,7 +388,6 @@ export default function AstroAstrologyAppEN(props) {
     e.preventDefault();
     setLoading(true);
     setHoraryResult('');
-    // Use current date/time and user's ACTUAL current location (not birth location)
     const now = new Date();
     const dateStr = now.toLocaleDateString('en-GB');
     const timeStr = now.toTimeString().slice(0,5);
@@ -391,12 +417,7 @@ export default function AstroAstrologyAppEN(props) {
     }
   };
 
-  // --- SEO: AstroAstrologyAppEN component meta for better search visibility ---
-  // If using Astro, you can set <title>, <meta> etc. in the page, but for React SPA, add structured data and meta tags dynamically if needed.
-  // For Astro/Next.js, prefer static head tags. For React SPA, you can use react-helmet or similar.
-  // Here, we add a JSON-LD structured data script for the main app:
   if (typeof window !== 'undefined' && document) {
-    // Remove old if exists
     const old = document.getElementById('astro-astrology-app-en-ld');
     if (old) old.remove();
     const script = document.createElement('script');
@@ -429,31 +450,7 @@ export default function AstroAstrologyAppEN(props) {
   return (
     <div style={{ width: '100%', maxWidth: '1400px', margin: '2rem auto', background: '#0f172a', borderRadius: 24, boxShadow: '0 4px 32px #0002', padding: '2.5vw', color: '#fff', boxSizing: 'border-box' }}>
       <h1 style={{ fontSize: 32, fontWeight: 'bold', textAlign: 'center', marginBottom: 24, letterSpacing: 1 }}>Astrology AI Premium (English)</h1>
-      <form onSubmit={async e => {
-        e.preventDefault();
-        setLoading(true);
-        setError('');
-        setResult('');
-        setPlanetPositions(null);
-        try {
-          if (!birth.date || !birth.lat || !birth.lon) throw new Error('Please fill in all fields.');
-          const dateObj = new Date(birth.date);
-          const lat = parseFloat(birth.lat);
-          const lon = parseFloat(birth.lon);
-          if (isNaN(lat) || isNaN(lon)) throw new Error('Enter valid coordinates.');
-          // Prepare a prompt for the English interpretation (no chart visual)
-          const prompt = `Please provide a detailed, professional, and friendly English natal chart interpretation for the following birth data.\n\nName: ${userInfo.name || '-'}\nGender: ${userInfo.gender || '-'}\nBirth date & time: ${birth.date}${birth.date && birth.date.includes('T') ? '' : ''}\nLatitude: ${birth.lat}\nLongitude: ${birth.lon}\nCity: ${birth.city || '-'}\nCountry: ${birth.country || '-'}`;
-          const res = await getGroqInterpretationEN(prompt);
-          setResult(res);
-          setTimeout(() => {
-            const el = document.getElementById('natal-interpretation-result');
-            if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-          }, 100);
-        } catch (e) {
-          setError(e.message);
-        }
-        setLoading(false);
-      }} style={{display:'flex', flexDirection:'column', gap:14, marginBottom:28, background:'#181825', borderRadius:14, padding:20, boxShadow:'0 2px 12px #0001'}}>
+      <form onSubmit={handleCalcPlanets} style={{display:'flex', flexDirection:'column', gap:14, marginBottom:28, background:'#181825', borderRadius:14, padding:20, boxShadow:'0 2px 12px #0001'}}>
         <div style={{display:'flex', gap:8}}>
           <div style={{flex:2, display:'flex', flexDirection:'column', gap:6}}>
             <label>Name</label>
@@ -514,7 +511,6 @@ export default function AstroAstrologyAppEN(props) {
         <button onClick={handleTarotButton} style={{ padding: '8px 16px', borderRadius: 8, background: '#ffd700', color: '#181825', fontWeight: 'bold', border: 'none' }}>Tarot Card</button>
         <button onClick={handleTransit} style={{ padding: '8px 16px', borderRadius: 8, background: '#38bdf8', color: '#181825', fontWeight: 'bold', border: 'none' }} disabled={!planetPositions}>Transit Analysis</button>
       </div>
-      {/* --- Always visible: Sinastri, Horary sections --- */}
       <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 24, marginBottom: 32 }}>
         <div style={{ minWidth: 320, flex: 1, maxWidth: 420, order: 1 }}>
           <h2 style={{ fontSize: 20, fontWeight: 600, color: '#38bdf8', marginBottom: 8 }}>Sinastri</h2>
@@ -577,14 +573,11 @@ export default function AstroAstrologyAppEN(props) {
           )}
         </div>
       </div>
-      {/* Tarot section moved below Sinastri and Horary */}
       <div ref={tarotSectionRef} style={{ width: '100%', maxWidth: 420, margin: '0 auto 32px auto', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <h2 style={{ fontSize: 20, fontWeight: 600, color: '#ffd700', marginBottom: 8, textAlign: 'center' }}>Tarot</h2>
         <TarotGridEN trigger={typeof window !== 'undefined' ? window.__drawTarotCardEN : 0} />
       </div>
-      {result && (
-        <ResultBoxEN result={result} shareUrl={shareUrl} />
-      )}
+      {result && <div ref={resultRef}><ResultBoxEN result={result} shareUrl={shareUrl} /></div>}
       <div style={{ color: '#888', textAlign: 'center', marginTop: 32 }}>
         <b>Astrology AI Premium (English)</b><br />
         <i>All features and interpretations are in English for the English homepage.</i>
