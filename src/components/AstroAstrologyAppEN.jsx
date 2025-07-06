@@ -1,6 +1,5 @@
 import React, { useState, useCallback, useRef } from 'react';
 import { getGroqInterpretationEN } from '../lib/groqApiEN.ts';
-import NatalChart from './NatalChart.jsx';
 
 // --- English Tarot Meanings ---
 const WILDWOOD_TAROT_EN = {
@@ -109,22 +108,6 @@ function PlanetTableEN({ positions }) {
           </div>
         ))}
       </div>
-    </div>
-  );
-}
-
-function ChartWheelEN({ positions }) {
-  if (!positions || Object.keys(positions).length === 0) {
-    return <div style={{color:'#f87171', fontSize:15, margin:'1rem 0'}}>No valid planet positions found for the natal chart.</div>;
-  }
-  // Convert positions to { Sun: deg, ... } format for NatalChart
-  const planetDegrees = Object.fromEntries(
-    Object.entries(positions).map(([planet, pos]) => [planet, pos.signIndex * 30 + pos.degree])
-  );
-  return (
-    <div style={{textAlign:'center', margin:'2rem 0'}}>
-      <NatalChart planets={planetDegrees} />
-      <div style={{fontSize:14, color:'#a78bfa', marginTop:8}}>Natal chart: Hover planets for details. Zodiac images, aspect lines, and house lines shown.</div>
     </div>
   );
 }
