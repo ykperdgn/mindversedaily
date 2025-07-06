@@ -1,4 +1,8 @@
 // Simple Groq API proxy for browser fetch
+console.log("PUBLIC_GROQ_API_KEY (build):", import.meta.env.PUBLIC_GROQ_API_KEY);
+if (typeof window !== "undefined") {
+  console.log("PUBLIC_GROQ_API_KEY (client):", import.meta.env.PUBLIC_GROQ_API_KEY);
+}
 export async function getGroqInterpretation(prompt: string): Promise<string> {
   const apiKey = import.meta.env.PUBLIC_GROQ_API_KEY;
   if (!apiKey) throw new Error('GROQ API anahtarı tanımlı değil.');
