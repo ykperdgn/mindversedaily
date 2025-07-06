@@ -375,46 +375,60 @@ const WILDWOOD_TAROT_TR = {
 function TarotCardGenerative() {
   const CARDS = React.useMemo(
     () => Object.entries(WILDWOOD_TAROT_TR).map(([title, meaning]) => {
-      // Extract base name before any ' * ' suffix and use for file name
       const base = title.includes(' * ') ? title.split(' * ')[0] : title;
       const file = base.replace(/\s+/g, '_') + '.png';
+      // Support for future reversed meanings: if meaning is an object, {upright, reversed}
       return { title, meaning, file };
     }),
     []
   );
-  const [card, setCard] = React.useState(null);
+  const [cards, setCards] = React.useState([]); // [{card, reversed}]
   const [loadingCard, setLoadingCard] = React.useState(false);
 
   const handleDraw = () => {
     setLoadingCard(true);
-    setCard(null);
+    setCards([]);
     setTimeout(() => {
-      const randomCard = CARDS[Math.floor(Math.random() * CARDS.length)];
-      setCard(randomCard);
+      // Draw 3 unique cards, each upright or reversed
+      let indices = [];
+      while (indices.length < 3) {
+        let idx = Math.floor(Math.random() * CARDS.length);
+        if (!indices.includes(idx)) indices.push(idx);
+      }
+      const drawn = indices.map(idx => {
+        const reversed = Math.random() < 0.5;
+        return { ...CARDS[idx], reversed };
+      });
+      setCards(drawn);
       setLoadingCard(false);
-    }, 3000); // 3 saniye bekleme
+    }, 2000);
   };
-
-  React.useEffect(() => {
-    handleDraw();
-  }, []);
 
   if (loadingCard) return (
     <div style={{border:'2px solid #ffd700', borderRadius:16, padding:16, width:'100%', background:'#222', color:'#ffd700', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', margin:'1rem auto', boxSizing:'border-box'}}>
-      <div>Kart hazırlanıyor... 🔮</div>
+      <div>Kartlar hazırlanıyor... 🔮</div>
     </div>
   );
-  if (!card) return null;
 
   return (
     <div style={{border:'2px solid #ffd700', borderRadius:16, padding:16, width:'100%', background:'#222', color:'#ffd700', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', margin:'1rem auto', boxSizing:'border-box'}}>
-      <div style={{fontWeight:'bold', marginBottom:8, fontSize:20}}>{card.title}</div>
-      <img src={`/assets/tarot/${card.file}`} alt={card.title} style={{width:180, height:280, objectFit:'cover', borderRadius:8, marginBottom:8, boxShadow:'0 2px 8px #0007'}} />
-      <div style={{marginTop:14, color:'#fff', fontSize:15, textAlign:'center'}}>
-        <b>Anlam:</b><br/>{card.meaning}
+      <div style={{display:'flex', flexDirection:'row', gap:18, justifyContent:'center', marginBottom:12}}>
+        {cards.length === 0 ? (
+          <div style={{color:'#888', fontSize:16, textAlign:'center', minWidth:180}}>Henüz kart çekilmedi.</div>
+        ) : cards.map((card, i) => (
+          <div key={i} style={{display:'flex', flexDirection:'column', alignItems:'center', minWidth:180}}>
+            <div style={{fontWeight:'bold', marginBottom:6, fontSize:17, color:'#ffd700', textAlign:'center'}}>{card.title}</div>
+            <img src={`/assets/tarot/${card.file}`} alt={card.title} style={{width:120, height:186, objectFit:'cover', borderRadius:8, marginBottom:8, boxShadow:'0 2px 8px #0007', transform: card.reversed ? 'rotate(180deg)' : 'none', transition:'transform 0.3s'}} />
+            <div style={{marginTop:4, color:'#fff', fontSize:14, textAlign:'center'}}>
+              <b>{card.reversed ? 'Ters Anlam:' : 'Anlam:'}</b><br/>
+              {/* If meaning is an object, use .reversed or .upright, else fallback */}
+              {typeof card.meaning === 'object' ? (card.reversed ? (card.meaning.reversed || card.meaning.upright) : card.meaning.upright) : card.meaning}
+            </div>
+          </div>
+        ))}
       </div>
-      <button onClick={handleDraw} style={{marginTop:12, padding:'6px 16px', borderRadius:8, background:'#ffd700', color:'#181825', fontWeight:'bold', border:'none'}}>
-        Yeni Kart Çek 🔮
+      <button onClick={handleDraw} style={{marginTop:12, padding:'10px 28px', borderRadius:8, background:'#ffd700', color:'#181825', fontWeight:'bold', border:'none', fontSize:18}}>
+        {cards.length === 0 ? '3 Kart Çek 🔮' : 'Tekrar Çek 🔮'}
       </button>
     </div>
   );
@@ -494,6 +508,7 @@ function App() {
   });
   const [planetPositions, setPlanetPositions] = useState(null);
   const [citySearchLoading, setCitySearchLoading] = useState(false);
+  const [partnerCitySearchLoading, setPartnerCitySearchLoading] = useState(false);
   const [userInfo, setUserInfo] = useState({ name: '', gender: '' });
   const [shareUrl, setShareUrl] = useState('');
   const [transitResult, setTransitResult] = useState('');
@@ -505,6 +520,7 @@ function App() {
   const [partnerPositions, setPartnerPositions] = useState(null);
   const [horaryInput, setHoraryInput] = useState('');
   const [horaryResult, setHoraryResult] = useState('');
+  const [horaryLocation, setHoraryLocation] = useState({ city: '', country: '', lat: '', lon: '' });
   const [sinastriLoading, setSinastriLoading] = useState(false);
   // Sesli Oku: Oynat/Durdur
   const [speechState, setSpeechState] = React.useState('idle'); // 'idle' | 'playing' | 'paused'
@@ -711,10 +727,25 @@ function App() {
     e.preventDefault();
     setLoading(true);
     setHoraryResult('');
-    const prompt = `Aşağıda verilen soru için, klasik horary (soru astrolojisi) prensiplerine uygun, detaylı ve profesyonel bir Türkçe astroloji yorumu yaz. ${TURKISH_FORCE}\n\nSoru: ${horaryInput}`;
+    // Gerçek tarih/saat ve kullanıcının GÜNCEL konumunu al
+    const now = new Date();
+    const tarihSaat = now.toLocaleString('tr-TR', { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' });
+    const city = horaryLocation.city || '-';
+    const country = horaryLocation.country || '-';
+    const lat = horaryLocation.lat || '-';
+    const lon = horaryLocation.lon || '-';
+    const prompt = `Aşağıda verilen soru için, klasik horary (soru astrolojisi) prensiplerine uygun, detaylı ve profesyonel bir Türkçe astroloji yorumu yaz. Doğum haritası veya doğum yeri kullanılmayacak. Yalnızca sorunun sorulduğu anın tarihi, saati ve aşağıdaki güncel konum kullanılacak. Transit/horary mantığıyla yanıtla. ${TURKISH_FORCE}\n\nSoru: ${horaryInput}\nSoru tarihi ve saati: ${tarihSaat}\nŞehir: ${city}\nÜlke: ${country}\nEnlem: ${lat}\nBoylam: ${lon}`;
     const res = await ensureTurkishAIResponse(prompt);
     setHoraryResult(res);
     setLoading(false);
+    setTimeout(() => {
+      const el = document.getElementById('horary-interpretation-result');
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, 100);
+  };
+
+  const handleTarotButton = () => {
+    setShowTarot(true);
   };
 
   React.useEffect(() => {
@@ -785,39 +816,92 @@ function App() {
           {loading ? 'Hesaplanıyor...' : 'Doğum Haritası Yorumu Al'}
         </button>
       </form>
-      {/* Gezegen tablosu: yalnızca pozisyonlar doluysa göster */}
-      {planetPositions && Object.keys(planetPositions).length > 0 && <PlanetTable positions={planetPositions} />}
-      {error && !result && <div style={{color:'#f87171', marginBottom:16}}>{error}</div>}
-      {result && <ResultBox result={result} shareUrl={shareUrl} containerStyle={{width:'100%',boxSizing:'border-box',overflowWrap:'break-word'}} />}
-      <form onSubmit={handleSubmit} style={{display:'flex', flexDirection:'column', gap:12, marginBottom:24}}>
+      <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 12, marginBottom: 0 }}>
         <textarea
           value={input}
           onChange={e=>setInput(e.target.value)}
           placeholder="Örnekler: 'Bugün bana ne tavsiye edersin?', 'Aşk hayatım nasıl olacak?', 'Bir tarot kartı çek', 'El falı yorumu al', 'Kariyerimle ilgili ne öngörüyorsun?'"
           rows={3}
-          style={{padding:12, borderRadius:8, border:'1px solid #a78bfa', fontSize:16, resize:'vertical'}}
+          style={{ padding: 12, borderRadius: 8, border: '1px solid #a78bfa', fontSize: 16, resize: 'vertical' }}
         />
-        <button type="submit" style={{padding:'10px 0', borderRadius:8, background:'#a78bfa', color:'#181825', fontWeight:'bold', border:'none', fontSize:16}} disabled={loading || !input}>
+        <button type="submit" style={{ padding: '10px 0', borderRadius: 8, background: '#a78bfa', color: '#181825', fontWeight: 'bold', border: 'none', fontSize: 16, marginBottom: 0 }} disabled={loading || !input}>
           {loading ? 'Yorum alınıyor...' : 'Yorum Al'}
         </button>
       </form>
-      <div style={{display:'flex', justifyContent:'center', gap:16, marginBottom:24}}>
-        <button onClick={()=>setShowTarot(v=>!v)} style={{padding:'8px 16px', borderRadius:8, background:'#ffd700', color:'#181825', fontWeight:'bold', border:'none'}}>Tarot Kartı</button>
-        <button onClick={handleTransit} style={{padding:'8px 16px', borderRadius:8, background:'#38bdf8', color:'#181825', fontWeight:'bold', border:'none'}} disabled={!planetPositions}>Transit Analizi</button>
+      <div style={{ display: 'flex', justifyContent: 'center', gap: 16, margin: '18px 0 24px 0' }}>
+        <button onClick={handleTarotButton} style={{ padding: '8px 16px', borderRadius: 8, background: '#ffd700', color: '#181825', fontWeight: 'bold', border: 'none' }}>Tarot Kartı</button>
+        <button onClick={handleTransit} style={{ padding: '8px 16px', borderRadius: 8, background: '#38bdf8', color: '#181825', fontWeight: 'bold', border: 'none' }} disabled={!planetPositions}>Transit Analizi</button>
       </div>
-      {showTarot && <TarotGrid />}
-      {planetPositions && (
-        <div style={{background:'#23234a', borderRadius:14, padding:16, margin:'1rem 0 1.5rem 0', width:'100%', boxSizing:'border-box', overflowWrap:'break-word'}}>
-          <div style={{fontWeight:'bold', color:'#38bdf8', marginBottom:8}}>Soru Astrolojisi (Horary)</div>
-          <form onSubmit={handleHorary} style={{display:'flex', gap:8, marginBottom:8}}>
-            <input type="text" value={horaryInput} onChange={e=>setHoraryInput(e.target.value)} placeholder="Bir soru yazın... (örn: Bu işte başarılı olur muyum?)" style={{flex:1, padding:8, borderRadius:8, border:'1px solid #38bdf8', fontSize:15}} />
-            <button type="submit" style={{padding:'8px 16px', borderRadius:8, background:'#38bdf8', color:'#181825', fontWeight:'bold', border:'none'}} disabled={!horaryInput || loading}>Sor</button>
+      {/* Gezegen tablosu: yalnızca pozisyonlar doluysa göster */}
+      {planetPositions && Object.keys(planetPositions).length > 0 && <PlanetTable positions={planetPositions} />}
+      {error && !result && <div style={{color:'#f87171', marginBottom:16}}>{error}</div>}
+      {result && <ResultBox result={result} shareUrl={shareUrl} containerStyle={{width:'100%',boxSizing:'border-box',overflowWrap:'break-word'}} />}
+      <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 24, marginBottom: 32 }}>
+        <div style={{ minWidth: 320, flex: 1, maxWidth: 420, order: 1 }}>
+          <h2 style={{ fontSize: 20, fontWeight: 600, color: '#38bdf8', marginBottom: 8 }}>Sinastri</h2>
+          <form onSubmit={async e => {
+            e.preventDefault();
+            setSinastriLoading(true);
+            setSinastriResult('');
+            const prompt = `Aşağıda verilen iki kişinin doğum haritası bilgilerine göre, detaylı ve profesyonel bir sinastri (ilişki uyumu) yorumu yaz.\n\nKullanıcı 1: ${JSON.stringify(birth)}\nKullanıcı 2: ${JSON.stringify(partner)}`;
+            const res = await ensureTurkishAIResponse(prompt);
+            setSinastriResult(res);
+            setSinastriLoading(false);
+          }} style={{ display: 'flex', flexDirection: 'column', gap: 8, background: '#181825', borderRadius: 10, padding: 14, marginBottom: 8 }}>
+            <input type="text" placeholder="Partner adı (isteğe bağlı)" value={partner.name || ''} name="name" onChange={e => setPartner(p => ({ ...p, name: e.target.value }))} style={{ padding: 8, borderRadius: 6, border:'1px solid #a78bfa', fontSize: 15 }} />
+            <input type="datetime-local" placeholder="Partner doğum tarihi & saati" value={partner.date ? `${partner.date}${partner.time ? 'T'+partner.time : ''}` : ''}
+              name="date"
+              onChange={e => {
+                let v = e.target.value;
+                let [date, time] = v.split('T');
+                setPartner(p => ({ ...p, date, time: time || '' }));
+              }}
+              style={{ padding: 8, borderRadius: 6, border:'1px solid #a78bfa', fontSize: 15 }}
+            />
+            <input type="text" placeholder="Partner şehir" value={partner.city} name="city" onChange={e => setPartner(p => ({ ...p, city: e.target.value }))} onBlur={handlePartnerCityBlur} style={{ padding: 8, borderRadius: 6, border:'1px solid #a78bfa', fontSize: 15 }} />
+            {partnerCitySearchLoading && <div style={{color:'#a78bfa', fontSize:13}}>Şehir aranıyor...</div>}
+            <input type="text" placeholder="Partner ülke" value={partner.country} name="country" onChange={e => setPartner(p => ({ ...p, country: e.target.value }))} style={{ padding: 8, borderRadius: 6, border:'1px solid #a78bfa', fontSize: 15 }} />
+            <input type="number" step="0.0001" placeholder="Partner enlem" value={partner.lat} name="lat" onChange={e => setPartner(p => ({ ...p, lat: e.target.value }))} style={{ padding: 8, borderRadius: 6, border:'1px solid #a78bfa', fontSize: 15 }} />
+            <input type="number" step="0.0001" placeholder="Partner boylam" value={partner.lon} name="lon" onChange={e => setPartner(p => ({ ...p, lon: e.target.value }))} style={{ padding: 8, borderRadius: 6, border:'1px solid #a78bfa', fontSize: 15 }} />
+            <button type="submit" style={{ padding: '8px 0', borderRadius: 7, background: '#38bdf8', color: '#181825', fontWeight: 'bold', border: 'none', fontSize: 16, marginTop: 4 }} disabled={sinastriLoading}>{sinastriLoading ? 'Hesaplanıyor...' : 'Sinastri Yorumu Al'}</button>
           </form>
-          {horaryResult && !isEnglishOrMixed(horaryResult) && <div style={{background:'#0f172a', borderRadius:10, padding:12, color:'#38bdf8', marginTop:10, whiteSpace:'pre-line', width:'100%', boxSizing:'border-box', overflowWrap:'break-word'}}><b>Horary Yorumu:</b><br/>{horaryResult}</div>}
-          {horaryResult && isEnglishOrMixed(horaryResult) && <div style={{background:'#0f172a', borderRadius:10, padding:12, color:'#f87171', marginTop:10, fontWeight:'bold', width:'100%', boxSizing:'border-box', overflowWrap:'break-word'}}>⚠️ AI yanıtı Türkçe değil veya karışık dilde geldi. Lütfen tekrar deneyin veya farklı bir soru sorun.</div>}
+          {sinastriResult && <div style={{ background: '#23234a', borderRadius: 8, padding: 12, color: '#fff', whiteSpace: 'pre-line', marginTop: 8 }}>{sinastriResult}</div>}
         </div>
-      )}
-      {/* Natal chart only when positions available */}
+        <div style={{ minWidth: 320, flex: 1, maxWidth: 420, order: 3 }}>
+          <h2 style={{ fontSize: 20, fontWeight: 600, color: '#a78bfa', marginBottom: 8 }}>Soru Astrolojisi (Horary)</h2>
+          <form onSubmit={handleHorary} style={{ display: 'flex', flexDirection: 'column', gap: 8, background: '#181825', borderRadius: 10, padding: 14, marginBottom: 8 }}>
+            <input type="text" placeholder="Sorunuzu yazın (Türkçe)" value={horaryInput} onChange={e => setHoraryInput(e.target.value)} style={{ padding: 8, borderRadius: 6, border:'1px solid #a78bfa', fontSize: 15 }} />
+            <input type="text" placeholder="Güncel şehir (soru için)" value={horaryLocation.city} onChange={async e => {
+              const city = e.target.value;
+              setHoraryLocation(l => ({ ...l, city }));
+              if (city && horaryLocation.country) {
+                const coords = await fetchCoordsFromCity(city, horaryLocation.country);
+                if (coords) setHoraryLocation(l => ({ ...l, lat: coords.lat, lon: coords.lon }));
+              }
+            }} style={{ padding: 8, borderRadius: 6, border:'1px solid #a78bfa', fontSize: 15 }} />
+            <input type="text" placeholder="Güncel ülke (soru için)" value={horaryLocation.country} onChange={async e => {
+              const country = e.target.value;
+              setHoraryLocation(l => ({ ...l, country }));
+              if (horaryLocation.city && country) {
+                const coords = await fetchCoordsFromCity(horaryLocation.city, country);
+                if (coords) setHoraryLocation(l => ({ ...l, lat: coords.lat, lon: coords.lon }));
+              }
+            }} style={{ padding: 8, borderRadius: 6, border:'1px solid #a78bfa', fontSize: 15 }} />
+            <input type="number" step="0.0001" placeholder="Güncel enlem (soru için)" value={horaryLocation.lat} onChange={e => setHoraryLocation(l => ({ ...l, lat: e.target.value }))} style={{ padding: 8, borderRadius: 6, border:'1px solid #a78bfa', fontSize: 15 }} />
+            <input type="number" step="0.0001" placeholder="Güncel boylam (soru için)" value={horaryLocation.lon} onChange={e => setHoraryLocation(l => ({ ...l, lon: e.target.value }))} style={{ padding: 8, borderRadius: 6, border:'1px solid #a78bfa', fontSize: 15 }} />
+            <button type="submit" style={{ padding: '8px 0', borderRadius: 7, background: '#a78bfa', color: '#181825', fontWeight: 'bold', border: 'none', fontSize: 16, marginTop: 4 }} disabled={loading}>{loading ? 'Hesaplanıyor...' : 'Horary Yorumu Al'}</button>
+          </form>
+          {horaryResult && (
+            <div id="horary-interpretation-result" style={{ background: '#0f172a', borderRadius: 10, padding: 12, color: '#38bdf8', marginTop: 10, whiteSpace: 'pre-line', width: '100%', boxSizing: 'border-box', overflowWrap: 'break-word' }}>
+              <b>Horary Yorumu:</b><br />{horaryResult}
+            </div>
+          )}
+        </div>
+      </div>
+      <div style={{ width: '100%', maxWidth: 420, margin: '0 auto 32px auto', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        <h2 style={{ fontSize: 20, fontWeight: 600, color: '#ffd700', marginBottom: 8, textAlign: 'center' }}>Tarot</h2>
+        <TarotGrid />
+      </div>
       {planetPositions && Object.keys(planetPositions).length > 0 && <ChartWheelV2 positions={planetPositions} />}
       {transitResult && !isEnglishOrMixed(transitResult) && (
         <div ref={transitRef} style={{position:'relative',marginTop:16,width:'100%',boxSizing:'border-box',overflowWrap:'break-word'}}>
@@ -829,38 +913,6 @@ function App() {
       {transitResult && isEnglishOrMixed(transitResult) && (
         <div ref={transitRef} style={{background:'#0f172a', borderRadius:10, padding:12, color:'#f87171', marginTop:16, fontWeight:'bold', width:'100%', boxSizing:'border-box', overflowWrap:'break-word'}}>
           ⚠️ AI yanıtı Türkçe değil veya karışık dilde geldi. Lütfen tekrar deneyin.
-        </div>
-      )}
-      {planetPositions && (
-        <div ref={sinastriRef} style={{background:'#23234a',borderRadius:14,padding:16,margin:'1rem 0 0.5rem 0',width:'100%',boxSizing:'border-box',overflowWrap:'break-word'}}>
-          <div style={{fontWeight:'bold', color:'#f472b6', marginBottom:8}}>Partner Bilgileri (Sinastri / İlişki Uyumu):</div>
-          <div style={{display:'flex', gap:8, marginBottom:8, flexWrap:'wrap'}}>
-            <input type="datetime-local" name="date" value={partner.date} onChange={handlePartnerChange} onBlur={handlePartnerCityBlur} placeholder="Doğum Tarihi & Saat" style={{flex:2, padding:8, borderRadius:6, border:'1px solid #fbbf24', fontSize:15}} />
-            <input type="text" name="city" value={partner.city} onChange={handlePartnerChange} placeholder="Şehir" style={{flex:1, padding:8, borderRadius:6, border:'1px solid #fbbf24', fontSize:15}} />
-            <input type="text" name="country" value={partner.country} onChange={handlePartnerChange} placeholder="Ülke" style={{flex:1, padding:8, borderRadius:6, border:'1px solid #fbbf24', fontSize:15}} />
-            <input type="number" step="0.0001" name="lat" value={partner.lat} onChange={handlePartnerChange} placeholder="Enlem (örn: 39.9334)" style={{flex:1, padding:8, borderRadius:6, border:'1px solid #fbbf24', fontSize:15}} />
-            <input type="number" step="0.0001" name="lon" value={partner.lon} onChange={handlePartnerChange} placeholder="Boylam (örn: 32.8597)" style={{flex:1, padding:8, borderRadius:6, border:'1px solid #fbbf24', fontSize:15}} />
-          </div>
-          <div style={{color:'#fbbf24', fontSize:12, marginBottom:6}}>
-            Ankara için örnek: Enlem 39.9334, Boylam 32.8597. Şehir/ülke girince otomatik dolmazsa elle girin.
-          </div>
-          <button onClick={handlePartnerCalc} style={{padding:'8px 16px', borderRadius:8, background:'#fbbf24', color:'#181825', fontWeight:'bold', border:'none', marginBottom:8}}>Partner Haritasını Hesapla</button>
-          {partnerPositions && <div style={{color:'#fbbf24', fontSize:13, marginBottom:4}}>Partner haritası hesaplandı.</div>}
-          <button onClick={handleSinastri} style={{padding:'8px 16px', borderRadius:8, background:'#f472b6', color:'#181825', fontWeight:'bold', border:'none', marginTop:8}} disabled={!partnerPositions || sinastriLoading}>{sinastriLoading ? 'Sinastri Analizi Alınıyor...' : 'Sinastri Analizi Al'}</button>
-          {!partnerPositions && <div style={{color:'#f87171', fontSize:13, marginTop:8}}>Önce partner bilgilerini eksiksiz girip haritasını hesaplayın.</div>}
-          {partnerPositions && sinastriResult && hasForbiddenWords(sinastriResult) && (
-            <div style={{background:'#0f172a', borderRadius:10, padding:12, color:'#f87171', marginTop:10, fontWeight:'bold', width:'100%', boxSizing:'border-box', overflowWrap:'break-word'}}>⚠️ Yanıt beklenenden farklı veya hatalı terimler içeriyor. Lütfen tekrar deneyin.</div>
-          )}
-          {partnerPositions && sinastriResult && isEnglishOrMixed(sinastriResult) && (
-            <div style={{background:'#0f172a', borderRadius:10, padding:12, color:'#f87171', marginTop:10, fontWeight:'bold', width:'100%', boxSizing:'border-box', overflowWrap:'break-word'}}>⚠️ AI yanıtı Türkçe değil veya karışık dilde geldi. Lütfen tekrar deneyin veya farklı bir partner bilgisi girin.</div>
-          )}
-          {partnerPositions && sinastriResult && !hasForbiddenWords(sinastriResult) && !isEnglishOrMixed(sinastriResult) && (
-            <div style={{position:'relative', marginTop:10, width:'100%', boxSizing:'border-box', overflowWrap:'break-word'}}>
-              <div style={{background:'#0f172a',borderRadius:10,padding:12,color:'#f472b6',whiteSpace:'pre-line',width:'100%',boxSizing:'border-box',overflowWrap:'break-word'}}>
-                <b>Sinastri Yorumu:</b><br/>{sinastriResult}
-              </div>
-            </div>
-          )}
         </div>
       )}
     </div>

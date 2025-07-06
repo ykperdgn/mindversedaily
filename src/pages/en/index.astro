@@ -3,6 +3,7 @@ import BaseHead from '../../components/BaseHead.astro';
 import HeaderEN from '../../components/HeaderEN.astro';
 import Footer from '../../components/Footer.astro';
 import SearchWidget from '../../components/SearchWidget.astro';
+import AstroAstrologyAppEN from '../../components/AstroAstrologyAppEN.jsx';
 import { SITE_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS } from '../../consts';
 import { getCollection } from 'astro:content';
 
@@ -704,6 +705,14 @@ const enDescription = "MindVerse Daily: Latest news, research and in-depth analy
 								<div style="font-size: 0.9rem; color: #64748b;">Explore articles</div>
 							</a>
 						))}
+					</div>
+				</section>
+
+				<!-- Astro React Astrology App (English) -->
+				<section style="margin: 3rem 0; display:flex; justify-content:center; width:100%; max-width:100vw; padding:0;">
+					<div style="width:100%; max-width:1400px; margin:0 auto;">
+						<h2 class="section-title" style="text-align:center;">🔮 Astrology AI Premium</h2>
+						<AstroAstrologyAppEN client:load />
 					</div>
 				</section>
 

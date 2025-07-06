@@ -1,0 +1,36 @@
+---
+import NatalChart from '../components/NatalChart.jsx';
+
+const natalPlanets = {
+  Sun: 102.45,
+  Moon: 310.33,
+  Mercury: 120.20,
+  Venus: 76.40,
+  Mars: 204.10,
+  Jupiter: 290.00,
+  Saturn: 297.30
+};
+
+const transitPlanets = {
+  Sun: 130.12,
+  Moon: 12.33,
+  Mercury: 145.20,
+  Venus: 80.00,
+  Mars: 250.00,
+  Jupiter: 310.00,
+  Saturn: 275.00
+};
+---
+
+<html lang="en">
+  <head>
+    <title>Astro Natal Chart</title>
+  </head>
+  <body>
+    <h1>Natal ve Transit Astro Chart</h1>
+
+    <div client:load>
+      <NatalChart planets={natalPlanets} transitPlanets={transitPlanets} />
+    </div>
+  </body>
+</html>
