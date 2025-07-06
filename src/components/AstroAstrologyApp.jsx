@@ -429,24 +429,7 @@ function TarotGrid({ trigger }) {
 }
 
 // --- Premium: Yorum kutusu kopyala, paylaş ve PDF olarak indir butonları ---
-function ResultBox({ result, shareUrl }) {
-  const [copied, setCopied] = React.useState(false);
-  const handleCopy = async () => {
-    try {
-      await navigator.clipboard.writeText(result);
-      setCopied(true);
-      setTimeout(()=>setCopied(false), 1200);
-    } catch {}
-  };
-  const handleShare = async () => {
-    if (navigator.share) {
-      try {
-        await navigator.share({ text: result });
-      } catch {}
-    } else {
-      handleCopy();
-    }
-  };
+function ResultBox({ result }) {
   const isMobile = typeof window !== 'undefined' && window.innerWidth <= 600;
   if (!result) return null;
   if (hasForbiddenWords(result)) {
@@ -457,21 +440,7 @@ function ResultBox({ result, shareUrl }) {
   }
   return (
     <div style={{background:'#181825', borderRadius:12, padding: isMobile ? 10 : 16, color:'#fff', whiteSpace:'pre-line', marginTop:16, position:'relative', width:'100%', boxSizing:'border-box', overflowWrap:'break-word', fontSize: isMobile ? 14 : 16}}>
-      <div style={{display:'flex', flexDirection:'row', gap:12, position:'absolute', top:10, right:16, zIndex:2}}>
-        <button onClick={handleCopy} title="Kopyala" style={{background:'none', border:'none', color:'#a78bfa', fontSize:18, cursor:'pointer', padding:4}}>
-          {copied ? '✔️' : '📋'}
-        </button>
-        <button onClick={handleShare} title="Paylaş" style={{background:'none', border:'none', color:'#38bdf8', fontSize:18, cursor:'pointer', padding:4}}>
-          🔗
-        </button>
-        {shareUrl && (
-          <button onClick={()=>{navigator.clipboard.writeText(shareUrl);}} title="Paylaşılabilir linki kopyala" style={{background:'none', border:'none', color:'#34d399', fontSize:18, cursor:'pointer', padding:4}}>
-            🔗 Link
-          </button>
-        )}
-      </div>
       <div style={{paddingTop: isMobile ? 20 : 32}}>{result}</div>
-      {shareUrl && <div style={{fontSize:12, color:'#34d399', marginTop:12, wordBreak:'break-all'}}>Paylaşılabilir link: <a href={shareUrl} target="_blank" rel="noopener noreferrer" style={{color:'#34d399', textDecoration:'underline'}}>{shareUrl}</a></div>}
     </div>
   );
 }
@@ -541,20 +510,13 @@ function App() {
 
   const handlePartnerCityBlur = async () => {
     if (partner.city) {
-      setCitySearchLoading(true);
+      setPartnerCitySearchLoading(true);
       const coords = await fetchCoordsFromCity(partner.city, partner.country);
-      setCitySearchLoading(false);
+      setPartnerCitySearchLoading(false);
       if (coords) {
-        lat = coords.lat;
-        lon = coords.lon;
+        setPartner(p => ({ ...p, lat: coords.lat, lon: coords.lon }));
       }
     }
-    if (!date || !lat || !lon) return; // Hala eksikse hesaplama
-    const dateObj = new Date(date);
-    if (isNaN(parseFloat(lat)) || isNaN(parseFloat(lon))) return;
-    const pos = await getPlanetPositions({ date: dateObj, latitude: parseFloat(lat), longitude: parseFloat(lon) });
-    setPartnerPositions(pos);
-    setPartner(p => ({ ...p, lat, lon })); // Otomatik doldurulanları da inputa yaz
   };
 
   const handleCalcPlanets = async e => {
@@ -592,6 +554,12 @@ function App() {
       const planetStr = Object.entries(positions).map(([p, pos]) => `${PLANET_TR[p]}: ${pos.sign} (${pos.degree.toFixed(2)})`).join(', ');
       const prompt = `Aşağıdaki doğum haritası bilgilerine göre, kullanıcının güçlü ve zayıf yönlerini, kariyer ve kişisel tavsiyelerini, sade, akıcı ve profesyonel Türkçe ile özetle. ${TURKISH_FORCE}\n\nDoğum tarihi: ${birth.date}\nŞehir: ${birth.city || '-'}\nÜlke: ${birth.country || '-'}\nEnlem: ${lat}, Boylam: ${lon}\nGezegenler: ${planetStr}`;
       const resAI = await ensureTurkishAIResponse(prompt);
+      setResult(resAI);
+      setTimeout(() => {
+        if (resultRef.current) {
+          resultRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }, 200);
       setResult(resAI);
       setTimeout(() => {
         if (resultRef.current) {
@@ -749,22 +717,8 @@ function App() {
   };
 
   React.useEffect(() => {
-    if (result) {
-      // Sadece temel bilgileri encode et, yorumu encode etme
-      const data = {
-        name: userInfo.name,
-        gender: userInfo.gender,
-        city: birth.city,
-        country: birth.country,
-        date: birth.date,
-        lat: birth.lat,
-        lon: birth.lon
-      };
-      const encoded = btoa(unescape(encodeURIComponent(JSON.stringify(data))));
-      setShareUrl(window.location.origin + window.location.pathname + '?astro=' + encoded);
-    } else {
-      setShareUrl('');
-    }
+    // Kaldırıldı: paylaşılabilir link oluşturma
+    setShareUrl('');
   // eslint-disable-next-line
   }, [result]);
 
@@ -801,7 +755,7 @@ function App() {
           <label>Doğum Tarihi & Saat</label>
           <input type="datetime-local" name="date" value={birth.date} onChange={handleBirthChange} style={{padding:8, borderRadius:6, border:'1px solid #a78bfa', fontSize:15}} required />
         </div>
-        <div style={{display:'flex', gap:8}}>
+        <div style={{display:'flex', gap:8, display:'none'}}>
           <div style={{flex:1, display:'flex', flexDirection:'column', gap:6}}>
             <label>Enlem (lat)</label>
             <input type="number" step="0.0001" name="lat" value={birth.lat} onChange={handleBirthChange} placeholder="41.0082" style={{padding:8, borderRadius:6, border:'1px solid #a78bfa', fontSize:15}} required />
@@ -861,8 +815,8 @@ function App() {
             <input type="text" placeholder="Partner şehir" value={partner.city} name="city" onChange={e => setPartner(p => ({ ...p, city: e.target.value }))} onBlur={handlePartnerCityBlur} style={{ padding: 8, borderRadius: 6, border:'1px solid #a78bfa', fontSize: 15 }} />
             {partnerCitySearchLoading && <div style={{color:'#a78bfa', fontSize:13}}>Şehir aranıyor...</div>}
             <input type="text" placeholder="Partner ülke" value={partner.country} name="country" onChange={e => setPartner(p => ({ ...p, country: e.target.value }))} style={{ padding: 8, borderRadius: 6, border:'1px solid #a78bfa', fontSize: 15 }} />
-            <input type="number" step="0.0001" placeholder="Partner enlem" value={partner.lat} name="lat" onChange={e => setPartner(p => ({ ...p, lat: e.target.value }))} style={{ padding: 8, borderRadius: 6, border:'1px solid #a78bfa', fontSize: 15 }} />
-            <input type="number" step="0.0001" placeholder="Partner boylam" value={partner.lon} name="lon" onChange={e => setPartner(p => ({ ...p, lon: e.target.value }))} style={{ padding: 8, borderRadius: 6, border:'1px solid #a78bfa', fontSize: 15 }} />
+            <input type="number" step="0.0001" placeholder="Partner'ın enlemi" value={partner.lat} name="lat" onChange={e => setPartner(p => ({ ...p, lat: e.target.value }))} style={{ padding: 8, borderRadius: 6, border:'1px solid #a78bfa', fontSize: 15, display: 'none' }} />
+            <input type="number" step="0.0001" placeholder="Partner'ın boylamı" value={partner.lon} name="lon" onChange={e => setPartner(p => ({ ...p, lon: e.target.value }))} style={{ padding: 8, borderRadius: 6, border:'1px solid #a78bfa', fontSize: 15, display: 'none' }} />
             <button type="submit" style={{ padding: '8px 0', borderRadius: 7, background: '#38bdf8', color: '#181825', fontWeight: 'bold', border: 'none', fontSize: 16, marginTop: 4 }} disabled={sinastriLoading}>{sinastriLoading ? 'Hesaplanıyor...' : 'Sinastri Yorumu Al'}</button>
           </form>
           {sinastriResult && <div style={{ background: '#23234a', borderRadius: 8, padding: 12, color: '#fff', whiteSpace: 'pre-line', marginTop: 8 }}>{sinastriResult}</div>}
@@ -887,8 +841,8 @@ function App() {
                 if (coords) setHoraryLocation(l => ({ ...l, lat: coords.lat, lon: coords.lon }));
               }
             }} style={{ padding: 8, borderRadius: 6, border:'1px solid #a78bfa', fontSize: 15 }} />
-            <input type="number" step="0.0001" placeholder="Güncel enlem (soru için)" value={horaryLocation.lat} onChange={e => setHoraryLocation(l => ({ ...l, lat: e.target.value }))} style={{ padding: 8, borderRadius: 6, border:'1px solid #a78bfa', fontSize: 15 }} />
-            <input type="number" step="0.0001" placeholder="Güncel boylam (soru için)" value={horaryLocation.lon} onChange={e => setHoraryLocation(l => ({ ...l, lon: e.target.value }))} style={{ padding: 8, borderRadius: 6, border:'1px solid #a78bfa', fontSize: 15 }} />
+            <input type="number" step="0.0001" placeholder="Güncel enlem (horary)" value={horaryLocation.lat} onChange={e => setHoraryLocation(l => ({ ...l, lat: e.target.value }))} style={{ padding: 8, borderRadius: 6, border:'1px solid #a78bfa', fontSize: 15, display: 'none' }} />
+            <input type="number" step="0.0001" placeholder="Güncel boylam (horary)" value={horaryLocation.lon} onChange={e => setHoraryLocation(l => ({ ...l, lon: e.target.value }))} style={{ padding: 8, borderRadius: 6, border:'1px solid #a78bfa', fontSize: 15, display: 'none' }} />
             <button type="submit" style={{ padding: '8px 0', borderRadius: 7, background: '#a78bfa', color: '#181825', fontWeight: 'bold', border: 'none', fontSize: 16, marginTop: 4 }} disabled={loading}>{loading ? 'Hesaplanıyor...' : 'Horary Yorumu Al'}</button>
           </form>
           {horaryResult && (

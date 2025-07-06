@@ -1,4 +1,10 @@
 <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="20" cy="20" r="20" fill="#2563eb"/>
-  <text x="50%" y="55%" text-anchor="middle" fill="white" font-size="18" font-family="Inter, Arial, sans-serif" font-weight="bold" dy=".3em">MV</text>
+  <defs>
+    <linearGradient id="mv-favicon-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#764ba2"/>
+      <stop offset="1" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="40" height="40" rx="10" fill="url(#mv-favicon-gradient)"/>
+  <text x="50%" y="62%" text-anchor="middle" fill="#fff" font-size="26" font-family="Segoe UI Emoji, Apple Color Emoji, Noto Color Emoji, Android Emoji, EmojiSymbols, Arial, sans-serif" font-weight="bold" dominant-baseline="middle">🌌</text>
 </svg>

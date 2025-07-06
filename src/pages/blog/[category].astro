@@ -371,6 +371,9 @@ const categoryKeywords = {
 				</div>
 
 				<div class="page-header">
+					<div class="blog-logo" aria-label="MindVerse Logo" style="margin-bottom: 1rem;">
+						<span style="font-size:2.5rem;display:inline-block;">🌌</span>
+					</div>
 					<h1 class="page-title">
 						<span class="category-emoji">{categoryIcons[category] || "📝"}</span>
 						{categoryTitles[category] || category.charAt(0).toUpperCase() + category.slice(1)}
@@ -405,7 +408,8 @@ const categoryKeywords = {
 					) : (						<ul class="mv-grid">
 							{filteredPosts.map(post => (
 								<li class="mv-card">
-									<a href={post.id ? `/blog/${post.id}` : '#'}>										{post.data.image ? (
+									<a href={post.id ? `/blog/${post.id}` : '#'}>
+										{post.data.image ? (
 											<img
 												src={post.data.image}
 												alt={post.data.title}
@@ -438,6 +442,7 @@ const categoryKeywords = {
 				</main>
 			</div>
 
-			<Footer />		</div>
+			<Footer />
+		</div>
 	</body>
 </html>

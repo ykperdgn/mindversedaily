@@ -250,13 +250,12 @@ function parseDateTimeInput(val) {
 }
 
 // --- Result Box Component ---
-function ResultBoxEN({ result, shareUrl }) {
+function ResultBoxEN({ result }) {
   if (!result) return null;
   const isMobile = typeof window !== 'undefined' && window.innerWidth <= 600;
   return (
     <div style={{background:'#181825', borderRadius:12, padding: isMobile ? 10 : 16, color:'#fff', whiteSpace:'pre-line', marginTop:16, position:'relative', width:'100%', boxSizing:'border-box', overflowWrap:'break-word', fontSize: isMobile ? 14 : 16}}>
       <div style={{paddingTop: isMobile ? 20 : 32}}>{result}</div>
-      {shareUrl && <div style={{fontSize:12, color:'#34d399', marginTop:12, wordBreak:'break-all'}}>Shareable link: <a href={shareUrl} target="_blank" rel="noopener noreferrer" style={{color:'#34d399', textDecoration:'underline'}}>{shareUrl}</a></div>}
     </div>
   );
 }
@@ -277,7 +276,6 @@ export default function AstroAstrologyAppEN(props) {
   });
   const [planetPositions, setPlanetPositions] = useState(null);
   const [userInfo, setUserInfo] = useState({ name: '', gender: '' });
-  const [shareUrl, setShareUrl] = useState('');
   const [transitResult, setTransitResult] = useState('');
   const [sinastriResult, setSinastriResult] = useState('');
   const [qaInput, setQaInput] = useState('');
@@ -481,7 +479,7 @@ export default function AstroAstrologyAppEN(props) {
           <label>Birth Date & Time</label>
           <input type="datetime-local" name="date" value={birth.date} onChange={handleBirthChange} style={{padding:8, borderRadius:6, border:'1px solid #a78bfa', fontSize:15}} required />
         </div>
-        <div style={{display:'flex', gap:8}}>
+        <div style={{display:'flex', gap:8, display:'none'}}>
           <div style={{flex:1, display:'flex', flexDirection:'column', gap:6}}>
             <label>Latitude (lat)</label>
             <input type="number" step="0.0001" name="lat" value={birth.lat} onChange={handleBirthChange} placeholder="51.5074" style={{padding:8, borderRadius:6, border:'1px solid #a78bfa', fontSize:15}} required />
@@ -536,8 +534,8 @@ export default function AstroAstrologyAppEN(props) {
             <input type="text" placeholder="Partner's city" value={partner.city} name="city" onChange={e => setPartner(p => ({ ...p, city: e.target.value }))} onBlur={handlePartnerCityBlurEN} style={{ padding: 8, borderRadius: 6, border:'1px solid #a78bfa', fontSize: 15 }} />
             {partnerCitySearchLoading && <div style={{color:'#a78bfa', fontSize:13}}>Searching city...</div>}
             <input type="text" placeholder="Partner's country" value={partner.country} name="country" onChange={e => setPartner(p => ({ ...p, country: e.target.value }))} style={{ padding: 8, borderRadius: 6, border:'1px solid #a78bfa', fontSize: 15 }} />
-            <input type="number" step="0.0001" placeholder="Partner's latitude" value={partner.lat} name="lat" onChange={e => setPartner(p => ({ ...p, lat: e.target.value }))} style={{ padding: 8, borderRadius: 6, border:'1px solid #a78bfa', fontSize: 15 }} />
-            <input type="number" step="0.0001" placeholder="Partner's longitude" value={partner.lon} name="lon" onChange={e => setPartner(p => ({ ...p, lon: e.target.value }))} style={{ padding: 8, borderRadius: 6, border:'1px solid #a78bfa', fontSize: 15 }} />
+            <input type="number" step="0.0001" placeholder="Partner's latitude" value={partner.lat} name="lat" onChange={e => setPartner(p => ({ ...p, lat: e.target.value }))} style={{ padding: 8, borderRadius: 6, border:'1px solid #a78bfa', fontSize: 15, display: 'none' }} />
+            <input type="number" step="0.0001" placeholder="Partner's longitude" value={partner.lon} name="lon" onChange={e => setPartner(p => ({ ...p, lon: e.target.value }))} style={{ padding: 8, borderRadius: 6, border:'1px solid #a78bfa', fontSize: 15, display: 'none' }} />
             <button type="submit" style={{ padding: '8px 0', borderRadius: 7, background: '#38bdf8', color: '#181825', fontWeight: 'bold', border: 'none', fontSize: 16, marginTop: 4 }} disabled={sinastriLoading}>{sinastriLoading ? 'Calculating...' : 'Get Synastry Interpretation'}</button>
           </form>
           {sinastriResult && <div style={{ background: '#23234a', borderRadius: 8, padding: 12, color: '#fff', whiteSpace: 'pre-line', marginTop: 8 }}>{sinastriResult}</div>}
@@ -562,8 +560,8 @@ export default function AstroAstrologyAppEN(props) {
                 if (coords) setHoraryLocation(l => ({ ...l, lat: coords.lat, lon: coords.lon }));
               }
             }} style={{ padding: 8, borderRadius: 6, border:'1px solid #a78bfa', fontSize: 15 }} />
-            <input type="number" step="0.0001" placeholder="Current latitude (for horary)" value={horaryLocation.lat} onChange={e => setHoraryLocation(l => ({ ...l, lat: e.target.value }))} style={{ padding: 8, borderRadius: 6, border:'1px solid #a78bfa', fontSize: 15 }} />
-            <input type="number" step="0.0001" placeholder="Current longitude (for horary)" value={horaryLocation.lon} onChange={e => setHoraryLocation(l => ({ ...l, lon: e.target.value }))} style={{ padding: 8, borderRadius: 6, border:'1px solid #a78bfa', fontSize: 15 }} />
+            <input type="number" step="0.0001" placeholder="Current latitude (for horary)" value={horaryLocation.lat} onChange={e => setHoraryLocation(l => ({ ...l, lat: e.target.value }))} style={{ padding: 8, borderRadius: 6, border:'1px solid #a78bfa', fontSize: 15, display: 'none' }} />
+            <input type="number" step="0.0001" placeholder="Current longitude (for horary)" value={horaryLocation.lon} onChange={e => setHoraryLocation(l => ({ ...l, lon: e.target.value }))} style={{ padding: 8, borderRadius: 6, border:'1px solid #a78bfa', fontSize: 15, display: 'none' }} />
             <button type="submit" style={{ padding: '8px 0', borderRadius: 7, background: '#a78bfa', color: '#181825', fontWeight: 'bold', border: 'none', fontSize: 16, marginTop: 4 }} disabled={loading}>{loading ? 'Calculating...' : 'Get Horary Interpretation'}</button>
           </form>
           {horaryResult && (
@@ -577,7 +575,7 @@ export default function AstroAstrologyAppEN(props) {
         <h2 style={{ fontSize: 20, fontWeight: 600, color: '#ffd700', marginBottom: 8, textAlign: 'center' }}>Tarot</h2>
         <TarotGridEN trigger={typeof window !== 'undefined' ? window.__drawTarotCardEN : 0} />
       </div>
-      {result && <div ref={resultRef}><ResultBoxEN result={result} shareUrl={shareUrl} /></div>}
+      {result && <div ref={resultRef}><ResultBoxEN result={result} /></div>}
       <div style={{ color: '#888', textAlign: 'center', marginTop: 32 }}>
         <b>Astrology AI Premium (English)</b><br />
         <i>All features and interpretations are in English for the English homepage.</i>
