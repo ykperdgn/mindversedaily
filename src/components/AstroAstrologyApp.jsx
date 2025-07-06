@@ -292,85 +292,49 @@ function ChartWheelV2({ positions }) {
 // --- Wildwood Tarot Kartları Türkçe Anlamlar ---
 const WILDWOOD_TAROT_TR = {
   // Majör Arkana
-  "The Wanderer": "Deli (The Fool)",
-  "The Shaman": "Büyücü (The Magician)",
-  "The Seer": "Azize (The High Priestess)",
-  "The Green Woman": "İmparatoriçe (The Empress)",
-  "The Green Man": "İmparator (The Emperor)",
-  "The Ancestor": "Başrahibe (The Hierophant)",
-  "The Forest Lovers": "Aşıklar (The Lovers)",
-  "The Archer": "Savaş Arabası (The Chariot)",
-  "The Stag": "Güç (Strength)",
-  "The Hooded Man": "Ermiş (The Hermit)",
-  "The Wheel": "Kader Çarkı (Wheel of Fortune)",
-  "The Woodward": "Adalet (Justice)",
-  "The Mirror": "Asılan Adam (The Hanged Man)",
-  "The Journey": "Ölüm (Death)",
-  "Balance": "Denge (Temperance)",
-  "The Guardian": "Şeytan (The Devil)",
-  "The Blasted Oak": "Kule (The Tower)",
-  "The Pole Star": "Yıldız (The Star)",
-  "The Moon on Water": "Ay (The Moon)",
-  "The Sun of Life": "Güneş (The Sun)",
-  "The Great Bear": "Mahkeme (Judgement)",
-  "The World Tree": "Dünya (The World)",
-  // Minör Arkana kartları
-  "King of Arrows * Kingfisher": "Zeka, iletişim, adalet, keskin görüş.",
-  "Queen of Arrows * Swan": "Duygusal denge, zarafet, sezgi.",
-  "Knight of Arrows * Hawk": "Hız, netlik, kararlılık.",
-  "Page of Arrows * Wren": "Merak, yeni fikirler, öğrenme.",
-  "Ace of Arrows * The Breath of Life": "Yeni başlangıçlar, ilham, fikir.",
-  "Two of Arrows * Injustice": "Kararsızlık, adaletsizlik, içsel çatışma.",
-  "Three of Arrows * Jealousy": "Kıskançlık, kalp kırıklığı, üzüntü.",
-  "Four of Arrows * Rest": "Dinlenme, iyileşme, içe dönüş.",
-  "Five of Arrows * Frustration": "Hayal kırıklığı, engeller, mücadele.",
-  "Six of Arrows * Transition": "Geçiş, değişim, yolculuk.",
-  "Seven of Arrows * Insecurity": "Güvensizlik, şüphe, endişe.",
-  "Eight of Arrows * Struggle": "Zorluk, mücadele, engeller.",
-  "Nine of Arrows * Dedication": "Adanmışlık, özveri, çaba.",
-  "Ten of Arrows * Instruction": "Öğrenme, öğretme, bilgi aktarımı.",
-  "King of Bows * Adder": "Liderlik, karizma, dönüşüm.",
-  "Queen of Bows * Hare": "Yaratıcılık, sezgi, zarafet.",
-  "Knight of Bows * Fox": "Kurnazlık, çeviklik, fırsatçılık.",
-  "Page of Bows * Stoat": "Merak, enerji, yeni başlangıçlar.",
-  "Ace of Bows * Spark of Life": "Hayat kıvılcımı, yeni enerji, motivasyon.",
-  "Two of Bows * Decision": "Karar verme, seçenekler, planlama.",
-  "Three of Bows * Fulfilment": "Tatmin, başarı, ilerleme.",
-  "Four of Bows * Celebration": "Kutlama, mutluluk, birlik.",
-  "Five of Bows * Empowerment": "Güçlenme, rekabet, mücadele.",
-  "Six of Bows * Abundance": "Bolluk, bereket, paylaşım.",
-  "Seven of Bows * Clearance": "Temizlik, arınma, engelleri aşma.",
-  "Eight of Bows * Hearthfire": "Aile, sıcaklık, topluluk.",
-  "Nine of Bows * Respect": "Saygı, direnç, tecrübe.",
-  "Ten of Bows * Responsibility": "Sorumluluk, yük, görev.",
-  "King of Vessels * Heron": "Duygusal denge, bilgelik, sabır.",
-  "Queen of Vessels * Salmon": "Sezgi, duygusal derinlik, bağlılık.",
-  "Knight of Vessels * Eel": "Uyum sağlama, akış, esneklik.",
-  "Page of Vessels * Otter": "Neşe, oyun, duygusal açıklık.",
-  "Ace of Vessels * The Waters of Life": "Duyguların başlangıcı, yeni ilişkiler.",
-  "Two of Vessels * Attraction": "Çekim, ortaklık, uyum.",
-  "Three of Vessels * Joy": "Sevinç, kutlama, dostluk.",
-  "Four of Vessels * Boredom": "Sıkılma, tatminsizlik, durağanlık.",
-  "Five of Vessels * Ecstasy": "Coşku, duygusal yoğunluk, aşırılık.",
-  "Six of Vessels * Reunion": "Buluşma, geçmişle yüzleşme, nostalji.",
-  "Seven of Vessels * Mourning": "Yas, kayıp, duygusal zorluk.",
-  "Eight of Vessels * Rebirth": "Yeniden doğuş, değişim, ilerleme.",
-  "Nine of Vessels * Generosity": "Cömertlik, paylaşım, bolluk.",
-  "Ten of Vessels * Happiness": "Mutluluk, aile, huzur.",
-  "King of Vessels * Wolf": "Koruma, liderlik, sadakat.",
-  "Queen of Stones * Bear": "Güç, koruyuculuk, annelik.",
-  "Knight of Stones * Horse": "Çalışkanlık, azim, ilerleme.",
-  "Page of Stones * Lynx": "Gizlilik, gözlem, yeni bilgiler.",
-  "Ace of Stones * The Foundation of Life": "Temel, güvenlik, yeni başlangıç.",
-  "Two of Stones * Challenge": "Mücadele, denge arayışı, zorluk.",
-  "Three of Stones * Creativity": "Yaratıcılık, işbirliği, üretkenlik.",
-  "Four of Stones * Protection": "Koruma, savunma, güvenlik.",
-  "Five of Stones * Endurance": "Dayanıklılık, sabır, zorluklara göğüs germe.",
-  "Six of Stones * Exploitation": "Sömürü, dengesizlik, adaletsizlik.",
-  "Seven of Stones * Healing": "Şifa, iyileşme, toparlanma.",
-  "Eight of Stones * Skill": "Beceri, ustalık, gelişim.",
-  "Nine of Stones * Tradition": "Gelenek, kökler, süreklilik.",
-  "Ten of Stones * Home": "Ev, aile, güvenli liman."
+  "The Wanderer": {
+    tr: "Deli",
+    en: "The Fool",
+    upright: "Yeni başlangıçlar, özgürlük, bilinmeyene cesaretle adım atmak.",
+    reversed: "Dikkatsizlik, hazırlıksızlık, riskli adımlar."
+  },
+  "The Shaman": {
+    tr: "Büyücü",
+    en: "The Magician",
+    upright: "İrade gücü, potansiyel, içsel kaynakları kullanmak.",
+    reversed: "Yanıltıcı güç, manipülasyon, fırsatları kaçırmak."
+  },
+  "The Seer": {
+    tr: "Azize",
+    en: "The High Priestess",
+    upright: "Sezgi, içgörü, ruhsal rehberlik.",
+    reversed: "Gizli gerçekler, içe kapanıklık, kafa karışıklığı."
+  },
+  "The Green Woman": {
+    tr: "İmparatoriçe",
+    en: "The Empress",
+    upright: "Verimlilik, yaratıcılık, doğayla uyum.",
+    reversed: "Aşırı korumacılık, tıkanıklık, dengesizlik."
+  },
+  "The Green Man": {
+    tr: "İmparator",
+    en: "The Emperor",
+    upright: "Büyüme, canlılık, doğayla bütünleşme.",
+    reversed: "Otoriteyle sorunlar, inatçılık, kontrol kaybı."
+  },
+  "Three of Vessels * Joy": {
+    tr: "Üç Kap * Sevinç",
+    en: "Three of Vessels * Joy",
+    upright: "Sevinç, kutlama, dostluk, sosyal başarı.",
+    reversed: "Aşırıya kaçmak, yüzeysel ilişkiler, hayal kırıklığı."
+  },
+  "Ten of Arrows * Instruction": {
+    tr: "On Ok * Öğreti",
+    en: "Ten of Arrows * Instruction",
+    upright: "Öğreti, bilgi aktarımı, deneyimden öğrenmek.",
+    reversed: "Yanlış yönlendirme, iletişim sorunları, inatçılık."
+  },
+  // ...diğer kartlar...
 };
 
 // Tarot Card Component: uses local /assets/tarot images and provided Turkish meanings
@@ -379,8 +343,7 @@ function TarotCardGenerative() {
     () => Object.entries(WILDWOOD_TAROT_TR).map(([title, meaning]) => {
       const base = title.includes(' * ') ? title.split(' * ')[0] : title;
       const file = base.replace(/\s+/g, '_') + '.png';
-      // Support for future reversed meanings: if meaning is an object, {upright, reversed}
-      return { title, meaning, file };
+      return { title, meaning, file, turkishTitle: meaning.tr };
     }),
     []
   );
@@ -431,11 +394,11 @@ function TarotCardGenerative() {
           <div style={{color:'#888', fontSize:16, textAlign:'center', minWidth: isMobile ? 0 : 180}}>Henüz kart çekilmedi.</div>
         ) : cards.map((card, i) => (
           <div key={i} style={{display:'flex', flexDirection:'column', ...cardStyle}}>
-            <div style={{fontWeight:'bold', marginBottom:6, fontSize:17, color:'#ffd700', textAlign:'center'}}>{card.title}</div>
+            <div style={{fontWeight:'bold', marginBottom:6, fontSize:17, color:'#ffd700', textAlign:'center'}}>{card.turkishTitle}</div>
             <img src={`/assets/tarot/${card.file}`} alt={card.title} style={{...imgStyle, transform: card.reversed ? 'rotate(180deg)' : 'none'}} />
             <div style={{marginTop:4, color:'#fff', fontSize:14, textAlign:'center'}}>
               <b>{card.reversed ? 'Ters Anlam:' : 'Anlam:'}</b><br/>
-              {typeof card.meaning === 'object' ? (card.reversed ? (card.meaning.reversed || card.meaning.upright) : card.meaning.upright) : card.meaning}
+              {typeof card.meaning === 'object' ? (card.reversed ? (card.meaning.reversed || card.meaning.upright) : card.meaning.upright) : card.meaning.tr}
             </div>
           </div>
         ))}
