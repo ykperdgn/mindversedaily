@@ -1,6 +1,3 @@
 {
-  "functions": {
-    "api/chart.py": { "runtime": "vercel-python@3.10" },
-    "api/transit.py": { "runtime": "vercel-python@3.10" }
-  }
+  "functions": {}
 }
