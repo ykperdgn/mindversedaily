@@ -68,22 +68,6 @@ const enhancedKeywords = [
 			border: 1px solid rgba(226, 232, 240, 0.5);
 		}
 
-		.hero-image {
-			position: relative;
-			height: 400px;
-			overflow: hidden;
-		}
-
-		.hero-image img {
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-			transition: transform 0.3s ease;
-		}
-
-		.blog-article:hover .hero-image img {
-			transform: scale(1.02);
-		}
 		.blog-content {
 			padding: 3rem 4rem; /* Daha geniş padding */
 		}
@@ -223,10 +207,6 @@ const enhancedKeywords = [
 				font-size: 2rem;
 			}
 
-			.hero-image {
-				height: 250px;
-			}
-
 			.prose {
 				font-size: 1rem;
 			}
@@ -241,14 +221,6 @@ const enhancedKeywords = [
 				← Blog'a Dön
 			</a>
 			<article class="blog-article">
-				<figure class="hero-image">
-					<img
-						src={image || '/assets/blog-placeholder-1.svg'}
-						alt={title}
-						loading="lazy"
-						onError={(e) => { e.target.src = '/assets/blog-placeholder-1.svg'; }}
-					/>
-				</figure>
 				<div class="blog-content">
 					<div class="blog-meta">
 						<FormattedDate date={pubDate} />

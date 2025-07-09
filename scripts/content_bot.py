@@ -161,6 +161,39 @@ subtopics = {
     "love": ["science of attraction", "relationship tips", "love languages", "psychology of love", "romantic gestures", "long-distance relationships"]
 }
 
+# Popsci tarzı ana kategoriler ve alt başlıklar
+POPSCI_CATEGORIES = ["science", "health", "business", "world"]
+POPSCI_SUBTOPICS = {
+    "science": [
+        "cutting-edge physics discoveries",
+        "breakthroughs in genetics",
+        "climate change science",
+        "AI and robotics in research",
+        "quantum computing explained"
+    ],
+    "health": [
+        "mental health trends",
+        "nutrition myths debunked",
+        "latest in preventive medicine",
+        "fitness tech innovations",
+        "public health challenges"
+    ],
+    "business": [
+        "AI's impact on global markets",
+        "startups changing the world",
+        "future of remote work",
+        "sustainable business models",
+        "fintech revolutions"
+    ],
+    "world": [
+        "geopolitical shifts in 2025",
+        "global climate policy",
+        "emerging economies",
+        "technology and society",
+        "international cooperation in science"
+    ]
+}
+
 def create_articles_for_all_categories(auto_deploy_enabled=False):
     date = datetime.datetime.utcnow().strftime("%Y-%m-%d")
     image_fetcher = ImageFetcher()  # Image fetcher instance'ı oluştur
@@ -281,6 +314,43 @@ def create_articles_for_selected_categories(selected_categories, auto_deploy_ena
         time.sleep(10)  # Content creation tamamlansin
         auto_deploy()
 
+def create_popsci_style_articles():
+    date = datetime.datetime.utcnow().strftime("%Y-%m-%d")
+    image_fetcher = ImageFetcher()
+    for category in POPSCI_CATEGORIES:
+        subtopics = POPSCI_SUBTOPICS[category]
+        for i, subtopic in enumerate(subtopics):
+            print(f"\n🎯 [{category.upper()}] Article {i+1}/5: {subtopic}")
+            try:
+                prompt_en = (
+                    f"Write a long-form article (700+ words) in English in the category '{category}' focusing on '{subtopic}', including recent developments or scientific findings. "
+                    "Include a catchy title (start with 'Title:') and a short summary (start with 'Summary:'). Then write the full article."
+                )
+                english_article = generate_content(prompt_en)
+                print("   ⏳ Waiting 10 seconds for API rate limit...")
+                time.sleep(10)
+
+                # Türkçe çeviri prompt'u
+                short_translation_prompt = (
+                    "Makalenin tamamını baştan sona Türkçeye çevir. Başlık ve özet dahil, başa tekrar Title: ve Summary: ekle. Sadece çeviriyi döndür:\n\n"
+                ) + english_article[:12000]
+                turkish_article = generate_content(short_translation_prompt)
+                print("   ⏳ Waiting 10 seconds for API rate limit...")
+                time.sleep(10)
+
+                for lang, article in [("en", english_article), ("tr", turkish_article)]:
+                    title, description, image, content = parse_article_fields(article, category, image_fetcher)
+                    slug = slugify(title)
+                    content_dir = os.path.join(os.path.dirname(__file__), "..", "src", "content", "blog", category)
+                    os.makedirs(content_dir, exist_ok=True)
+                    filepath = os.path.join(content_dir, f"{date}-{slug}.{lang}.md")
+                    write_safe_article(filepath, title, description, date, category, image, content)
+                print(f"   ✅ Article for '{subtopic}' created in both EN & TR.")
+            except Exception as e:
+                print(f"   ❌ Error: {e}")
+                continue
+    print("\n🎉 Popsci tarzı içerik üretimi tamamlandı!")
+
 def auto_deploy():
     """Otomatik build ve deploy işlemi"""
     try:
@@ -320,12 +390,13 @@ def auto_deploy():
 if __name__ == "__main__":
     import sys
 
-    # Komut satırı argümanlarını kontrol et
     auto_deploy_enabled = "--deploy" in sys.argv
 
-    if len(sys.argv) > 1 and sys.argv[1] not in ["--deploy"]:
+    if "--popsci" in sys.argv:
+        create_popsci_style_articles()
+    elif len(sys.argv) > 1 and sys.argv[1] not in ["--deploy"]:
         # Belirli kategoriler
-        categories_to_create = [arg for arg in sys.argv[1:] if arg != "--deploy"]
+        categories_to_create = [arg for arg in sys.argv[1:] if arg not in ["--deploy"]]
         create_articles_for_selected_categories(categories_to_create, auto_deploy_enabled)
     else:
         # Tek kategori test için

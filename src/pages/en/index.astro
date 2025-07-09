@@ -24,7 +24,7 @@ const availableCategories = [...new Set(posts.map(post => post.data.category).fi
 
 const categories = availableCategories.length > 0
   ? availableCategories
-  : ["health", "psychology", "history", "space", "quotes", "love", "horoscope"];
+  : ["health", "psychology", "history", "space", "quotes", "love", "horoscope", "science", "business", "world"];
 
 const categoryIcons = {
   health: "🧬",
@@ -33,7 +33,10 @@ const categoryIcons = {
   space: "🚀",
   quotes: "💬",
   love: "❤️",
-  horoscope: "🔮"
+  horoscope: "🔮",
+  science: "🔬",
+  business: "💼",
+  world: "🌍"
 };
 
 // English homepage SEO

@@ -29,7 +29,7 @@ const availableCategories = [...new Set(posts.map(post => post.data.category).fi
 
 const categories = availableCategories.includes('health') && availableCategories.includes('psychology')
   ? availableCategories
-  : ["health", "psychology", "history", "space", "quotes", "love", "horoscope"];
+  : ["health", "psychology", "history", "space", "quotes", "love", "horoscope", "science", "business", "world"];
 
 const categoryIcons = {
   health: "🧬",
@@ -38,7 +38,10 @@ const categoryIcons = {
   space: "🚀",
   quotes: "💬",
   love: "❤️",
-  horoscope: "🔮"
+  horoscope: "🔮",
+  science: "🔬",
+  business: "💼",
+  world: "🌍"
 };
 
 // Türkçe kategori isimleri
@@ -49,7 +52,10 @@ const categoryNamesTR = {
   space: "Uzay",
   quotes: "Alıntılar",
   love: "Aşk",
-  horoscope: "Horoskop"
+  horoscope: "Horoskop",
+  science: "Bilim",
+  business: "İş Dünyası",
+  world: "Dünya"
 };
 
 // Homepage SEO optimization
