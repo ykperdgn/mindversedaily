@@ -19,6 +19,22 @@ interface Props {
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
+// Detect language and alternate URLs
+const pathname = Astro.url.pathname;
+const isEnglish = pathname.startsWith('/en');
+
+// Compute alternate URLs
+let trUrl, enUrl, xDefaultUrl;
+if (isEnglish) {
+  enUrl = canonicalURL.toString();
+  trUrl = new URL(pathname.replace(/^\/en/, ''), Astro.site).toString();
+  xDefaultUrl = enUrl;
+} else {
+  trUrl = canonicalURL.toString();
+  enUrl = new URL('/en' + (pathname === '/' ? '' : pathname), Astro.site).toString();
+  xDefaultUrl = trUrl;
+}
+
 const {
 	title,
 	description,
@@ -129,9 +145,9 @@ const fullTitle = title.includes('MindVerse') ? title : `${title} | ${SITE_TITLE
 <link rel="canonical" href={canonicalURL} />
 
 <!-- Language alternates -->
-<link rel="alternate" hreflang="tr" href={canonicalURL} />
-<link rel="alternate" hreflang="en" href={new URL(Astro.url.pathname.replace('/tr/', '/en/'), Astro.site)} />
-<link rel="alternate" hreflang="x-default" href={canonicalURL} />
+<link rel="alternate" hreflang="tr" href={trUrl} />
+<link rel="alternate" hreflang="en" href={enUrl} />
+<link rel="alternate" hreflang="x-default" href={xDefaultUrl} />
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content={articleType === 'article' ? 'article' : 'website'} />
