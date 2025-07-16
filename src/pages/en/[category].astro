@@ -1,7 +1,7 @@
 ---
 import BaseHead from '../../components/BaseHead.astro';
 import HeaderEN from '../../components/HeaderEN.astro';
-import Footer from '../../components/Footer.astro';
+import FooterEN from '../../components/FooterEN.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 import { getCollection } from 'astro:content';
 import FormattedDate from '../../components/FormattedDate.astro';
@@ -30,11 +30,13 @@ const filteredPosts = posts.filter(post =>
   post.data.category?.toLowerCase() === category.toLowerCase()
 );
 
-// Get all available categories for navigation
+// Get all available categories for navigation (ENGLISH ONLY)
 const availableCategories = [...new Set(posts.map(post => post.data.category).filter(Boolean))];
 const categories = availableCategories.length > 0
-  ? availableCategories.sort()
-  : ["health", "psychology", "history", "space", "quotes", "love"];
+  ? availableCategories.filter(cat => [
+      "health","psychology","history","space","quotes","love","horoscope","science","business","world"
+    ].includes(cat)).sort()
+  : ["health", "psychology", "history", "space", "quotes", "love", "horoscope", "science", "business", "world"];
 
 const categoryIcons = {
   health: "🧬",
@@ -360,10 +362,8 @@ const pageKeywords = `${category}, ${category} articles, ${category} research, s
               <p>No articles found in this category yet.</p>
               <a href="/en">Back to home</a>
             </div>
-          ) : (            <ul class="mv-grid">              {filteredPosts.map(post => (
-                <li class="mv-card">
-                  <a
-                    href={post.id ? `/${post.id}` : '#'}
+          ) : (            <ul class="mv-grid">              {filteredPosts.map(post => (                <li class="mv-card">                  <a
+                    href={post.id ? `/en/blog/${post.id.replace(/en$/, '')}` : '#'}
                     data-post-title={post.data.title}
                     data-post-description={post.data.description || ''}
                     data-post-category={post.data.category || ''}
@@ -402,7 +402,7 @@ const pageKeywords = `${category}, ${category} articles, ${category} research, s
         </main>
       </div>
 
-      <Footer />
+      <FooterEN />
     </div>
   </body>
 </html>

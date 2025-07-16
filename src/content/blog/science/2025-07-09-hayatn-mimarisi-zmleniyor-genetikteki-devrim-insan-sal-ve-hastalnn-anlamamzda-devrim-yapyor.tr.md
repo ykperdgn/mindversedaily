@@ -4,7 +4,6 @@ description: "Genetik alanındaki son yıllardaki ilerleme, gen düzenleme, geno
 pubDate: 2025-07-09
 category: "science"
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Genetik alanı, insan genomunun gizemlerinin çözümlenmesiyle son yıllarda büyük bir değişim geçirdi. Gen düzenleme, genomik ve epigenetik alanlarındaki hızlı ilerleme, insan sağlığı ve hastalık önleme anlayışımızı devrimleştiriyor. Bu makalede, genetikteki son kırılmaların insan sağlığı ve hastalık önleme anlayışımızdaki etkilerini araştıracağız.

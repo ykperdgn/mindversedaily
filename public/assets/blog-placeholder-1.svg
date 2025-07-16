@@ -11,7 +11,6 @@
     </linearGradient>
   </defs>
   <rect width="800" height="400" rx="64" fill="url(#grad1)"/>
-  <!-- Center group: emoji and text -->
   <g>
     <text x="400" y="185" font-family="Segoe UI Emoji, Apple Color Emoji, Noto Color Emoji, Arial, sans-serif" font-size="160" text-anchor="middle" dominant-baseline="middle">🌌</text>
     <text x="400" y="275" font-family="Segoe UI, Arial, sans-serif" font-size="56" font-weight="bold" text-anchor="middle" fill="url(#text-gradient)" letter-spacing="2" style="text-shadow:0 2px 12px #0006;">MindVerse</text>

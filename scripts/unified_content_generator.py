@@ -380,7 +380,13 @@ tags: ["{category}"]
 
             # Write file
             with open(file_path, 'w', encoding='utf-8') as f:
-                f.write(frontmatter + content)
+                final_content = frontmatter + content
+                # Append Amazon CTA for English health articles
+                if self.language == "en" and category == "health":
+                    final_content += ("\n---\n"
+                        "🔍 To discover all health products on Amazon, click here:\n"
+                        "➡️ [https://amzn.to/3GLJYIo]\n")
+                f.write(final_content)
 
             print(f"✅ Created: {file_path.name}")
             return True

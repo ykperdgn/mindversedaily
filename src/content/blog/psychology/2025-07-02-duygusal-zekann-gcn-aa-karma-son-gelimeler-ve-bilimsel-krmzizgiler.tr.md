@@ -6,9 +6,6 @@ category: psychology
 tags: []
 ---
 
-Here is the translated article in Turkish:
-
-
 
 Duygusal zeka, 1990 yılında psikologlar Peter Salovey ve John D. Mayer tarafından tanıtılan bir kavramdır. Kendimizde ve başkalarında duyguları tanımak ve anlamak ve bu farkındalığı düşünce ve davranış rehberliğinde kullanmak anlamına gelir. DZ, gelişmiş ilişkiler, daha iyi mental sağlık ve iş performansının yanı sıra birçok olumlu sonuca bağlıydı. Önemi rağmen, DZ'nin nöral mekanizmaları ancak yakın zamanda eksiksiz olarak anlaşılmaya başlanmıştır.
 

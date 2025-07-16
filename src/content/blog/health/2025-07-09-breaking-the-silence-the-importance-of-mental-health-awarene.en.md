@@ -1,9 +1,8 @@
 ---
 title: "Breaking the Silence The Importance of Mental Health Awareness in Modern Society"
 description: "Mental health awareness has become a critical aspect of modern society, as the world grapples with the escalating rates of depression, anxiety, and ot..."
-category: "health"
+category: health
 pubDate: 2025-07-09
-image: "/assets/blog-placeholder-1.svg"
 tags: ["health"]
 ---
 
@@ -39,3 +38,7 @@ Actionable Takeaways:
 * Support mental health initiatives and organizations in your community, advocating for greater awareness and support.
 
 By working together, we can create a society that prioritizes mental health, supports those in need, and promotes a culture of understanding and empathy.
+
+[ See Todays Deals on Amazon!](https://amzn.to/3UjsCWp)
+
+[🛒 See Today’s Deals on Amazon!](https://amzn.to/3UjsCWp)

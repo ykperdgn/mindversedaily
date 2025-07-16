@@ -2,7 +2,7 @@
 title: "The Quest to Discover Exoplanets A Journey Through the Cosmos"
 description: "The Early Days A Brief History"
 pubDate: 2025-07-01
-category: "space"
+category: space
 tags: []
 ---
 
@@ -57,3 +57,7 @@ Dr. Batalha emphasized the importance of continued exploration:
 The discovery of exoplanets has revolutionized our understanding of the universe, revealing a vast array of worlds beyond our own. As new missions and technologies emerge, we can expect even more exciting findings in the years to come. The search for life beyond Earth is an ongoing quest that continues to captivate scientists and the public alike.
 
 As we venture deeper into the cosmos, the discovery of exoplanets serves as a reminder of humanity's innate curiosity and drive to explore. The next chapter in this journey will undoubtedly be filled with surprises, insights, and new questions waiting to be answered.
+
+[ See Todays Deals on Amazon!](https://amzn.to/3UjsCWp)
+
+[🛒 See Today’s Deals on Amazon!](https://amzn.to/3UjsCWp)

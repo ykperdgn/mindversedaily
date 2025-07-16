@@ -2,11 +2,9 @@
 title: "Satranç Tahtasını Yeniden Düzenlemek 2025 ve Ötesinde Jeopolitik Değişimler"
 description: "21. yüzyılın karmaşıklıklarına yol alırken, 2025 yılı jeopolitik değişimlerin merkezi olacak. Yeni global güçlerin yükselişi, uluslararası ittifakların yeniden yapılandırılması ve bilimsel keşifler..."
 pubDate: 2025-07-09
-category: "world"
+category: world
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
-
 21. yüzyılın ilk çeyreğinde, dünya derin jeopolitik değişimlere şahit oldu. COVID-19 pandemisi, Çin'in yükselişi ve bölgesel oyuncuların artan kendilerini göstermesi, global manzaranın hem akışkan hem de öngörülemez olmasını sağladı. 2025 yılına girerken, birkaç önemli eğilim ve gelişme, dünya düzenini yeniden şekillendirecek ve ulusları uyum sağlamaya ve yenilik yapmaya zorlayacak.
 
 **Hindistan Okyanusu'nun Yükselişi**

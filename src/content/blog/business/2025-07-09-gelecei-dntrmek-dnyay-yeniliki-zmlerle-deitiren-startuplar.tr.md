@@ -2,9 +2,8 @@
 title: "Geleceği Dönüştürmek Dünyayı Yenilikçi Çözümlerle Değiştiren Startuplar"
 description: "İklim değişikliğini önlemeye çalışmaktan sağlığa kadar, startuplar pozitif değişimin itici gücü olarak ortaya çıkıyorlar. Bu makale, dünyayı olumlu yönde etkilemek için yaratıcı çözümler geliştiren..."
 pubDate: 2025-07-09
-category: "business"
+category: business
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Son yıllarda, startup'lar dünyadaki en önemli mücadelelerin üstesinden gelmek için yenilikçi teknolojiler ve iş modelleri geliştiren pozitif değişimin itici gücü oldu. İklim değişikliği ve yenilenebilir enerji, sağlık ve eğitim gibi alanlarda startup'lar pozitif dönüşümün öncüsü olarak ortaya çıkıyorlar.

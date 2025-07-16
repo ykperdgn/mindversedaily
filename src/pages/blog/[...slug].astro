@@ -5,7 +5,13 @@ import { render } from 'astro:content';
 
 export async function getStaticPaths() {
 	const posts = await getCollection('blog');
-	return posts.map((post) => ({
+	// SADECE TÜRKÇE POSTLARİ handle et - İngilizce postlar /en/blog/[...slug].astro tarafından handle edilecek
+	const turkishPosts = posts.filter(post => {
+		if (!post.id) return false;
+		// Sadece Türkçe postlar: .tr ile bitenler veya İngilizce olmayan (.en ile bitmeyen) postlar
+		return post.id.endsWith('tr') || (!post.id.endsWith('en') && !post.id.endsWith('tr'));
+	});
+	return turkishPosts.map((post) => ({
 		params: { slug: post.id },
 		props: post,
 	}));

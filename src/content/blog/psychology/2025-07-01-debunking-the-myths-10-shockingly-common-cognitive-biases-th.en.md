@@ -1,16 +1,8 @@
 ---
-title: "Debunking The Myths 10 Shockingly Common Cognitive Biases Th.En"
-description: "Discover the latest research and insights in psychology category on MindVerse Daily."
-pubDate: 2025-07-02
-category: psychology
-tags: []
----
-
-﻿---
 title: "Debunking the Myths 10 Shockingly Common Cognitive Biases That Shape Your Reality"
 description: "Discover the fascinating world of human psychology with insights into behavior, mental health, cognitive science, and the latest psychological research."
 pubDate: 2025-07-01
-category: "psychology"
+category: psychology
 tags: []
 ---
 
@@ -45,3 +37,7 @@ Kunda, Z. (1990). The case for motivated reasoning. Psychological Bulletin, 108(
 Kruger, J., & Dunning, D. (1999). Unskilled and unaware of it: How difficulties in recognizing one's own incompetence lead to inflated self-assessments. Journal of Personality and Social Psychology, 77(6), 1121-1134.
 
 Tversky, A., & Kahneman, D. (1973). Availability: A heuristic for judging probability. Cognitive Psychology, 5(2), 207-232.
+
+[ See Todays Deals on Amazon!](https://amzn.to/3UjsCWp)
+
+[🛒 See Today’s Deals on Amazon!](https://amzn.to/3UjsCWp)

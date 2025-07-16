@@ -1,10 +1,9 @@
 ---
-title: "Başlık Zamanla Yarış İklim Değişikliği Biliminde Son Gelişmeleri Açığa Çı"
+title: "Başlık Zamanla Yarış İklim Değişikliği Biliminde Son Gelişmeleri Açığa Ç"
 description: "Başlık Zamanla Yarış İklim Değişikliği Biliminde Son Gelişmeleri Açığa Çıkarma..."
 pubDate: 2025-07-09
-category: "science"
+category: science
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 **Başlık:** "Zamanla Yarış: İklim Değişikliği Biliminde Son Gelişmeleri Açığa Çıkarma"

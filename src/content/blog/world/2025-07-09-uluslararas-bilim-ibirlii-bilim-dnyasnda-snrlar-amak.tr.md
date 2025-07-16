@@ -2,9 +2,8 @@
 title: "Uluslararası Bilim İşbirliği Bilim Dünyasında Sınırları Aşmak"
 description: "Dünya giderek daha fazla birbirine bağlanıyor ve bilim dünyasında uluslararası işbirliği ilerleme ve yeniliklerin temel taşı haline geliyor. Çeşitli arka planlardan gelen bilim insanları, kaynaklar..."
 pubDate: 2025-07-09
-category: "world"
+category: world
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 21. yüzyılda, dünya withoutseen sorunlarla karşı karşıya ve bu sorunlara cevap verebilmek için küresel bilim topluluğundan toplu bir çaba gerekiyor. Uluslararası bilim işbirliği, bu sorunları ele almak için gerekli olan kaynakların, uzmanlıkların ve bilgilerinin paylaşımına imkan veriyor. Bu işbirliği, keşif ve yenilikleri hızlandırıyor.

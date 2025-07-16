@@ -2,9 +2,8 @@
 title: "Gerçeğin Açığa Çıkarılması Bilimle Ortak Beslenme Mitleri Çürütülüyor"
 description: "Beslenme mitleri on yıllar boyunca devam etti, bu da genel halk arasında kafa karışıklığı ve yanlış bilgiye yol açtı. Bu makalede, en son bilimsel bulguları inceleyeceğiz ve en yaygın beslenme mitl..."
 pubDate: 2025-07-09
-category: "health"
+category: health
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Beslenme dünyası karmaşık ve sürekli evrim geçiriyor, yeni araştırmalar ve çalışmalar düzenli olarak ortaya çıkıyor. Ancak, bilgi denizinde pek çok mit ve yanlış görüş yerleşik hale geliyor, sıklıkla iyi niyetli ancak yanlış bilgilendirilmiş kişiler veya şirketler tarafından sürdürülüyor. Bu mitler, sağlığımıza zarar verebilir, kötü gıda seçimlerine veya etkisiz takviyelere yol açabilir.

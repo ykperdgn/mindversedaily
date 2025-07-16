@@ -2,9 +2,8 @@
 title: "Kârlılığın Yeniden Düşünülmesi İklim Bilinci Çağında Sürdürülebilir İş Modelinin Yükselişi"
 description: "İklim değişikliğinin yıkıcı etkileriyle mücadele eden dünyada, işletmeler krizdeki rollerini yeniden değerlendirmek zorunda kaldı. Gelir öncelikli geleneksel modeller, çevre ve sosyal sorumluluk ön..."
 pubDate: 2025-07-09
-category: "business"
+category: business
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 

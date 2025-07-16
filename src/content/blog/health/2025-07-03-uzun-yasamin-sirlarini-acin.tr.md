@@ -3,7 +3,7 @@ title: "Uzun Yaşamın Sırlarını Açın"
 description: "İnsanlar olarak, uzun ve sağlıklı bir yaşam sürme kavramına her zaman merak duymuşuzdur."
 category: health
 pubDate: 2025-07-03
-tags: [health"]
+tags: ["health"]
 ---
 
 İnsanlar olarak, uzun ve sağlıklı bir yaşam süresine sahip olma fikrine her zaman ilgi duymuşuzdur. Antik uygarlıklardan modern zamanlara kadar, uzun ömür arayışı bilimsel araştırmaları, felsefi tartışmaları ve spiritüel arayışları teşvik etmiştir. Uzun ömür araştırmalarında yapılan recentbreakthroughs, genetik, yaşam tarzı ve çevresel faktörlerin yaşam süresini etkileme biçimindeki kompleks etkileşimi aydınlatmıştır. Bu makalede, en umut verici araştırma alanlarını keşfedecek ve size uzun, sağlıklı bir yaşam yaşama yolunda πραktik ipuçları sunacağız.

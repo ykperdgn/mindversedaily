@@ -2,7 +2,7 @@
 title: "Embracing Embodiment The Rise of Sensorimotor Therapies"
 description: "Discover cutting-edge research and insights from MindVerse Daily in the psychology category"
 pubDate: 2025-07-02
-category: "psychology"
+category: psychology
 tags: []
 ---
 
@@ -61,3 +61,7 @@ References:
 [6] Bremner, J. D., et al. (2019). Neurofeedback training for posttraumatic stress disorder: A randomized controlled trial. Journal of Traumatic Stress, 32(3), 247-255.
 
 [7] Parsons, T. D., et al. (2018). Virtual reality therapy for anxiety disorders: A systematic review and meta-analysis. Depression Research and Treatment, 2018, 1-13.
+
+[ See Todays Deals on Amazon!](https://amzn.to/3UjsCWp)
+
+[🛒 See Today’s Deals on Amazon!](https://amzn.to/3UjsCWp)

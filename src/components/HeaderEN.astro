@@ -2,15 +2,19 @@
 import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../consts';
 
+// Only English categories and navigation
 const categories = [
   "health",
   "psychology",
   "history",
   "space",
   "quotes",
-  "love"
+  "love",
+  "horoscope",
+  "science",
+  "business",
+  "world"
 ];
-
 const categoryIcons = {
   health: "🧬",
   psychology: "🧠",
@@ -18,17 +22,22 @@ const categoryIcons = {
   space: "🚀",
   quotes: "💬",
   love: "❤️",
-  horoscope: "🔮"
+  horoscope: "🔮",
+  science: "🔬",
+  business: "💼",
+  world: "🌍"
 };
-
-const categoryNames = {
+const categoryNamesEN = {
   health: "Health",
   psychology: "Psychology",
   history: "History",
   space: "Space",
   quotes: "Quotes",
   love: "Love",
-  horoscope: "Horoscope"
+  horoscope: "Horoscope",
+  science: "Science",
+  business: "Business",
+  world: "World"
 };
 ---
 
@@ -49,14 +58,10 @@ const categoryNames = {
     <!-- Categories Navigation -->
     <nav class="mv-categories-wrapper">
       <div class="mv-categories">
-        <a href="/en/horoscope" class="mv-category-tab">
-          <span class="category-icon">🔮</span>
-          Horoscope
-        </a>
         {categories.map(cat => (
           <a href={`/en/${cat}`} class="mv-category-tab">
             <span class="category-icon">{categoryIcons[cat]}</span>
-            {categoryNames[cat]}
+            {categoryNamesEN[cat]}
           </a>
         ))}
       </div>

@@ -2,9 +2,9 @@
 title: "Kuantum Alanının Sırlarını Çözümlemek Kuantum Bilgisayarlamaya Giriş"
 description: "Kuantum bilgisayar, klasik bilgisayarların çözemediği kompleks sorunları çözebilecek devrimci bir teknolojidir. Bu makalede, kuantum bilgisayar temellerine, ilkelerine ve alanındaki son gelişmelere..."
 pubDate: 2025-07-09
-category: "science"
+category: science
 tags: []
-image: "/assets/blog-placeholder-1.svg"
+---
 ---
 
 Kuantum bilgisayar, son yıllarda yoğun ilgi gören bir alandır, Google, IBM ve Microsoft gibi teknoloji devlerinin onun geliştirilmesine ciddi yatırımlar yapıyor. Ancak, kuantum bilgisayar nedir ve klasik bilgisayar ile nasıl ayrılır? Kuantum bilgisayar ilkelerini anlamak için, kuantum mekaniğinin garip ve karşıtuitu dünyasına dalıyoruz.

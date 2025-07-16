@@ -2,7 +2,7 @@
 title: "The Renaissance Era A Time of Great Cultural, Scientific, and Artistic Transformation"
 description: "The Roots of the Renaissance"
 pubDate: 2025-07-01
-category: "history"
+category: history
 tags: []
 ---
 
@@ -35,3 +35,7 @@ References:
 4. "Galileo's Observations of the Heavens: A Study in the Development of Scientific Thought" by Peter S. Brown (Historical Research, 2012)
 
 5. "The Rise of Mathematics and Astronomy in Renaissance Italy" by Paolo Galluzzi et al. (Historical Research, 2008)
+
+[ See Todays Deals on Amazon!](https://amzn.to/3UjsCWp)
+
+[🛒 See Today’s Deals on Amazon!](https://amzn.to/3UjsCWp)

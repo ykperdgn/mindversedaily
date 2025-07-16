@@ -1,16 +1,8 @@
 ---
-title: "Unraveling The Power Of Social Psychology How Human Interact.En"
-description: "Discover the latest research and insights in psychology category on MindVerse Daily."
-pubDate: 2025-07-02
-category: psychology
-tags: []
----
-
-﻿---
 title: "Unraveling the Power of Social Psychology How Human Interactions Shape Our Thoughts, Feelings, and Behaviors"
 description: "Discover the fascinating world of human psychology with insights into behavior, mental health, cognitive science, and the latest psychological research."
 pubDate: 2025-07-01
-category: "psychology"
+category: psychology
 tags: []
 ---
 
@@ -55,3 +47,7 @@ Kahneman, D., & Tversky, A. (1979). Prospect theory: An analysis of decision und
 Kunda, Z. (1990). The case for motivated reasoning. Psychological Bulletin, 107(1), 48-62.
 
 Tajfel, H., & Turner, J. C. (1979). An integrative theory of intergroup conflict. The Social Psychology of Intergroup Relations, 33, 47-75.
+
+[ See Todays Deals on Amazon!](https://amzn.to/3UjsCWp)
+
+[🛒 See Today’s Deals on Amazon!](https://amzn.to/3UjsCWp)

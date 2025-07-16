@@ -2,7 +2,7 @@
 title: "The Hunt is On Current Initiatives and Findings"
 description: "One notable example is the discovery of K2-18b, a super-Earth that orbits a small star about 111 light-years away. A team of scientists used the Hubbl..."
 pubDate: 2025-07-02
-category: "space"
+category: space
 tags: []
 ---
 
@@ -57,3 +57,7 @@ As the universe continues to unfold its secrets, one thing is clear – the hunt
 (7) Square Kilometre Array telescope: SKA Observatory (2022)
 
 This article has provided a comprehensive overview of the search for extraterrestrial life, highlighting the latest research and expert insights. As we continue to explore the vast expanse of space, one thing is certain – the quest for extraterrestrial life will remain an exciting and ongoing adventure that captivates human imagination.
+
+[ See Todays Deals on Amazon!](https://amzn.to/3UjsCWp)
+
+[🛒 See Today’s Deals on Amazon!](https://amzn.to/3UjsCWp)

@@ -2,9 +2,8 @@
 title: "Stigmanın Kırılması En Son Ruh Sağlığı Trendleri ve Bilim Sonuçlarını Açığa Çıkarma"
 description: "Bugün hızlı tempolu dünyada ruh sağlığı, küresel ruh sağlığı bozukluğu yükünü artırmıştır. Bu makale, en son ruh sağlığı trendlerini, yeni bilim sonuçlarını ve ruh sağlığı sorunlarına yenilikçi yak..."
 pubDate: 2025-07-09
-category: "health"
+category: health
 tags: []
-image: "/assets/blog-placeholder-1.svg"
 ---
 
 Ruh sağlığı uzun süre gizlilik ve utanç perdesinin arkasında kaldı. Ancak, ruh sağlığı önemini artırmaya ilişkin artan bilinçle, ruh sağlığı etrafındaki konuşma sonunda açılmaya başladı. En son ruh sağlığı trendleri ve bilim sonuçları, bu kritik sorunu ele alma yenilikçi yaklaşımlarına ışık tutuyor ve yakından bakmaya değer.

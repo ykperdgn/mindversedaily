@@ -2,9 +2,8 @@
 title: "21. Yüzyılın Sessiz Öldürücüleri Çağımızın Kamu Sağlığı Çıkmazlarına Direniş"
 description: "21. yüzyılın tıp ve teknoloji alanlarında kaydedilen büyük ilerlemelerine rağmen, yeni ve karmaşık kamu sağlığı çıkmazları ortaya çıktı. Antimikrobiyal direncinden çevresel bozulmaya kadar, bu sess..."
 pubDate: 2025-07-09
-category: "health"
+category: health
 tags: []
-image: "https://images.pexels.com/photos/32898565/pexels-photo-32898565.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
 ---
 
 21. yüzyıl, tıp alanındaki büyük ilerlemelerle karakterize edildi. previously ölümcül hastalıklara karşı aşılar geliştirildi, cerrahi teknikleri geliştirildi ve insan vücudunun anlaşılması eksponansiyel olarak arttı. Ancak, bu ilerlemelere rağmen, kamu sağlığı çıkmazları topluluklarımızı hala etkiliyor, genellikle radarın altında kalmaya devam ediyor. Bu "sessiz öldürücüleri" dünya çapında bireylerin ve toplulukların sağlığını ve refahını ciddi bir tehdit oluşturuyor ve onları doğrudan karşılamamız gerekiyor.

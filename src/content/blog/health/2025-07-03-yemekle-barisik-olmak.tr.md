@@ -3,7 +3,7 @@ title: "Yemekle Barışık Olmak"
 description: "Her lokmada lezzeti, dokuyu ve kokuyu tamamen hissedin. Hiçbir dikkat dağılmıyor, hiç acele edilm..."
 category: health
 pubDate: 2025-07-03
-tags: [health"]
+tags: ["health"]
 ---
 
 Hök: Yemeklerinizi tam anlamıyla tadın, lezzetler, dokular ve kokularla tamamen daldığınızı hayal edin. Hiçbir dikkat dağıtıcı, acele etmeden, sadece sizin ve yiyecekleriniz arasında. Bu, yiyecekle olan ilişkinizi dönüştürmekte olan bilinçli yemeğin özüdür.

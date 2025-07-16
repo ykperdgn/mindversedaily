@@ -2,7 +2,7 @@
 import type { CollectionEntry } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import HeaderEN from '../components/HeaderEN.astro';
-import Footer from '../components/Footer.astro';
+import FooterEN from '../components/FooterEN.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import { SITE_AUTHOR } from '../consts';
 
@@ -17,6 +17,19 @@ const categoryKeywords = {
   space: 'space, astronomy, planet, galaxy, exploration, NASA',
   quotes: 'quotes, wisdom, philosophy, motivation, inspiration',
   love: 'love, relationship, emotions, romance, affection, bond'
+};
+
+const categoryNamesEN = {
+  health: "Health",
+  psychology: "Psychology",
+  history: "History",
+  space: "Space",
+  quotes: "Quotes",
+  love: "Love",
+  horoscope: "Horoscope",
+  science: "Science",
+  business: "Business",
+  world: "World"
 };
 
 const enhancedKeywords = [
@@ -260,6 +273,25 @@ const enhancedKeywords = [
 			box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
 		}
 
+		.back-link {
+			display: inline-block;
+			margin-bottom: 1rem;
+			color: #3b82f6;
+			text-decoration: none;
+			font-weight: 600;
+			font-size: 1rem;
+			border-bottom: 2px solid rgba(59, 130, 246, 0.3);
+			transition: all 0.3s ease;
+		}
+
+		.back-link:hover {
+			color: #1d4ed8;
+			border-bottom-color: #1d4ed8;
+			background: rgba(59, 130, 246, 0.1);
+			padding: 2px 4px;
+			border-radius: 4px;
+		}
+
 		/* Mobile responsive */
 		@media (max-width: 768px) {
 			.blog-container {
@@ -331,6 +363,9 @@ const enhancedKeywords = [
 
 		<HeaderEN />
 		<main class="blog-container">
+			<a href="/en/blog" class="back-link">
+				← Back to Blog
+			</a>
 			<article class="blog-article">
 				{image && (
 					<div class="hero-image">
@@ -339,7 +374,7 @@ const enhancedKeywords = [
 				)}
 				<div class="blog-content">
 					<div class="blog-meta">
-						<span class="category-badge">{category}</span>
+						<span class="category-badge">{categoryNamesEN[category] || (category?.charAt(0).toUpperCase() + category?.slice(1))}</span>
 						<time class="blog-date" datetime={pubDate?.toISOString()}>
 							<FormattedDate date={pubDate} />
 						</time>
@@ -357,7 +392,7 @@ const enhancedKeywords = [
 				</div>
 			</article>
 		</main>
-		<Footer />
+		<FooterEN />
 	</div>
 </body>
 </html>
