@@ -1,22 +1,30 @@
 ---
 import BaseHead from '../../components/BaseHead.astro';
 import HeaderEN from '../../components/HeaderEN.astro';
-import FooterEN from '../../components/FooterEN.astro';
+import Footer from '../../components/Footer.astro';
 import SearchWidget from '../../components/SearchWidget.astro';
 import AstroAstrologyAppEN from '../../components/AstroAstrologyAppEN.jsx';
 import { SITE_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS } from '../../consts';
 import { getCollection } from 'astro:content';
 
-// İngilizce ana sayfa için sadece İngilizce içerikleri çek
+// Dinamik dil tespit
+const currentPath = Astro.url.pathname;
+const isEnglishPage = currentPath.startsWith('/en');
+
+// İngilizce sayfa için SADECE İngilizce içerikleri getir
 const allPosts = await getCollection('blog');
+
+// SADECE İNGİLİZCE içerikleri filtrele
 const posts = allPosts
-  .filter(post => post.slug && post.slug.endsWith('en'))
+  .filter(post => post.slug && post.slug.endsWith('.en'))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
+// Dinamik kategoriler - İngilizce içeriklerden
 const availableCategories = [...new Set(posts.map(post => post.data.category).filter(Boolean))];
+
 const categories = availableCategories.length > 0
   ? availableCategories
-  : ["health", "psychology", "history", "space", "quotes", "love", "horoscope", "science", "business", "world"];
+  : ["health", "psychology", "history", "space", "quotes", "love", "horoscope"];
 
 const categoryIcons = {
   health: "🧬",
@@ -25,33 +33,17 @@ const categoryIcons = {
   space: "🚀",
   quotes: "💬",
   love: "❤️",
-  horoscope: "🔮",
-  science: "🔬",
-  business: "💼",
-  world: "🌍"
+  horoscope: "🔮"
 };
 
-const categoryNamesEN = {
-  health: "Health",
-  psychology: "Psychology",
-  history: "History",
-  space: "Space",
-  quotes: "Quotes",
-  love: "Love",
-  horoscope: "Horoscope",
-  science: "Science",
-  business: "Business",
-  world: "World"
-};
-
+// English homepage SEO
 const homeKeywords = `science news, health, psychology, technology, space, history, research, current news, academic studies, scientific discoveries, blog`;
 const enTitle = "MindVerse Daily - Science, Health & Technology News";
 const enDescription = "MindVerse Daily: Latest news, research and in-depth analysis in science, health, psychology, history, space and technology. Your gateway to knowledge with fresh content every day.";
 ---
 
 <!DOCTYPE html>
-<html lang="en-US">
-	<head>
+<html lang="en-US">	<head>
 		<BaseHead
 			title={enTitle}
 			description={enDescription}
@@ -118,9 +110,7 @@ const enDescription = "MindVerse Daily: Latest news, research and in-depth analy
 				max-width: 1200px;
 				margin: 0 auto;
 				padding: 9rem 1rem 2rem 1rem;
-			}
-
-			.mv-hero {
+			}			.mv-hero {
 				text-align: center;
 				margin-bottom: 1rem;
 				padding: 1.5rem 2rem;
@@ -392,9 +382,7 @@ const enDescription = "MindVerse Daily: Latest news, research and in-depth analy
 				border-radius: 2rem;
 				backdrop-filter: blur(10px);
 				box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-			}
-
-			.mv-category-tab {
+			}			.mv-category-tab {
 				background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
 				color: #2563eb;
 				border-radius: 2rem;
@@ -627,13 +615,11 @@ const enDescription = "MindVerse Daily: Latest news, research and in-depth analy
 				}
 			}
 		</style>
-	</head>
-	<body>
-		<div class="content-wrapper">
+	</head>	<body>		<div class="content-wrapper">
 			<!-- Language Switcher -->
 			<div class="language-switcher">
-				<a href="/" class={`lang-btn`}>TR</a>
-				<a href="/en" class={`lang-btn active`}>EN</a>
+				<a href="/" class={`lang-btn ${!isEnglishPage ? 'active' : ''}`}>TR</a>
+				<a href="/en" class={`lang-btn ${isEnglishPage ? 'active' : ''}`}>EN</a>
 			</div>
 
 			<HeaderEN />
@@ -651,7 +637,47 @@ const enDescription = "MindVerse Daily: Latest news, research and in-depth analy
 					<p class="mv-desc">Quality content from science, health, psychology and current topics</p>
 				</section>
 
+				<!-- Language Toggle Button -->
+				<div class="language-toggle-container">
+					<a href="/" class="language-toggle-btn">
+						<span class="language-flag">🇹🇷</span>
+						<span class="language-text">Türkçe Oku</span>
+						<span class="language-arrow">→</span>
+					</a>				</div>				<!-- Search Widget -->
 				<SearchWidget lang="en" />
+
+				<!-- Latest Articles -->
+				<section class="mv-grid-section">
+					<h2 class="mv-section-title">Latest Articles</h2>
+					<ul class="mv-grid">
+						{posts.slice(0, 9).map((post) => (
+							<li class="mv-card">
+								<a
+									href={`/en/blog/${post.slug}/`}
+									data-post-title={post.data.title}
+									data-post-description={post.data.description}
+									data-post-category={post.data.category}
+									data-post-date={post.data.pubDate.toISOString()}
+								>
+									<article>
+										<h3 class="mv-card-title">{post.data.title}</h3>
+										<p class="mv-card-summary">{post.data.description}</p>
+										<div class="mv-card-meta">
+											<span class="category-badge">{post.data.category.charAt(0).toUpperCase() + post.data.category.slice(1)}</span>
+											<time datetime={post.data.pubDate.toISOString()}>
+												{post.data.pubDate.toLocaleDateString('en-US', {
+													year: 'numeric',
+													month: 'long',
+													day: 'numeric',
+												})}
+											</time>
+										</div>
+									</article>
+								</a>
+							</li>
+						))}
+					</ul>
+				</section>
 
 				<!-- Categories -->
 				<section class="categories-grid" style="margin: 3rem 0 2rem 0;">
@@ -661,12 +687,22 @@ const enDescription = "MindVerse Daily: Latest news, research and in-depth analy
 							<a
 								href={`/en/${cat}`}
 								class="category-card"
-								style="display: block; padding: 1.5rem; background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); border-radius: 1rem; text-decoration: none; color: #1e293b; transition: transform 0.2s ease; text-align: center; border: 2px solid #e2e8f0;"
+								style="
+									display: block;
+									padding: 1.5rem;
+									background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+									border-radius: 1rem;
+									text-decoration: none;
+									color: #1e293b;
+									transition: transform 0.2s ease;
+									text-align: center;
+									border: 2px solid #e2e8f0;
+								"
 								onmouseover="this.style.transform='translateY(-2px)'; this.style.borderColor='#3b82f6';"
 								onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='#e2e8f0';"
 							>
 								<div style="font-size: 2rem; margin-bottom: 0.5rem;">{categoryIcons[cat]}</div>
-								<div style="font-weight: 600; margin-bottom: 0.5rem;">{categoryNamesEN[cat] || (cat.charAt(0).toUpperCase() + cat.slice(1))}</div>
+								<div style="font-weight: 600; margin-bottom: 0.5rem;">{cat.charAt(0).toUpperCase() + cat.slice(1)}</div>
 								<div style="font-size: 0.9rem; color: #64748b;">Explore articles</div>
 							</a>
 						))}
@@ -683,7 +719,7 @@ const enDescription = "MindVerse Daily: Latest news, research and in-depth analy
 
 			</main>
 
-			<FooterEN />
+			<Footer />
 		</div>
 	</body>
 </html>

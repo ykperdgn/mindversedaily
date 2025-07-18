@@ -5,34 +5,17 @@ import { render } from 'astro:content';
 
 export async function getStaticPaths() {
 	const posts = await getCollection('blog');
-
-	// SADECE İngilizce postlar (id 'en' ile bitenler)
-	const englishPosts = posts.filter(post => {
-		const isEnglish = post.id.endsWith('en');
-		console.log('[EN BLOG] Checking post:', post.id, 'Is English:', isEnglish);
-		return isEnglish;
-	});
-
-	console.log('[EN BLOG] Total English posts found:', englishPosts.length);
-
-	return englishPosts.map((post) => {
-		// 'en' uzantısını URL'den kaldır
-		const cleanSlug = post.id.replace(/en$/, '');
-		console.log('[EN BLOG] Creating route:', cleanSlug, 'for post:', post.id);
-		return {
-			params: { slug: cleanSlug },
-			props: post,
-		};
-	});
+	// Only English posts (ending with .en)
+	const englishPosts = posts.filter(post => post.slug && post.slug.endsWith('.en'));
+	return englishPosts.map((post) => ({
+		params: { slug: post.id },
+		props: post,
+	}));
 }
-
 type Props = CollectionEntry<'blog'>;
 
 const post = Astro.props;
 const { Content } = await render(post);
-
-// Debug: hangi post render ediliyor
-console.log('[EN BLOG] Rendering post:', post.id, 'Title:', post.data.title);
 ---
 
 <BlogPostEN {...post.data}>

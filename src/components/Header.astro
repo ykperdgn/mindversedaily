@@ -1,7 +1,4 @@
 ---
-// Türkçe header sadece Türkçe sayfalarda kullanılmalı. Eğer yanlışlıkla İngilizce sayfada kullanılırsa, İngilizce kategori isimleri ve /en/ linkleri gösterilmemeli.
-// Bu dosya sadece Türkçe sayfalar için kullanılmalıdır!
-
 import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../consts';
 
@@ -11,12 +8,9 @@ const categories = [
   "history",
   "space",
   "quotes",
-  "love",
-  "horoscope",
-  "science",
-  "business",
-  "world"
+  "love"
 ];
+
 const categoryIcons = {
   health: "🧬",
   psychology: "🧠",
@@ -24,22 +18,17 @@ const categoryIcons = {
   space: "🚀",
   quotes: "💬",
   love: "❤️",
-  horoscope: "🔮",
-  science: "🔬",
-  business: "💼",
-  world: "🌍"
+  horoscope: "🔮"
 };
-const categoryNamesTR = {
-  health: "Sağlık",
+
+// Türkçe kategori isimleri
+const categoryNamesTR = {  health: "Sağlık",
   psychology: "Psikoloji",
   history: "Tarih",
   space: "Uzay",
   quotes: "Alıntılar",
   love: "Aşk",
-  horoscope: "Horoskop",
-  science: "Bilim",
-  business: "İş Dünyası",
-  world: "Dünya"
+  horoscope: "Horoskop"
 };
 ---
 
@@ -60,6 +49,10 @@ const categoryNamesTR = {
     <!-- Categories Navigation -->
     <nav class="mv-categories-wrapper">
       <div class="mv-categories">
+        <a href="/horoscope" class="mv-category-tab">
+          <span class="category-icon">🔮</span>
+          Horoskop
+        </a>
         {categories.map(cat => (
           <a href={`/${cat}`} class="mv-category-tab">
             <span class="category-icon">{categoryIcons[cat]}</span>{categoryNamesTR[cat]}

@@ -1,5 +1,13 @@
 ---
-title: "Success is not final, failure is not fatal - it is the courage to continue that counts - Winston Churchill"
+title: "Success Is Not Final Failure Is Not Fatal It Is The Courage .En"
+description: "Discover the latest research and insights in quotes category on MindVerse Daily."
+pubDate: 2025-07-02
+category: quotes
+tags: []
+---
+
+---
+title: "Success is not final, failure is not fatal it is the courage to continue that counts. - Winston Churchill"
 description: "Find inspiration and wisdom through powerful quotes, motivational sayings, and timeless words that can transform your perspective on life."
 pubDate: 2025-07-01
 category: quotes

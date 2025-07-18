@@ -1,7 +1,7 @@
 ---
 import BaseHead from '../../../components/BaseHead.astro';
-import HeaderEN from '../../../components/HeaderEN.astro';
-import FooterEN from '../../../components/FooterEN.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../../../consts';
 import { getCollection } from 'astro:content';
 import FormattedDate from '../../../components/FormattedDate.astro';
@@ -30,13 +30,11 @@ const filteredPosts = posts.filter(post =>
   post.data.category?.toLowerCase() === category.toLowerCase()
 );
 
-// Get all available categories for navigation (ENGLISH ONLY)
+// Get all available categories for navigation
 const availableCategories = [...new Set(posts.map(post => post.data.category).filter(Boolean))];
 const categories = availableCategories.length > 0
-  ? availableCategories.filter(cat => [
-      "health","psychology","history","space","quotes","love","horoscope","science","business","world"
-    ].includes(cat)).sort()
-  : ["health", "psychology", "history", "space", "quotes", "love", "horoscope", "science", "business", "world"];
+  ? availableCategories.sort()
+  : ["health", "psychology", "history", "space", "quotes", "love"];
 
 const categoryIcons = {
   health: "🧬",
@@ -47,6 +45,7 @@ const categoryIcons = {
   love: "❤️"
 };
 
+// Category descriptions in English
 const categoryDescriptions = {
   health: "Latest breakthroughs in health, medicine, and wellness research",
   psychology: "Insights into human behavior, mental health, and cognitive science",
@@ -73,7 +72,7 @@ const pageKeywords = `${category}, ${category} articles, ${category} research, s
   </head>
   <body>
     <div class="content-wrapper">
-      <HeaderEN />
+      <Header />
 
       <main class="mv-main-blog">
         <!-- Category Header -->
@@ -100,10 +99,10 @@ const pageKeywords = `${category}, ${category} articles, ${category} research, s
         </nav>        <!-- Blog Posts Grid -->
         <section class="mv-grid-section">
           {filteredPosts.length > 0 ? (
-            <ul class="mv-grid">            {filteredPosts.map((post) => {
-                // İngilizce post için doğru URL oluştur: /en/blog/post-id (remove 'en' suffix)
-                const cleanSlug = post.id.replace(/en$/, '');
-                const postUrl = `/en/blog/${cleanSlug}`;
+            <ul class="mv-grid">              {filteredPosts.map((post) => {
+                // İngilizce post için doğru URL oluştur
+                const slug = post.slug || post.id;
+                const postUrl = `/blog/${slug.replace('.en', '')}en`;
                 return (
                 <li class="mv-card">
                   <a href={postUrl}>
@@ -138,7 +137,7 @@ const pageKeywords = `${category}, ${category} articles, ${category} research, s
         </section>
       </main>
 
-      <FooterEN />
+      <Footer />
     </div>
   </body>
 </html>

@@ -1,7 +1,7 @@
 ---
 import BaseHead from '../../components/BaseHead.astro';
 import HeaderEN from '../../components/HeaderEN.astro';
-import FooterEN from '../../components/FooterEN.astro';
+import Footer from '../../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 import { getCollection } from 'astro:content';
 import FormattedDate from '../../components/FormattedDate.astro';
@@ -30,13 +30,11 @@ const filteredPosts = posts.filter(post =>
   post.data.category?.toLowerCase() === category.toLowerCase()
 );
 
-// Get all available categories for navigation (ENGLISH ONLY)
+// Get all available categories for navigation
 const availableCategories = [...new Set(posts.map(post => post.data.category).filter(Boolean))];
 const categories = availableCategories.length > 0
-  ? availableCategories.filter(cat => [
-      "health","psychology","history","space","quotes","love","horoscope","science","business","world"
-    ].includes(cat)).sort()
-  : ["health", "psychology", "history", "space", "quotes", "love", "horoscope", "science", "business", "world"];
+  ? availableCategories.sort()
+  : ["health", "psychology", "history", "space", "quotes", "love"];
 
 const categoryIcons = {
   health: "🧬",
@@ -44,10 +42,7 @@ const categoryIcons = {
   history: "📜",
   space: "🚀",
   quotes: "💬",
-  love: "❤️",
-  business: "💼",
-  science: "🔬",
-  world: "🌍"
+  love: "❤️"
 };
 
 // Category descriptions in English
@@ -57,10 +52,7 @@ const categoryDescriptions = {
   history: "Fascinating stories and discoveries from our past",
   space: "Space exploration, astronomy, and cosmic discoveries",
   quotes: "Inspirational quotes and wisdom from great minds",
-  love: "The science of relationships, emotions, and human connections",
-  business: "Business, entrepreneurship, economy, and finance news",
-  science: "Scientific discoveries, research, and technology updates",
-  world: "World news, international affairs, and global trends"
+  love: "The science of relationships, emotions, and human connections"
 };
 
 const categoryTitle = category.charAt(0).toUpperCase() + category.slice(1);
@@ -215,7 +207,7 @@ const pageKeywords = `${category}, ${category} articles, ${category} research, s
 
       .mv-card-img {
         width: 100%;
-        height: 130px;
+        height: 200px;
         object-fit: cover;
       }
 
@@ -362,8 +354,10 @@ const pageKeywords = `${category}, ${category} articles, ${category} research, s
               <p>No articles found in this category yet.</p>
               <a href="/en">Back to home</a>
             </div>
-          ) : (            <ul class="mv-grid">              {filteredPosts.map(post => (                <li class="mv-card">                  <a
-                    href={post.id ? `/en/blog/${post.id.replace(/en$/, '')}` : '#'}
+          ) : (            <ul class="mv-grid">              {filteredPosts.map(post => (
+                <li class="mv-card">
+                  <a
+                    href={post.id ? `/${post.id}` : '#'}
                     data-post-title={post.data.title}
                     data-post-description={post.data.description || ''}
                     data-post-category={post.data.category || ''}
@@ -402,7 +396,7 @@ const pageKeywords = `${category}, ${category} articles, ${category} research, s
         </main>
       </div>
 
-      <FooterEN />
+      <Footer />
     </div>
   </body>
 </html>

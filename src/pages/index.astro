@@ -7,6 +7,18 @@ import AstroAstrologyApp from '../components/AstroAstrologyApp.jsx';
 import { SITE_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS, SITE_LANG } from '../consts';
 import { getCollection } from 'astro:content';
 
+// Otomatik dil yönlendirme (tarayıcı dili İngilizce ise)
+if (typeof window !== 'undefined') {
+  const userLang = window.navigator.language || window.navigator.userLanguage;
+  if (userLang && userLang.startsWith('en')) {
+    window.location.replace('/en');
+  }
+}
+
+// Dinamik dil tespit
+const currentPath = Astro.url.pathname;
+const isEnglishPage = currentPath.startsWith('/en');
+
 // Ana sayfada kategorileri `src/content/blog` klasörlerinden otomatik çek
 const allPosts = await getCollection('blog');
 
@@ -23,7 +35,7 @@ const posts = allPosts
 // Dinamik kategoriler - content/blog klasörlerinden
 const availableCategories = [...new Set(posts.map(post => post.data.category).filter(Boolean))];
 
-const categories = availableCategories.length > 0
+const categories = availableCategories.includes('health') && availableCategories.includes('psychology')
   ? availableCategories
   : ["health", "psychology", "history", "space", "quotes", "love", "horoscope"];
 
@@ -37,6 +49,7 @@ const categoryIcons = {
   horoscope: "🔮"
 };
 
+// Türkçe kategori isimleri
 const categoryNamesTR = {
   health: "Sağlık",
   psychology: "Psikoloji",
@@ -47,6 +60,7 @@ const categoryNamesTR = {
   horoscope: "Horoskop"
 };
 
+// Homepage SEO optimization
 const homeKeywords = `${SITE_KEYWORDS}, blog, güncel haberler, bilimsel araştırmalar, sağlık haberleri, psikoloji makaleleri, tarih yazıları, uzay keşifleri`;
 ---
 
@@ -394,7 +408,7 @@ const homeKeywords = `${SITE_KEYWORDS}, blog, güncel haberler, bilimsel araşt�
 
       @media (max-width: 768px) {
         .mv-hero {
-          padding: 3rem 1rem;
+          padding: 4.5rem 1rem 3rem 1rem; /* Üst boşluk artırıldı */
         }
 
         .hero-galaxy {
@@ -464,9 +478,10 @@ const homeKeywords = `${SITE_KEYWORDS}, blog, güncel haberler, bilimsel araşt�
     <div class="content-wrapper">
       <!-- Language Switcher -->
       <div class="language-switcher">
-        <a href="/" class={`lang-btn active`}>TR</a>
-        <a href="/en" class={`lang-btn`}>EN</a>
+        <a href="/" class={`lang-btn ${!isEnglishPage ? 'active' : ''}`}>TR</a>
+        <a href="/en" class={`lang-btn ${isEnglishPage ? 'active' : ''}`}>EN</a>
       </div>
+
       <Header />
       <main class="mv-main-home">
         <section class="mv-hero">
@@ -477,9 +492,10 @@ const homeKeywords = `${SITE_KEYWORDS}, blog, güncel haberler, bilimsel araşt�
             <span class="mind-gradient">Mind</span><span class="verse-gradient">Verse</span>
             <span class="daily-subtitle">Daily</span>
           </h1>
-          <p class="mv-desc">Bilim, sağlık, psikoloji ve güncel konulardan en kaliteli içerikler</p>
-        </section>
+          <p class="mv-desc">Bilim, sağlık, psikoloji ve güncel konulardan en kaliteli içerikler</p>        </section>        <!-- Arama Widget -->
         <SearchWidget lang="tr" />
+
+        <!-- Kategoriler -->
         <section class="categories-grid" style="margin: 3rem 0 2rem 0;">
           <h2 style="text-align: center; margin-bottom: 1.5rem; color: #1e293b;">Kategoriler</h2>
           <div class="mv-categories-home" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; max-width: 800px; margin: 0 auto;">
@@ -487,7 +503,17 @@ const homeKeywords = `${SITE_KEYWORDS}, blog, güncel haberler, bilimsel araşt�
               <a
                 href={`/${cat}`}
                 class="category-card"
-                style="display: block; padding: 1.5rem; background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); border-radius: 1rem; text-decoration: none; color: #1e293b; transition: transform 0.2s ease; text-align: center; border: 2px solid #e2e8f0;"
+                style="
+                  display: block;
+                  padding: 1.5rem;
+                  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+                  border-radius: 1rem;
+                  text-decoration: none;
+                  color: #1e293b;
+                  transition: transform 0.2s ease;
+                  text-align: center;
+                  border: 2px solid #e2e8f0;
+                "
                 onmouseover="this.style.transform='translateY(-2px)'; this.style.borderColor='#3b82f6';"
                 onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='#e2e8f0';"
               >
@@ -498,12 +524,15 @@ const homeKeywords = `${SITE_KEYWORDS}, blog, güncel haberler, bilimsel araşt�
             ))}
           </div>
         </section>
+
+        <!-- Astro React Astrology App (deneme) -->
         <section style="margin: 3rem 0; display:flex; justify-content:center; width:100%; max-width:100vw; padding:0;">
           <div style="width:100%; max-width:1400px; margin:0 auto;">
             <h2 class="section-title" style="text-align:center;">🔮 Astroloji Yorumları</h2>
             <AstroAstrologyApp client:load />
           </div>
         </section>
+
       </main>
       <Footer />
     </div>

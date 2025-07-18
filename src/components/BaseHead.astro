@@ -19,22 +19,6 @@ interface Props {
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-// Detect language and alternate URLs
-const pathname = Astro.url.pathname;
-const isEnglish = pathname.startsWith('/en');
-
-// Compute alternate URLs
-let trUrl, enUrl, xDefaultUrl;
-if (isEnglish) {
-  enUrl = canonicalURL.toString();
-  trUrl = new URL(pathname.replace(/^\/en/, ''), Astro.site).toString();
-  xDefaultUrl = enUrl;
-} else {
-  trUrl = canonicalURL.toString();
-  enUrl = new URL('/en' + (pathname === '/' ? '' : pathname), Astro.site).toString();
-  xDefaultUrl = trUrl;
-}
-
 const {
 	title,
 	description,
@@ -56,41 +40,24 @@ if (typeof imageProp === 'string') {
   ogImageUrl = new URL(imageProp.src, Astro.site).toString();
 }
 
-// --- KATEGORİLERİ VE ANAHTARLARI TAMAMEN AYIR ---
-// İngilizce kategori anahtarları ve isimleri
-const EN_CATEGORIES = [
-  'health', 'psychology', 'history', 'space', 'quotes', 'love', 'horoscope', 'science', 'business', 'world'
-];
-const EN_CATEGORY_NAMES = {
-  health: 'Health',
-  psychology: 'Psychology',
-  history: 'History',
-  space: 'Space',
-  quotes: 'Quotes',
-  love: 'Love',
-  horoscope: 'Horoscope',
-  science: 'Science',
-  business: 'Business',
-  world: 'World'
-};
-const categoryKeywordsEN = {
-  health: 'health, medicine, wellness, mental health, nutrition, exercise, doctor advice',
-  psychology: 'psychology, behavioral science, mental health, personality, therapy, cognitive psychology',
-  history: 'history news, past, civilization, culture, archaeology, ancient times, historical events',
-  space: 'space news, astronomy, planet discovery, galaxy, NASA, astronaut, space technology',
-  quotes: 'inspirational quotes, wisdom, philosophy, motivation, success quotes',
-  love: 'love guide, relationship advice, emotions, romance, affection, couples therapy',
-  business: 'business, economy, entrepreneurship, finance, management, career',
-  science: 'science, research, technology, innovation, discovery',
-  world: 'world, news, international, global, agenda'
+// Enhanced keywords with category-specific terms
+const categoryKeywords = {
+  health: 'sağlık haberleri, tıp, wellness, mental sağlık, beslenme, egzersiz, doktor tavsiyeleri',
+  psychology: 'psikoloji, davranış bilimi, zihin sağlığı, kişilik, terapi, bilişsel psikoloji',
+  history: 'tarih haberleri, geçmiş, medeniyet, kültür, arkeoloji, antik çağ, tarihsel olaylar',
+  space: 'uzay haberleri, astronomi, gezegen keşfi, galaksi, NASA, astronot, uzay teknolojisi',
+  quotes: 'ilham verici sözler, alıntılar, hikmet, felsefe, motivasyon, başarı sözleri',
+  love: 'aşk rehberi, ilişki tavsiyeleri, duygular, romantizm, sevgi, çift terapisi'
 };
 
-// --- KATEGORİ İSİMLERİ VE KEYWORDS DİL BAZLI OLARAK KULLANILACAK ---
-
-// ENGLISH PAGE LOGIC: Only use English categories, names, and keywords
-const allKeywords = isEnglish
-  ? [SITE_KEYWORDS, customKeywords, category ? categoryKeywordsEN[category] : '', 'MindVerse blog', ...EN_CATEGORIES.map(cat => EN_CATEGORY_NAMES[cat])].filter(Boolean).join(', ')
-  : [SITE_KEYWORDS, customKeywords].filter(Boolean).join(', ');
+const allKeywords = [
+  SITE_KEYWORDS,
+  customKeywords,
+  category ? categoryKeywords[category] : '',
+  'MindVerse blog',
+  'güncel haberler',
+  'bilim haberleri'
+].filter(Boolean).join(', ');
 
 // Enhanced Structured Data
 const structuredData = {
@@ -155,16 +122,16 @@ const fullTitle = title.includes('MindVerse') ? title : `${title} | ${SITE_TITLE
 <meta name="keywords" content={allKeywords} />
 <meta name="author" content={author} />
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-<meta name="language" content={isEnglish ? 'en' : 'tr'} />
+<meta name="language" content={SITE_LANG} />
 <meta name="revisit-after" content="7 days" />
 
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
 
 <!-- Language alternates -->
-<link rel="alternate" hreflang="tr" href={trUrl} />
-<link rel="alternate" hreflang="en" href={enUrl} />
-<link rel="alternate" hreflang="x-default" href={xDefaultUrl} />
+<link rel="alternate" hreflang="tr" href={canonicalURL} />
+<link rel="alternate" hreflang="en" href={new URL(Astro.url.pathname.replace('/tr/', '/en/'), Astro.site)} />
+<link rel="alternate" hreflang="x-default" href={canonicalURL} />
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content={articleType === 'article' ? 'article' : 'website'} />
@@ -175,8 +142,8 @@ const fullTitle = title.includes('MindVerse') ? title : `${title} | ${SITE_TITLE
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:image:alt" content={title} />
-<meta property="og:site_name" content={isEnglish ? 'MindVerse Daily' : SITE_TITLE} />
-<meta property="og:locale" content={isEnglish ? 'en_US' : 'tr_TR'} />
+<meta property="og:site_name" content={SITE_TITLE} />
+<meta property="og:locale" content={SITE_LOCALE} />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
@@ -215,13 +182,9 @@ const fullTitle = title.includes('MindVerse') ? title : `${title} | ${SITE_TITLE
 <link rel="preload" href="/fonts/atkinson-regular.woff" as="font" type="font/woff" crossorigin />
 <link rel="preload" href="/fonts/atkinson-bold.woff" as="font" type="font/woff" crossorigin />
 
-<!-- AdSense and Turkish-only scripts -->
-{!isEnglish && (
-  <>
-    <meta name="google-adsense-account" content="ca-pub-3096725438789562" />
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3096725438789562" crossorigin="anonymous"></script>
-  </>
-)}
+<!-- AdSense -->
+<meta name="google-adsense-account" content="ca-pub-3096725438789562">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3096725438789562" crossorigin="anonymous"></script>
 
 <!-- Google Analytics: Geliştirici trafiğini hariç tut -->
 <script>

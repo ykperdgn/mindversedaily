@@ -35,17 +35,18 @@ export const GET: APIRoute = async ({ url }) => {
       'business': 'İş Dünyası',
       'science': 'Bilim',
       'world': 'Dünya'
-    };    // Transform posts for search API
+    };
+
+    // Transform posts for search API
     const searchablePosts = filteredPosts.map(post => {
-      const id = post.id;
-        // Create proper URL based on language and id structure
+      const id = post.id;      // Create proper URL based on language and id structure
       let postUrl;
       if (lang === 'en') {
-        // For English: /en/blog/id-without-en-suffix
+        // For English: /blog/id-without-en + 'en'
         const baseId = id.replace(/en$/, '');
-        postUrl = `/en/blog/${baseId}`;
+        postUrl = `/blog/${baseId}en`;
       } else {
-        // For Turkish: /blog/id-without-tr-suffix
+        // For Turkish: /blog/id-without-tr
         const baseId = id.replace(/tr$/, '');
         postUrl = `/blog/${baseId}`;
       }const category = post.data.category || '';
