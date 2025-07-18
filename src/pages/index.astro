@@ -411,29 +411,20 @@ const homeKeywords = `${SITE_KEYWORDS}, blog, güncel haberler, bilimsel araşt�
 
       @media (max-width: 768px) {
         .mv-hero {
-          padding: 4.5rem 1rem 3rem 1rem; /* Üst boşluk artırıldı */
+          padding: 4.5rem 1rem 2rem 1rem; /* Increased top padding for mobile overlap fix */
         }
-
-        .hero-galaxy {
-          font-size: 3rem;
-        }
-
         .mv-title {
           font-size: 2.5rem;
         }
-
         .mind-gradient, .verse-gradient {
           font-size: 2.5rem;
         }
-
         .daily-subtitle {
           font-size: 1.8rem;
         }
-
         .mv-desc {
           font-size: 1.1rem;
         }
-
         .mv-categories {
           gap: 0.5rem;
           padding: 0.75rem;
@@ -442,17 +433,18 @@ const homeKeywords = `${SITE_KEYWORDS}, blog, güncel haberler, bilimsel araşt�
           -webkit-overflow-scrolling: touch;
           scroll-behavior: smooth;
         }
-
         .mv-category-tab {
           padding: 0.6rem 1rem;
           font-size: 0.85rem;
           white-space: nowrap;
           flex-shrink: 0;
         }
-
         .mv-grid {
           grid-template-columns: 1fr;
           gap: 1.5rem;
+        }
+        .mv-main-home {
+          padding: 8rem 1rem 2rem 1rem;
         }
       }
 
@@ -460,7 +452,6 @@ const homeKeywords = `${SITE_KEYWORDS}, blog, güncel haberler, bilimsel araşt�
         .mv-hero {
           padding: 4.5rem 0.75rem 2rem 0.75rem; /* Increased top padding for mobile overlap fix */
         }
-
         .mv-categories {
           gap: 0.4rem;
           padding: 0.5rem;
@@ -468,13 +459,11 @@ const homeKeywords = `${SITE_KEYWORDS}, blog, güncel haberler, bilimsel araşt�
           margin-right: -1rem;
           border-radius: 1rem;
         }
-
         .mv-category-tab {
           padding: 0.5rem 0.8rem;
           font-size: 0.8rem;
           min-width: auto;
         }
-
         .mv-main-home {
           padding: 1.5rem 0.75rem;
         }
