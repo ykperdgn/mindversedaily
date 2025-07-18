@@ -33,11 +33,8 @@ const posts = allPosts
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 // Dinamik kategoriler - content/blog klasörlerinden
-const availableCategories = [...new Set(posts.map(post => post.data.category).filter(Boolean))];
-
-const categories = availableCategories.includes('health') && availableCategories.includes('psychology')
-  ? availableCategories
-  : ["health", "psychology", "history", "space", "quotes", "love", "horoscope"];
+const allCategories = ["health", "psychology", "history", "space", "quotes", "love", "horoscope", "business", "science", "world"];
+const categories = allCategories;
 
 const categoryIcons = {
   health: "🧬",
@@ -46,7 +43,10 @@ const categoryIcons = {
   space: "🚀",
   quotes: "💬",
   love: "❤️",
-  horoscope: "🔮"
+  horoscope: "🔮",
+  business: "💼",
+  science: "🔬",
+  world: "🌍"
 };
 
 // Türkçe kategori isimleri
@@ -57,7 +57,10 @@ const categoryNamesTR = {
   space: "Uzay",
   quotes: "Alıntılar",
   love: "Aşk",
-  horoscope: "Horoskop"
+  horoscope: "Horoskop",
+  business: "İş",
+  science: "Bilim",
+  world: "Dünya"
 };
 
 // Homepage SEO optimization
@@ -454,6 +457,10 @@ const homeKeywords = `${SITE_KEYWORDS}, blog, güncel haberler, bilimsel araşt�
       }
 
       @media (max-width: 480px) {
+        .mv-hero {
+          padding: 4.5rem 0.75rem 2rem 0.75rem; /* Increased top padding for mobile overlap fix */
+        }
+
         .mv-categories {
           gap: 0.4rem;
           padding: 0.5rem;
@@ -518,7 +525,7 @@ const homeKeywords = `${SITE_KEYWORDS}, blog, güncel haberler, bilimsel araşt�
                 onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='#e2e8f0';"
               >
                 <div style="font-size: 2rem; margin-bottom: 0.5rem;">{categoryIcons[cat]}</div>
-                <div style="font-weight: 600; margin-bottom: 0.5rem;">{categoryNamesTR[cat]}</div>
+                <div style="font-weight: 600; margin-bottom: 0.5rem;">{categoryNamesTR[cat] || cat.charAt(0).toUpperCase() + cat.slice(1)}</div>
                 <div style="font-size: 0.9rem; color: #64748b;">Yazıları keşfet</div>
               </a>
             ))}

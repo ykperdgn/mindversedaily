@@ -20,11 +20,8 @@ const posts = allPosts
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 // Dinamik kategoriler - İngilizce içeriklerden
-const availableCategories = [...new Set(posts.map(post => post.data.category).filter(Boolean))];
-
-const categories = availableCategories.length > 0
-  ? availableCategories
-  : ["health", "psychology", "history", "space", "quotes", "love", "horoscope"];
+const allCategories = ["health", "psychology", "history", "space", "quotes", "love", "horoscope", "business", "science", "world"];
+const categories = allCategories;
 
 const categoryIcons = {
   health: "🧬",
@@ -33,7 +30,10 @@ const categoryIcons = {
   space: "🚀",
   quotes: "💬",
   love: "❤️",
-  horoscope: "🔮"
+  horoscope: "🔮",
+  business: "💼",
+  science: "🔬",
+  world: "🌍"
 };
 
 // English homepage SEO
@@ -526,6 +526,10 @@ const enDescription = "MindVerse Daily: Latest news, research and in-depth analy
 
 			@media (max-width: 768px) {
 				.mv-hero {
+					padding: 4.5rem 1rem 2rem 1rem; /* Increased top padding for mobile overlap fix */
+				}
+
+				.mv-hero {
 					padding: 2rem 1rem;
 				}
 
@@ -582,6 +586,10 @@ const enDescription = "MindVerse Daily: Latest news, research and in-depth analy
 			}
 
 			@media (max-width: 480px) {
+				.mv-hero {
+					padding: 4.5rem 0.75rem 2rem 0.75rem; /* Increased top padding for mobile overlap fix */
+				}
+
 				.mv-categories {
 					gap: 0.4rem;
 					padding: 0.5rem;
@@ -637,18 +645,11 @@ const enDescription = "MindVerse Daily: Latest news, research and in-depth analy
 					<p class="mv-desc">Quality content from science, health, psychology and current topics</p>
 				</section>
 
-				<!-- Language Toggle Button -->
-				<div class="language-toggle-container">
-					<a href="/" class="language-toggle-btn">
-						<span class="language-flag">🇹🇷</span>
-						<span class="language-text">Türkçe Oku</span>
-						<span class="language-arrow">→</span>
-					</a>				</div>				<!-- Search Widget -->
+				<!-- Search Widget -->
 				<SearchWidget lang="en" />
 
 				<!-- Latest Articles -->
 				<section class="mv-grid-section">
-					<h2 class="mv-section-title">Latest Articles</h2>
 					<ul class="mv-grid">
 						{posts.slice(0, 9).map((post) => (
 							<li class="mv-card">
