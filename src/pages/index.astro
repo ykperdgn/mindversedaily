@@ -7,14 +7,6 @@ import AstroAstrologyApp from '../components/AstroAstrologyApp.jsx';
 import { SITE_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS, SITE_LANG } from '../consts';
 import { getCollection } from 'astro:content';
 
-// Otomatik dil yönlendirme (tarayıcı dili İngilizce ise)
-if (typeof window !== 'undefined') {
-  const userLang = window.navigator.language || window.navigator.userLanguage;
-  if (userLang && userLang.startsWith('en')) {
-    window.location.replace('/en');
-  }
-}
-
 // Dinamik dil tespit
 const currentPath = Astro.url.pathname;
 const isEnglishPage = currentPath.startsWith('/en');
