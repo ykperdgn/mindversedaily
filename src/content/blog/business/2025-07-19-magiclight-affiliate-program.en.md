@@ -1,9 +1,10 @@
 ---
 pubDate: 2025-07-19
 category: business
-title: Earn with Magiclight Affiliate Program: AI-Powered Video Creation for Businesses
-seoTitle: Magiclight Affiliate Program | Earn Money with AI Video Creation
-seoDescription: Discover Magiclight's AI-powered video creation tool and affiliate program. Learn about SEO benefits and earning opportunities for content creators and businesses.
+title: "Earn with Magiclight Affiliate Program: AI-Powered Video Creation for Businesses"
+seoTitle: "Magiclight Affiliate Program | Earn Money with AI Video Creation"
+seoDescription: "Discover Magiclight's AI-powered video creation tool and affiliate program. Learn about SEO benefits and earning opportunities for content creators and businesses."
+description: "Discover Magiclight's AI-powered video creation tool and affiliate program. Learn about SEO benefits and earning opportunities for content creators and businesses."
 ---
 
 **Magiclight: AI-Powered Video Creation for Businesses**
