@@ -35,9 +35,18 @@ const posts = allPosts
 // Dinamik kategoriler - content/blog klasörlerinden
 const availableCategories = [...new Set(posts.map(post => post.data.category).filter(Boolean))];
 
-const categories = availableCategories.includes('health') && availableCategories.includes('psychology')
-  ? availableCategories
-  : ["health", "psychology", "history", "space", "quotes", "love", "horoscope"];
+const categories = [
+  "health",
+  "psychology",
+  "history",
+  "space",
+  "quotes",
+  "love",
+  "horoscope",
+  "business",
+  "science",
+  "world"
+];
 
 const categoryIcons = {
   health: "🧬",
@@ -46,7 +55,10 @@ const categoryIcons = {
   space: "🚀",
   quotes: "💬",
   love: "❤️",
-  horoscope: "🔮"
+  horoscope: "🔮",
+  business: "💼",
+  science: "🔬",
+  world: "🌍"
 };
 
 // Türkçe kategori isimleri
@@ -57,7 +69,10 @@ const categoryNamesTR = {
   space: "Uzay",
   quotes: "Alıntılar",
   love: "Aşk",
-  horoscope: "Horoskop"
+  horoscope: "Horoskop",
+  business: "İş Dünyası",
+  science: "Bilim",
+  world: "Dünya"
 };
 
 // Homepage SEO optimization
