@@ -7,6 +7,14 @@ import AstroAstrologyApp from '../components/AstroAstrologyApp.jsx';
 import { SITE_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS, SITE_LANG } from '../consts';
 import { getCollection } from 'astro:content';
 
+// Otomatik dil yönlendirme (tarayıcı dili İngilizce ise)
+if (typeof window !== 'undefined') {
+  const userLang = window.navigator.language || window.navigator.userLanguage;
+  if (userLang && userLang.startsWith('en')) {
+    window.location.replace('/en');
+  }
+}
+
 // Dinamik dil tespit
 const currentPath = Astro.url.pathname;
 const isEnglishPage = currentPath.startsWith('/en');
@@ -24,35 +32,35 @@ const posts = allPosts
   })
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-// Dinamik kategoriler - content/blog klasörlerinden
-const allCategories = ["health", "psychology", "history", "space", "quotes", "love", "horoscope", "business", "science", "world"];
-const categories = allCategories;
+// Tüm 10 kategori sabit listesi
+const categories = [
+  "business", "science", "world", "horoscope", "health", "psychology", "history", "space", "quotes", "love"
+];
 
 const categoryIcons = {
+  business: "💼",
+  science: "🔬",
+  world: "🌍",
+  horoscope: "🔮",
   health: "🧬",
   psychology: "🧠",
   history: "📜",
   space: "🚀",
   quotes: "💬",
-  love: "❤️",
-  horoscope: "🔮",
-  business: "💼",
-  science: "🔬",
-  world: "🌍"
+  love: "❤️"
 };
 
-// Türkçe kategori isimleri
 const categoryNamesTR = {
+  business: "İş Dünyası",
+  science: "Bilim",
+  world: "Dünya",
+  horoscope: "Horoskop",
   health: "Sağlık",
   psychology: "Psikoloji",
   history: "Tarih",
   space: "Uzay",
   quotes: "Alıntılar",
-  love: "Aşk",
-  horoscope: "Horoskop",
-  business: "İş",
-  science: "Bilim",
-  world: "Dünya"
+  love: "Aşk"
 };
 
 // Homepage SEO optimization
@@ -403,20 +411,29 @@ const homeKeywords = `${SITE_KEYWORDS}, blog, güncel haberler, bilimsel araşt�
 
       @media (max-width: 768px) {
         .mv-hero {
-          padding: 4.5rem 1rem 2rem 1rem; /* Increased top padding for mobile overlap fix */
+          padding: 4.5rem 1rem 3rem 1rem; /* Üst boşluk artırıldı */
         }
+
+        .hero-galaxy {
+          font-size: 3rem;
+        }
+
         .mv-title {
           font-size: 2.5rem;
         }
+
         .mind-gradient, .verse-gradient {
           font-size: 2.5rem;
         }
+
         .daily-subtitle {
           font-size: 1.8rem;
         }
+
         .mv-desc {
           font-size: 1.1rem;
         }
+
         .mv-categories {
           gap: 0.5rem;
           padding: 0.75rem;
@@ -425,25 +442,21 @@ const homeKeywords = `${SITE_KEYWORDS}, blog, güncel haberler, bilimsel araşt�
           -webkit-overflow-scrolling: touch;
           scroll-behavior: smooth;
         }
+
         .mv-category-tab {
           padding: 0.6rem 1rem;
           font-size: 0.85rem;
           white-space: nowrap;
           flex-shrink: 0;
         }
+
         .mv-grid {
           grid-template-columns: 1fr;
           gap: 1.5rem;
         }
-        .mv-main-home {
-          padding: 8rem 1rem 2rem 1rem;
-        }
       }
 
       @media (max-width: 480px) {
-        .mv-hero {
-          padding: 4.5rem 0.75rem 2rem 0.75rem; /* Increased top padding for mobile overlap fix */
-        }
         .mv-categories {
           gap: 0.4rem;
           padding: 0.5rem;
@@ -451,11 +464,13 @@ const homeKeywords = `${SITE_KEYWORDS}, blog, güncel haberler, bilimsel araşt�
           margin-right: -1rem;
           border-radius: 1rem;
         }
+
         .mv-category-tab {
           padding: 0.5rem 0.8rem;
           font-size: 0.8rem;
           min-width: auto;
         }
+
         .mv-main-home {
           padding: 1.5rem 0.75rem;
         }
@@ -506,7 +521,7 @@ const homeKeywords = `${SITE_KEYWORDS}, blog, güncel haberler, bilimsel araşt�
                 onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='#e2e8f0';"
               >
                 <div style="font-size: 2rem; margin-bottom: 0.5rem;">{categoryIcons[cat]}</div>
-                <div style="font-weight: 600; margin-bottom: 0.5rem;">{categoryNamesTR[cat] || cat.charAt(0).toUpperCase() + cat.slice(1)}</div>
+                <div style="font-weight: 600; margin-bottom: 0.5rem;">{categoryNamesTR[cat]}</div>
                 <div style="font-size: 0.9rem; color: #64748b;">Yazıları keşfet</div>
               </a>
             ))}
