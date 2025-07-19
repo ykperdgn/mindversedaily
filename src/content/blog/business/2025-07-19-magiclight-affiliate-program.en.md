@@ -16,7 +16,7 @@ The Magiclight affiliate program rewards you for referring new users to the plat
 Videos created with Magiclight are optimized for search engines, helping your website rank higher and attract more organic traffic. By joining the affiliate program, you can boost your own site's SEO while benefiting from Magiclight's powerful features.
 
 **How to Join?**
-To join the Magiclight affiliate program, visit the [Magiclight Affiliate Program](https://magiclight.ai/affiliate) page or use [this special link](https://m.magiclight.ai/official-website?code=znzhjam01). After signing up, you'll receive a unique referral link and earn commissions for every sale made through your link.
+To join the Magiclight affiliate program, use [this special link](https://m.magiclight.ai/official-website?code=znzhjam01) only. After signing up, you'll receive a unique referral link and earn commissions for every sale made through your link.
 
 **Why Choose Magiclight?**
 - Fast and easy AI-powered video creation

@@ -20,8 +20,11 @@ const posts = allPosts
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 // Dinamik kategoriler - İngilizce içeriklerden
-const allCategories = ["health", "psychology", "history", "space", "quotes", "love", "horoscope", "business", "science", "world"];
-const categories = allCategories;
+const availableCategories = [...new Set(posts.map(post => post.data.category).filter(Boolean))];
+
+const categories = availableCategories.length > 0
+  ? availableCategories
+  : ["health", "psychology", "history", "space", "quotes", "love", "horoscope"];
 
 const categoryIcons = {
   health: "🧬",
@@ -30,10 +33,7 @@ const categoryIcons = {
   space: "🚀",
   quotes: "💬",
   love: "❤️",
-  horoscope: "🔮",
-  business: "💼",
-  science: "🔬",
-  world: "🌍"
+  horoscope: "🔮"
 };
 
 // English homepage SEO
@@ -645,11 +645,18 @@ const enDescription = "MindVerse Daily: Latest news, research and in-depth analy
 					<p class="mv-desc">Quality content from science, health, psychology and current topics</p>
 				</section>
 
-				<!-- Search Widget -->
+				<!-- Language Toggle Button -->
+				<div class="language-toggle-container">
+					<a href="/" class="language-toggle-btn">
+						<span class="language-flag">🇹🇷</span>
+						<span class="language-text">Türkçe Oku</span>
+						<span class="language-arrow">→</span>
+					</a>				</div>				<!-- Search Widget -->
 				<SearchWidget lang="en" />
 
 				<!-- Latest Articles -->
 				<section class="mv-grid-section">
+					<h2 class="mv-section-title">Latest Articles</h2>
 					<ul class="mv-grid">
 						{posts.slice(0, 9).map((post) => (
 							<li class="mv-card">

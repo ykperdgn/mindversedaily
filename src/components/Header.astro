@@ -8,11 +8,7 @@ const categories = [
   "history",
   "space",
   "quotes",
-  "love",
-  "horoscope",
-  "business",
-  "science",
-  "world"
+  "love"
 ];
 
 const categoryIcons = {
@@ -22,24 +18,17 @@ const categoryIcons = {
   space: "🚀",
   quotes: "💬",
   love: "❤️",
-  horoscope: "🔮",
-  business: "💼",
-  science: "🔬",
-  world: "🌍"
+  horoscope: "🔮"
 };
 
 // Türkçe kategori isimleri
-const categoryNamesTR = {
-  health: "Sağlık",
+const categoryNamesTR = {  health: "Sağlık",
   psychology: "Psikoloji",
   history: "Tarih",
   space: "Uzay",
   quotes: "Alıntılar",
   love: "Aşk",
-  horoscope: "Horoskop",
-  business: "İş",
-  science: "Bilim",
-  world: "Dünya"
+  horoscope: "Horoskop"
 };
 ---
 
@@ -60,6 +49,10 @@ const categoryNamesTR = {
     <!-- Categories Navigation -->
     <nav class="mv-categories-wrapper">
       <div class="mv-categories">
+        <a href="/horoscope" class="mv-category-tab">
+          <span class="category-icon">🔮</span>
+          Horoskop
+        </a>
         {categories.map(cat => (
           <a href={`/${cat}`} class="mv-category-tab">
             <span class="category-icon">{categoryIcons[cat]}</span>{categoryNamesTR[cat]}
@@ -206,11 +199,6 @@ const categoryNamesTR = {
     max-width: 6xl;
     margin: 0 auto;
     padding: 0 1rem;
-    overflow-x: auto;
-    overflow-y: visible;
-    /* Mobile fix: add background and z-index for overlay issues */
-    background: rgba(248, 250, 252, 0.95);
-    z-index: 1001;
   }
 
   .mv-category-tab {
@@ -259,16 +247,20 @@ const categoryNamesTR = {
 
   .category-icon {
     font-size: 1.1rem;
-  }
+  }  @media (max-width: 768px) {
+    .logo-section {
+      padding: 0.5rem 0.75rem;
+    }
 
-  @media (max-width: 768px) {
+    .logo-link {
+      gap: 0.5rem;
+      font-size: 1.25rem;
+    }
+
     .mv-categories-wrapper {
       padding: 0.4rem 0;
-      position: relative;
-      z-index: 1001;
-      background: rgba(248, 250, 252, 0.98);
-      box-shadow: 0 2px 10px rgba(0,0,0,0.04);
     }
+
     .mv-categories {
       overflow-x: auto;
       padding: 0 0.75rem;
@@ -277,15 +269,12 @@ const categoryNamesTR = {
       scrollbar-width: none;
       -ms-overflow-style: none;
       gap: 0.4rem;
-      background: rgba(248, 250, 252, 0.98);
-      border-radius: 1.5rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-      position: relative;
-      z-index: 1001;
     }
+
     .mv-categories::-webkit-scrollbar {
       display: none;
     }
+
     .mv-category-tab {
       font-size: 0.85rem;
       padding: 0.6rem 1rem;
@@ -293,26 +282,9 @@ const categoryNamesTR = {
       flex-shrink: 0;
       min-width: 85px;
     }
+
     .category-icon {
       font-size: 1rem;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .mv-categories {
-      gap: 0.3rem;
-      padding: 0 0.5rem;
-      margin-left: -0.5rem;
-      margin-right: -0.5rem;
-      border-radius: 1rem;
-      background: rgba(248, 250, 252, 0.99);
-      position: relative;
-      z-index: 1001;
-    }
-    .mv-category-tab {
-      padding: 0.4rem 0.8rem;
-      font-size: 0.8rem;
-      min-width: 70px;
     }
   }
 </style>

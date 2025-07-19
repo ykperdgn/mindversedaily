@@ -39,18 +39,9 @@ const filteredPosts = posts.filter(post =>
 
 // Get all available categories for navigation
 const availableCategories = [...new Set(posts.map(post => post.data.category).filter(Boolean))];
-const categories = [
-  "health",
-  "psychology",
-  "history",
-  "space",
-  "quotes",
-  "love",
-  "business",
-  "science",
-  "world",
-  "horoscope"
-];
+const categories = availableCategories.length > 0
+  ? availableCategories.sort()
+  : ["health", "psychology", "history", "space", "quotes", "love"];
 
 const categoryIcons = {
   health: "🧬",
@@ -414,8 +405,7 @@ const categoryKeywords = {
 							<p>Bu kategoride henüz yazı bulunmuyor.</p>
 							<a href="/blog">Tüm yazılara dön</a>
 						</div>
-					) : (
-						<ul class="mv-grid">
+					) : (						<ul class="mv-grid">
 							{filteredPosts.map(post => (
 								<li class="mv-card">
 									<a href={post.id ? `/blog/${post.id}` : '#'}>

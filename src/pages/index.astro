@@ -32,35 +32,32 @@ const posts = allPosts
   })
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-// Tüm 10 kategori sabit listesi
-const categories = [
-  "business", "science", "world", "horoscope", "health", "psychology", "history", "space", "quotes", "love"
-];
+// Dinamik kategoriler - content/blog klasörlerinden
+const availableCategories = [...new Set(posts.map(post => post.data.category).filter(Boolean))];
+
+const categories = availableCategories.includes('health') && availableCategories.includes('psychology')
+  ? availableCategories
+  : ["health", "psychology", "history", "space", "quotes", "love", "horoscope"];
 
 const categoryIcons = {
-  business: "💼",
-  science: "🔬",
-  world: "🌍",
-  horoscope: "🔮",
   health: "🧬",
   psychology: "🧠",
   history: "📜",
   space: "🚀",
   quotes: "💬",
-  love: "❤️"
+  love: "❤️",
+  horoscope: "🔮"
 };
 
+// Türkçe kategori isimleri
 const categoryNamesTR = {
-  business: "İş Dünyası",
-  science: "Bilim",
-  world: "Dünya",
-  horoscope: "Horoskop",
   health: "Sağlık",
   psychology: "Psikoloji",
   history: "Tarih",
   space: "Uzay",
   quotes: "Alıntılar",
-  love: "Aşk"
+  love: "Aşk",
+  horoscope: "Horoskop"
 };
 
 // Homepage SEO optimization

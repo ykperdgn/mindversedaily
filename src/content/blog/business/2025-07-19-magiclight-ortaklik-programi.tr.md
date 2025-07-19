@@ -15,7 +15,7 @@ Magiclight affiliate programı, platformu tanıtan ve yeni kullanıcılar kazand
 Magiclight ile üretilen videolar, arama motorlarında daha iyi sıralama almak için optimize edilmiştir. Video içerikleri, web sitenizin SEO performansını artırır ve organik trafik sağlar. Affiliate programı ile hem kendi sitenizin SEO'sunu güçlendirebilir hem de Magiclight'ın sunduğu avantajlardan yararlanabilirsiniz.
 
 **Nasıl Katılırım?**
-Magiclight affiliate programına katılmak için [Magiclight Affiliate Programı](https://magiclight.ai/affiliate) veya doğrudan [bu özel linki](https://m.magiclight.ai/official-website?code=znzhjam01) kullanabilirsiniz. Kayıt olduktan sonra size özel bir referans linki verilir ve bu link üzerinden gelen her satıştan komisyon kazanırsınız.
+Magiclight affiliate programına katılmak için sadece [bu özel linki](https://m.magiclight.ai/official-website?code=znzhjam01) kullanabilirsiniz. Kayıt olduktan sonra size özel bir referans linki verilir ve bu link üzerinden gelen her satıştan komisyon kazanırsınız.
 
 **Neden Magiclight?**
 - Yapay zeka ile hızlı ve kolay video üretimi
