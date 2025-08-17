@@ -1,23 +1,5 @@
 ---
-import { type CollectionEntry, getCollection } from 'astro:content';
-import BlogPostEN from '../../../layouts/BlogPostEN.astro';
-import { render } from 'astro:content';
-
-export async function getStaticPaths() {
-	const posts = await getCollection('blog');
-	// Only English posts (ending with .en)
-	const englishPosts = posts.filter(post => post.slug && post.slug.endsWith('.en'));
-	return englishPosts.map((post) => ({
-		params: { slug: post.id },
-		props: post,
-	}));
-}
-type Props = CollectionEntry<'blog'>;
-
-const post = Astro.props;
-const { Content } = await render(post);
+import { Astro } from 'astro';
+Astro.response.status = 404;
 ---
-
-<BlogPostEN {...post.data}>
-	<Content />
-</BlogPostEN>
+<!doctype html><html lang="en"><head><meta charset="utf-8" /><title>Content Offline</title><meta name="robots" content="noindex,nofollow" /></head><body style="font-family:system-ui;padding:40px;text-align:center;">Content temporarily offline.<br/><a href="/en">MindVerse</a></body></html>
