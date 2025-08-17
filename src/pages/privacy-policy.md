@@ -6,7 +6,7 @@ noindex: false
 # Privacy Policy
 _Last updated: 17 Aug 2025_
 
-This Privacy Policy explains how MindVerse ("we", "us", "our") collects, uses and protects information when you visit **mindversedaily.vercel.app** (the "Site"). We operate a minimal, content‑only website showcasing our own Kindle e‑books. We do not run user accounts and do not sell personal data.
+This Privacy Policy explains how MindVerse ("we", "us", "our") collects, uses and protects information when you visit **mindversedaily.com** (the "Site"). We operate a minimal, content‑only website showcasing our own Kindle e‑books. We do not run user accounts and do not sell personal data.
 
 ## 1. Information We Collect
 We intentionally collect **no personally identifiable information** through forms at this time. The Site currently has:
@@ -45,7 +45,7 @@ If we add an email subscription form or API endpoint later, this Policy will be 
 Although we do not actively target the EU with localized services, if applicable you may request: access, rectification, deletion, restriction, or objection regarding any personal information you have voluntarily provided. Contact us as below; we will respond within 30 days.
 
 ## 10. Contact
-For privacy inquiries or requests: privacy@mindverse.example (placeholder – replace with operational address before launch).
+For privacy inquiries or requests: mindversedaily@gmail.com
 
 ## 11. Changes to this Policy
 We may revise this Policy to reflect content scope, legal, or technology updates. The “Last updated” date will change accordingly. Material changes will be summarized at the top of this page.

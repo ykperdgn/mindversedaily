@@ -1,13 +1,30 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
-import EbookCard from '../../components/EbookCard.astro';
+// Removed EbookCard; replicate homepage card structure for identical look
 const ebooks = (await getCollection('ebooks')).sort((a,b)=> (b.data.publishDate as any) - (a.data.publishDate as any));
 ---
 <BaseLayout title="Ebooks | MindVerse">
   <h1 style="margin-top:0;font-size:clamp(1.8rem,5vw,2.6rem);background:var(--grad);-webkit-background-clip:text;color:transparent;">Ebooks</h1>
-  <p style="max-width:720px;font-size:.95rem;opacity:.85;">Rebuild in progress. Below are our current titles with short previews. Full versions are available on Kindle (direct author links, no affiliates).</p>
-  <div class="grid" style="margin-top:2rem;">
-    {ebooks.map(e => <EbookCard ebook={e} />)}
+  <p style="max-width:720px;font-size:.95rem;opacity:.85;">All current titles. Same card style as homepage.</p>
+  <div class="ebooks-grid" style="margin-top:2rem;">
+    {ebooks.map(e => (
+      <a href={`/ebooks/${e.slug ?? e.id.replace(/\.md$/, '')}`} class="card">
+        {e.data.cover && <img src={e.data.cover} alt={e.data.title} loading="lazy" />}
+        <div class="body">
+          <h3>{e.data.title}</h3>
+          <p>{e.data.description}</p>
+        </div>
+      </a>
+    ))}
   </div>
+  <style>
+    .ebooks-grid{display:grid;gap:1.25rem;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));}
+    .card{display:flex;flex-direction:column;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:1rem;overflow:hidden;min-height:240px;text-decoration:none;}
+    .card img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block;}
+    .card .body{padding:.85rem .9rem 1.1rem;display:flex;flex-direction:column;gap:.5rem;}
+    .card h3{margin:0;font-size:1rem;line-height:1.25;font-weight:600;color:#f1f5f9;}
+    .card p{margin:0;font-size:.75rem;opacity:.75;line-height:1.35;color:#f1f5f9;}
+    .card:hover h3{text-decoration:underline;}
+  </style>
 </BaseLayout>
