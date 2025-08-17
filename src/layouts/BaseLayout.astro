@@ -16,9 +16,13 @@ const canonical = indexingEnabled ? Astro.url?.href : undefined;
     <meta name="google-adsense-account" content="ca-pub-3096725438789562" />
     <link rel="icon" href="/favicon.svg" />
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3096725438789562" crossOrigin="anonymous"></script>
+    <link rel="preload" href="/fonts/atkinson-regular.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="/fonts/atkinson-bold.woff" as="font" type="font/woff" crossorigin>
     <style>
       :root{--bg:#0f172a;--surface:rgba(255,255,255,0.05);--border:rgba(255,255,255,.08);--grad:linear-gradient(135deg,#3b82f6,#8b5cf6,#ec4899);}
-      *{box-sizing:border-box;} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,sans-serif;background:var(--bg);color:#f1f5f9;line-height:1.5;} a{color:#60a5fa;} a:hover{text-decoration:underline;}
+      @font-face{font-family:'Atkinson';src:url('/fonts/atkinson-regular.woff') format('woff');font-weight:400;font-display:swap;}
+      @font-face{font-family:'Atkinson';src:url('/fonts/atkinson-bold.woff') format('woff');font-weight:700;font-display:swap;}
+      *{box-sizing:border-box;} body{margin:0;font-family:'Atkinson',system-ui,-apple-system,Segoe UI,Roboto,Inter,sans-serif;background:var(--bg);color:#f1f5f9;line-height:1.5;} a{color:#60a5fa;} a:hover{text-decoration:underline;}
       header{display:flex;align-items:center;justify-content:space-between;padding:1rem 1.25rem;border-bottom:1px solid var(--border);backdrop-filter:blur(10px);position:sticky;top:0;background:rgba(15,23,42,.85);}
       nav a{margin-right:1rem;font-size:.85rem;font-weight:500;letter-spacing:.5px;text-decoration:none;color:#cbd5e1;} nav a:last-child{margin-right:0;} nav a:hover{color:#fff;}
       .logo{font-weight:700;background:var(--grad);-webkit-background-clip:text;color:transparent;font-size:1rem;letter-spacing:.5px;}
