@@ -1,0 +1,2 @@
+Placeholder directory for ebook cover images.
+Add JPG cover files here named to match frontmatter, e.g. quantum-self.jpg, shadows-light.jpg, pull-dont-push.jpg.

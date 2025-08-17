@@ -1,13 +1,27 @@
 ---
-// Deprecated terms
+import BaseLayout from '../layouts/BaseLayout.astro';
+const indexingEnabled = import.meta.env.PUBLIC_INDEXING === 'true';
 ---
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta name="robots" content="noindex" />
-    <title>Deprecated</title>
-</head>
-<body style="font-family:system-ui;background:#0f172a;color:#fff;display:flex;align-items:center;justify-content:center;min-height:100vh;">
-    Removed.
-</body>
-</html>
+<BaseLayout title="Terms of Use | MindVerse" noindex={!indexingEnabled}>
+  <h1 style="margin-top:0;font-size:clamp(1.8rem,5vw,2.6rem);background:var(--grad);-webkit-background-clip:text;color:transparent;">Terms of Use</h1>
+  <p style="opacity:.85;max-width:760px;font-size:.95rem;">Last updated: 17 Aug 2025</p>
+  <section style="max-width:820px;font-size:.95rem;line-height:1.6;opacity:.9;">
+    <p>These Terms govern your use of the MindVerse website (the "Site"). By accessing the Site you agree to these Terms.</p>
+    <h2 style="font-size:1.1rem;margin:2rem 0 .75rem;">1. Content Scope</h2>
+    <p>The Site provides descriptive pages and limited previews of our own Kindle e‑books plus direct Amazon links (no affiliate tracking). No user accounts or comment systems are offered.</p>
+    <h2 style="font-size:1.1rem;margin:2rem 0 .75rem;">2. Intellectual Property</h2>
+    <p>All text, covers and branding are owned by MindVerse unless otherwise noted. You may not reproduce substantial portions without permission.</p>
+    <h2 style="font-size:1.1rem;margin:2rem 0 .75rem;">3. No Advice</h2>
+    <p>Content is informational / literary only and not professional, medical or psychological advice.</p>
+    <h2 style="font-size:1.1rem;margin:2rem 0 .75rem;">4. External Links</h2>
+    <p>Links to Amazon or other third parties are provided for convenience. We are not responsible for external content.</p>
+    <h2 style="font-size:1.1rem;margin:2rem 0 .75rem;">5. Disclaimer of Warranties</h2>
+    <p>The Site is provided "as is" without warranties. Availability and accuracy are not guaranteed.</p>
+    <h2 style="font-size:1.1rem;margin:2rem 0 .75rem;">6. Limitation of Liability</h2>
+    <p>To the maximum extent permitted by law, MindVerse is not liable for any indirect, incidental or consequential damages arising from Site use.</p>
+    <h2 style="font-size:1.1rem;margin:2rem 0 .75rem;">7. Changes</h2>
+    <p>We may update these Terms; continued use constitutes acceptance. Significant changes will be noted in the README or on this page.</p>
+    <h2 style="font-size:1.1rem;margin:2rem 0 .75rem;">8. Contact</h2>
+    <p>For questions: legal@mindverse.example (placeholder – replace with operational address before launch).</p>
+  </section>
+</BaseLayout>

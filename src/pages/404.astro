@@ -1,0 +1,23 @@
+---
+const indexingEnabled = import.meta.env.PUBLIC_INDEXING === 'true';
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Not Found | MindVerse</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    {(!indexingEnabled) && <meta name="robots" content="noindex,nofollow" />}
+    <link rel="icon" href="/favicon.svg" />
+    <style>
+      :root{--grad:linear-gradient(135deg,#3b82f6,#8b5cf6,#ec4899);} body{margin:0;font-family:system-ui;background:#0f172a;color:#f1f5f9;display:flex;align-items:center;justify-content:center;min-height:100vh;padding:2rem;} h1{margin:0 0 1rem;font-size:clamp(2.2rem,6vw,3.5rem);background:var(--grad);-webkit-background-clip:text;color:transparent;} a{color:#60a5fa;text-decoration:none;font-weight:500;} a:hover{text-decoration:underline;} .box{max-width:620px;text-align:center;} p{line-height:1.6;opacity:.85;margin:0 0 1.25rem;} .home-btn{display:inline-block;background:var(--grad);color:#fff;padding:.85rem 1.4rem;border-radius:999px;font-size:.85rem;font-weight:600;box-shadow:0 4px 18px -4px rgba(99,102,241,.5);transition:.25s;} .home-btn:hover{transform:translateY(-2px);box-shadow:0 6px 22px -6px rgba(99,102,241,.6);}
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h1>404</h1>
+      <p>The page you were looking for is not here. The site is in a focused rebuild—some legacy URLs were removed permanently.</p>
+      <a href="/" class="home-btn">Go Home</a>
+    </div>
+  </body>
+</html>

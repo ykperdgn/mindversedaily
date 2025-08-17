@@ -1,54 +1,68 @@
-# MindVerse Astro Blog
+# MindVerse Minimal E‑Book Hub
 
-Modern, minimalist ve hızlı bir blog/news sitesi. Popsci.com tarzı küçük grid, SEO uyumlu, örnek içerikli ve Vercel deploy uyumlu.
+Focused Astro site hosting previews & metadata for MindVerse authored Kindle e‑books. Previously a multi‑category bilingual blog; now intentionally reduced while rebuilding. No affiliate links; only direct Amazon product pages for our titles.
 
-## Özellikler
-- Astro tabanlı, TypeScript desteği
-- Kategoriler: science, health, business, world
-- Modern grid/kart ve sade logo
-- SEO dosyaları (robots.txt, sitemap.xml)
-- İki dilli arama fonksiyonu (Türkçe/İngilizce)
-- Gerçek zamanlı arama ve filtreleme
-- Vercel ile kolay deploy
+## Current Status (Rebuild Phase)
+- Indexing disabled by default (`PUBLIC_INDEXING=false`) – dynamic `robots.txt` & `sitemap.xml` endpoints adapt when toggled.
+- Legacy blog, astrology widgets, automation & unused components fully removed.
+- Three initial ebook entries with on‑site preview extraction.
+- Google AdSense script integrated (non‑personalized until launch) to satisfy future monetization placement.
+- Privacy Policy & Terms pages implemented for AdSense compliance.
+- Book JSON‑LD structured data injected on each e‑book detail page.
 
-## Arama Fonksiyonu 🔍
+## Tech Stack
+- Astro ^5
+- TypeScript capable (minimal usage)
+- No React / MDX / Tailwind (purged) for minimal footprint
+- `sharp` for future image optimization
 
-Site, dil özelinde güçlü bir arama sistemi içerir:
+## Content Model (`src/content/config.ts`)
+Collection `ebooks` fields:
+- title, author, language (default en)
+- amazonAsin, amazonUrl
+- cover (path under `/public`)
+- description (<=500 chars)
+- categories (string[])
+- publishDate (Date)
+- preview: optional { type: words | break | percent, value?: number }
 
-### Özellikler
-- **Dil bazlı arama**: Türkçe sayfada Türkçe içerik, İngilizce sayfada İngilizce içerik arar
-- **Gerçek zamanlı filtreleme**: 300ms gecikme ile hızlı sonuçlar
-- **Çoklu alan arama**: Başlık, açıklama ve kategori alanlarında arar
-- **Arama terimi vurgulama**: Bulunan terimleri renkli gösterir
-- **Mobil uyumlu**: Responsive tasarım
-- **API entegrasyonu**: `/api/posts.json` endpoint'i ile dinamik veri
+Preview extraction supports:
+- words: first N words
+- break: explicit `<!-- preview-start -->` to `<!-- preview-end -->`
+- percent: first N percent of words
 
-### Kullanım
-- Ana sayfadaki arama kutusuna yazmaya başlayın
-- Sonuçlar otomatik olarak filtrelenir
-- "Temizle" butonu ile aramayı sıfırlayın
-- Her dilde kendi içeriğini arar
+## Dynamic Indexing Control
+- `src/pages/robots.txt.js` emits Allow/Disallow based on `PUBLIC_INDEXING`.
+- `src/pages/sitemap.xml.js` returns empty set when indexing disabled; full minimal sitemap when enabled.
+- `BaseLayout.astro` automatically toggles robots meta and canonical.
 
-## İletişim
-📧 mindversedaily@gmail.com
+## Planned Next Steps
+1. Replace placeholder cover images with real assets (`/public/assets/covers/*.jpg`).
+2. Add optional author/about page for credibility.
+3. Optional email subscription endpoint + form.
+4. Accessibility & performance pass (alt text completeness, image optimization pipeline via `sharp`).
+5. Light privacy‑friendly analytics.
 
-## Geliştirme
-```sh
+## Environment Variables
+- `PUBLIC_INDEXING` = `true` to allow indexing (removes noindex meta, robots Disallow & exposes populated sitemap).
+- Optionally set `SITE_URL` for accurate absolute URLs in sitemap & JSON‑LD.
+
+## Development
+```
+npm install
 npm run dev
 ```
-
-## Build
-```sh
+Build:
+```
 npm run build
 ```
+Output: `dist/` (deploy via Vercel).
 
-## Deploy
-Vercel ile tek tık deploy veya `vercel --prod` komutu ile canlıya alın.
+## Deployment
+Set `PUBLIC_INDEXING=false` until launch; then switch to true + redeploy when baseline content & policies ready. Provide real contact addresses in Privacy & Terms before enabling.
 
-## Vercel & GitHub Entegrasyonu
-1. Vercel panelinde "Add New Project" diyerek [ykperdgn/mindversedaily](https://github.com/ykperdgn/mindversedaily) reposunu seçin.
-2. Proje kök dizinini `public/mindverse_new` olarak ayarlayın.
-3. Build komutu: `npm run build`, output directory: `dist`.
-4. Her push'ta otomatik deploy gerçekleşir.
-5. Otomasyon veya içerik botu ile deploy tetiklemek için yeni webhook URL'niz:
-   https://api.vercel.com/v1/integrations/deploy/prj_AGaMnVDNwQRriAJoIR6DbhRDgLnA/EClzUbpcNT
+## Policies
+Privacy Policy (`/privacy-policy`) and Terms (`/terms`) active. Update contact emails before production indexing.
+
+## License
+All original content © MindVerse. Codebase internal use; no explicit open‑source license at this time.
