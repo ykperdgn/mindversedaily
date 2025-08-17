@@ -1,22 +1,22 @@
 ---
-title: "Shadows and Light: Taşın Fısıltıları"
+title: "Shadows and Light: Whispers of the Stone"
 author: "Yakup Erdoğan"
-language: "tr"
+language: "en"
 amazonAsin: "B0FH6QD73R"
 amazonUrl: "https://www.amazon.com/dp/B0FH6QD73R"
 cover: "/assets/covers/shadows-light.jpg"
-description: "Gerçekliğin çapasını korumakla görevli iki kardeşin ve bir Koruyucu'nun düzen ve kaos arasındaki kozmik mücadelesi."
-categories: ["fantastik","bilimkurgu"]
+description: "A cosmic struggle between order and chaos: two siblings guarding reality's anchor and a Guardian who forces them to face what the universe is becoming."
+categories: ["fantasy","science-fiction"]
 publishDate: 2025-07-09
-preview: { type: "words", value: 500 }
+preview: { type: "percent", value: 20 }
 ---
 
 <!-- preview-start -->
-Dağın tepesindeki çökmekte olan Gözlemevi dünyadan saklanmak için olduğu kadar, babalarının unutulmuş mirasının ördüğü birer zindandı. Biri geçmişin gölgeleriyle savaşan bir koruyucu, diğeri geleceğe takıntılı bir bilgeydi.
+At the mountain summit the crumbling Observatory was as much a hiding place as a prison woven by their father’s forgotten legacy. One was a guardian wrestling the shadows of the past; the other a seer obsessed with the future.
 
-Eski taş — tek mirasları — bir gece boyutlar arası çaresiz bir fısıltı gönderdiğinde rutin sessizlik yırtıldı.
+The old stone — their sole inheritance — tore the routine silence one night by sending a desperate inter‑dimensional whisper.
 
-Koruyucu Sevan ortaya çıkıp gerçeği açığa çıkardığında artık geri dönüş yoktu: Taş bir Gerçeklik Çapasıydı ve evren ölüyordu.
+When Guardian Sevan emerged and revealed the truth there was no return: the Stone was a Reality Anchor and the universe was dying.
 <!-- preview-end -->
 
-Devamını Kindle'da oku: <a href="https://www.amazon.com/dp/B0FH6QD73R" rel="noopener" target="_blank">Amazon'da Aç</a>
+Read the full edition on Kindle: <a href="https://www.amazon.com/dp/B0FH6QD73R" rel="noopener" target="_blank">Open on Amazon</a>

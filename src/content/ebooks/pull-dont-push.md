@@ -1,20 +1,20 @@
 ---
-title: "Çek, İtme: İçsel Gücünü Uyandır"
+title: "Pull, Don’t Push: Awaken Your Inner Power"
 author: "Yakup Erdoğan"
-language: "tr"
+language: "en"
 amazonAsin: "B0FMK1KJ17"
 amazonUrl: "https://www.amazon.com/dp/B0FMK1KJ17"
 cover: "/assets/covers/pull-dont-push.jpg"
-description: "Dışsal motivasyon illüzyonundan çıkıp içsel çekim alanını aktive etmeye yönelik modern bir rehber."
-categories: ["öz gelişim","motivasyon"]
+description: "A modern framework to exit the illusion of external motivation and activate a sustainable inner field of pull."
+categories: ["self-improvement","motivation"]
 publishDate: 2025-08-14
-preview: { type: "words", value: 550 }
+preview: { type: "percent", value: 20 }
 ---
 
 <!-- preview-start -->
-Alarmın sabah 6'da çaldığında sadece kulaklarını mı uyandırıyor yoksa ruhunu da mı? İlk düşüncen "Yine mi?" mi yoksa "Yeni bir gün!" mü? Bu basit soru büyük bir sırrı açığa çıkarır: Gerçek motivasyon nereden gelir?
+When your alarm rings at 6 a.m. does it only wake your ears or your spirit too? Is your first thought “Again?” or “New day!”? That simple question exposes a big secret: where real drive originates.
 
-Çoğumuz motivasyonu dış dünyada arıyoruz: patron övgüsünde, beğeni sayısında, kısa vadeli dopamin kıvılcımlarında. Oysa bu büyük yanılgının başlangıcıdır. Bu kitap içsel çekim motorunu kalibre etmen için sana çerçeve sunuyor.
+Most of us chase motivation outside: boss praise, like counts, short dopamine sparks. That chase is the start of the illusion. This book gives you a framework to calibrate the internal gravity engine.
 <!-- preview-end -->
 
-Devamını Kindle'da oku: <a href="https://www.amazon.com/dp/B0FMK1KJ17" rel="noopener" target="_blank">Amazon'da Aç</a>
+Read the full edition on Kindle: <a href="https://www.amazon.com/dp/B0FMK1KJ17" rel="noopener" target="_blank">Open on Amazon</a>
