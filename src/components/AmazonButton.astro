@@ -1,0 +1,9 @@
+---
+const { href, label = 'Open on Amazon', variant = 'primary' } = Astro.props;
+---
+<a href={href} target="_blank" rel="noopener" class={`amazon-btn ${variant}`}>{label}</a>
+<style>
+.amazon-btn{display:inline-flex;align-items:center;gap:.5rem;font-weight:600;border-radius:999px;padding:.75rem 1.25rem;font-size:.95rem;text-decoration:none;transition:.25s;background:linear-gradient(135deg,#6366f1,#8b5cf6,#ec4899);color:#fff;box-shadow:0 4px 18px -4px rgba(99,102,241,.5);}
+.amazon-btn:hover{transform:translateY(-2px);box-shadow:0 6px 22px -6px rgba(99,102,241,.6);}
+.amazon-btn:active{transform:translateY(0);}
+</style>

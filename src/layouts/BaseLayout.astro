@@ -1,0 +1,45 @@
+---
+let { title = 'MindVerse', description = '', noindex } = Astro.props as any;
+const indexingEnabled = import.meta.env.PUBLIC_INDEXING === 'true';
+if (noindex === undefined) noindex = !indexingEnabled;
+const canonical = indexingEnabled ? Astro.url?.href : undefined;
+---
+<html lang="en">
+  <head>
+    <!-- Vercel deploy: keep site domain configured in astro.config.mjs -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>{title}</title>
+    {description && <meta name="description" content={description} />}
+    {noindex && <meta name="robots" content="noindex,nofollow" />}
+    {canonical && <link rel="canonical" href={canonical} />}
+    <meta name="google-adsense-account" content="ca-pub-3096725438789562" />
+    <link rel="icon" href="/favicon.svg" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3096725438789562" crossOrigin="anonymous"></script>
+    <style>
+      :root{--bg:#0f172a;--surface:rgba(255,255,255,0.05);--border:rgba(255,255,255,.08);--grad:linear-gradient(135deg,#3b82f6,#8b5cf6,#ec4899);}
+      *{box-sizing:border-box;} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,sans-serif;background:var(--bg);color:#f1f5f9;line-height:1.5;} a{color:#60a5fa;} a:hover{text-decoration:underline;}
+      header{display:flex;align-items:center;justify-content:space-between;padding:1rem 1.25rem;border-bottom:1px solid var(--border);backdrop-filter:blur(10px);position:sticky;top:0;background:rgba(15,23,42,.85);}
+      nav a{margin-right:1rem;font-size:.85rem;font-weight:500;letter-spacing:.5px;text-decoration:none;color:#cbd5e1;} nav a:last-child{margin-right:0;} nav a:hover{color:#fff;}
+      .logo{font-weight:700;background:var(--grad);-webkit-background-clip:text;color:transparent;font-size:1rem;letter-spacing:.5px;}
+      main{max-width:1100px;margin:0 auto;padding:2rem 1.25rem;}
+      footer{padding:2rem 1.25rem;font-size:.75rem;opacity:.6;text-align:center;}
+      .grid{display:grid;gap:1.25rem;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));}
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">MindVerse</div>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/ebooks">Ebooks</a>
+        <a href="/amazon">Amazon</a>
+        <a href="/privacy-policy" style="opacity:.7;">Privacy</a>
+      </nav>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer>© {new Date().getFullYear()} MindVerse • {indexingEnabled ? 'Live' : 'Rebuild phase (noindex)'} </footer>
+  </body>
+</html>

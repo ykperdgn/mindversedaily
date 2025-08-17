@@ -1,41 +1,64 @@
 ---
+import { getCollection } from 'astro:content';
+const ebooks = (await getCollection('ebooks')).sort((a,b)=> (b.data.publishDate as any) - (a.data.publishDate as any)).slice(0,3);
 ---
 <!doctype html>
-<html lang="tr">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>MindVerse Yeniden Tasarlanıyor</title>
+    <title>MindVerse • Rebuild</title>
     <meta name="robots" content="noindex,nofollow" />
-    <meta name="google-adsense-account" content="ca-pub-3096725438789562" />
     <link rel="icon" href="/favicon.svg" />
     <style>
-      body {margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,sans-serif;display:flex;align-items:center;justify-content:center;min-height:100vh;background:#0f172a;color:#f1f5f9;padding:2rem;text-align:center;}
-      .wrap {max-width:720px;width:100%;}
-      h1 {font-size:clamp(2rem,5vw,3rem);margin:0 0 1rem;font-weight:800;background:linear-gradient(135deg,#3b82f6,#8b5cf6,#ec4899);-webkit-background-clip:text;color:transparent;}
-      p {line-height:1.6;margin:0 0 1.25rem;font-size:1.05rem;}
-      .box {background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);padding:2rem;border-radius:1.5rem;backdrop-filter:blur(6px);}
-      footer {margin-top:2rem;font-size:.75rem;opacity:.6;}
-      .ads {margin:1.5rem auto;min-height:90px;display:flex;align-items:center;justify-content:center;border:1px dashed rgba(255,255,255,0.2);border-radius:12px;padding:.75rem;font-size:.75rem;letter-spacing:.5px;text-transform:uppercase;}
-      a{color:#3b82f6;text-decoration:none;}a:hover{text-decoration:underline;}
+      body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,sans-serif;background:#0f172a;color:#f1f5f9;line-height:1.55;}
+      header{display:flex;align-items:center;justify-content:space-between;padding:1rem 1.25rem;border-bottom:1px solid rgba(255,255,255,.08);}
+      .logo{font-weight:700;background:linear-gradient(135deg,#3b82f6,#8b5cf6,#ec4899);-webkit-background-clip:text;color:transparent;font-size:1rem;letter-spacing:.5px;}
+      a{text-decoration:none;color:#60a5fa;} a:hover{text-decoration:underline;}
+      main{max-width:1100px;margin:0 auto;padding:2.5rem 1.25rem 4rem;}
+      h1{margin:0 0 1rem;font-size:clamp(2.2rem,5vw,3.2rem);background:linear-gradient(135deg,#3b82f6,#8b5cf6,#ec4899);-webkit-background-clip:text;color:transparent;}
+      .intro{max-width:760px;font-size:1.02rem;opacity:.9;}
+      .ebooks-grid{display:grid;gap:1.25rem;margin-top:2rem;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));}
+      .card{display:flex;flex-direction:column;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:1rem;overflow:hidden;min-height:240px;}
+      .card img{width:100%;aspect-ratio:3/4;object-fit:cover;}
+      .card .body{padding:.85rem .9rem 1.1rem;display:flex;flex-direction:column;gap:.5rem;}
+      .card h3{margin:0;font-size:1rem;line-height:1.25;font-weight:600;}
+      .card p{margin:0;font-size:.75rem;opacity:.75;line-height:1.35;}
+      footer{padding:2rem 1.25rem;font-size:.7rem;opacity:.55;text-align:center;}
+      .cta-btn{display:inline-block;background:linear-gradient(135deg,#6366f1,#8b5cf6,#ec4899);padding:.75rem 1.15rem;border-radius:999px;font-weight:600;color:#fff;text-decoration:none;font-size:.8rem;box-shadow:0 4px 18px -4px rgba(99,102,241,.5);transition:.25s;}
+      .cta-btn:hover{transform:translateY(-2px);box-shadow:0 6px 22px -6px rgba(99,102,241,.6);}
+      nav a{margin-right:1rem;font-size:.8rem;letter-spacing:.5px;color:#cbd5e1;} nav a:last-child{margin-right:0;} nav a:hover{color:#fff;}
+      .note{margin-top:2rem;font-size:.7rem;opacity:.5;max-width:640px;}
     </style>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3096725438789562" crossorigin="anonymous"></script>
   </head>
   <body>
-    <div class="wrap">
-      <div class="box">
-        <h1>MindVerse Yeniden Tasarlanıyor</h1>
-        <p>Siteyi tamamen yeniden tasarlıyoruz. Kısa süre içinde sadece seçilmiş özgün içerikler ve kitap satış yönlendirmeleri (Amazon) ile döneceğiz.</p>
-        <p>Tüm önceki içerikler geçici olarak devre dışı bırakıldı.</p>
-        <div class="ads">
-          Google Ad Alanı (Geçici)
-        </div>
-        <p>Dönüş bildirimlerini almak isterseniz yakında e-posta aboneliği eklenecek.</p>
-        <p><strong>Not:</strong> Çok az metin + sadece reklam politikaya aykırı olabilir. Nihai yayında yeterli özgün metin ve kullanıcı değeri sunun.</p>
-        <p><a href="/amazon" style="color:#ec4899;font-weight:600;">Amazon kitap sayfaları yakında.</a></p>
+    <header>
+      <div class="logo">MindVerse</div>
+      <nav>
+        <a href="/ebooks">Ebooks</a>
+        <a href="/amazon">Amazon</a>
+      </nav>
+    </header>
+    <main>
+      <h1>Rebuilding MindVerse</h1>
+      <p class="intro">Transitioning from a broad blog to a focused hub for our own Kindle e‑books. Below are the first titles. Detailed pages include an on‑site preview. Indexing & SEO are temporarily disabled while structure stabilizes.</p>
+      <div class="ebooks-grid">
+        {ebooks.map(e => (
+          <a href={`/ebooks/${e.slug ?? e.id.replace(/\\.md$/, '')}`} class="card">
+            {e.data.cover && <img src={e.data.cover} alt={e.data.title} loading="lazy" />}
+            <div class="body">
+              <h3>{e.data.title}</h3>
+              <p>{e.data.description}</p>
+            </div>
+          </a>
+        ))}
       </div>
-      <footer>© {new Date().getFullYear()} MindVerse</footer>
-    </div>
+      <div style="margin-top:2.5rem;">
+        <a href="/ebooks" class="cta-btn">View All Ebooks</a>
+      </div>
+      <p class="note">No affiliates. Canonical + sitemap will be reinstated after content baseline & design pass.</p>
+    </main>
+    <footer>© {new Date().getFullYear()} MindVerse • Rebuild phase (noindex)</footer>
   </body>
 </html>
 

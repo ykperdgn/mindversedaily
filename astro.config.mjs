@@ -1,8 +1,5 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
-import mdx from '@astrojs/mdx';
-import sitemap from '@astrojs/sitemap';
-import react from '@astrojs/react';
 import { fileURLToPath } from 'url';
 import path from 'path';
 
@@ -11,6 +8,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // https://astro.build/config
+// To enable indexing set PUBLIC_INDEXING=true in environment (Vercel env var)
+// Optionally disable sitemap plugin during rebuild phase if needed.
 export default defineConfig({
 	site: 'https://www.mindversedaily.com',
 	// Vite settings to resolve /assets to public/assets
@@ -24,22 +23,7 @@ export default defineConfig({
 			'__MV_REDESIGN__': 'true'
 		}
 	},
-	integrations: [
-		mdx(),
-		sitemap({
-			changefreq: 'daily',
-			priority: 0.8,
-			lastmod: new Date(),
-			i18n: {
-				defaultLocale: 'tr',
-				locales: {
-					tr: 'tr-TR',
-					en: 'en-US'
-				}
-			}
-		}),
-		react(),
-	],
+	integrations: [],
 	server: {
 		host: '0.0.0.0',
 		port: 4321,
