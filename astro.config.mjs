@@ -12,13 +12,16 @@ const __dirname = path.dirname(__filename);
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://mindversedaily.vercel.app',
+	site: 'https://www.mindversedaily.com',
 	// Vite settings to resolve /assets to public/assets
 	vite: {
 		resolve: {
 			alias: {
 				'/assets': path.resolve(__dirname, 'public/assets')
 			}
+		},
+		define: {
+			'__MV_REDESIGN__': 'true'
 		}
 	},
 	integrations: [

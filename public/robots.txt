@@ -1,32 +1,11 @@
 User-agent: *
-Allow: /
-Disallow: /scripts/
-Disallow: /*.json$
-Disallow: /automation_dashboard.html
-Disallow: /status.html
-Disallow: /*.bat$
-Disallow: /*.py$
+Disallow: /
 
-# Allow important pages explicitly for better indexing
-Allow: /blog/
-Allow: /en/
-Allow: /tr/
-Allow: /science*
-Allow: /health*
-Allow: /business*
-Allow: /world*
-Allow: /psychology*
-Allow: /space*
-Allow: /history*
-Allow: /quotes*
-Allow: /love*
-Allow: /en/science*
-Allow: /en/health*
-Allow: /en/business*
-Allow: /en/world*
-Allow: /rss.xml
-Allow: /sitemap-index.xml
-Allow: /sitemap*.xml
+User-agent: AdsBot-Google
+Allow: /
+
+# Redesign in progress - all content disabled
+# Production hosting via Vercel will continue
 
 # Sitemap location
 Sitemap: https://mindversedaily.vercel.app/sitemap-index.xml

@@ -1,21 +1,6 @@
 ---
-import { type CollectionEntry, getCollection } from 'astro:content';
-import BlogPost from '../layouts/BlogPost.astro';
-import { render } from 'astro:content';
-
-export async function getStaticPaths() {
-	const posts = await getCollection('blog');
-	return posts.map((post) => ({
-		params: { slug: post.id },
-		props: post,
-	}));
-}
-type Props = CollectionEntry<'blog'>;
-
-const post = Astro.props;
-const { Content } = await render(post);
+// ...existing code removed during redesign freeze
+import { Astro } from 'astro';
+Astro.response.status = 404;
 ---
-
-<BlogPost {...post.data}>
-	<Content />
-</BlogPost>
+<!doctype html><html lang="tr"><head><meta charset="utf-8" /><meta name="robots" content="noindex,nofollow" /><title>İçerik Geçici Olarak Kapalı</title></head><body style="font-family:system-ui;padding:40px;text-align:center;">İçerikler yeniden yapılandırılıyor.<br/>Anasayfa: <a href="/">MindVerse</a></body></html>
