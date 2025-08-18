@@ -1,11 +1,11 @@
 ﻿---
 title: "Cognitive Ecology and Attention Architecture"
-author: "Unknown"
+author: ""
 description: "An exploration of how attention systems shape cognition across environments."
 cover: "/assets/covers/cognitive-ecology-attention-architecture.webp"
 amazonAsin: "B0FMS71DH2"
 amazonUrl: "https://www.amazon.com/dp/B0FMS71DH2"
-publishDate: "2024-01-01"
+publishDate: "2025-08-18"
 category: "science"
 language: "en"
 pages: 320
@@ -21,5 +21,3 @@ Cognitive Ecology and Attention Architecture examines how attentional systems ar
 
 - ASIN: B0FMS71DH2
 - Amazon: https://www.amazon.com/dp/B0FMS71DH2
-
-Kapak olarak sağladığınız JPG'den optimize edilmiş WebP oluşturuldu ve kullanılıyor.
