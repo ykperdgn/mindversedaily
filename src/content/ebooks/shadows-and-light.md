@@ -44,7 +44,7 @@ The woman’s eyes locked onto the pulsing stone in the middle of the room. The 
 
 “I am Sevan,” she said, her voice trembling but resolute. “I am the last Guardian. And the universe needs you.”
 
-Click here to watch and listen on YouTube: https://youtu.be/wt2gElFR0jo?si=ihG2YclZhUablFc_
+Click here to watch and listen on YouTube: <a href="https://youtu.be/wt2gElFR0jo?si=ihG2YclZhUablFc_" target="_blank" rel="noopener" style="display:inline-block;padding:8px 16px;background:#222;color:#fff;border-radius:4px;text-decoration:none;">Watch on YouTube</a>
 <!-- preview-end -->
 
 Read the full edition on Kindle: "https://www.amazon.com/dp/B0FH6QD73R"
