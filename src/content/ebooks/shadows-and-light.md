@@ -43,6 +43,8 @@ At that exact moment, a sharp knock echoed on the wooden door of the Observatory
 The woman’s eyes locked onto the pulsing stone in the middle of the room. The expression on her face was one of both relief and terrible confirmation.
 
 “I am Sevan,” she said, her voice trembling but resolute. “I am the last Guardian. And the universe needs you.”
+
+Click here to watch and listen on YouTube: https://youtu.be/wt2gElFR0jo?si=ihG2YclZhUablFc_
 <!-- preview-end -->
 
 Read the full edition on Kindle: "https://www.amazon.com/dp/B0FH6QD73R"
