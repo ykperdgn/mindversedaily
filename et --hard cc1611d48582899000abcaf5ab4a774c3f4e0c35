@@ -1,0 +1,10 @@
+[33m95932de[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m  Add beautiful purple gradient homepage with inline styles
+[33mb5f60d0[m  Beautiful purple gradient homepage design
+[33m21e75b7[m feat: Integrate @vercel/analytics component and fix layout files
+[33m9b4ffd2[m Force redeploy for environment variables
+[33m237cc8e[m  Production ready: UnifiedLayout, dynamic SEO, GA4 consent, ebook system complete
+[33mcc1611d[m Refactor site to ebook hub: add ebook collection, pages, SEO/AdSense layout, structured data, optimized covers, updated legal pages
+[33mca2c86b[m chore: remove legacy assets & config; add font preloads and Atkinson font-face
+[33m644080f[m feat: richer English teaser previews and break mode for ebooks
+[33m40b84ee[m feat: rewrite pull-dont-push teaser and switch to break preview
+[33m48bd017[m chore: translate ebook entries to English with 20 percent preview
