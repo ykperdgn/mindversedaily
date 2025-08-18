@@ -52,6 +52,6 @@ Learning ObjectiveLearning Objective: Reframe early “I feel more scattered” 
 Yakup Erdoğan
 <!-- preview-end -->
 
-Read the full edition on Kindle: <a href="https://www.amazon.com/dp/B0FMS71DH2" rel="noopener" target="_blank">Open on Amazon</a>
+Read the full edition on Kindle: "https://www.amazon.com/dp/B0FMS71DH2"
 
 

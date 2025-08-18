@@ -26,4 +26,4 @@ Quantum Self is the architectural refactor: you treat beliefs as packages, atten
 The goal is not a mythical permanent flow state—it’s a resilient upgrade cycle: observe → instrument → refactor → deploy small. If you have tried motivational force and relapsed into latency, you don’t need more push—you need systematic introspective engineering.
 <!-- preview-end -->
 
-Read the full edition on Kindle: <a href="https://www.amazon.com/dp/B0FL9SK6RP" rel="noopener" target="_blank">Open on Amazon</a>
+Read the full edition on Kindle: "https://www.amazon.com/dp/B0FL9SK6RP"

@@ -21,4 +21,4 @@ When a fracture of impossible light ripples through the stone’s surface, reali
 Whispers become coordinates. Silence becomes a ticking geometry. Choice becomes cosmology.
 <!-- preview-end -->
 
-Read the full edition on Kindle: <a href="https://www.amazon.com/dp/B0FH6QD73R" rel="noopener" target="_blank">Open on Amazon</a>
+Read the full edition on Kindle: "https://www.amazon.com/dp/B0FH6QD73R"

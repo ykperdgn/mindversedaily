@@ -26,4 +26,4 @@ Inside you’ll map “friction signatures,” design a Minimum Viable Morning, 
 If you are exhausted from white‑knuckling productivity, the shift isn’t more force—it’s better architecture. Begin the migration.
 <!-- preview-end -->
 
-Read the full edition on Kindle: <a href="https://www.amazon.com/dp/B0FMK1KJ17" rel="noopener" target="_blank">Open on Amazon</a>
+Read the full edition on Kindle: "https://www.amazon.com/dp/B0FMK1KJ17"
