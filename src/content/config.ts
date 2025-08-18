@@ -1,5 +1,4 @@
-// Restored ebooks collection schema.
-import { defineCollection, z } from 'astro:content';
+﻿import { defineCollection, z } from 'astro:content';
 
 const ebooks = defineCollection({
   type: 'content',
@@ -12,7 +11,14 @@ const ebooks = defineCollection({
     cover: z.string().optional(),
     description: z.string(),
     categories: z.array(z.string()).default([]),
-    publishDate: z.date(),
+    publishDate: z.preprocess((arg) => {
+      if (typeof arg === 'string' || typeof arg === 'number') return new Date(arg);
+      return arg;
+    }, z.date()),
+    pages: z.number().optional(),
+    rating: z.number().optional(),
+    tags: z.array(z.string()).optional(),
+    featured: z.boolean().optional(),
     preview: z.object({
       type: z.enum(['words','break','percent']).default('words'),
       value: z.number().optional()
