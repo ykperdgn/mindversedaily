@@ -6,7 +6,9 @@ const ebooks = (await getCollection('ebooks')).sort((a,b)=> (b.data.publishDate 
 ---
 <BaseLayout title="Ebooks | MindVerse">
   <h1 style="margin-top:0;font-size:clamp(1.8rem,5vw,2.6rem);background:var(--grad);-webkit-background-clip:text;color:transparent;">Ebooks</h1>
-  <p style="max-width:720px;font-size:.95rem;opacity:.85;">All current titles. Same card style as homepage.</p>
+  <p style="max-width:720px;font-size:.95rem;opacity:.85;">
+    Explore all MindVerse Kindle titles—consciousness, motivation, speculative fiction, and personal growth. Select a book to read a preview or continue on Kindle.
+  </p>
   <div class="ebooks-grid" style="margin-top:2rem;">
     {ebooks.map(e => (
       <a href={`/ebooks/${e.slug ?? e.id.replace(/\.md$/, '')}`} class="card">
