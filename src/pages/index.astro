@@ -5,7 +5,9 @@ const ebooks = (await getCollection('ebooks')).sort((a,b)=> (b.data.publishDate 
 ---
 <BaseLayout title="MindVerse • Kindle E‑Books" description="MindVerse authored Kindle e‑books: conscious productivity, motivation architecture, speculative fiction previews.">
   <h1 style="margin:0 0 1rem;font-size:clamp(2.2rem,5vw,3.2rem);background:var(--grad);-webkit-background-clip:text;color:transparent;">MindVerse E‑Books</h1>
-  <p class="intro" style="max-width:760px;font-size:1.02rem;opacity:.9;">Curated Kindle titles by MindVerse—engineering inner architecture, sustainable drive, and imaginative speculative worlds. Select a book to read an on‑site preview then continue on Kindle.</p>
+  <p class="intro" style="max-width:760px;font-size:1.02rem;opacity:.9;">
+  Welcome to MindVerse, your destination for original Kindle e-books on conscious productivity, motivation, personal growth, and speculative fiction. Each book is crafted to deliver practical insights, transformative frameworks, and imaginative journeys—no filler, no clickbait, just real value for your mind and life. Browse our collection, read on-site previews, and continue your journey on Kindle.
+</p>
   <div class="ebooks-grid" style="display:grid;gap:1.25rem;margin-top:2rem;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));">
     {ebooks.map(e => (
       <a href={`/ebooks/${e.slug ?? e.id.replace(/\.md$/, '')}`} class="card" style="display:flex;flex-direction:column;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:1rem;overflow:hidden;min-height:240px;text-decoration:none;">
